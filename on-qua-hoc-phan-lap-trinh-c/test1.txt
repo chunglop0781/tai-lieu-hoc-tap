@@ -1,0 +1,11 @@
+5
+Nguyen Van An
+SV001 A 8.5
+Tran Thi Binh
+SV002 B 7.2
+Le Hoang Cuong
+SV003 C 6.9
+Pham Minh Duc
+SV004 A 9.1
+Vo Thi Em
+SV005 B 5.8

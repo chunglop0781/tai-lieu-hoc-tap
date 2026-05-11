@@ -1,0 +1,2676 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chữa đề cương ôn tập Tin học đại cương (Lập trình C)</title>
+    
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+        h1, h2 {
+            color: #333;
+        }
+    </style>
+
+    <!-- Thêm để chạy biểu thức toán -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const datetime = now.toLocaleString('vi-VN', {
+                weekday: 'long', year: 'numeric', month: '2-digit', day: '2-digit',
+                hour: '2-digit', minute: '2-digit', second: '2-digit'
+            });
+            // Cập nhật tiêu đề tab
+            document.title = `Chữa đề cương ôn tập Tin học đại cương (Lập trình C) (Update: ${datetime})`;
+            // Nếu muốn, bạn cũng có thể hiện ở một div trong body
+            const dtDiv = document.getElementById('datetime');
+            if (dtDiv) dtDiv.textContent = datetime;
+        }
+
+        // Chạy ngay khi load trang và mỗi giây
+        window.onload = updateDateTime;
+        setInterval(updateDateTime, 1000);
+    </script>
+</head>
+<body>
+    <h1>Chữa đề cương ôn tập Tin học đại cương (Lập trình C)</h1>
+    <p>Update mới nhất: <span id="datetime"></span> - Author: Mai Ngọc Hùng Anh (Trường ĐH GTVT)</p>
+</body>
+
+    <h2>Bài 1</h2>
+    <p>Nhập dãy n số thực. Tính và in các đại lượng:</p>
+    <ul>
+        <li>T là tích các số khác không của dãy.</li>
+        <li>M là giá trị nhỏ nhất của dãy số.</li>
+        <li>In các giá trị của dãy trên cùng một dòng.</li>
+    </ul>
+    <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int n;
+    printf("Nhap gia tri n: ");
+    scanf("%d", &n);
+    if (n &lt;= 0) {
+        printf("n phai lon hon 0");
+        return 0;
+    }
+    int a[n];
+    printf("Vui long nhap tung gia tri cua n:\n");
+    for (int i = 0; i &lt; n; i++) {
+        printf("a[%d] = ", i);
+        scanf("%d", &a[i]);
+    }
+    int tich = 1;
+    for (int i = 0; i &lt; n; i++) {
+        if (a[i] != 0) {
+            tich *= a[i];
+        }
+    }
+    int min = a[0];
+    for (int i = 1; i &lt; n; i++) {
+        if (a[i] &lt; min) {
+            min = a[i];
+        }
+    }
+    printf("Tich va min cua day la: %d, %d", tich, min);
+    return 0;
+}
+    </pre>
+
+    <h2>Bài 2</h2>
+    <p>Nhập một dãy n phần tử nguyên. Đếm số phần tử chẵn của dẫy (S1) và tính tổng các phần tử của dãy (S2). Sau đó tính T = S2/S1</p>
+    <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int n;
+    printf("Nhap cac gia tri nguyen cua n va tung gia tri cua tung n.\n");
+    printf("Phan tu S1.\n");
+    printf("n = ");
+    scanf("%d", &n);
+    int a[n];
+    for(int i = 0; i &lt; n; i++) {
+        printf("a[%d] = ", i);
+        scanf("%d", &a[i]);
+    }
+    printf("Phan tu S2.\n");
+    printf("n = ");
+    scanf("%d", &n);
+    int b[n];
+    for(int i = 0; i &lt; n; i++) {
+        printf("b[%d] = ", i);
+        scanf("%d", &b[i]);
+    }
+    int S1 = 0;
+    for(int i = 0; i &lt; n; i++) {
+        if(a[i] % 2 == 0) {
+            S1++;
+        }
+    }
+    int S2 = 0;
+    for(int i = 0; i &lt; n; i++) {
+        S2 += b[i];
+    }
+    if(S2 == 0) {
+        printf("Loi phep tinh, vui long nhap lai phan tu n2.\n");
+        return 1;
+    }
+    float T = (float)S1 / S2;
+    printf("T = %.2f", T);
+    return 0;
+}
+    </pre>
+    <h2>Bài 3</h2>
+    <p>Nhập một dãy n số nguyên. Tìm số các cặp 2 phần tử liên tiếp mà tích của chúng chia hết cho tổng của chúng. In ra một cặp phần tử tìm được.</p>
+    <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int n;
+    int a[n];
+    printf("Nhap n: ");
+    scanf("%d", &n);
+    printf("Nhap %d so nguyen:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+    int dem = 0;
+    int timthay = 0;
+    int x, y;
+    for (int i = 0; i < n - 1; i++) {
+        int tong = a[i] + a[i + 1];
+        int tich = a[i] * a[i + 1];
+        if (tong != 0 && tich % tong == 0) {
+            dem++;
+            if (!timthay) {
+                x = a[i];
+                y = a[i + 1];
+                timthay = 1;
+            }
+        }
+    }
+    printf("So cap thoa man: %d\n", dem);
+    if (timthay) {
+        printf("Mot cap tim duoc: (%d, %d)\n", x, y);
+    } else {
+        printf("Khong co cap nao thoa man.\n");
+    }
+    return 0;
+}
+    </pre>
+
+    <h2>Bài 4</h2>
+    <p>Nhập một dãy n số thực. Trong số các bộ 3 phần tử liên tiếp, hãy tìm một bộ có tích nhỏ nhất. Hãy in bộ 3 phần tử và tích nhỏ nhất tìm được.</p>
+    <h4>Untitled4.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+int main() {
+	int n;
+	printf("Nhap he so n: ");
+	scanf("%d", &n);
+	printf("Nhap tung phan tu con cua mang n:\n");
+	double a[100];
+	for (int i = 0; i < n; i++) {
+		printf("a[%d] = ", i);
+		scanf("%lf", &a[i]);
+	}
+	double min = a[0] * a[1] * a[2];
+	int vitri = 0;
+	for (int i = 1; i <= n - 3; i++) {
+		double tich = a[i] * a[i+1] * a[i+2];
+		if (tich < min) {
+			min = tich;
+			vitri = i;
+		}
+	}
+	printf("\n");
+	printf("Bo 3 phan tu co tich nho nhat: %.2f, %.2f, %.2f\n", a[vitri], a[vitri + 1], a[vitri + 2]);
+	printf("Tich nho nhat: %.2f\n", min);
+}
+
+    </pre>
+
+    <h2>Bài 5</h2>
+    <p>Nhập một dẫy số n số nguyên. Hãy:</p>
+<p>a) Tìm giá trị nhỏ nhất của dãy? Giá trị nhỏ nhất là số chẵn hay số lẻ?</p>
+<p>b) Đếm số phần tử của dãy có giá trị nằm trong đoạn [3, 50]?</p>
+    <h4>Untitled5.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+int main () {
+	int n;
+	printf("Nhap phan tu n: ");
+	scanf("%d", &n);
+	printf("Nhap cac phan tu cua day n:\n");
+	int a[100];
+	for (int i = 0; i < n; i++) {
+		printf("a[%d] = ", i);
+		scanf("%d", &a[i]);
+	}
+	int min;
+	for (int i = 0; i < n; i++) {
+		if (min > a[i]) {
+			min = a[i];
+		}
+	}
+	printf("Min  = %d", min);
+	if (min % 2 == 0) {
+		printf("Min la so chan.\n");
+	} else {
+		printf("Min la so le.\n");
+	}
+	int dem = 0;
+	for (int i = 0; i < n; i++) {
+		if (a[i] >= 3 && a[i] <= 50) {
+			dem++;
+		}
+	}
+	printf("Cac phan tu cua day thuoc [3,50] la: %d", dem);
+}
+
+    </pre>
+
+    <h2>Bài 6</h2>
+    <p>Nhập dãy n số thực a1,a2,..,an và giá trị thực x. Hãy:</p>
+<p>a) Đếm xem trong dãy có bao nhiêu phần tử có giá trị bằng x?</p>
+<p>b) Tính trung bình cộng các phần tử của dãy số có giá trị lớn hơn x?</p>
+    <h4>Untitled6.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+	int n;
+	printf("Vui long nhap so nguyen n: ");
+	scanf("%d", &n);
+	double a[100];
+	printf("Vui long nhap so thuc a1, a2, ..., an:\n");
+	for (int i = 0; i < n; i++) {
+		printf("a[%d] = ", i);
+		scanf("%lf", &a[i]);
+	}
+	double x;
+	printf("Vui long nhap gia tri thuc x:\n");
+	scanf("%lf", &x);
+	int sogiatribangx = 0;
+	double tong = 0;
+	int sogiatrilonhonx = 0;
+	for (int i = 0; i < n; i++) {
+		if (a[i] == x) {
+			sogiatribangx++;
+		}
+		if (a[i] > x) {
+			tong += a[i];
+			sogiatrilonhonx++;
+		}
+	}
+	printf("So phan tu co gia tri bang x = %d\n", sogiatribangx);
+	if (sogiatrilonhonx > 0) {
+		double tbc = tong / sogiatrilonhonx;
+		printf("TBC = %.2f\n", tbc);
+	} else {
+		printf("Khong co phan tu nao lon hon x\n");
+	}
+	return 0;
+}
+
+    </pre>
+
+    <h2>Bài 7</h2>
+    <p>Cho n điểm trong mặt phằng xOy</p>
+<p>a) Nhập toạ độ xi (i=1..n), yi (i=1..n) của n điểm đó và in ra màn hình toạ độ các điểm vừa nhập.</p>
+<p>b) Đếm và in ra màn hình số điểm nằm phía trên (không thuộc) đường thẳng y=ax+b với a, b là 2 số thực được nhập từ bàn phím</p>
+<p>c) Trong số các đoạn thẳng có đầu mút là 2 điểm thuộc n điểm đã cho, hãy đếm và in ra màn hình số đoạn thẳng nằm bên trong hình tròn tâm tại gốc O(0,0) bán kính = 5</p>
+    <h4>Untitled7.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+	int n;
+	printf("Vui long nhap so mang n: ");
+	scanf("%d", &n);
+	int x[100];
+	int y[100];
+	printf("Vui long nhap x va y cua tung diem.\n");
+	for(int i = 0; i < n; i++){
+		printf("Diem thu %d.\n", i + 1);
+		printf("x = ");
+		scanf("%d", &x[i]);
+		printf("y = ");
+		scanf("%d", &y[i]);
+	}
+	printf("Cac toa do diem vua nhap:\n");
+	for(int i = 0; i < n; i++) {
+	printf("Diem thu %d co toa do (%d, %d).\n", i+1, x[i], y[i]);
+	}
+	double a, b;
+	printf("Nhap 2 so thuc a va b: ");
+	scanf("%lf %lf", &a, &b);
+	int diem_nam_phia_tren = 0;
+	for(int i = 0; i < n; i++) {
+		if (y[i] > a * x[i] + b) {
+			diem_nam_phia_tren++;
+		}
+	}
+	printf("So diem nam phia tren (khong thuoc) duong thang y=ax+b la: %d\n", diem_nam_phia_tren);
+	int so_doan_thang_nam_ben_trong = 0;
+	for(int i = 0; i < n; i++) {
+		if (y[i] * y[i] + x[i] * x[i] < 5 * 5) {
+			so_doan_thang_nam_ben_trong++;
+		}
+	}
+	printf("So doan thang nam ben trong hinh tron tam tai goc O(0,0) ban kinh = 5 la: %d\n", so_doan_thang_nam_ben_trong);
+	return 0;
+}
+
+    </pre>
+
+    <h2>Bài 8</h2>
+    <p>Cho n điểm trong mặt phằng xOy</p>
+<p>- Nhập toạ độ xi (i=1..n), yi (i=1..n) của n điểm đó và in ra màn hình toạ độ các điểm vừa nhập.</p>
+<p>- Đếm và in ra màn hình số điểm nằm trên (thuộc), số điểm nằm phía trên và số điểm nằm phía dưới đường thẳng chứa đường phân giác của góc phần tư thứ II</p>
+<p>- Trong số các đoạn thẳng có đầu mút là 2 điểm thuộc n điểm đã cho, đếm và in ra màn hình số đoạn thẳng nằm trong góc phần tư thứ I và số đoạn thẳng nằm trong góc phần tư thứ II</p>
+    <h4>Untitled8.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+	int n;
+	printf("Vui long nhap so mang n: ");
+	scanf("%d", &n);
+	int x[100];
+	int y[100];
+	printf("Vui long nhap x va y cua tung diem.\n");
+	for(int i = 0; i < n; i++){
+		printf("Diem thu %d.\n", i + 1);
+		printf("x = ");
+		scanf("%d", &x[i]);
+		printf("y = ");
+		scanf("%d", &y[i]);
+	}
+	int dem_thuoc = 0;
+	int dem_tren = 0;
+	int dem_duoi = 0;
+	for(int i = 0; i < n; i++){
+		if (y[i] == -x[i]) {
+			dem_thuoc++;
+		}
+		if(y[i] > -x[i]) {
+			dem_tren++;
+		}
+		if(y[i] < -x[i]) {
+			dem_duoi++;
+		}
+	}
+	printf("So diem nam tren (thuoc), so diem nam phia tren va so diem nam phia duoi duong thang chua duong phan giac cua goc phan tu thu II la: %d, %d, %d\n", dem_thuoc, dem_tren, dem_duoi);
+	int goc_phan_tu_thu_nhat = 0;
+	int goc_phan_tu_thu_hai = 0;
+	for(int i = 0; i < n; i++){
+		if(x[i] > 0  && y[i] > 0) {
+			goc_phan_tu_thu_nhat++;
+		}
+		if(y[i] > 0 && x[i] < 0) {
+			goc_phan_tu_thu_hai++;
+		}
+	}
+	printf("So doan thang nam trong goc phan tu thu I va so doan thang nam trong goc phan tu thu II la: %d, %d\n", goc_phan_tu_thu_nhat, goc_phan_tu_thu_hai);
+}
+
+    </pre>
+
+    <h2>Bài 9</h2>
+    <p>Cho n điểm trong mặt phằng xOy
+<p>a) Nhập toạ độ xi (i=1..n), yi (i=1..n) của n điểm đó và in ra màn hình toạ độ các điểm vừa nhập</p>
+<p>b) Tính và in ra màn hình độ dài đường gấp khúc đi qua các điểm lần lượt theo thứ tự: 1,2...,n</p>
+<p>c) Trong số các đoạn thẳng có đầu mút là 2 điểm thuộc n điểm đã cho, hãy tính và in ra màn hình tổng độ dài của các đoạn cắt trục OX. Đếm xem có bao nhiêu đoạn như vậy? (Một đoạn thẳng gọi là cắt trục OX nếu nó có chung với OX duy nhất một điểm)</p>
+    <h4>Untitled9.txt</h4>
+    <pre>
+5
+1 2
+-3 4
+0 0
+5 -1
+2 7
+    </pre>
+    <h4>Untitled9.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;math.h&gt;
+
+typedef struct{
+	int x;
+	int y;
+	double duongthang1;
+	double duongthang2;
+	double tong1;
+} Diem;
+
+
+int main() {
+	FILE *f = fopen ("D:\\bai tap dh\\2026.01\\on-qua-hoc-phan-lap-trinh-c\\Untitled9.txt", "r");
+	if (f==NULL) {
+		printf("Loi file Untitled9.txt!\n");
+		return 1;
+	}
+	int n;
+	fscanf(f, "%d\n", &n);
+	Diem d[100];
+	for (int i = 0; i < n; i++) {
+		fscanf(f, "%d %d\n", &d[i].x, &d[i].y);
+	}
+	printf("Cac diem hien co:\n");
+	for (int i = 0; i < n; i++) {
+		printf("Diem %d: (%d, %d)\n", i+1, d[i].x, d[i].y);
+	}
+	for (int i = 0; i < n - 1; i++) {
+    	d[i].tong1 = sqrt((d[i+1].x - d[i].x) * (d[i+1].x - d[i].x) + (d[i+1].y - d[i].y) * (d[i+1].y - d[i].y));
+	}
+	printf("Do dai tung doan cua duong gap khuc:\n");
+	for (int i = 0; i < n - 1; i++) {
+		printf("Duong %d: %.2f\n", i+1, d[i].tong1);
+	}
+	double tong3 = 0;
+	for (int i = 0; i < n - 1; i++) {
+		tong3 += d[i].tong1;
+	}
+	printf("Do dai duong gap khuc = %.2f\n", tong3);
+	int dem = 0;
+	double tong2 = 0;
+	for (int i = 0; i < n - 1; i++) {
+    	for (int j = i + 1; j < n; j++) {
+        	if (d[i].y * d[j].y < 0) {
+            	dem++;
+            	tong2 += sqrt((d[j].x - d[i].x) * (d[j].x - d[i].x) + (d[j].y - d[i].y) * (d[j].y - d[i].y));
+        	}
+    	}
+	}
+	printf("So doan thang cat truc OX: %d\n", dem);
+	printf("Tong do dai cac doan cat truc OX: %.2f\n", tong2);
+	return 0;
+}
+
+    </pre>
+
+    <h2>Bài 10</h2>
+    <p>Cho n điểm trong mặt phằng xOy</p>
+<p>a) Nhập toạ độ xi (i=1..n), yi (i=1..n) của n điểm đó và in ra màn hình toạ độ các điểm vừa nhập.</p>
+<p>b) Đếm và in ra màn hình số điểm nằm bên ngoài hình tròn tâm tại gốc O(0,0) bán kính R (với R là một số thực dương được nhập từ bàn phím)</p>
+<p>c) Tìm và in ra màn hình toạ độ các đỉnh của một hình chữ nhật có các cạnh song song với các trục toạ độ, chứa n điểm đã cho và có diện tích nhỏ nhất.</p>
+    <h4>Untitled10.txt</h4>
+    <pre>
+5
+5 1
+6 -1
+4 -4
+-7 5
+-8 12 
+    </pre>
+    <h4>Untitled10.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;math.h&gt;
+
+typedef struct {
+	int x;
+	int y;
+	int dodai;
+	int benngoai;
+	double dientich;
+} Diem;
+
+int main() {
+	FILE *f = fopen("D:\\bai tap dh\\2026.01\\on-qua-hoc-phan-lap-trinh-c\\Untitled10.txt", "r");
+	if (f==NULL) {
+		printf("Loi file Untitled10.txt!");
+	}
+	int n;
+	fscanf(f, "%d\n", &n);
+	Diem d[100];
+	for (int i = 0; i < n; i++) {
+		fscanf(f, "%d %d\n", &d[i].x, &d[i].y);
+	}
+	printf("Cac diem vua nhap:\n");
+	for (int i = 0; i < n; i++) {
+		printf("Diem %d: (%d, %d)\n", i+1, d[i].x, d[i].y);
+	}
+	int r;
+	printf("Nhap he so ban kinh R: ");
+	scanf("%d", &r);
+	for (int i = 0; i < n; i++) {
+		d[i].dodai = sqrt(d[i].x * d[i].x + d[i].y * d[i].y);
+	}
+	int benngoai = 0;
+	for (int i = 0; i < n; i++) {
+		if (d[i].dodai - r > 0) {
+			benngoai++;
+		}
+	}
+	printf("So diem nam ben ngoai hinh tron tam tai goc O(0,0) ban kinh R: %d\n", benngoai);
+	int xmin = d[0].x, xmax = d[0].x;
+	int ymin = d[0].y, ymax = d[0].y;
+	for (int i = 0; i < n; i++) {
+		if (d[i].x < xmin) xmin = d[i].x;
+		if (d[i].x > xmax) xmax = d[i].x;
+		if (d[i].y < ymin) ymin = d[i].y;
+		if (d[i].y > ymax) ymax = d[i].y;
+	}
+	int dientich = (xmax - xmin) * (ymax - ymin);
+	printf("Toa do cac dinh cua hinh chu nhat:\n");
+		printf("A(%d, %d)\n", xmin, ymin);
+		printf("B(%d, %d)\n", xmax, ymin);
+		printf("C(%d, %d)\n", xmax, ymax);
+		printf("D(%d, %d)\n", xmin, ymax);
+	printf("Dien tich nho nhat = %d\n", dientich);
+	return 0;
+}
+
+    </pre>
+
+    <h2>Bài 11</h2>
+    <p>Nhập toạ độ x, y của một dãy n điểm. Sau đó:</p>
+<p>- Tính độ dài đường gấp khúc lần lượt đi qua các điểm theo thứ tự: 2,3,...,n,1.</p>
+<p>- Trong số các đoạn thẳng đi qua 2 điểm của dãy nói trên, hãy tìm một đoạn thẳng có độ dài lớn nhất. In toạ độ điểm đầu, toạ độ điểm cuối và độ dài của đoạn tìm được.</p>
+    <h4>Untitled11.txt</h4>
+    <pre>
+5
+5 1
+6 -1
+4 -4
+-7 5
+-8 12
+    </pre>
+    <h4>Untitled11.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;math.h&gt;
+
+typedef struct {
+	double x;
+	double y;
+} Diem;
+
+int main() {
+	FILE *f = fopen("D:\\bai tap dh\\2026.01\\on-qua-hoc-phan-lap-trinh-c\\Untitled11.txt", "r");
+	if (f==NULL) {
+		printf("Loi file Untitled11.txt!");
+		return 1;
+	}
+	int n;
+	Diem d[100];
+	fscanf(f, "%d\n", &n);
+	for (int i = 0; i < n; i++) {
+		fscanf(f, "%lf %lf\n", &d[i].x, &d[i].y);
+	}
+    double tong = 0;
+    for (int i = 1; i < n - 1; i++) {
+        tong += pow((pow(d[i+1].x - d[i].x, 2) + pow(d[i+1].y - d[i].y, 2)), 1.0/2);
+    }
+    tong += sqrt(pow(d[0].x - d[n-1].x, 2) + pow(d[0].y - d[n-1].y, 2));
+    printf("Do dai duong gap khuc = %.2lf\n", tong);
+    double max = 0;
+    int a = 0, b = 1;
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = i + 1; j < n; j++) {
+            double kc = pow((pow(d[j].x - d[i].x, 2) + pow(d[j].y - d[i].y, 2)), 1.0/2);
+            if (kc > max) {
+                max = kc;
+                a = i;
+                b = j;
+            }
+        }
+    }
+    printf("Doan thang dai nhat:\n");
+    printf("Diem dau: (%.2lf, %.2lf)\n", d[a].x, d[a].y);
+    printf("Diem cuoi: (%.2lf, %.2lf)\n", d[b].x, d[b].y);
+    printf("Do dai = %.2lf\n", max);
+    return 0;
+}
+
+    </pre>
+
+    <h2>Bài 12</h2>
+    <p>Nhập toạ độ x, y của một dãy n điểm. Sau đó:</p>
+<p>- Đếm xem có bao nhiêu điểm nằm bên trong hình tròn tâm tại gốc O(0,0) và bán kính bằng 4.</p>
+<p>- Tìm hình chữ nhật nhỏ nhất có các cạnh song song với các trục toạ độ và chứa n điểm nói trên (điểm nằm trên biên của hình chữ nhật cũng được coi là chứa trong đó).</p>
+    <h4>Untitled12.txt</h4>
+    <pre>
+5
+5 1
+6 -1
+4 -4
+-7 5
+-8 12 
+    </pre>
+    <h4>Untitled12.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;math.h&gt;
+
+typedef struct {
+	int x;
+	int y;
+	double dodai;
+} Diem;
+
+int main() {
+	FILE *f = fopen ("D:\\bai tap dh\\2026.01\\on-qua-hoc-phan-lap-trinh-c\\Untitled12.txt", "r");
+	if (f==NULL) {
+		printf("Loi file Untitled12.txt!\n");
+		return 1;
+	}
+	int n;
+	fscanf(f, "%d\n", &n);
+	Diem d[100];
+	for (int i = 0; i < n; i++) {
+		fscanf(f, "%d %d\n", &d[i].x, &d[i].y);
+	}
+	int r;
+	printf("Nhap he so ban kinh R: ");
+	scanf("%d", &r);
+	int dem = 0;
+	for (int i = 0; i < n; i++) {
+		d[i].dodai = pow(pow(d[i].x, 2) + pow(d[i].y, 2),1.0/2);
+		if (d[i].dodai - r < 0) {
+			dem++;
+		}
+	}
+	printf("So diem nam ben trong hinh tron tam tai goc 0(0,0) ban kinh r = %d la: %d\n", r, dem);
+	int x_min = d[0].x, x_max = d[0].x;
+	int y_min = d[0].y, y_max = d[0].y;
+	for (int i = 1; i < n; i++) {
+		if (d[i].x < x_min) {
+			x_min = d[i].x;
+		}
+		if (d[i].x > x_max) {
+			x_max = d[i].x;
+		}
+		if (d[i].y < y_min) {
+			y_min = d[i].y;
+		}
+		if (d[i].y > y_max) {
+			y_max = d[i].y;
+		}
+	}
+	int dientich;
+	dientich = (x_max - x_min) * (y_max - y_min);
+	printf("Dien tich can tim bang %d.\n", dientich);
+	return 0;
+}
+
+
+    </pre>
+
+    <h2>Bài 13</h2>
+    <p>Nhập toạ độ x, y của dãy n điểm. Sau đó:
+<p>- Đếm số điểm nằm bên trên ( không thuộc ) đường thẳng y = ax + b, trong đó a, b nhập từ bàn phím.
+<p>- Đếm số điểm nằm bên trong góc phần tư thứ 1, số điểm nằm bên trong góc phần tư thứ 2.
+<p>- Trong số các đoạn thẳng có 2 đầu mút là các điểm vừa nhập, hãy tính tổng độ dài các đoạn thẳng nằm trong góc phần tư thứ 3.</p>
+    <h4>Untitled13.txt</h4>
+    <pre>
+7
+5 1
+6 -1
+4 -4
+-7 5
+-8 12
+-1 -2
+-5 -7
+    </pre>
+    <h4>Untitled13.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;math.h&gt;
+
+typedef struct {
+	int x;
+	int y;
+} Diem;
+
+int main() {
+	FILE *f = fopen ("D:\\bai tap dh\\2026.01\\on-qua-hoc-phan-lap-trinh-c\\Untitled13.txt", "r");
+	if (f==NULL) {
+		printf("Loi file Untitled13.txt!");
+		return 1;
+	}
+	int n;
+	Diem d[100];
+	fscanf(f, "%d\n", &n);
+	for (int i = 0; i < n; i++) {
+		fscanf(f, "%d %d\n", &d[i].x, &d[i].y);
+	}
+	int a,b;
+	printf("Nhap he so a va b: ");
+	scanf("%d %d", &a, &b);
+	int dem = 0;
+	for (int i = 0; i < n; i++) {
+		if (d[i].y > a * d[i].x + b) {
+			dem++;
+		}
+	}
+	printf("So diem nam ben tren (khong thuoc) duong thang y=ax+b la: %d.\n", dem);
+	int qp1 = 0, qp2 = 0;
+	for (int i = 0; i < n; i++) {
+		if (d[i].x > 0 && d[i].y > 0) {
+			qp1++;
+		}
+		if (d[i].x < 0 && d[i].y > 0) {
+			qp2++;
+		}
+	}
+	printf("So diem nam ben trong goc phan tu thu nhat la: %d.\n", qp1);
+	printf("So diem nam ben trong goc phan tu thu hai la: %d.\n", qp2);
+	double dodai = 0;
+	for (int i = 0; i < n - 1; i++) {
+		if (d[i].x < 0 && d[i].y < 0 && d[i+1].x < 0 && d[i+1].y < 0) {
+			dodai += pow(pow(d[i+1].x - d[i].x, 2) + pow(d[i+1].y - d[i].y, 2), 1.0/2);
+		}
+	}
+	printf("Do dai cac diem nam ben trong goc phan tu thu ba la: %.2f.\n", dodai);
+	return 0;
+}
+
+    </pre>
+
+    <h2>Bài 14</h2>
+    <p>Nhập các hệ số ai (i=0,1,..,n) của đa thức P(x) bậc n (ai là hệ số của xi ) và</p>
+<p>nhập các hệ số bj (j=0,1,...,m) của đa thức Q(x) bậc m (bj là hệ số của xj ).</p>
+<p>Giả thiết các hệ số an và bm đều khác 0. Sau đó:</p>
+<p>- Nhập số thực x1, tính các giá trị: P(x1), Q(x1) và S = P(x1)/Q(x1)</p>
+<p>- Tính hệ số của đa thức tổng P(x)+ Q(x).- Tính hệ số của đa thức hiệu: P(x) - Q(x)</p>
+    <h4>Untitled14.txt</h4>
+    <pre>
+3
+1
+2
+-1
+4
+2
+2
+-3
+1
+2
+    </pre>
+    <h4>Untitled14.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;math.h&gt;
+
+typedef struct {
+	int bac;
+	double hs[100];
+} DaThuc;
+
+int main() {
+	FILE *f = fopen ("D:\\bai tap dh\\2026.01\\on-qua-hoc-phan-lap-trinh-c\\Untitled14.txt", "r");
+	if (f == NULL) {
+		printf("Loi file Untitled14.txt!\n");
+		return 1;
+	}
+	DaThuc P, Q, Tong, Hieu;
+	double x1;
+	double Px = 0, Qx = 0;
+    fscanf(f, "%d\n", &P.bac);
+    for (int i = 0; i <= P.bac; i++) {
+        fscanf(f, "%lf\n", &P.hs[i]);
+	}
+    fscanf(f, "%d\n", &Q.bac);
+    for (int i = 0; i <= Q.bac; i++) {
+        fscanf(f, "%lf\n", &Q.hs[i]);
+	}
+    fscanf(f, "%lf\n", &x1);
+    fclose(f);
+    for (int i = 0; i <= P.bac; i++) {
+        if (i + 1 == x1) {
+        	Px = P.hs[i];
+		}
+	}
+    for (int i = 0; i <= Q.bac; i++) {
+        if (i + 1 == x1) {
+        	Qx = Q.hs[i];
+		}
+	}
+	printf("x1 = %.2lf\n", x1);
+	printf("P(x1) = %.2lf\n", Px);
+	printf("Q(x1) = %.2lf\n", Qx);
+	if (Qx != 0) {
+		printf("S = P(x1) / Q(x1) = %.2lf\n", Px / Qx);
+	} else {
+		printf("Khong the chia cho 0!\n");
+	}
+    Tong.bac = (P.bac > Q.bac) ? P.bac : Q.bac;
+    for (int i = 0; i <= Tong.bac; i++) {
+        Tong.hs[i] = 0;
+        if (i <= P.bac) {
+        	Tong.hs[i] += P.hs[i];
+		}
+        if (i <= Q.bac) {
+        	Tong.hs[i] += Q.hs[i];
+		}
+    }
+    Hieu.bac = (P.bac > Q.bac) ? P.bac : Q.bac;
+    for (int i = 0; i <= Hieu.bac; i++) {
+        Hieu.hs[i] = 0;
+        if (i <= P.bac) {
+        	Hieu.hs[i] += P.hs[i];
+		}
+        if (i <= Q.bac) {
+        	Hieu.hs[i] -= Q.hs[i];
+		}
+    }
+    printf("Da thuc P(x) + Q(x):\n");
+    for (int i = Tong.bac; i >= 0; i--) {
+        if (Tong.hs[i] != 0) {
+            printf("%.2lf*x^%d ", Tong.hs[i], i);
+		}
+        if (i > 0 && Tong.hs[i-1] != 0) {
+            printf("+ ");
+		}
+    }
+    printf("\n");
+    printf("Da thuc P(x) - Q(x):\n");
+    for (int i = Hieu.bac; i >= 0; i--) {
+        if (Hieu.hs[i] != 0) {
+            printf("%.2lf*x^%d ", Hieu.hs[i], i);
+		}
+        if (i > 0 && Hieu.hs[i-1] != 0) {
+            printf("+ ");
+		}
+    }
+    printf("\n");
+    return 0;
+}
+
+
+    </pre>
+
+    <h2>Bài 15</h2>
+    <p>Cho ma trận nguyên A cấp mxn.</p>
+<p>- Nhập ma trận từ bàn phím và in ma trận vừa nhập ra màn hình dưới dạng bảng.</p>
+<p>- Tính và in ra màn hình tổng các phần tử chẵn của ma trận.</p>
+<p>- Tính và in ra màn hình các giá trị bj (j=1..m) với bj là giá trị lớn nhất của cột thứ j</p>
+    <h4>Untitled15.txt</h4>
+    <pre>
+5
+6
+1 2 3 4 5 6
+2 3 4 5 6 7
+3 4 5 6 7 8
+4 5 6 7 8 9
+5 6 7 8 9 0
+    </pre>
+    <h4>Untitled15.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+	FILE *f = fopen ("D:\\bai tap dh\\2026.01\\on-qua-hoc-phan-lap-trinh-c\\Untitled15.txt", "r");
+	if (f==NULL) {
+		printf("Loi file Untitled15.txt!");
+		return 1;
+	}
+	int m, n;
+    int mt[100][100];
+    fscanf(f, "%d\n", &m);
+    fscanf(f, "%d\n", &n);
+	printf("m = %d, n = %d\n", m, n);
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            fscanf(f, "%d", &mt[i][j]);
+        }
+    }
+    fclose(f);
+    printf("Ma tran trong file:\n");
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            printf("%4d", mt[i][j]);
+        }
+        printf("\n");
+    }
+    int phantuchan = 0;
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            if (mt[i][j] % 2 == 0) {
+            	phantuchan += mt[i][j];
+			}
+        }
+    }
+    printf("Tong cac phan tu chan cua ma tran bang: %d\n", phantuchan);
+    int j;
+    printf("Nhap gia tri j (j <= %d): ", n);
+    scanf("%d", &j);
+    if (j >= 0 && j <= n) {
+    	for (int i = 0; i < m; i++) {
+            printf("%4d", mt[i][j-1]);
+        	printf("\n");
+    	}
+	} else {
+		printf("Loi gia tri j!\n");
+		return 1;
+	}
+    return 0;
+}
+
+
+    </pre>
+
+    <h2>Bài 16</h2>
+    <p>Nhập ma trận A cấp mxn với các phần tử nguyên sau đó:</p>
+<p>- Tính các tổng cột. Hãy cho biết có bao nhiêu tổng cột là số chẵn.</p>
+<p>- Tính trung bình cộng các phần tử lẻ của ma trận</p>
+    <h4>Untitled16.txt</h4>
+    <pre>
+5
+6
+1 2 3 4 5 6
+2 3 4 5 6 7
+3 4 5 6 7 8
+4 5 6 7 8 9
+5 6 7 8 9 0
+    </pre>
+    <h4>Untitled16.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+	FILE *f = fopen ("D:\\bai tap dh\\2026.01\\on-qua-hoc-phan-lap-trinh-c\\Untitled16.txt", "r");
+	if (f==NULL) {
+		printf("Loi file Untitled16.txt!");
+		return 1;
+	}
+	int m, n;
+    int mt[100][100];
+    fscanf(f, "%d\n", &m);
+    fscanf(f, "%d\n", &n);
+	printf("m = %d, n = %d\n", m, n);
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            fscanf(f, "%d", &mt[i][j]);
+        }
+    }
+    fclose(f);
+    printf("Ma tran trong file:\n");
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            printf("%4d", mt[i][j]);
+        }
+        printf("\n");
+    }
+    int tongcot[100];
+    int tongle = 0;
+    int tongcotchan = 0;
+    int tongcotle = 0;
+    int phantule = 0;
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            	tongcot[j] += mt[i][j];
+            	if (mt[i][j] % 2 != 0) {
+            		tongle += mt[i][j];
+            		phantule++;
+				}
+        }
+    }
+    for (int j = 0; j < n; j++) {
+            if (tongcot[j] % 2 == 0) {
+            	tongcotchan++;
+			} else {
+            	tongcotle++;
+			}
+	}
+    printf("Tong cua cac cot bang:\n");
+        for (int j = 0; j < n; j++) {
+            printf("Cot %d = %d\n", j+1, tongcot[j]);
+        }
+    printf("So tong cot la so chan bang: %d\n", tongcotchan);
+    printf("So tong cot la so le bang: %d\n", tongcotle);
+    double tbc;
+    tbc = tongle/phantule;
+    printf("Trung binh cong cac phan tu le cua ma tran bang : %.2f\n", tbc);
+    return 0;
+}
+
+    </pre>
+
+    <h2>Bài 17</h2>
+    <p>Nhập ma trận thực cấp mxn. Sau đó:</p>
+<p>- Tìm giá trị nhỏ nhất của các phần tử của ma trận.</p>
+<p>- Tìm các cột chứa giá trị nhỏ nhất đó.</p>
+<p>- Có bao nhiêu cột như vậy</p>
+    <h4>Untitled17.txt</h4>
+    <pre>
+5
+6
+1 2 3 4 5 6
+2 3 4 5 6 7
+3 4 5 6 7 8
+4 5 6 7 8 9
+5 6 7 8 9 0
+    </pre>
+    <h4>Untitled17.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+	FILE *f = fopen ("D:\\bai tap dh\\2026.01\\on-qua-hoc-phan-lap-trinh-c\\Untitled17.txt", "r");
+	if (f==NULL) {
+		printf("Loi file Untitled17.txt!");
+		return 1;
+	}
+	int m, n;
+    int mt[100][100];
+    fscanf(f, "%d\n", &m);
+    fscanf(f, "%d\n", &n);
+	printf("m = %d, n = %d\n", m, n);
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            fscanf(f, "%d", &mt[i][j]);
+        }
+    }
+    fclose(f);
+    printf("Ma tran trong file:\n");
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            printf("%4d", mt[i][j]);
+        }
+        printf("\n");
+    }
+    int min = mt[0][0];
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+        	if (min > mt[i][j]) {
+        		min = mt[i][j];
+			}
+        }
+    }
+    printf("Gia tri nho nhat cua cac phan tu cua ma tran: %d\n", min);
+    int dem = 0;
+	printf("Cac cot chua gia tri nho nhat: ");
+	for (int j = 0; j < n; j++) {
+    for (int i = 0; i < m; i++) {
+        if (mt[i][j] == min) {
+        	printf("%d\n", j+1);
+        	dem++;
+            break;
+        } }
+    }
+	printf("So cot chua gia tri nho nhat: %d\n", dem);
+    return 0;
+}
+
+    </pre>
+
+    <h2>Bài 18</h2>
+    <p>Cho ma trận nguyên A cấp mxn.</p>
+<p>a) Nhập ma trận từ bàn phím và in ma trận vừa nhập ra màn hình dưới dạng bảng.</p>
+<p>b) Tìm và in ra màn hình phần tử dương nhỏ nhất của ma trận.</p>
+<p>c) Nhập từ bàn phím số nguyên x, cho biết có phần tử nào của ma trận A có giá trị bằng x không? Nếu có, tìm và in ra màn hình vị trí (chỉ số cột, hàng) của một phần tử như vậy.</p>
+    <h4>Untitled18.txt</h4>
+    <pre>
+5
+6
+1 2 3 4 5 6
+2 3 4 5 6 7
+3 4 5 6 7 8
+4 5 6 7 8 9
+5 6 7 8 9 0
+    </pre>
+    <h4>Untitled18.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+	FILE *f = fopen ("D:\\bai tap dh\\2026.01\\on-qua-hoc-phan-lap-trinh-c\\Untitled18.txt", "r");
+	if (f==NULL) {
+		printf("Loi file Untitled18.txt!");
+		return 1;
+	}
+	int m, n;
+    int mt[100][100];
+    fscanf(f, "%d\n", &m);
+    fscanf(f, "%d\n", &n);
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            fscanf(f, "%d", &mt[i][j]);
+        }
+    }
+    fclose(f);
+    printf("Ma tran trong file:\n");
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            printf("%4d", mt[i][j]);
+        }
+        printf("\n");
+    }
+    int min = mt[0][0];
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+        	if (min > 0 && min > mt[i][j]) {
+        		min = mt[i][j];
+			}
+        }
+    }
+    printf("Phan tu duong nho nhat cua ma tran: %d\n", min);
+    int x;
+    int found = 0;
+    printf("Nhap so x: ");
+    scanf("%d", &x);
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            if (mt[i][j] == x) {
+                printf("Tim thay x tai: Cot %d, Hang %d\n", j + 1, i + 1);
+                found = 1;
+            }
+			}
+        }
+    if (!found) {
+        printf("Khong co phan tu nao bang x trong ma tran.\n");
+    }
+    return 0;
+}
+
+    </pre>
+
+    <h2>Bài 19</h2>
+    <p>Cho ma trận thực A cấp mxn và số thực x.</p>
+<p>a) Nhập ma trận từ bàn phím và in ma trận vừa nhập ra màn hình dưới dạng bảng.
+<p>b) Tính và in ra màn hình trung bình cộng các phần tử của ma trận có giá trị lớn</p> hơn x.</p>
+<p>c) Tính và in ra màn hình tổng các phần tử của mỗi hàng trong ma trận. Đếm và in ra màn hình số các hàng có tổng âm.</p>
+    <h4>Untitled19.txt</h4>
+    <pre>
+5
+6
+1 2 3 4 5 6
+2 3 4 5 6 7
+3 4 5 6 7 8
+4 5 6 7 8 9
+5 6 7 8 9 0
+    </pre>
+    <h4>Untitled19.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+	FILE *f = fopen ("D:\\bai tap dh\\2026.01\\on-qua-hoc-phan-lap-trinh-c\\Untitled17.txt", "r");
+	if (f==NULL) {
+		printf("Loi file Untitled17.txt!");
+		return 1;
+	}
+	int m, n;
+    int mt[100][100];
+    fscanf(f, "%d\n", &m);
+    fscanf(f, "%d\n", &n);
+	printf("m = %d, n = %d\n", m, n);
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            fscanf(f, "%d", &mt[i][j]);
+        }
+    }
+    fclose(f);
+    printf("Ma tran trong file:\n");
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            printf("%4d", mt[i][j]);
+        }
+        printf("\n");
+    }
+    int x;
+    printf("Nhap so nguyen x: ");
+    scanf("%d", &x);
+    int tonggtlon = 0;
+    int demgtlon = 0;
+    double tbcgtlon;
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            if (x < mt[i][j]) {
+            	tonggtlon += mt[i][j];
+            	demgtlon++;
+			}
+        }
+    }
+    tbcgtlon = tonggtlon / demgtlon;
+    printf("Trung binh cong cac phan tu cua ma tran co gia tri lon hon x la: %.2f\n", tbcgtlon);
+	int tonghang[100];
+	int dem = 0;
+    for (int i = 0; i < m; i++) {
+    	tonghang[i] = 0;
+        for (int j = 0; j < n; j++) {
+            	tonghang[i] += mt[i][j];
+        }
+    }
+	printf("Tong cac phan tu cua moi hang:\n");
+    for (int i = 0; i < m; i++) {
+        printf("Hang %d co tong = %d\n", i + 1, tonghang[i]);
+        if (tonghang[i] < 0) {
+            dem++;
+        }
+    }
+    printf("So hang co tong am la: %d\n", dem);
+    return 0;
+}
+    </pre>
+
+    <h2>Bài 20</h2>
+    <p>Nhập ma trận thực cấp mxn , sau đó:</p>
+<p>- Tính trung bình cộng các phần tử (của ma trận) có giá trị trong đoạn [a,b] với a, b là các số thực nhập từ bàn phím.</p>
+<p>- Tìm 1 phần tử âm có giá trị lớn nhất và một phần tử âm có giá trị nhỏ nhất.</p>
+    <h4>Untitled20.txt</h4>
+    <pre>
+5
+6
+-1 -2 3 4 5 6
+2 3 -4 -5 6 7
+3 4 5 6 -7 -8
+4 5 -6 7 8 -9
+-5 6 7 8 -9 0
+    </pre>
+    <h4>Untitled20.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+	FILE *f = fopen ("D:\\bai tap dh\\2026.01\\on-qua-hoc-phan-lap-trinh-c\\Untitled20.txt", "r");
+	if (f==NULL) {
+		printf("Loi file Untitled20.txt!");
+		return 1;
+	}
+	int m, n;
+    int mt[100][100];
+    fscanf(f, "%d\n", &m);
+    fscanf(f, "%d\n", &n);
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            fscanf(f, "%d", &mt[i][j]);
+        }
+    }
+    fclose(f);
+    double a, b;
+    printf("Vui long nhap gia tri a, b: ");
+    scanf("%lf %lf", &a, &b);
+    int tongdk = 0;
+    int ptdk = 0;
+    double tbcdk;
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            if(a <= mt[i][j] && b <= mt[i][j]) {
+            	tongdk += mt[i][j];
+            	ptdk++;
+			}
+        }
+    }
+    tbcdk = tongdk / ptdk;
+    printf("Trung binh cong cac phan tu (cua ma trsn) co gia tri trong doan [a,b] voi a, b la cac so thuc bang: %.2f\n", tbcdk);
+    int phantuam_min, phantuam_max;
+	for (int i = 0; i < m; i++) {
+	    for (int j = 0; j < n; j++) {
+	        if (mt[i][j] < 0) {
+                	if (mt[i][j] > phantuam_max)
+                    	phantuam_max = mt[i][j];
+                	if (mt[i][j] < phantuam_min)
+                    	phantuam_min = mt[i][j];
+        	}
+    	}
+	}
+	printf("Mot phan tu am co gia tri lon nhat va mot phan tu am co gia tri nho nhat bang: %d, %d\n", phantuam_max, phantuam_min);
+	    return 0;
+}
+
+    </pre>
+
+    <h2>Bài 21</h2>
+    <p>Nhập ma trận nguyên cấp nxn, sau đó:</p>
+<p>- In ma trận dưới dạng bảng</p>
+<p>- Tìm Max của các phần tử lẻ nằm bên dưới đường chéo phụ.</p>
+<p>- Có phần tử nào nằm bên trên đường chéo phụ có giá trị bằng Max hay không? Nếu có in các phần tử tìm được.</p>
+    <h4>Untitled21.txt</h4>
+    <pre>
+5
+-1 -2 7 4 5
+2 3 -4 -5 6
+3 4 5 6 -7
+4 5 -6 7 8
+-5 6 7 8 -9
+    </pre>
+    <h4>Untitled21.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+	FILE *f = fopen ("D:\\bai tap dh\\2026.01\\on-qua-hoc-phan-lap-trinh-c\\Untitled21.txt", "r");
+	if (f==NULL) {
+		printf("Loi file Untitled21.txt!");
+		return 1;
+	}
+	int n;
+    int mt[100][100];
+    fscanf(f, "%d\n", &n);
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            fscanf(f, "%d", &mt[i][j]);
+        }
+    }
+    fclose(f);
+    printf("Ma tran trong file:\n");
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            printf("%4d", mt[i][j]);
+        }
+        printf("\n");
+    }
+	int max;
+	for (int i = n - 1; i >= 0; i--) {
+    	for (int j = n - 1; j >= 0; j--) {
+        	if (i + j > n - 1 && mt[i][j] % 2 != 0) {
+            	if (mt[i][j] > max) {
+                	max = mt[i][j];
+            	}
+        	}
+    	}
+	}
+	printf("Max phan tu le ben duoi duong cheo phu = %d\n", max);
+	printf("Phan tu nam ben tren duong cheo phu co gia tri bang Max la:\n");
+	for (int i = 0; i < n; i++) {
+    	for (int j = 0; j < n; j++) {
+        	if (i + j < n - 1 && mt[i][j] == max) {
+            	printf("Phan tu = %d tai hang %d, cot %d.\n", mt[i][j], i+1, j+1);
+        	}
+    	}
+	}
+	return 0;
+}
+
+    </pre>
+
+    <h2>Bài 22</h2>
+    <p>Nhập họ tên, điểm toán, điểm lý, điểm hoá của n thí sinh. Sau đó:
+<p>- In ra một thí sinh có điểm toán cao nhất.</p>
+<p>- In ra 3 thí sinh có tổng điểm cao nhất và 3 thí sinh có tổng điểm thấp nhất.</p>
+    <h4>Untitled22.txt</h4>
+    <pre>
+10
+Nguyen Van A 8.5 7.0 9.0
+Tran Thi B 6.5 8.0 7.5
+Le Van C 9.0 8.5 8.0
+Pham Thi D 7.5 6.5 7.0
+Hoang Van E 5.5 6.0 6.5
+Do Thi F 8.0 7.5 8.5
+Vu Van G 6.0 6.5 7.0
+Bui Thi H 9.5 9.0 9.0
+Dang Van I 7.0 7.5 6.5
+Ngo Thi K 8.5 8.0 8.0
+
+    </pre>
+    <h4>Untitled22.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+typedef struct {
+	char hoten[100];
+	double toan;
+	double ly;
+	double hoa;
+	double tongdiem;
+} HocSinh;
+
+int main() {
+	FILE *f = fopen ("D:\\bai tap dh\\2026.01\\on-qua-hoc-phan-lap-trinh-c\\Untitled22.txt", "r");
+	if (f==NULL) {
+		printf("Loi file Untitled22!\n");
+		return 1;
+	}
+	int n;
+	fscanf(f, "%d\n", &n);
+	HocSinh hs[100];
+	for (int i = 0; i < n; i++) {
+		fgets(hs[i].hoten, 100, f);
+		hs[i].hoten[strcspn(hs[i].hoten, "\n")] = 0;			//Tieng Viet co cach trong file txt thi phai co them cai nay
+		fscanf(f, "%lf %lf %lf\n", &hs[i].toan, &hs[i].ly, &hs[i].hoa);
+	}
+	char tentoancao[100];
+	double diemtoanmax;
+	strcpy(tentoancao, hs[0].hoten);
+	for (int i = 0; i < n; i++) {
+			if (hs[i].toan > diemtoanmax) {
+				strcpy(tentoancao, hs[i].hoten);
+				diemtoanmax = hs[i].toan;
+		}
+	}
+	printf("Hoc sinh co diem toan cao nhat la: %s (%.2f diem)\n", tentoancao, diemtoanmax);
+	for (int i = 0; i < n; i++) {
+		hs[i].tongdiem = hs[i].toan + hs[i].ly + hs[i].hoa;
+	}
+	for (int i = 0; i < n - 1; i++) {
+		for (int j = i + 1; j < n; j++)  {
+			if (hs[i].tongdiem < hs[j].tongdiem) {
+				HocSinh temp = hs[i];
+				hs[i] = hs[j];
+				hs[j] = temp;
+			}
+		}
+	}
+	printf("\n");
+	printf("3 hoc sinh co tong diem cao nhat:\n");
+	for (int i = 0; i < 3; i++) {
+		printf("Ten: %s | Tong diem: %.2f\n", hs[i].hoten, hs[i].tongdiem);
+	}
+	for (int i = 0; i < n - 1; i++) {
+		for (int j = i + 1; j < n; j++)  {
+			if (hs[i].tongdiem > hs[j].tongdiem) {
+				HocSinh temp = hs[i];
+				hs[i] = hs[j];
+				hs[j] = temp;
+			}
+		}
+	}
+	printf("\n");
+	printf("3 hoc sinh co tong diem thap nhat:\n");
+	for (int i = 0; i < 3; i++) {
+		printf("Ten: %s | Tong diem: %.2f\n", hs[i].hoten, hs[i].tongdiem);
+	}
+	printf("\n");
+	return 0;
+}
+
+    </pre>
+    </pre>
+
+    <h2>Bài 23</h2>
+    <p>Thông tin về mỗi sinh viên là một cấu trúc gồm các trường: Mã Sinh viên, Họ tên, Quê quán, điểm trung bình học tập.</p>
+<p>a) Nhập một danh sách gồm n sinh viên của một lớp và in ra màn hình thông tin về n sinh viên vừa nhập.</p>
+<p>b) Sắp xếp danh sách n sinh viên trên theo chiều giảm dần của điểm trung bình chung. Hãy in ra màn hình thông tin về n sinh viên sau khi đã sắp xếp.</p>
+<p>c) Nhập từ bàn phím số thực x. Tìm và in ra màn hình thông tin của tất cả các sinh viên có điểm trung bình lớn hơn hoặc bằng x.</p>
+    <h4>Untitled23.txt</h4>
+    <pre>
+10
+SV001
+Nguyen Van A
+Ha Noi
+8.17
+SV002
+Tran Thi B
+Da Nang
+7.33
+SV003
+Le Van C
+Ho Chi Minh
+8.50
+SV004
+Pham Thi D
+Hai Phong
+7.00
+SV005
+Hoang Van E
+Dong Nai
+6.00
+SV006
+Do Thi F
+Binh Duong
+8.00
+SV007
+Vu Van G
+Thai Nguyen
+6.50
+SV008
+Bui Thi H
+Khanh Hoa
+9.17
+SV009
+Dang Van I
+Nghe An
+7.00
+SV010
+Ngo Thi K
+Binh Thuan
+8.17
+
+    </pre>
+    <h4>Untitled23.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+typedef struct {
+    char masv[20];
+    char hoten[100];
+    char quequan[100];
+    double diemtrungbinh;
+} SinhVien;
+
+int main() {
+	FILE *f = fopen ("D:\\bai tap dh\\2026.01\\on-qua-hoc-phan-lap-trinh-c\\Untitled23.txt", "r");
+	if (f==NULL) {
+		printf("Loi file Untitled23!\n");
+		return 1;
+	}
+	int n;
+	fscanf(f, "%d\n", &n);
+	SinhVien sv[100];
+	for (int i = 0; i < n; i++) {
+		fgets(sv[i].masv, 100, f);
+		sv[i].masv[strcspn(sv[i].masv, "\n")] = 0;
+		fgets(sv[i].hoten, 100, f);
+		sv[i].hoten[strcspn(sv[i].hoten, "\n")] = 0;
+		fgets(sv[i].quequan, 100, f);
+		sv[i].quequan[strcspn(sv[i].quequan, "\n")] = 0;
+		fscanf(f, "%lf\n", &sv[i].diemtrungbinh);
+	}
+	printf("Danh sach cua %d sinh vien:\n", n);
+	for (int i = 0; i < n; i++) {
+		printf("Ho ten: %s | Ma SV: %s | Que quan: %s | Diem TB: %.2f\n", sv[i].hoten, sv[i].masv, sv[i].quequan, sv[i].diemtrungbinh);
+	}
+	printf("\n");
+		for (int i = 0; i < n - 1; i++) {
+			for (int j = i + 1; j < n; j++) {
+				if (sv[i].diemtrungbinh > sv[j].diemtrungbinh) {
+					SinhVien temp = sv[i];
+					sv[i] = sv[j];
+					sv[j] = temp;
+				}
+			}
+		}
+	printf("Danh sach cua %d sinh vien theo chieu giam dan cua diem trung binh:\n", n);
+	for (int i = 0; i < n; i++) {
+		printf("Ho ten: %s | Ma SV: %s | Que quan: %s | Diem TB: %.2f\n", sv[i].hoten, sv[i].masv, sv[i].quequan, sv[i].diemtrungbinh);
+	}
+	printf("\n");
+	double x;
+	printf("Nhap so thuc x: ");
+	scanf("%lf", &x);
+	printf("Danh sach sinh vien co diem trung binh lon hon hoac bang x la:\n", n);
+		for (int i = 0; i < n; i++) {
+				if (sv[i].diemtrungbinh >= x) {
+					printf("Ho ten: %s | Ma SV: %s | Que quan: %s | Diem TB: %.2f\n", sv[i].hoten, sv[i].masv, sv[i].quequan, sv[i].diemtrungbinh);
+			}
+		}
+	printf("\n");
+	return 0;
+}
+
+    </pre>
+
+    <h2>Bài 24</h2>
+    <p>Nhập thông tin về n cầu thủ, mỗi cầu thủ là một bản ghi gồm các trường: TEN (Tên), SBT (Số bàn thắng), DOI (Đội bóng). Giả thiết có 3 đội bóng là A, B, C. Sau đó:
+<p>- Tìm tổng số bàn thắng của mỗi đội.</p>
+<p>- Cho biết 3 cầu thủ ghi được nhiều bàn thắng nhất, 3 cầu thủ ghi được ít bàn thắng nhất.</p>
+    <h4>Untitled24.txt</h4>
+    <pre>
+10
+Le Van A
+5
+Barcelona
+Tran Thi B
+3
+RealMadrid
+Nguyen Van C
+7
+ManchesterCity
+Pham Thi D
+4
+Chelsea
+Hoang Van E
+2
+Bayern
+Do Thi F
+6
+Juventus
+Vu Van G
+1
+Liverpool
+Bui Thi H
+8
+PSG
+Dang Van I
+3
+Arsenal
+Ngo Thi K
+5
+Dortmund
+
+    </pre>
+    <h4>Untitled24.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+typedef struct {
+    char ten[100];
+    double sbt;
+    char doi[100];
+} CauThu;
+
+int main() {
+	FILE *f = fopen ("D:\\bai tap dh\\2026.01\\on-qua-hoc-phan-lap-trinh-c\\Untitled24.txt", "r");
+	if (f==NULL) {
+		printf("Loi file Untitled24!\n");
+		return 1;
+	}
+	int n;
+	fscanf(f, "%d\n", &n);
+	CauThu ct[100];
+	for (int i = 0; i < n; i++) {
+		fgets(ct[i].ten, 100, f);
+		ct[i].ten[strcspn(ct[i].ten, "\n")] = 0;
+		fscanf(f, "%lf\n", &ct[i].sbt);
+		fgets(ct[i].doi, 100, f);
+		ct[i].doi[strcspn(ct[i].doi, "\n")] = 0;
+	}
+    fclose(f);
+	char danhsachdoi[100][100];
+	double tongsbt[100] = {0};
+	int sodoi = 0;
+	for (int i = 0; i < n; i++) {
+    	int j;
+    	for (j = 0; j < sodoi; j++) {
+        	if (strcmp(ct[i].doi, danhsachdoi[j]) == 0) {
+            	tongsbt[j] += ct[i].sbt;
+            	break;
+        	}
+    	}
+    	if (j == sodoi) { 
+        	strcpy(danhsachdoi[sodoi], ct[i].doi);
+        	tongsbt[sodoi] = ct[i].sbt;
+        	sodoi++;
+    	}
+	}
+    printf("Tong so ban thang theo tung doi:\n");
+    for (int i = 0; i < sodoi; i++) {
+        printf("%-15s : %.0lf\n", danhsachdoi[i], tongsbt[i]);
+    }
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (ct[i].sbt < ct[j].sbt) {
+                CauThu temp = ct[i];
+                ct[i] = ct[j];
+                ct[j] = temp;
+            }
+        }
+    }
+    printf("\n");
+    printf("3 cau thu ghi nhieu ban thang nhat:\n");
+    for (int i = 0; i < 3 && i < n; i++) {
+        printf("%s - %.0lf - %s\n", ct[i].ten, ct[i].sbt, ct[i].doi);
+    }
+    printf("\n");
+    printf("3 cau thu ghi it ban thang nhat:\n");
+    for (int i = n - 1; i >= n - 3 && i >= 0; i--) {
+        printf("%s - %.0lf - %s\n", ct[i].ten, ct[i].sbt, ct[i].doi);
+    }
+
+    return 0;
+}
+    </pre>
+
+    <h2>Bài 25</h2>
+    <p>Nhập danh sách n thí sinh tham gia Olympic tin học sinh viên 2006 . Mỗi thí sinh là một bản ghi gồm các trường: HT (Họ tên), SD (Số điểm), T (Trường). Giả thiết có 3 trường đại học tham gia là A1, A2, A3.</p>
+<p>Yêu cầu:</p>
+<p>- Tính tổng số điểm của mỗi trường đại học, trường nào có số điểm cao nhất.</p>
+<p>- Cho biết 3 thí sinh dự thi có điểm cao nhất</p>
+    <h4>Untitled25.txt</h4>
+    <pre>
+10
+Nguyen Van A
+8.5
+A1
+Tran Thi B
+7.0
+A2
+Le Van C
+9.0
+A3
+Pham Thi D
+6.5
+A1
+Hoang Van E
+7.5
+A2
+Do Thi F
+8.0
+A3
+Vu Van G
+6.0
+A1
+Bui Thi H
+9.5
+A2
+Dang Van I
+7.0
+A3
+Ngo Thi K
+8.0
+A1
+
+    </pre>
+    <h4>Untitled25.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+typedef struct {
+    char ht[100];
+    double sd;
+    char t[100];
+} ThiSinh;
+
+int main() {
+	FILE *f = fopen ("D:\\bai tap dh\\2026.01\\on-qua-hoc-phan-lap-trinh-c\\Untitled25.txt", "r");
+	if (f==NULL) {
+		printf("Loi file Untitled25!\n");
+		return 1;
+	}
+	int n;
+	fscanf(f, "%d\n", &n);
+	ThiSinh ts[100];
+	for (int i = 0; i < n; i++) {
+		fgets(ts[i].ht, 100, f);
+		ts[i].ht[strcspn(ts[i].ht, "\n")] = 0;
+		fscanf(f, "%lf\n", &ts[i].sd);
+		fgets(ts[i].t, 100, f);
+		ts[i].t[strcspn(ts[i].t, "\n")] = 0;
+	}
+    fclose(f);
+	char danhsachtruong[100][100];
+	double tongdiem[100] = {0};
+	int sotruong = 0;
+	for (int i = 0; i < n; i++) {
+    	int j;
+    	for (j = 0; j < sotruong; j++) {
+        	if (strcmp(ts[i].t, danhsachtruong[j]) == 0) {
+            	tongdiem[j] += ts[i].sd;
+            	break;
+        	}
+    	}
+    	if (j == sotruong) { 
+        	strcpy(danhsachtruong[sotruong], ts[i].t);
+        	tongdiem[sotruong] = ts[i].sd;
+        	sotruong++;
+    	}
+	}
+    printf("Tong so diem theo tung truong:\n");
+    for (int i = 0; i < sotruong; i++) {
+        printf("%-15s : %.0lf\n", danhsachtruong[i], tongdiem[i]);
+    }
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (ts[i].sd < ts[j].sd) {
+                ThiSinh temp = ts[i];
+                ts[i] = ts[j];
+                ts[j] = temp;
+            }
+        }
+    }
+    printf("\n");
+    printf("3 thi sinh co so diem cao nhat:\n");
+    for (int i = 0; i < 3 && i < n; i++) {
+        printf("%s - %.0lf - %s\n", ts[i].ht, ts[i].sd, ts[i].t);
+    }
+    return 0;
+}
+    </pre>
+
+    <h2>Bài 26</h2>
+    <p>Nhập n điểm. Mỗi điểm là một bản ghi gồm 3 trường là: x (hoành độ), y (tung độ), Màu (mã mầu: 1-Đỏ, 2-Vàng, 3-Xanh). </p>
+<p>Hãy tính và in:</p>
+<p>- Khoảng cách Max của các điểm đỏ tới tâm O(0,0).</p>
+<p>- S là tổng độ dài các khoảng cách từ các điểm Xanh tới trục OX.</p>
+    <h4>Untitled26.txt</h4>
+    <pre>
+15
+1.0 2.0 1
+3.5 4.2 2
+0.0 0.0 3
+5.0 1.0 1
+2.2 3.3 2
+4.4 0.5 3
+1.5 2.5 1
+3.3 4.4 2
+2.0 1.0 3
+0.5 0.5 1
+1.2 3.4 2
+2.5 1.5 3
+3.0 3.0 1
+4.0 2.0 2
+5.5 3.5 3
+
+    </pre>
+    <h4>Untitled26.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;math.h&gt;
+
+typedef struct {
+    double x;
+    double y;
+    int mau;
+    double khoangcach;
+} Diem;
+
+int main() {
+	FILE *f = fopen ("D:\\bai tap dh\\2026.01\\on-qua-hoc-phan-lap-trinh-c\\Untitled26.txt", "r");
+	if (f==NULL) {
+		printf("Loi file Untitled26!\n");
+		return 1;
+	}
+	int n;
+	fscanf(f, "%d\n", &n);
+	Diem d[100];
+	for (int i = 0; i < n; i++) {
+		fscanf(f, "%lf %lf %d\n", &d[i].x, &d[i].y, &d[i].mau);
+	}
+    fclose(f);
+    double maxdo = 0;
+    double tongxanh = 0;
+    for (int i = 0; i < n; i++) {
+    	d[i].khoangcach = pow(pow(d[i].x,2) + pow(d[i].y,2),1.0/2);
+    	if (d[i].mau == 1) {
+            if (d[i].khoangcach > maxdo)
+                maxdo = d[i].khoangcach;
+        }
+        if (d[i].mau == 3) {
+            tongxanh += fabs(d[i].y);
+        }
+	}
+	printf("Khoang cach max tu diem do den O(0,0): %.2lf\n", maxdo);
+    printf("Tong khoang cach tu cac diem xanh den truc Ox: %.2lf\n", tongxanh);
+    return 0;
+}
+    </pre>
+
+
+    <h2>Bài 27</h2>
+    <p>Xây dựng cấu trúc Diem(hoành độ x, tung độ y,mầu:1 – vàng, 2- đỏ, 3 - xanh). Nhập vào n điểm và thực hiện việc:</p>
+<p>- Tính độ dài đường gấp khúc lần lượt đi qua điểm 1, điểm 2,.., điểm n.</p>
+<p>- Đếm số điểm đỏ thuộc góc phần tư số nhất</p>
+<p>- Tìm một điểm xanh xa gốc toạ độ nhất</p>
+    <h4>Untitled27.txt</h4>
+    <pre>
+10
+1.0 2.0 2
+3.0 1.0 1
+-1.0 4.0 3
+2.5 3.5 2
+0.0 0.0 1
+4.0 4.0 3
+-2.0 -1.0 2
+3.0 3.0 3
+-1.5 2.5 1
+2.0 -3.0 2
+
+    </pre>
+    <h4>Untitled27.cpp (ChatGPT làm full)</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;math.h&gt;
+
+
+struct Diem {
+    double x, y;
+    int mau; // 1-Vàng, 2-Đỏ, 3-Xanh
+};
+
+double khoangCach(struct Diem a, struct Diem b) {
+    return sqrt((a.x - b.x)*(a.x - b.x) + (a.y - b.y)*(a.y - b.y));
+}
+
+double khoangCachGoc(struct Diem a) {
+    return sqrt(a.x*a.x + a.y*a.y);
+}
+
+int main() {
+    FILE *f = fopen("diem.txt", "r");
+    if (f == NULL) {
+        printf("Loi mo file diem.txt!\n");
+        return 1;
+    }
+    int n;
+    fscanf(f, "%d", &n);
+    struct Diem d[100];
+
+    for (int i = 0; i < n; i++) {
+        fscanf(f, "%lf %lf %d", &d[i].x, &d[i].y, &d[i].mau);
+    }
+    fclose(f);
+    // 1. Tính độ dài đường gấp khúc
+    double tongDuongGiac = 0;
+    for (int i = 0; i < n-1; i++) {
+        tongDuongGiac += khoangCach(d[i], d[i+1]);
+    }
+    printf("Do dai duong gap khuc: %.2lf\n", tongDuongGiac);
+
+    // 2. Đếm số điểm đỏ thuộc góc phần tư I
+    int demDoThuocQ1 = 0;
+    for (int i = 0; i < n; i++) {
+        if (d[i].mau == 2 && d[i].x > 0 && d[i].y > 0) {
+            demDoThuocQ1++;
+        }
+    }
+    printf("So diem do thuoc goc phan tu I: %d\n", demDoThuocQ1);
+    // 3. Tìm điểm xanh xa gốc nhất
+    double maxKhoangCach = -1;
+    int idxMax = -1;
+    for (int i = 0; i < n; i++) {
+        if (d[i].mau == 3) {
+            double kc = khoangCachGoc(d[i]);
+            if (kc > maxKhoangCach) {
+                maxKhoangCach = kc;
+                idxMax = i;
+            }
+        }
+    }
+
+    if (idxMax != -1) {
+        printf("Diem xanh xa goc nhat: (%.2lf, %.2lf) - Khoang cach: %.2lf\n",
+               d[idxMax].x, d[idxMax].y, maxKhoangCach);
+    } else {
+        printf("Khong co diem xanh trong danh sach.\n");
+    }
+    return 0;
+}
+     </pre>
+
+    <h2>Bài 28</h2>
+    <p>Nhập danh sách n thí sinh tham gia Olympic Tin học sinh viên 2006.</p>
+<p>Mỗi thí sinh là một bản ghi gồm các trường: HT (Họ tên), DIEM (Số điểm), TRUONG (Trường). Giả thiết có 3 trường Đại học tham gia là A, B, C. Yêu cầu:- Tính tổng số điểm của mỗi trường đại học. Hãy cho biết một trường có số điểm cao nhất.</p>
+<p>- Cho biết 3 thí sinh có điểm thấp nhất.</p>
+    <h4>Untitled28.txt</h4>
+    <pre>
+8
+Cr7 6 A
+M10 7 B
+A80 5 C
+CuToMM 2 B
+Aiueratnhiu 4 A
+Hahahihi 7 B
+Baygiokemmuoi 5 A
+Rokhongwc 4 C
+
+    </pre>
+    <h4>Untitled28.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+
+typedef struct {
+	char hoten[100];
+	int diem;
+	char truong[100];
+} ThiSinh;
+
+typedef struct {
+	char ten[2];
+	int tong;
+} Truong;
+
+
+
+int main() {
+	FILE *f = fopen("D:\\bai tap dh\\2026.01\\on-qua-hoc-phan-lap-trinh-c\\Untitled28.txt", "r");
+	if (f==NULL) {
+		printf("Loi file Untitled28.txt!\n");
+		return 1;
+	}
+	int n;
+	fscanf(f, "%d\n", &n);
+	ThiSinh ts[100];
+	for (int i = 0; i < n; i++) {
+		fscanf(f, "%s %d %s\n", &ts[i].hoten, &ts[i].diem, &ts[i].truong);
+	}
+	fclose(f);
+	Truong t[3] = {{"A", 0}, {"B", 0}, {"C", 0}};
+	for (int i = 0; i < n; i++) {
+		if (strcmp(ts[i].truong, "A") == 0) t[0].tong += ts[i].diem;
+		if (strcmp(ts[i].truong, "B") == 0) t[1].tong += ts[i].diem;
+		if (strcmp(ts[i].truong, "C") == 0) t[2].tong += ts[i].diem;
+	}
+	for (int i = 0; i < 2; i++) {
+		for (int j = i + 1; j < 3; j++) {
+			if (t[i].tong < t[j].tong) {
+				Truong tmp = t[i];
+				t[i] = t[j];
+				t[j] = tmp;
+			}
+		}
+	}
+	printf("3 truong co tong so diem theo lan luot tu cao den thap:\n");
+	for (int i = 0; i < 3; i++) {
+		printf("Truong %s: %d\n", t[i].ten, t[i].tong);
+	}
+	for (int i = 0; i < n - 1; i++) {
+		for (int j = i + 1; j < n; j++) {
+			if (ts[i].diem > ts[j].diem) {
+				ThiSinh tmp = ts[i];
+				ts[i] = ts[j];
+				ts[j] = tmp;
+			}
+		}
+	}
+	printf("3 thi sinh co tong diem thap nhat:\n");
+	for (int i = 0; i < 3; i++) {
+		printf("%s: %d\n", ts[i].hoten, ts[i].diem);
+	}
+	return 0;
+}
+      </pre>
+
+    <h2>Bài 29</h2>
+    <p>Nhập danh sách n thí sinh tham gia Olympic Tin học sinh viên 2006.</p>
+<p>Mỗi thí sinh là một bản ghi gồm các trường: HT (Họ tên), DIEM (Số điểm), TRUONG (Trường). Giả thiết có 3 trường Đại học tham gia là A, B, C. Yêu cầu:- Tính tổng số điểm của mỗi trường đại học. Hãy cho biết một trường có số điểm cao nhất.</p>
+<p>- Cho biết 3 thí sinh có điểm thấp nhất.</p>
+    <h4>Untitled29.txt</h4>
+    <pre>
+8
+102 10.5 A
+105 8.2 B
+108 12.0 B
+111 6.8 C
+114 9.1 B
+117 7.5 A
+120 5.9 C
+123 11.3 B
+
+    </pre>
+    <h4>Untitled29.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+
+typedef struct {
+	int bks;
+	double tt;
+	char cty[100];
+} otovantai;
+
+int main() {
+	FILE *f = fopen ("D:\\bai tap dh\\2026.01\\on-qua-hoc-phan-lap-trinh-c\\Untitled29.txt", "r");
+	if (f == NULL) {
+		printf("Loi file Untitled29.txt!");
+		return 1;
+	}
+	int n;
+	fscanf(f, "%d\n", &n);
+	otovantai vt[100];
+	for (int i = 0; i < n; i++) {
+		fscanf(f, "%d %lf %s\n", &vt[i].bks, &vt[i].tt, &vt[i].cty);
+	}
+	int dem = 0;
+	for (int i = 0; i < n; i++) {
+		if(strcmp(vt[i].cty, "B") == 0 && vt[i].bks % 3 == 0) {
+			dem++;
+		}
+	}
+	printf("So bks oto B chia het cho 3 la: %d\n", dem);
+	for (int i = 0; i < n - 1; i++) {
+		for (int j = i + 1; j < n; j++) {
+			if(vt[i].tt > vt[j].tt) {
+			otovantai temp = vt[i];
+			vt[i] = vt[j];
+			vt[j] = temp;
+			}
+		}
+	}
+	printf("3 oto co trong tai nho nhat:\n");
+	for (int i = 0; i < 3; i++) {
+		printf("BSK: %d | TT: %.2f | Cty: %s\n", vt[i].bks, vt[i].tt, vt[i].cty);
+	}
+}
+      </pre>
+
+    <h2>Bài 30</h2>
+    <p>Nhập danh sách n thí sinh tham gia Olympic Tin học sinh viên 2006.</p>
+<p>Mỗi thí sinh là một bản ghi gồm các trường: HT (Họ tên), DIEM (Số điểm), TRUONG (Trường). Giả thiết có 3 trường Đại học tham gia là A, B, C. Yêu cầu:- Tính tổng số điểm của mỗi trường đại học. Hãy cho biết một trường có số điểm cao nhất.</p>
+<p>- Cho biết 3 thí sinh có điểm thấp nhất.</p>
+    <h4>Untitled30.txt</h4>
+    <pre>
+10
+MH01 10 15000
+MH02 5 32000
+MH03 20 12000
+MH04 7 45000
+MH05 12 18000
+MH06 3 99000
+MH07 25 8000
+MH08 9 56000
+MH09 15 22000
+MH10 6 75000
+
+    </pre>
+    <h4>Untitled30-1.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+
+
+struct hang {
+	char mahang[20];
+	int soluong;
+	double dongia;
+};
+
+double giatri(struct hang h) {
+	return h.soluong * h.dongia;
+}
+
+int main() {
+	int n;
+	printf("Nhap so loai hang: ");
+	scanf("%d", &n);
+	struct hang a[100];
+	for (int i = 1; i < n + 1; i++) {
+		printf("Nhap thong tin loai hang thu %d\n", i);
+		printf("Ma hang: ");
+		scanf("%s", &a[i].mahang);
+		printf("So luong: ");
+		scanf("%d", &a[i].soluong);
+		printf("Don gia: ");
+		scanf("%lf", &a[i].dongia);
+	}
+	printf("=> Danh sach hang vua nhap\n");
+	for (int i = 1; i < n + 1; i++) {
+		printf("Hang thu %d --- Ma hang: %s --- So luong: %d --- Don gia: %.2f --- Gia tri = %.2f\n", i, a[i].mahang, a[i].soluong, a[i].dongia, giatri(a[i]));
+	}
+	for (int i = 0; i < n - 1; i++) {
+		for (int j = i + 1; j < n; j++) {
+			if (giatri(a[i]) < giatri(a[j])) {
+				struct hang temp = a[i];
+				a[i] = a[j];
+				a[j] = temp;
+			}
+		}
+	}
+	printf("=> Danh sach sau khi sap xep giam dan theo gia tri:\n");
+	for (int i = 0; i < n; i++) {
+		printf("Hang thu %d --- Ma hang: %s --- So luong: %d --- Don gia: %.2f --- Gia tri = %.2f\n", i, a[i].mahang, a[i].soluong, a[i].dongia, giatri(a[i]));
+	}
+	double tong = 0;
+	for (int i = 0; i < n; i++) {
+		tong += giatri(a[i]);
+	}
+	printf("=> Tong gia tri cac loai hang = %.2f\n", tong);
+	return 0;
+}
+      </pre>
+    <h4>Untitled30-2.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+
+typedef struct {
+	char mahang[20];
+	int soluong;
+	double dongia;
+	double giatri;
+} hang;
+
+
+int main() {
+	FILE *f = fopen ("D:\\bai tap dh\\2026.01\\on-qua-hoc-phan-lap-trinh-c\\Untitled30.txt", "r");
+	if (f == NULL) {
+		printf("Khong mo duoc file Untitled30.txt!\n");
+		return 1;
+	}
+	int n;
+	fscanf (f, "%d\n", &n);
+	hang h[100];
+	for (int i = 0; i < n; i++) {
+	fscanf(f, "%s %d %lf\n", h[i].mahang, &h[i].soluong, &h[i].dongia);
+	h[i].giatri = h[i].soluong * h[i].dongia;
+	}
+	fclose (f);
+	printf("Danh sach hang\n");
+	for (int i = 0; i < n; i++) {
+		printf("Hang thu %d --- Ma hang: %s --- So luong: %d --- Don gia: %.2f --- Gia tri = %.2f\n", i + 1, h[i].mahang, h[i].soluong, h[i].dongia, h[i].giatri);
+
+	}
+	for (int i = 0; i < n - 1; i++) {
+		for (int j = i + 1; j < n; j++) {
+			if (h[i].giatri < h[j].giatri) {
+				hang temp = h[i];
+				h[i] = h[j];
+				h[j] = temp;
+			}
+		}
+	}
+	printf("=> Danh sach sau khi sap xep giam dan theo gia tri:\n");
+	for (int i = 0; i < n; i++) {
+		printf("Ma hang: %s --- So luong: %d --- Don gia: %.2f --- Gia tri = %.2f\n", h[i].mahang, h[i].soluong, h[i].dongia, h[i].giatri);
+	}
+	double tong = 0;
+	for (int i = 0; i < n; i++) {
+		tong += h[i].giatri;
+	}
+	printf("=> Tong gia tri cac loai hang = %.2f\n", tong);
+	return 0;
+}
+      </pre>
+
+    <h1>SoDoKhoiTinhGT</h1>
+    <h2>Bài 1</h2>
+<div class="box">
+    <p>Tính:</p>
+    <p>
+        \( S(n) = \sqrt{2 + \sqrt{2 + \sqrt{2 + \dots + \sqrt{2}}}} \)
+    </p>
+    <p>Trong đó <b>n</b> là số tự nhiên, có <b>n dấu căn</b>.</p>
+</div>
+
+<!-- Bài 2 -->
+<h2>Bài 2</h2>
+<div class="box">
+    <p>Tính:</p>
+    <p>
+        \( S(n) = \sqrt{1 + \sqrt{2 + \sqrt{3 + \dots + \sqrt{n}}}} \)
+    </p>
+    <p>Trong đó <b>n</b> là số tự nhiên.</p>
+</div>
+
+<!-- Bài 3 -->
+<h2>Bài 3</h2>
+<div class="box">
+    <p>Cho số nguyên dương <b>n</b>. Hãy đếm số chữ số của <b>n</b>.</p>
+    <p><b>Ví dụ:</b> n = 345 → có 3 chữ số.</p>
+</div>
+
+<!-- Bài 4 -->
+<h2>Bài 4</h2>
+<div class="box">
+    <p>Tính:</p>
+    <p>
+        \( S = x + \dfrac{x^2}{1+2} + \dfrac{x^3}{1+2+3} + \dots +
+        \dfrac{x^n}{1+2+3+\dots+n} \)
+    </p>
+    <p>Với <b>x</b> là số thực, <b>n</b> là số nguyên.</p>
+</div>
+
+<!-- Bài 5 -->
+<h2>Bài 5</h2>
+<div class="box">
+    <p>Nhập một mảng các số nguyên có <b>n</b> phần tử.</p>
+    <p>Thực hiện các yêu cầu sau:</p>
+    <ul>
+        <li>Tìm vị trí của phần tử có giá trị nhỏ nhất.</li>
+        <li>Sắp xếp mảng theo thứ tự tăng dần.</li>
+    </ul>
+</div>
+
+<!-- Bài 6 -->
+<h2>Bài 6</h2>
+<div class="box">
+    <p>Nhập dãy <b>n</b> điểm có tọa độ:</p>
+    <p>M1(x1, y1), M2(x2, y2), ..., Mn(xn, yn).</p>
+    <p>Thực hiện các yêu cầu sau:</p>
+    <ul>
+        <li>Tính độ dài đường gấp khúc M1M2M3...Mn.</li>
+        <li>Tìm chu vi đường tròn nhỏ nhất chứa tất cả các điểm.</li>
+        <li>Nhập bán kính <b>r</b> của đường tròn tâm O, đếm số điểm thuộc đường tròn.</li>
+    </ul>
+</div>
+
+<!-- Bài 7 -->
+<h2>Bài 7</h2>
+<div class="box">
+    <p>Nhập hai đa thức bậc hai:</p>
+    <p>
+        \( a_1x^2 + b_1x + c_1 = 0 \) <br>
+        \( a_2x^2 + b_2x + c_2 = 0 \)
+    </p>
+    <p>Thực hiện:</p>
+    <ul>
+        <li>Tính tổng hai đa thức.</li>
+        <li>Tính đạo hàm từng đa thức.</li>
+        <li>Tính tổng các đạo hàm.</li>
+    </ul>
+</div>
+
+    <h4>SoDoKhoiTinhGT.cpp</h4>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+
+/* ===== BÀI 1 ===== */
+double bai1(int n) {
+    double S = 0;
+    for (int i = 0; i < n; i++)
+        S = sqrt(2 + S);
+    return S;
+}
+
+/* ===== BÀI 2 ===== */
+double bai2(int n) {
+    double S = 0;
+    for (int i = n; i >= 1; i--)
+        S = sqrt(i + S);
+    return S;
+}
+
+/* ===== BÀI 3 ===== */
+int demChuSo(int n) {
+    int dem = 0;
+    do {
+        dem++;
+        n /= 10;
+    } while (n != 0);
+    return dem;
+}
+
+/* ===== BÀI 4 ===== */
+double bai4(double x, int n) {
+    double S = 0, mu = x;
+    int tong = 0;
+    for (int i = 1; i <= n; i++) {
+        tong += i;
+        if (i > 1) mu *= x;
+        S += mu / tong;
+    }
+    return S;
+}
+
+/* ===== BÀI 5 ===== */
+int viTriMin(int a[], int n) {
+    int min = a[0], pos = 0;
+    for (int i = 1; i < n; i++)
+        if (a[i] < min) {
+            min = a[i];
+            pos = i;
+        }
+    return pos;
+}
+
+void sapXepTang(int a[], int n) {
+    for (int i = 0; i < n - 1; i++)
+        for (int j = i + 1; j < n; j++)
+            if (a[i] > a[j]) {
+                int t = a[i];
+                a[i] = a[j];
+                a[j] = t;
+            }
+}
+
+/* ===== BÀI 6 ===== */
+typedef struct {
+    double x, y;
+} Diem;
+
+double kc(Diem a, Diem b) {
+    return sqrt((a.x - b.x)*(a.x - b.x) + (a.y - b.y)*(a.y - b.y));
+}
+
+double doDaiGapKhuc(Diem d[], int n) {
+    double sum = 0;
+    for (int i = 0; i < n - 1; i++)
+        sum += kc(d[i], d[i + 1]);
+    return sum;
+}
+
+double chuViNhoNhat(Diem d[], int n) {
+    double cx = 0, cy = 0;
+    for (int i = 0; i < n; i++) {
+        cx += d[i].x;
+        cy += d[i].y;
+    }
+    cx /= n; cy /= n;
+
+    double r = 0;
+    for (int i = 0; i < n; i++) {
+        double dist = sqrt((d[i].x - cx)*(d[i].x - cx)
+                         + (d[i].y - cy)*(d[i].y - cy));
+        if (dist > r) r = dist;
+    }
+    return 2 * M_PI * r;
+}
+
+int demDiem(Diem d[], int n, double r) {
+    int cnt = 0;
+    for (int i = 0; i < n; i++) {
+        double dist = sqrt(d[i].x*d[i].x + d[i].y*d[i].y);
+        if (fabs(dist - r) < 1e-6)
+            cnt++;
+    }
+    return cnt;
+}
+
+/* ===== BÀI 7 ===== */
+typedef struct {
+    double a, b, c;
+} DaThuc;
+
+DaThuc tongDaThuc(DaThuc p1, DaThuc p2) {
+    DaThuc t;
+    t.a = p1.a + p2.a;
+    t.b = p1.b + p2.b;
+    t.c = p1.c + p2.c;
+    return t;
+}
+
+DaThuc daoHam(DaThuc p) {
+    DaThuc d;
+    d.a = 0;
+    d.b = 2 * p.a;
+    d.c = p.b;
+    return d;
+}
+
+/* ===== MAIN ===== */
+int main() {
+    int chon;
+    do {
+        printf("\n===== MENU =====");
+        printf("\n1. Bai 1");
+        printf("\n2. Bai 2");
+        printf("\n3. Bai 3");
+        printf("\n4. Bai 4");
+        printf("\n5. Bai 5");
+        printf("\n6. Bai 6");
+        printf("\n7. Bai 7");
+        printf("\n0. Thoat");
+        printf("\nChon: ");
+        scanf("%d", &chon);
+
+        if (chon == 1) {
+            int n;
+            printf("Nhap n: ");
+            scanf("%d", &n);
+            printf("S = %.5lf\n", bai1(n));
+        }
+
+        if (chon == 2) {
+            int n;
+            printf("Nhap n: ");
+            scanf("%d", &n);
+            printf("S = %.5lf\n", bai2(n));
+        }
+
+        if (chon == 3) {
+            int n;
+            printf("Nhap n: ");
+            scanf("%d", &n);
+            printf("So chu so = %d\n", demChuSo(n));
+        }
+
+        if (chon == 4) {
+            int n;
+            double x;
+            printf("Nhap x, n: ");
+            scanf("%lf%d", &x, &n);
+            printf("S = %.5lf\n", bai4(x, n));
+        }
+
+    } while (chon != 0);
+
+    return 0;
+}
+
+      </pre>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải thích C: for, struct, fgets, strcspn, fclose</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f7f7f7;
+        }
+        h1, h2 {
+            color: #333;
+        }
+
+        code {
+            font-family: monospace;
+        }
+        .explanation {
+            background-color: #e2f0d9;
+            padding: 10px;
+            border-left: 5px solid #4CAF50;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Giải thích C: <code>for</code>, <code>struct</code>, <code>fgets</code>, <code>strcspn</code>, <code>fclose</code></h1>
+
+    <h2>1. Cấu trúc <code>struct</code></h2>
+    <div class="explanation">
+        <p><code>struct</code> trong C dùng để định nghĩa một kiểu dữ liệu mới bao gồm nhiều thành phần khác nhau, ví dụ:</p>
+        <pre><code>struct SinhVien {
+    char ten[50];
+    int tuoi;
+    float diem;
+};</code></pre>
+        <p>Ý nghĩa:</p>
+        <ul>
+            <li><code>char ten[50];</code> – lưu tên sinh viên (chuỗi ký tự).</li>
+            <li><code>int tuoi;</code> – lưu tuổi.</li>
+            <li><code>float diem;</code> – lưu điểm trung bình.</li>
+        </ul>
+    </div>
+
+    <h2>2. Vòng lặp <code>for</code></h2>
+    <div class="explanation">
+        <p>Vòng lặp <code>for</code> dùng để lặp lại một khối lệnh nhiều lần:</p>
+        <pre><code>for(int i = 0; i &lt; 5; i++) {
+    printf("%d\n", i);
+}</code></pre>
+        <p>Ý nghĩa:</p>
+        <ul>
+            <li><code>int i = 0;</code> – khởi tạo biến đếm.</li>
+            <li><code>i &lt; 5;</code> – điều kiện lặp.</li>
+            <li><code>i++</code> – tăng biến đếm sau mỗi lần lặp.</li>
+        </ul>
+    </div>
+
+    <h2>3. Hàm <code>fgets</code></h2>
+    <div class="explanation">
+        <p><code>fgets</code> đọc một dòng từ tệp hoặc bàn phím:</p>
+        <pre><code>char buffer[100];
+fgets(buffer, 100, stdin);</code></pre>
+        <p>Ý nghĩa:</p>
+        <ul>
+            <li><code>buffer</code> – nơi lưu dữ liệu đọc được.</li>
+            <li><code>100</code> – số ký tự tối đa đọc (bao gồm ký tự kết thúc <code>\0</code>).</li>
+            <li><code>stdin</code> – nguồn dữ liệu (bàn phím).</li>
+        </ul>
+    </div>
+
+    <h2>4. Hàm <code>strcspn</code></h2>
+    <div class="explanation">
+        <p><code>strcspn</code> trả về số ký tự từ đầu chuỗi đến khi gặp ký tự trong tập ký tự cho trước:</p>
+        <pre><code>buffer[strcspn(buffer, "\n")] = 0;</code></pre>
+        <p>Ý nghĩa:</p>
+        <ul>
+            <li>Xác định vị trí ký tự <code>\n</code> trong chuỗi <code>buffer</code>.</li>
+            <li>Gán <code>0</code> để loại bỏ ký tự xuống dòng khi đọc từ <code>fgets</code>.</li>
+        </ul>
+    </div>
+
+    <h2>5. Hàm <code>fclose</code></h2>
+    <div class="explanation">
+        <p><code>fclose</code> đóng tệp đã mở để giải phóng tài nguyên:</p>
+        <pre><code>FILE *fp = fopen("data.txt", "r");
+fclose(fp);</code></pre>
+        <p>Ý nghĩa:</p>
+        <ul>
+            <li><code>fopen</code> mở tệp.</li>
+            <li><code>fclose</code> đóng tệp khi không còn cần đọc/ghi nữa.</li>
+        </ul>
+    </div>
+
+    <h2>6. Ví dụ kết hợp tất cả</h2>
+    <pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+struct SinhVien {
+    char ten[50];
+    int tuoi;
+    float diem;
+};
+
+int main() {
+    struct SinhVien sv;
+    printf("Nhap ten sinh vien: ");
+    fgets(sv.ten, 50, stdin);
+    sv.ten[strcspn(sv.ten, "\n")] = 0; // loại bỏ \n
+
+    printf("Nhap tuoi: ");
+    scanf("%d", &sv.tuoi);
+
+    printf("Nhap diem: ");
+    scanf("%f", &sv.diem);
+
+    printf("\nThong tin sinh vien:\n");
+    printf("Ten: %s\n", sv.ten);
+    printf("Tuoi: %d\n", sv.tuoi);
+    printf("Diem: %.2f\n", sv.diem);
+
+    return 0;
+}</code></pre>
+
+</body>
+</html>

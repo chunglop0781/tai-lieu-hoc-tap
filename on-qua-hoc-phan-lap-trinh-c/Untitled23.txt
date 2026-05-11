@@ -1,0 +1,41 @@
+10
+SV001
+Nguyen Van A
+Ha Noi
+8.17
+SV002
+Tran Thi B
+Da Nang
+7.33
+SV003
+Le Van C
+Ho Chi Minh
+8.50
+SV004
+Pham Thi D
+Hai Phong
+7.00
+SV005
+Hoang Van E
+Dong Nai
+6.00
+SV006
+Do Thi F
+Binh Duong
+8.00
+SV007
+Vu Van G
+Thai Nguyen
+6.50
+SV008
+Bui Thi H
+Khanh Hoa
+9.17
+SV009
+Dang Van I
+Nghe An
+7.00
+SV010
+Ngo Thi K
+Binh Thuan
+8.17

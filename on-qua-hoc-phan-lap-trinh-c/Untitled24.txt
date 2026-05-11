@@ -1,0 +1,91 @@
+30
+Le Van A
+5
+Barcelona
+Tran Thi B
+3
+RealMadrid
+Nguyen Van C
+7
+ManchesterCity
+Pham Thi D
+4
+Chelsea
+Hoang Van E
+2
+Bayern
+Do Thi F
+6
+Juventus
+Vu Van G
+1
+Liverpool
+Bui Thi H
+8
+PSG
+Dang Van I
+3
+Arsenal
+Ngo Thi K
+5
+Dortmund
+Nguyen Van L
+4
+Barcelona
+Tran Thi M
+2
+RealMadrid
+Le Van N
+6
+ManchesterCity
+Pham Thi O
+3
+Chelsea
+Hoang Van P
+5
+Bayern
+Do Thi Q
+7
+Juventus
+Vu Van R
+2
+Liverpool
+Bui Thi S
+6
+PSG
+Dang Van T
+4
+Arsenal
+Ngo Thi U
+3
+Dortmund
+Le Van V
+8
+Barcelona
+Tran Thi W
+5
+RealMadrid
+Nguyen Van X
+7
+ManchesterCity
+Pham Thi Y
+6
+Chelsea
+Hoang Van Z
+2
+Bayern
+Do Thi AA
+4
+Juventus
+Vu Van AB
+5
+Liverpool
+Bui Thi AC
+6
+PSG
+Dang Van AD
+3
+Arsenal
+Ngo Thi AE
+2
+Dortmund

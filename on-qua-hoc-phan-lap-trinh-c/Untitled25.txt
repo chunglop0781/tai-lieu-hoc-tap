@@ -1,0 +1,31 @@
+10
+Nguyen Van A
+8.5
+A1
+Tran Thi B
+7.0
+A2
+Le Van C
+9.0
+A3
+Pham Thi D
+6.5
+A1
+Hoang Van E
+7.5
+A2
+Do Thi F
+8.0
+A3
+Vu Van G
+6.0
+A1
+Bui Thi H
+9.5
+A2
+Dang Van I
+7.0
+A3
+Ngo Thi K
+8.0
+A1
