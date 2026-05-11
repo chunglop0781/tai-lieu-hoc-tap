@@ -1,0 +1,41 @@
+10
+SV001
+Nguyen Van A
+Ha Noi
+8.5 7.5 9.0
+SV002
+Tran Thi B
+Hai Phong
+6.0 6.5 7.0
+SV003
+Le Van C
+Ha Noi
+9.0 8.5 8.0
+SV004
+Pham Thi D
+Da Nang
+7.0 7.5 6.5
+SV005
+Hoang Van E
+Ha Noi
+8.0 8.0 8.0
+SV006
+Do Thi F
+Nam Dinh
+5.5 6.0 6.5
+SV007
+Bui Van G
+Ha Noi
+9.5 9.0 9.0
+SV008
+Dang Thi H
+Hue
+7.5 7.0 7.5
+SV009
+Ngo Van I
+Ha Noi
+6.5 7.0 6.0
+SV010
+Le Thi K
+Hai Duong
+8.0 7.5 7.0
