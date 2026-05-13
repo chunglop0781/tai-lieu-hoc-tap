@@ -42,5 +42,5 @@ str(du_lieu)
 # Cau truc du lieu
 
 class(du_lieu)
-# Data Frame (Khung du lieu): chua du liru duoc to chuc theo dong (quan sat - observations) va cot (bien - variables)
+# Data Frame (Khung du lieu): chua du lieu duoc to chuc theo dong (quan sat - observations) va cot (bien - variables)
 # Kieu doi tuong
