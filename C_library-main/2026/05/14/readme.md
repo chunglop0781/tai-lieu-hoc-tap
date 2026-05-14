@@ -20,6 +20,21 @@
 ### + Cả hai đều là cách lưu trữ dữ liệu tuyến tính.
 ### + Mỗi cấu trúc có ưu nhược điểm riêng phù hợp với các bài toán khác nhau.
 ### + Hiểu rõ sự khác biệt giúp lựa chọn cấu trúc dữ liệu tối ưu.
+### 1) Danh sách liên kết đặc biệt: Stack (LIFO)
+### Stack (Ngăn xếp - LIFO) là gì?
+### - LIFO, viết tắt của Last-In, First-Out, mô tả một nguyên tắc xử lý dữ liệu nơi phần tử được thêm vào cuối cùng sẽ được lấy ra đầu tiên.
+### - Ngăn xếp (Stack) là một cấu trúc dữ liệu trừu tượng hoạt động theo nguyên tắc LIFO.
+### - Ta có thể hình dung ngăn xếp như một chồng đĩa: đĩa mình đặt lên trên cùng là đĩa ta sẽ lấy ra đầu tiên.
+### Các thao tác cơ bản của Stack
+### - Để cài đặt ngăn xếp bằng danh sách liên kết, chúng ta thường sử dụng một con trỏ duy nhất:
+### + Top (đỉnh): Trỏ đến phần tử trên cùng của ngăn xếp (nơi phần tử mới được thêm vào và cũng là phần tử sẽ được lấy ra).
+### 1. Push (Thêm vào ngăn xếp): Thêm một phần tử mới lên đỉnh ngăn xếp.
+### Tạo một nút mới bằng cấp phát động (ví dụ: malloc).
+### Gán dữ liệu cho nút mới.
+### Con trỏ next của nút mới sẽ trỏ đến nút mà Top hiện tại đang trỏ tới.
+### Cập nhật con trỏ Top trỏ đến nút mới này.
+### 
+### 
 ### 
 <img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/e5d980a9-140e-4d67-abd2-253cd7840e69" />
 <img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/dcf912f3-2159-49da-b5bf-aa244ef17d2e" />
