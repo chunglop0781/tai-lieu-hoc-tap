@@ -150,6 +150,26 @@ void displayStack() {
     printf("\n");
 }
 
+int pop() {
+    if (isEmpty()) {
+        printf("Stack rong.\n");
+        return -1;
+    }
+    struct Node *temp = top;
+    int value = temp->data;
+    top = top->next;
+    free(temp);
+    return value;
+}
+
+int peek() {
+    if (isEmpty()) {
+        printf("Stack rong.\n");
+        return -1;
+    }
+    return top->data;
+}
+
 
 int main() {
     push(10);
@@ -159,7 +179,7 @@ int main() {
     printf("\nThuc hien Pop\n");
     printf("Pop: %d\n", pop()); // Pop: 30
     displayStack();
-    printf("Peak: %d\n", peek()); // Peek: 20
+    printf("Peek: %d\n", peek()); // Peek: 20
     displayStack();
     printf("Pop: %d\n", pop()); // Pop: 20
     displayStack();
