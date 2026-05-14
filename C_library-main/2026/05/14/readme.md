@@ -197,8 +197,37 @@ int main() {
 
 <img width="1538" height="463" alt="image" src="https://github.com/user-attachments/assets/09f8c272-7cd1-49a7-9bbc-890e530fff1a" />
 
-### 
-### 
+### 2) Danh sách liên kết đặc biệt: Queue (FIFO)
+### Queue (Hàng đợi - FIFO) là gì?
+### FIFO, viết tắt của First-In, First-Out, mô tả một nguyên tắc xử lý dữ liệu nơi phần tử được thêm vào đầu tiên sẽ được lấy ra đầu tiên.
+### - Hàng đợi (Queue) là một cấu trúc dữ liệu trừu tượng hoạt động theo nguyên tắc FIFO.
+### - Khác với ngăn xếp, hàng đợi mở ở cả hai đầu.
+### - Có hai thao tác được thực hiện:
+###     enqueue hoặc chèn – thêm một phần tử vào hàng đợi
+###     dequeue hoặc xóa – loại bỏ một phần tử khỏi hàng đợi
+### - Để quản lý hàng đợi, sử dụng hai con trỏ:
+###     Front (đầu hàng)
+###     Rear (cuối hàng)
+### Biểu diễn hàng đợi
+### - Hàng đợi trong cấu trúc dữ liệu có thể được truy cập từ cả hai phía của nó (phía trước để xóa và phía sau để chèn).
+### - Sơ đồ sau đây giải thích biểu diễn hàng đợi như một cấu trúc dữ liệu:
+`Vào cuối - Ra cuối (Rear)` -> `Vào trước - Ra trước (Front)`
+### Các thao tác cơ bản của Queue
+### - Để cài đặt hàng đợi bằng danh sách liên kết, chúng ta thường sử dụng hai con trỏ:
+### + Front (đầu): Trỏ đến phần tử đầu tiên của hàng đợi (phần từ sẽ được lấy ra).
+### + Rear (cuối): Trỏ đến phần tử cuối cùng của hàng đợi (nơi phần tử mới được thêm vào).
+### Các thao tác cơ bản của Queue
+### 1 Enqueue (Thêm vào hàng đợi): Thêm một phần tử mới vào cuối hàng đợi.
+### - Tạo một nút mới bằng cấp phát động (vì dụ: malloc).
+### - Gán dữ liệu cho nút mới.
+### - Nút mới này sẽ được nối vào sau nút cuối cùng hiện tại của hàng đợi (Rear).
+### - Cập nhật con trỏ Rear trỏ đến nút mới này.
+### 2. Dequeue (Lấy ra khỏi hàng đợi): Xóa và trả về phần tử ở đầu hàng đợi.
+### - Kiểm tra xem hàng đợi có rỗng không.
+### - Lưu trữ con trỏ đến nút đầu tiên (Front) để trả về dữ liệu.
+### - Cập nhật con trỏ Front trỏ đến nút kế tiếp.
+### - Giải phóng bộ nhớ của nút đã được lấy ra (ví dụ: free).
+
 ### 
 ### 
 ### 
