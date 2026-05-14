@@ -1,0 +1,48 @@
+### MỤC LỤC
+### ◆ Danh sách liên kết đặc biệt: Stack (LIFO).
+### ◆ Danh sách liên kết đặc biệt: Queue (FIFO).
+### ◆ So sánh danh sách liên kết và mảng.
+### ◆ Ví dụ thực hành.
+### ◆ Nhắc lại & Kết nối
+### Danh sách liên kết đơn, con trỏ, cấp phát động
+### + Cấp phát động: malloc(), calloc(), free().
+### + Cấu trúc tự trở: struct Node { int data; struct Node "next: );
+### + Danh sách liên kết đơn:
+### Tập hợp các Node nổi nhau bằng con trỏ next.
+### Quản lý bằng con trỏ head (nếu rỗng thì NULL).
+### Thao tác cơ bản: Tạo rỗng, duyệt/in, thêm đầu cuối, xóa đầu cuối giữa, tìm kiếm, giải phóng toàn bộ.
+### Tại sao chúng ta cần FIFO, LIFO?
+### Buổi hôm nay, chúng ta sẽ đi vào hai cấu trúc dữ liệu rất quan trọng khác, mà mình có thể cài đặt bằng Danh sách liên kết: Stack (LIFO) và Queue (FIFO).
+### Stack (LIFO - Last In, First Out) và Queue (FIFO - First In, First Out):
+### + Là hai cấu trúc dữ liệu cơ bản, nhưng có nguyên tắc hoạt động rất đặc trưng.
+### + Ứng dụng cực kỳ rộng rãi trong khoa học máy tính (quản lý hàm gọi, hàng đợi tác vụ, xử lý dữ liệu).
+### So sánh danh sách liên kết và mảng:
+### + Cả hai đều là cách lưu trữ dữ liệu tuyến tính.
+### + Mỗi cấu trúc có ưu nhược điểm riêng phù hợp với các bài toán khác nhau.
+### + Hiểu rõ sự khác biệt giúp lựa chọn cấu trúc dữ liệu tối ưu.
+### 
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/e5d980a9-140e-4d67-abd2-253cd7840e69" />
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/dcf912f3-2159-49da-b5bf-aa244ef17d2e" />
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/5a09eb95-42ae-4629-ae25-ab8b5feda8ba" />
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/0b7fc421-0984-4dbe-b33a-2ddd4ad37911" />
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/2b83847f-1be5-40b3-b061-a2e8befcc84f" />
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/5f4807f5-ac26-4fac-a93d-405e4d784367" />
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/6b9cf316-5be7-495b-afe2-7d60ba5482bc" />
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/751de04a-0cc7-48dd-b85d-14f209589f5a" />
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/a76bf485-0b91-4954-9cf5-658de42c1c6a" />
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/a28ff6de-790a-493e-aaf5-10ad179e9b94" />
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/5dae7288-b5c3-48e2-9af3-62a312b0818f" />
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/d31216a1-f6bb-44eb-9d3f-f5b9ac9a4ca6" />
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/abcd3e42-77f7-4b72-8dea-ec81385ab958" />
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/253b1877-c65c-44f1-8166-23cd4a9408d7" />
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/ec181ba2-1185-46bf-89b3-b6354b27f0e6" />
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/c35d1326-dd2d-471d-b412-6f10607eb7e3" />
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/7620b026-406a-4796-bcb7-5044ad851efe" />
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/dcc967e6-ffc7-432c-ab54-925eb87d9c29" />
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/d82dc660-53cd-43b6-9561-b24db055fcce" />
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/4b735207-0a44-4963-a844-3bc188fc8482" />
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/748e57ba-a7b5-48e3-8299-f9b11c23feaf" />
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/119056f6-c6c3-404a-8671-cb92bf468de9" />
+<img width="1536" height="2048" alt="image" src="https://github.com/user-attachments/assets/637cef97-9744-42ab-8eaf-080056d578ce" />
+<img width="1536" height="2048" alt="image" src="https://github.com/user-attachments/assets/94035609-af84-4e2c-ac06-89cf6c791390" />
+<img width="1536" height="2048" alt="image" src="https://github.com/user-attachments/assets/e67a4ec0-53e7-41ea-9819-ba32e68aa9c3" />
