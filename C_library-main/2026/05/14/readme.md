@@ -33,9 +33,21 @@
 ### Gán dữ liệu cho nút mới.
 ### Con trỏ next của nút mới sẽ trỏ đến nút mà Top hiện tại đang trỏ tới.
 ### Cập nhật con trỏ Top trỏ đến nút mới này.
-### 
-### 
-### 
+### Các thao tác cơ bản của Stack
+### - Thao tác Push:
+### + Dùng để chèn hoặc thêm một phần tử vào đỉnh của ngăn xếp (stack).
+### + Việc đặt một phần tử mới vào ngăn xếp được gọi là thao tác push.
+### Các bước thực hiện trong thao tác push:
+###   Bước 1 – Kiểm tra xem ngăn xếp đã đầy chưa.
+###   Bước 2 – Nếu ngăn xếp đầy, báo lỗi và thoát.
+###   Bước 3 – Nếu ngăn xếp chưa đầy, tăng top để trỏ đến ô trống tiếp theo.
+###   Bước 4 – Thêm phần tử dữ liệu vào vị trí mà top đang trỏ tới.
+###   Bước 5 – Trả về trạng thái thành công.
+### Ví dụ: Cài đặt Stack bằng danh sách liên kết đơn (Hàm push)
+```
+#include <stdio.h>
+```
+### //
 <img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/e5d980a9-140e-4d67-abd2-253cd7840e69" />
 <img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/dcf912f3-2159-49da-b5bf-aa244ef17d2e" />
 <img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/5a09eb95-42ae-4629-ae25-ab8b5feda8ba" />
