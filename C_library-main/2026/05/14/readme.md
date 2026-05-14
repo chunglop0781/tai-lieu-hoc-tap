@@ -91,7 +91,6 @@ void displayStack() {
 }
 
 
-
 int main() {
     push(10); // Stack: 10
     displayStack();
@@ -103,7 +102,78 @@ int main() {
 }
 ```
 <img width="1525" height="166" alt="image" src="https://github.com/user-attachments/assets/21f1328e-f226-4ddd-a081-68af3d864c6c" />
-### //
+
+### Ví dụ: Cài đặt Stack bằng danh sách liên kết đơn (Hàm pop)
+### - Ta giữ nguyên các đoạn code ở ví dụ trước bao gồm:
+### - Trong hàm main ta thực hiện chạy chương trình và xem kết quả:
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node {
+    int data;
+    struct Node *next;
+    };
+    
+// Con tro HEAD cua Stack (day chinh la con tro top)
+struct Node *top = NULL; // Stack rong ban dau
+
+void push(int data_val) {
+    // Cấp phát bộ nhớ cho một nút (node) mới
+    struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
+    // Kiểm tra xem việc cấp phát bộ nhớ có thành công không
+    if (newNode == NULL) {
+        printf("Cap phat bo nho that bai! Khong the them phan tu.\n");
+        return;
+    }
+    newNode->data = data_val;    // Gán dữ liệu cho nút mới
+    newNode->next = top;         // Nút mới trỏ đến nút mà top đang trỏ tới
+    top = newNode;               // Cập nhật top trỏ đến nút mới
+    printf("Pushed %d vao Stack.\n", data_val);
+}
+// Hàm kiểm tra Stack có rỗng không
+int isEmpty() {
+    return top == NULL;
+}
+
+void displayStack() {
+    if (isEmpty()) {
+        printf("Stack rỗng.\n");
+        return;
+    }
+    printf("Stack (Top -> Bottom): ");
+    struct Node *current = top;
+    while (current != NULL) {
+        printf("%d ", current->data);
+        current = current->next;
+    }
+    printf("\n");
+}
+
+
+int main() {
+    push(10);
+    push(20);
+    push(30);
+    displayStack(); // Stack: 30 20 10
+    printf("\nThuc hien Pop\n");
+    printf("Pop: %d\n", pop()); // Pop: 30
+    displayStack();
+    printf("Peak: %d\n", peek()); // Peek: 20
+    displayStack();
+    printf("Pop: %d\n", pop()); // Pop: 20
+    displayStack();
+    printf("Stack is empty? %s\n", isEmpty() ? "True" : "False");
+    printf("Pop: %d\n", pop()); // Pop: 10
+    displayStack();
+    printf("Stack is empty? %s\n", isEmpty() ? "True" : "False");
+    return 0;
+}
+
+```
+
+### 
+
 <img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/e5d980a9-140e-4d67-abd2-253cd7840e69" />
 <img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/dcf912f3-2159-49da-b5bf-aa244ef17d2e" />
 <img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/5a09eb95-42ae-4629-ae25-ab8b5feda8ba" />
