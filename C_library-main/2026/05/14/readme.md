@@ -44,6 +44,8 @@
 ###   Bước 4 – Thêm phần tử dữ liệu vào vị trí mà top đang trỏ tới.
 ###   Bước 5 – Trả về trạng thái thành công.
 ### Ví dụ: Cài đặt Stack bằng danh sách liên kết đơn (Hàm push)
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/b319af78-5884-4f76-b320-be34ff2363de" />
+
 ```
 #include <stdio.h>
 #include <stdlib.h>
@@ -100,6 +102,7 @@ int main() {
     return 0;
 }
 ```
+<img width="1525" height="166" alt="image" src="https://github.com/user-attachments/assets/21f1328e-f226-4ddd-a081-68af3d864c6c" />
 ### //
 <img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/e5d980a9-140e-4d67-abd2-253cd7840e69" />
 <img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/dcf912f3-2159-49da-b5bf-aa244ef17d2e" />
