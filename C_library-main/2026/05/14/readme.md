@@ -104,6 +104,9 @@ int main() {
 <img width="1525" height="166" alt="image" src="https://github.com/user-attachments/assets/21f1328e-f226-4ddd-a081-68af3d864c6c" />
 
 ### Ví dụ: Cài đặt Stack bằng danh sách liên kết đơn (Hàm pop)
+
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/660781b9-251a-4bd4-b369-258d8012b930" />
+
 ### - Ta giữ nguyên các đoạn code ở ví dụ trước bao gồm:
 ### - Trong hàm main ta thực hiện chạy chương trình và xem kết quả:
 ```
