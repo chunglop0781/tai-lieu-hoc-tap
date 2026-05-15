@@ -197,6 +197,7 @@ int main() {
 
 <img width="1538" height="463" alt="image" src="https://github.com/user-attachments/assets/09f8c272-7cd1-49a7-9bbc-890e530fff1a" />
 
+
 ### 2) Danh sách liên kết đặc biệt: Queue (FIFO)
 ### Queue (Hàng đợi - FIFO) là gì?
 ### FIFO, viết tắt của First-In, First-Out, mô tả một nguyên tắc xử lý dữ liệu nơi phần tử được thêm vào đầu tiên sẽ được lấy ra đầu tiên.
@@ -289,6 +290,98 @@ int main() {
 ```
 
 <img width="1517" height="231" alt="image" src="https://github.com/user-attachments/assets/2950b1a5-43c8-4616-be93-943c8c8f1b49" />
+
+### Ví dụ: Cài đặt Queue bằng Danh sách liên kết đơn (Hàm dequeue())
+### - Ta viết thêm cài đặt hàm dequeue() và peek_queue():
+
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/3361f795-3b5b-43bd-b9c6-50eebd9141ec" />
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node { int data; struct Node *next; };
+// Con tro DAU va CUOI của Queue
+struct Node *front = NULL; // Dau hang doi
+struct Node *rear = NULL; // Cuoi hong doi
+//////////
+void enqueue(int data_val) {
+    struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
+    if (newNode == NULL) {
+        printf("Cap phat bo nho that bai! Khong the them phan tu.\n");
+        return;
+    }
+    newNode->data = data_val;
+    newNode->next = NULL;
+    if (front == NULL) {
+        front = newNode;
+        rear = newNode;
+    } else {
+        rear->next = newNode;
+        rear = newNode;
+    }
+    printf("Enqueued %d vao Queue.\n", data_val);
+}
+//////////
+int isQueueEmpty() {
+    return front == NULL;
+}
+//////////
+void displayQueue() {
+    if(isQueueEmpty()){
+        printf("Queue rong.\n");
+        return;
+    }
+    printf("Queue (Front -> Rear): ");
+    struct Node * current = front;
+    while (current != NULL) {
+        printf("%d ", current->data);
+        current = current->next;
+    }
+    printf("\n");
+}
+//////////
+int dequeue() { //dequeue: thao tac loai bo va lay mot phan tu ra khoi hang doi (queue)
+    if (isQueueEmpty()) {
+        printf("Loi: Queue rong, khong the dequeue.\n");
+        exit(EXIT_FAILURE);
+    }
+    struct Node *temp = front;           // 1. Tạo con trỏ tạm trỏ đến nút đầu (front)
+    int dequeued_data = temp->data;      // 2. Lưu giá trị của nút sắp xóa
+    front = front->next;                 // 3. Di chuyển front sang nút kế tiếp
+    if (front == NULL) {                 // 4. Kiểm tra nếu hàng đợi rỗng sau khi lấy ra
+        rear = NULL;                     // 5. Cập nhật con trỏ rear về NULL
+    }
+    free(temp);
+    temp = NULL;
+    return dequeued_data;
+}
+//////////
+// Hom peek queue: Xem du tieu o dau Queue
+int peek_queue() {
+    if (isQueueEmpty()) {
+        printf("Loi: Queue rong, khong the peek.\n");
+        exit(EXIT_FAILURE);
+    }
+    return front->data;
+}
+//////////
+int main() {
+    enqueue(10); enqueue(20); enqueue(30); displayQueue(); // Queue: 10 20 30
+    printf("\nThuc hien Dequeue\n");
+    printf("Dequeue: %d\n", dequeue()); // Dequeue 10 displayQueue();
+    printf("Peek: %d\n", peek_queue()); // Peek 20 displayQueue();
+    printf("Dequeue: %d\n", dequeue()); // Dequeue 20
+    displayQueue();
+    printf("Queue is empty? %s\n", isQueueEmpty() ? "True" : "False");
+    printf("Dequeue: %d\n", dequeue()); // Dequeue 30
+    displayQueue();
+    printf("Queue is empty? %s\n", isQueueEmpty() ? "True" : "False");
+    return 0;
+}
+```
+
+<img width="1527" height="417" alt="image" src="https://github.com/user-attachments/assets/dec347d7-4075-4735-9a2d-69e04f23b8d7" />
 
 ### 
 ### 
