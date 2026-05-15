@@ -227,6 +227,68 @@ int main() {
 ### - Lưu trữ con trỏ đến nút đầu tiên (Front) để trả về dữ liệu.
 ### - Cập nhật con trỏ Front trỏ đến nút kế tiếp.
 ### - Giải phóng bộ nhớ của nút đã được lấy ra (ví dụ: free).
+### Ví dụ: Cài đặt Queue bằng Danh sách liên kết đơn
+### - Cài đặt hàm enqueue() và is QueueEmpty():
+
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/6a325df8-35de-4d0f-9d03-663d00c291ca" />
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node { int data; struct Node *next; };
+// Con tro DAU va CUOI của Queue
+struct Node *front = NULL; // Dau hang doi
+struct Node *rear = NULL; // Cuoi hong doi
+//////////
+void enqueue(int data_val) {
+    struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
+    if (newNode == NULL) {
+        printf("Cap phat bo nho that bai! Khong the them phan tu.\n");
+        return;
+    }
+    newNode->data = data_val;
+    newNode->next = NULL;
+    if (front == NULL) {
+        front = newNode;
+        rear = newNode;
+    } else {
+        rear->next = newNode;
+        rear = newNode;
+    }
+    printf("Enqueued %d vao Queue.\n", data_val);
+}
+//////////
+int isQueueEmpty() {
+    return front == NULL;
+}
+//////////
+void displayQueue() {
+    if(isQueueEmpty()){
+        printf("Queue rong.\n");
+        return;
+    }
+    printf("Queue (Front -> Rear): ");
+    struct Node * current = front;
+    while (current != NULL) {
+        printf("%d ", current->data);
+        current = current->next;
+    }
+    printf("\n");
+}
+//////////
+int main() {
+    enqueue(10); //Queue: 10
+    displayQueue();
+    enqueue(20); //Queue: 10 -> 20
+    displayQueue();
+    enqueue(30); //Queue: 10 -> 20 -> 30
+    displayQueue();
+    return 0;
+}
+```
+
+<img width="1517" height="231" alt="image" src="https://github.com/user-attachments/assets/2950b1a5-43c8-4616-be93-943c8c8f1b49" />
 
 ### 
 ### 
