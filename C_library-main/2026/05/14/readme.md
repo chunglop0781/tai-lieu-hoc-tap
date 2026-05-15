@@ -388,6 +388,15 @@ int main() {
 ### - Cả Mảng và Danh sách liên kết đều là các cấu trúc dữ liệu tuyến tính (linear data structures).
 ### - Mỗi cấu trúc có ưu điểm và nhược điểm riêng, phù hợp với các tình huống sửdụng khác nhau.
 ### - Việc lựa chọn cấu trúc dữ liệu tối ưu là rất quan trọng trong lập trình.
+### 3) So sánh danh sách liên kết và mảng
+### So sánh danh sách liên kết và mảng
+| Đặc điểm | Mảng (Array) | Danh sách liên kết (Linked List) |
+| :--- | :---: | ---: |
+| Cấp phát | Tĩnh (Stack) hoặc Động (Heap) - liên tiếp | Động (Heap) - không liên tiếp |
+| Kích thước | Cố định sau khi khai báo cấp phát | Linh hoạt, có thể thêm xóa node dễ dàng |
+| Truy cập | Ngẫu nhiên bằng chỉ số | Tuần tự theo con trỏ |
+| Chèn/Xóa | Tốn kém (phải dịch chuyển nhiều phần tử). | Hiệu quả (chỉ cần thay đổi con trỏ)|
+| Ứng dụng | Khi biết trước kích thước, cần truy cập nhanh, duyệt tuần tự | Khi kích thước thay đổi thường xuyên, cần chèn xóa hiệu quả, không cần truy cập ngẫu nhiên |
 
 ### 
 ### 
