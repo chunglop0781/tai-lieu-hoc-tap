@@ -383,6 +383,12 @@ int main() {
 
 <img width="1527" height="417" alt="image" src="https://github.com/user-attachments/assets/dec347d7-4075-4735-9a2d-69e04f23b8d7" />
 
+### 3) So sánh danh sách liên kết và màng
+### So sánh danh sách liên kết và màng
+### - Cả Mảng và Danh sách liên kết đều là các cấu trúc dữ liệu tuyến tính (linear data structures).
+### - Mỗi cấu trúc có ưu điểm và nhược điểm riêng, phù hợp với các tình huống sửdụng khác nhau.
+### - Việc lựa chọn cấu trúc dữ liệu tối ưu là rất quan trọng trong lập trình.
+
 ### 
 ### 
 ### 
