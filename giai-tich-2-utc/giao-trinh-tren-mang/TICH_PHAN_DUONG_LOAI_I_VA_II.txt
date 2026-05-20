@@ -1,0 +1,1250 @@
+
+S
+STUDOCUHACK
+Search for courses, quizzes, or documents
+
+
+
+
+
+
+Guest user
+
+0
+followers
+
+0
+Uploads
+
+0
+upvotes
+
+Home
+My Library
+AI Notes
+Ask AI
+AI Quiz
+
+Recent
+
+
+
+Courses
+
+
+Projects
+
+giải tích
+Tích phân Đường Loại I và II - Giá Trình Toán Cao Cấp
+
+
+0
+
+
+
+
+Download
+24 TÍCH PHÂN ĐƯỜNGI=ZABP(x, y)dx +Q(x, y)dy =ZAC+ZCB=ZxBxAP(x, yA)dx +ZyByAQ(xB, y)dy,hayI=ZABP(x, y)dx +Q(x, y)dy =ZAD+ZDB=ZyByAQ(xA, y)dy +ZxBxAP(x, yB)dx.Ví dụ 1.2.9. Chứng minh rằng, tích phân đường I=RAB(3x2y+y)dx+(x3+x)dy, với A(1,−2), B(2,3)không phụ thuộc vào đường đi. Tính I.Giải. Ta có P(x, y) = 3x2y+y, Q(x, y) = x3+x⇒∂Q∂x = 3x2+ 1,∂P∂y = 3x2+ 1.Do đó, ∂Q∂x ,∂P∂yliên tục trên R2và ∂Q∂x =∂P∂y = 3x2+ 1.Vậy tích phân Ikhông phụ thuộc vào đường lấy tích phân.Cách 1: Tính ITồn tại hàm u(x, y)là vi phân toàn phần của P(x, y)dx +Q(x, y)dy, tức làdu(x, y) = P(x, y)dx +Q(x, y)dy ⇒∂u∂x =P(x, y) = 3x2y+y⇒u(x, y) = y.x3+y.x +C(y)⇒∂u∂y =Q(x, y) = x3+x⇒x3+x+C(y) = x3+x⇒C(y) = 0⇒u(x, y) = x3y+xy.Khi đóI=ZABP(x, y)dx+Q(x, y)dy =u(xB, yB)−u(xA, yA) = [23.3+2.3]−[13.(−2)+1.(−2)] = 30−(−4) = 34.Cách 2: Tính IVì tích phân Ikhông phụ thuộc vào đường đi nên ta sẽ lấy tích phân theo đường thẳng đi từ Ađến C, sau đó đi từ Cđến B. Khi đóI=ZABP(x, y)dx +Q(x, y)dy =ZAC+ZCB=xBZxAP(x, yA)dx +yBZyAQ(xB, y)dy =
+1.2 Tích phân đường loại hai 25Hình 1.26: Lấy tích phân theo đường thẳng từ Ađến Csau đó từ Cđến B=2Z1(3x2.−2+−2)dx +3Z−2(23+2)dy =−2x3−2x21+ [10y]3−2= (−20 + 4) + (30 + 20) = 34.Ví dụ 1.2.10. Cho 2 hàm P(x, y) = (1 + x+y)e−y, Q(x, y) = (1 −x−y)e−y.Tìm hàm h(x)thỏah(0) = 1 để biểu thức h(x)P(x, y)dx +h(x)Q(x, y)dy là vi phân toàn phần của hàm u(x, y)nào đó.Với h(x)vừa tìm, tính tích phân I=RC[h(x)P(x, y)dx +h(x)Q(x, y)dy]trong đó Clà nửa đường trònx2+y2= 9 nằm bên phải trục tung, chiều đi từ điểm A(0,−3) đến điểm B(0,3).Giải. Để biểu thức h(x)P(x, y)dx +h(x)Q(x, y)dy là vi phân toàn phần của hàm u(x, y)nào đóthì[h(x)Q(x, y)]0x= [h(x)P(x, y)]0y⇒h0(x)Q(x, y) + h(x).Q0x=h(x).P 0y⇒h0(x).(1−x−y)e−y+h(x).(−1)e−y=h(x).[e−y−(1+x+y)e−y]⇒h0(x).(1−x−y)e−y=h(x).(1−x−y)e−y⇒h0(x) = h(x)⇒dhdx =h⇒dhh=dx ⇒ln |h(x)|=x+C⇒h(x) = ex+C.Hàm h(x)thỏa h(0) = 1 nên h(0) = e0+C= 1 ⇒C= 0.Vậy h(x) = ex.Với h(x) = exthì tích phân I=RC[h(x)P(x, y)dx +h(x)Q(x, y)dy]không phụ thuộc đường đinên ta sẽ lấy tích phân theo đường thẳng x= 0 đi từ Ađến B. Khi đóI=ZAB[h(x)P(x, y)dx +h(x)Q(x, y)dy] =yBZyAh(0)Q(0, y)dy ==3Z−3e0.(1 −0−y)e−ydy =3Z−3(1 −y)e−ydyTheo công thức tích phân từng phần, đặt(u= 1 −ydv =e−ydy ⇒(du =−dyv=−e−y
+
+
+
+Ask a question about this document
+
+End of document
+Was this document helpful?
+
+
+
+0
+More from:
+giải tích
+Discover more from:
+giải tích
+Trường Đại học Bách khoa - Đại học Quốc gia Thành phố Hồ Chí Minh
+360 documents
+
+16
+Bài 10: Phấn Đấu Xứng Đáng Đảng Viên Đảng Cộng Sản Việt Nam - Snsbsn
+Bài 10: Phấn Đấu Xứng Đáng Đảng Viên Đảng Cộng Sản Việt Nam - Snsbsn
+giải tích
+100%
+(27)
+24
+Tiểu luận PHÁP LUẬT ĐẠI CƯƠNG: Nguồn gốc, Bản chất & Vai trò
+Tiểu luận PHÁP LUẬT ĐẠI CƯƠNG: Nguồn gốc, Bản chất & Vai trò
+giải tích
+98%
+(42)
+153
+Hướng Dẫn Ôn Thi Olympic Toán SV - Giải Tích và Dãy Số
+Hướng Dẫn Ôn Thi Olympic Toán SV - Giải Tích và Dãy Số
+giải tích
+100%
+(17)
+33
+Tài liệu Chương 1: Tích Phân Kép - Giáo Trình Toán Học 2
+Tài liệu Chương 1: Tích Phân Kép - Giáo Trình Toán Học 2
+giải tích
+100%
+(13)
+10
+Chương 2: Quy Hoạch Tuyến Tính (Linear Programming) - Tài Liệu Ôn Tập
+Chương 2: Quy Hoạch Tuyến Tính (Linear Programming) - Tài Liệu Ôn Tập
+giải tích
+100%
+(11)
+9
+Giai-tich-1 69 Câu Trắc Nghiệm Giới Hạn và Đạo Hàm
+Giai-tich-1 69 Câu Trắc Nghiệm Giới Hạn và Đạo Hàm
+giải tích
+100%
+(11)
+
+Recommended for you
+153
+Hướng Dẫn Ôn Thi Olympic Toán SV - Giải Tích và Dãy Số
+Hướng Dẫn Ôn Thi Olympic Toán SV - Giải Tích và Dãy Số
+giải tích
+100%
+(17)
+33
+Tài liệu Chương 1: Tích Phân Kép - Giáo Trình Toán Học 2
+Tài liệu Chương 1: Tích Phân Kép - Giáo Trình Toán Học 2
+giải tích
+100%
+(13)
+15
+Báo Cáo Bài Tập Lớn Giải Tích 2 - Nhóm GT2-L06-02
+Báo Cáo Bài Tập Lớn Giải Tích 2 - Nhóm GT2-L06-02
+giải tích
+100%
+(8)
+12
+Giới Hạn và Sự Liên Tục Của Hàm Số - MATH101 Lecture Notes
+Giới Hạn và Sự Liên Tục Của Hàm Số - MATH101 Lecture Notes
+giải tích
+100%
+(7)
+6
+Chiến dịch Điện Biên Phủ 1954 - Lịch sử Đảng PPT - LSD
+Chiến dịch Điện Biên Phủ 1954 - Lịch sử Đảng PPT - LSD
+giải tích
+100%
+(7)
+47
+Báo cáo tổng kết xây dựng Game Mario trên Unity - 2022
+giải tích
+100%
+(6)
+
+Students also viewed
+Bài Tập Giải Tích 1 - Hàm Số Liên Tục và Các Điểm Gián Đoạn
+ĐỀ CƯƠNG ÔN TẬP MÔN TOÁN CAO CẤP - TỔNG HỢP KIẾN THỨC
+Tài liệu Lsdcsvn - Lịch sử Đảng Cộng sản Việt Nam: Từ Thành lập đến Đổi mới
+Bài Kiểm Tra 2 MĐ - Điện Máy Không Đồng Bộ và Biến Áp
+Giáo trình Chuỗi Số - Tài liệu học phần 8 Chuỗi
+HK251 - Bài Tập Chương 2: Khảo Sát Sự Hội Tụ Các Dãy Hàm
+Related documents
+Buổi 08 - Giải Tích Lớp MA006: Chương 4 & 5 - Phân Tích Đa Biến
+Bài Tập 09: Phương Pháp Tọa Độ Cầu Trong Tích Phân Bội 3 - MA006
+TR2011 Incompressible Aerodynamics Midterm Test QSC 348
+Đề thi Giải tích Kinh tế - MT1017 - Mã đề 1204
+Chương 4: Hàm Số Mũ và Logarit - Tác Động của Thuốc
+BÀI TẬP CHƯƠNG 1 - Giải Bài Tập và Chứng Minh Toán
+Preview text
+Mục lục
+Lời nói đầu................................................................ i
+
+Mục lục Những kí hiệu ii
+Chương 1. TÍCH PHÂN ĐƯỜNG
+Tích phân đường loại một
+1.1. Đặt vấn đề
+1.1. Định nghĩa
+1.1. Tính chất của tích phân đường loại một
+1.1. Trường hợp cung AB ⌢ có phương trình tham số x = x(t), y = y(t), a 6 t 6 b
+1.1. Trường hợp cung AB ⌢ có phương trình y = y(x), a 6 x 6 b.
+1.1. Trường hợp cung AB ⌢ có phương trình x = x(y), c 6 y 6 d.
+1.1. Trường hợp cung AB ⌢ cho trong hệ tọa độ cực x = r(φ) cos φ, y = r(φ) sin φ, α 6 φ 6 β.
+1.1. Tính phân đường loại một trong không gian
+Tích phân đường loại hai
+1.2. Đặt vấn đề
+1.2. Định nghĩa
+1.2. Mối liên hệ giữa tích phân đường loại I và tích phân đường loại II
+1.2. Trường hợp cung AB ⌢ có phương trình tham số x = x(t), y = y(t)
+1.2. Trường hợp cung AB ⌢ có phương trình y = y(x)
+1.2. Trường hợp cung AB ⌢ có phương trình x = x(y)
+1.2. Tính phân đường loại hai trong không gian
+1.2. Công thức Green
+1.2. Tích phân không phụ thuộc vào đường đi
+Thực hành MatLab
+1.3. Vẽ đường cong tham số trong mặt phẳng
+1.3. Vẽ đường cong tham số trong không gian
+Bài tập
+1.4. Tính tích phân đường loại I
+1.4. Tính tích phân đường loại II
+1.4. Tích phân đường không phụ thuộc vào đường đi
+Chương
+TÍCH PHÂN ĐƯỜNG
+Tích phân đường loại một........................................... 2
+Tích phân đường loại hai........................................... 11
+Thực hành MatLab................................................ 27
+Bài tập............................................................ 28
+1. Tích phân đường loại một
+1.1. Đặt vấn đề
+Cho hàm số z = f (x, y) > 0 và đường cong C trong mặt phẳng tọa độ Oxy. Hãy tính diện tích của "hàng rào" dọc theo đường C và có chiều cao tại mỗi điểm (x, y) là f (x, y).
+
+Hình 1: Diện tích của "hàng rào" dọc theo đường C và có chiều cao tại mỗi điểm (x, y) là f (x, y).
+
+Cho đường cong trơn C = ⌢AB xác định trong mặt phẳng Oxy. Ta sẽ chia cung AB ⌢ thành những
+cung nhỏ Ai− 1 Ai bởi những điểm A 0 = A, A 1 ,... , An = B. Độ dài của những cung nhỏ Ai− 1 Ai được ký hiệu là ∆ℓi và λ = max i ∆ℓi. Ta chọn điểm bất kỳ tương ứng Mi(xi, yi) trên cung Ai− 1 Ai.
+
+4 TÍCH PHÂN ĐƯỜNG
+Ví dụ 1.1. Viết phương trình tham số của đoạn thẳng nối hai điểm A(xA, yA), B(xB , yB )
+
+Giải. Phương trình tham số của đoạn thẳng nối hai điểm A(xA, yA), B(xB , yB ) là { x = xA + (xB − xA).t, y = yA + (yB − yA).t 0 6 t 6 1.
+
+Ví dụ 1.1. Viết phương trình tham số của đường tròn (x − a) 2 + (y − b) 2 = R 2
+
+Giải. Phương trình tham số của đường tròn (x − a) 2 + (y − b) 2 = R 2 là { x = a + R cos t, y = b + R sin t
+
+0 6 t 6 2 π.
+
+Ví dụ 1.1. Viết phương trình tham số của Ellipse x
+
+2 a 2
+
+y
+2 b 2
+
+= 1
+Giải. Phương trình tham số của Ellipse x 2 a 2 +
+
+y 2 b 2 = 1 là { x = a cos t, y = b sin t
+
+0 6 t 6 2 π.
+
+Theo công thức lấy vi phân cung của đường cong C ta có
+
+dℓ =
+
+√
+(x′(t)) 2 + (y′(t)) 2 dt
+
+Từ đó, ta có định lý sau:
+
+Định lý 1. Cho hàm số f (x, y) liên tục trên cung AB ⌢. Khi đó
+
+∫
+
+AB
+
+f (x, y)dℓ =
+
+∫ b
+
+a
+
+f (x(t), y(t)).
+
+√
+(x′(t)) 2 + (y′(t)) 2 dt.
+
+Chú ý. Khi lấy tích phân theo cung AB ⌢ chúng ta không quan tâm đến việc điểm A hay B là điểm đầu hay điểm cuối của cung, mà chỉ quan tâm đến giá trị t ∈ [a, b]. Khi đó tích phân sẽ luôn được tính bằng cách lấy cận từ cận nhỏ a đến cận lớn b.
+
+Ví dụ 1.1. Tính I =
+
+∫
+C
+
+(2 + x 2 y)dℓ, với C là nửa đường tròn x 2 + y 2 = 1, y > 0.
+
+Hình 1: Nửa đường tròn x 2 + y 2 = 1, y > 0.
+
+1 Tích phân đường loại một 5
+
+Giải. Ta phải tham số hóa nửa đường tròn x 2 + y 2 = 1, y > 0 bằng cách đặt   
+
+x = cos t y = sin t 0 6 t 6 π.
+
+⇒
+{
+x′(t) = − sin t y′(t) = cos t
+
+Khi đó
+
+I =
+∫
+C
+
+(2 + x 2 y)dℓ =
+
+∫ π
+
+0
+
+(2 + cos 2 t. sin t)
+
+√
+(− sin t) 2 + (cos t) 2 dt =
+
+∫ π
+
+0
+
+(2 + cos 2 t. sin t)dt =
+
+=
+[
+2 t − cos
+
+3 t 3
+
+]π
+
+0
+
+= 2π + 2 3.
+
+1.1 Trường hợp cung AB ⌢ có phương trình y = y(x), a 6 x 6 b.
+
+Trường hợp cung AB ⌢ có phương trình y = y(x), a 6 x 6 b.
+
+Định lý 1. Cho hàm số f (x, y) liên tục trên cung AB ⌢. Khi đó
+
+∫
+
+AB
+
+f (x, y)dℓ =
+
+∫ b
+
+a
+
+f (x, y(x)).
+
+√
+1 + (y′(x)) 2 dx.
+
+Thật vậy, cung AB ⌢ có phương trình y = y(x), a 6 x 6 b sẽ được tham số hóa như sau:   
+
+x = x y = y(x) a 6 x 6 b.
+
+⇒
+{
+x′(x) = 1 y′(x) = y′(x)
+
+Chú ý. Trong trường hợp đặc biệt khi y = y(x) = 0 thì
+
+∫
+
+AB
+
+f (x, y)dℓ =
+
+∫ b
+
+a
+
+f (x, 0)dx.
+
+Khi đó tích phân đường loại I sẽ trở thành tích phân xác định.
+
+Ví dụ 1.1. Tính I =
+
+∫
+C
+
+y x dℓ, với C là cung của parabol y = x
+
+2 2 nối hai điểm A(1, 1 /2) và B(2, 2).
+
+Giải. Ta có dℓ =
+
+√
+1 + (y′(x) 2 dx =
+
+√
+1 + x 2 dx, 1 6 x 6 2.
+
+Khi đó
+
+I =
+∫
+AB
+
+y x dℓ
+
+= 1
+2
+∫ 2
+1
+
+x
+
+√
+1 + x 2 dx = 1 4
+
+∫ 2
+1
+
+√
+1 + x 2 d(1 + x 2 ) =
+
+[
+1
+6
+.(1 + x 2 ) 3 / 2
+
+] 2
+1
+
+= 5
+√
+5 − 2
+√
+2
+6
+.
+1.1 Trường hợp cung AB
+⌢
+
+1.1. Trường hợp cung AB ⌢ có phương trình x = x(y), c 6 y 6 d.
+Trường hợp cung AB ⌢ có phương trình x = x(y), c 6 y 6 d.
+
+1 Tích phân đường loại một 7
+
+Khi đó
+
+I =
+
+∫
+AB
+
+xydℓ =
+
+√ 2 ∫
+
+0
+
+y 2 .y
+
+√
+1 + 4y 2 dy
+
+Đặt t =
+
+√
+1 + 4y 2 ⇒ tdt = 8ydy, y 0
+
+√
+2
+t 1 3
+
+I =
+∫ 3
+1
+
+t 2 − 1 4 .t. tdt 4 =
+
+1
+16
+[
+t 5 5 −
+
+t 3 3
+
+] 3
+1
+
+= 149 60.
+1.1 Trường hợp cung AB ⌢ cho trong hệ tọa độ cực x = r(φ) cos φ, y = r(φ) sin φ,
+
+α 6 φ 6 β.
+Trường hợp cung AB ⌢ xác định trong hệ tọa độ cực   
+
+x = r(φ) cos φ y = r(φ) sin φ α 6 φ 6 β.
+
+Ví dụ 1.1. Viết phương trình tham số hóa đường tròn x 2 + y 2 = 2x trong hệ tọa độ cực.
+
+Giải. Đặt { x = r. cos φ y = r. sin φ
+
+Thay x, y vào phương trình đường tròn x 2 + y 2 = 2x ta được r 2 = 2r cos φ ⇒ r = 2 cos φ và cos φ > 0 ⇒ − π 2 6 φ 6 π 2 . Vậy  
+
+
+
+x = 2 cos φ. cos φ y = 2 cos φ. sin φ − π 2 6 φ 6 π 2 Từ công thức của đường cong C xác định trong hệ tọa độ cực, ta có { x′(φ) = r′(φ) cos φ − r(φ) sin φ y′(φ) = r′(φ) sin φ + r(φ) cos φ
+
+⇒
+{
+(x′(φ)) 2 = (r′(φ) cos φ) 2 − 2 .r′(φ) cos φ.r(φ) sin φ + (r(φ) sin φ) 2 (y′(φ)) 2 = (r′(φ) sin φ) 2 + 2′(φ) sin φ.r(φ) cos φ + (r(φ) cos φ) 2 ⇒ (x′(φ)) 2 + (y′(φ)) 2 = (r(φ)) 2 + (r′(φ)) 2.
+
+Định lý 1. Cho hàm số f (x, y) liên tục trên cung AB ⌢. Khi đó
+
+∫
+
+AB
+
+f (x, y)dℓ =
+
+∫ β
+
+α
+
+f (r(φ) cos φ, r(φ) sin φ).
+
+√
+(r(φ)) 2 + (r′(φ)) 2 dφ.
+
+Ví dụ 1.1. Tính
+
+∫
+C
+
+√
+x 2 + y 2 dℓ, với C là đường cong xác định trong hệ tọa độ cực bởi phương trình
+
+r 2 = cos 2φ, φ ∈ [−π/ 4 , π/4].
+
+Giải. Ta có r(φ) = √cos 2φ ⇒ r′(φ) = − √sin 2φ cos 2φ ⇒ (r(φ)) 2 +(r′(φ)) 2 = cos 2φ+ sin
+
+2 2 φ cos 2φ
+
+= 1
+cos 2φ. Khi đó
+
+∫
+
+C
+
+√
+x 2 + y 2 dℓ =
+
+∫ π/ 4
+
+−π/ 4
+
+r(φ).
+
+√
+(r(φ)) 2 + (r′(φ)) 2 =
+
+∫ π/ 4
+
+−π/ 4
+
+√
+cos 2φ.
+
+√ 1
+cos 2φ dφ =
+
+∫ π/ 4
+
+−π/ 4
+
+dφ = π 2
+
+8 TÍCH PHÂN ĐƯỜNG
+Hình 1: C là đường cong xác định trong hệ tọa độ cực bởi phương trình r 2 = cos 2φ, φ ∈ [−π/ 4 , π/4].
+
+1.1. Tính chất của tích phân đường loại một
+Khi mở rộng đường cong C xác định trong không gian thì tích phân đường loại I là tích phân có dạng ∫
+
+C
+
+f (x, y, z)dℓ
+
+với C là đường cong lấy tích phân.
+
+Trường hợp cung trơn AB ⌢ được xác định trong không gian với phương trình tham số     
+
+x = x(t) y = y(t) z = z(t) a 6 t 6 b.
+
+Ví dụ 1.1. Viết phương trình tham số giao tuyến của mặt trụ x 2 + y 2 = 4 và mặt phẳng z = 1
+
+Giải. Giao tuyến của mặt trụ x 2 + y 2 = 4 và mặt phẳng z = 1 thỏa { x 2 + y 2 = 4 z = 1
+
+⇒
+
+
+
+x = 2 cos t y = 2 sin t z = 1
+
+0 6 t 6 2 π
+
+Ví dụ 1.1. Viết phương trình tham số giao tuyến của mặt cầu x 2 + y 2 + z 2 = 4z và mặt phẳng z = 2 − x.
+
+Giải. Giao tuyến của mặt cầu x 2 + y 2 + z 2 = 4z và mặt phẳng z = 2 − x thỏa { x 2 + y 2 + z 2 = 4z z = 2 − x
+
+⇒
+{
+x 2 + y 2 + (2 − x) 2 = 4(2 − x) z = 2 − x
+
+⇒
+{
+2 x 2 + y 2 = 4 z = 2 − x
+
+⇒
+
+
+
+x =
+
+√
+2 cos t y = 2 sin t z = 2 − √2 cos t
+
+0 6 t 6 2 π
+
+10 TÍCH PHÂN ĐƯỜNG
+Hình 1: Đường cong C : x = cos t, y = sin t, z = t, 0 6 t 6 2 π.
+
+Theo công thức tính tích phân đường loại I trong không gian, ta có
+
+I =
+∫
+C
+
+y sin zdℓ =
+
+∫ 2 π
+
+0
+
+sin t. sin t.
+
+√
+(− sin t) 2 + (cos t) 2 + 1 2 dt =
+
+√
+2.
+∫ 2 π
+
+0
+
+sin 2 tdt =
+
+√
+2
+2
+[
+t −
+
+1
+2 sin 2t
+
+] 2 π
+
+0
+
+=
+√
+2 π.
+
+Ví dụ 1.1. Tính tích phân I =
+
+∫
+C
+
+xzdℓ, với C là giao tuyến của mặt cầu x 2 + y 2 + z 2 = 2 và mặt
+
+nón z 2 = x 2 + y 2 lấy phần x, z > 0.
+
+Hình 1: Giao tuyến của mặt cầu x 2 + y 2 + z 2 = 2 và mặt nón z 2 = x 2 + y 2 lấy phần x, z > 0.
+
+Giải. Viết phương trình tham số hóa giao tuyến. Giao tuyến của mặt cầu x 2 + y 2 + z 2 = 2 và mặt nón z 2 = x 2 + y 2 thỏa { x 2 + y 2 + z 2 = 2 z 2 = x 2 + y 2
+
+⇒
+{
+x 2 + y 2 + x 2 + y 2 = 2 z 2 = x 2 + y 2
+
+⇒
+{
+x 2 + y 2 = 1 z 2 = 1
+
+1 Tích phân đường loại hai 11
+
+Vì giao tuyến lấy phần z > 0 nên z = 1, và x > 0 nên khi đặt x = cos t ta lấy phần t ∈
+
+[
+−
+π 2 , π 2
+
+]
+. Vậy
+
+giao tuyến C cần tìm có phương trình tham số là   
+
+x = cos t y = sin t, z = 1
+
+−
+π 2 6 t 6
+
+π 2 ⇒
+
+
+
+
+x′(t) = − sin t y′(t) = cos t z′(t) = 0
+
+Khi đó
+
+I =
+
+∫
+C
+
+xzdℓ =
+
+∫ π/ 2
+
+−π/ 2
+
+cos t. 1.
+
+√
+(− sin t) 2 + (cos t) 2 + 0 2 dt = [sin t]π/ −π/ 22 = 2.
+
+1. Tích phân đường loại hai
+1.2. Đặt vấn đề
+Công của lực −→ F để di chuyển chất điểm M từ điểm A đến điểm B theo đường thẳng AB là
+
+W =<
+
+−→
+F.
+−−→
+AB >= |−
+→
+F |.|−
+−→
+AB|. cos( ̂
+
+−→
+F ,
+−−→
+AB)
+Bài toán đặt ra: Hãy tính công của lực −→ F để di chuyển chất điểm M từ điểm A đến điểm B theo một đường cong trơn C nối điểm A với điểm B trong mặt phẳng Oxy.
+
+Hình 1: Chia đường cong AB ⌢ thành những đường cong nhỏ trong mặt phẳng
+
+Để giải bài toán này, ta chia đường cong AB ⌢ thành những đường cong nhỏ Ai− 1 Ai với độ dài ∆ℓi bởi những điểm A 0 = A, A 1 ,... , An = B và chọn trên mỗi đường cong nhỏ này điểm Mi. Nếu chia đường cong AB ⌢ đủ nhỏ, thì có thể xem:
+
+Chất điểm di chuyển trên đường cong Ai− 1 Ai là đường thẳng,
+
+Lực tác dụng lên chất điểm khi di chuyển trên đường cong Ai− 1 Ai không đổi và bằng với −→ F (Mi).
+
+Lúc này, công của lực khi di chuyển chất điểm M từ vị trí Ai− 1 đến Ai là < −→ F (Mi), − A−i−−− 1 →Ai >. Khi cộng công của lực trên mọi đường cong nhỏ Ai− 1 Ai ta thu được công thức gần đúng của công khi di chuyển chất điểm dọc theo cung AB ⌢
+
+W ≈
+∑ n i=
+
+< −→ F (Mi), − A−i−−− 1 A→i >
+
+1 Tích phân đường loại hai 13
+
+Tổng này chính là tổng Riemann của tích phân đường loại I. Do đó
+
+W =
+
+∫
+AB
+
+|−→ F (M )|. cos α(M ).dℓ.
+
+Vậy mối liên hệ giữa tích phân đường loại I và tích phân đường loại II là ∫
+
+AB
+
+P (x, y)dx + Q(x, y)dy =
+
+∫
+AB
+
+|−→ F (M )|. cos α(M ).dℓ.
+
+Tuy nhiên, giữa tích phân đường loại I và tích phân đường loại II có sự khác biệt quan trọng sau:
+
+Tích phân đường loại I không phụ thuộc vào hướng lấy tích phân trên cung AB ⌢ vì trong tổng Riemann của tích phân đường loại I, giá trị của f (Mi) nhân với ∆ℓi.
+
+Tích phân đường loại II phụ thuộc vào hướng lấy tích phân trên cung AB ⌢ vì trong tổng Riemann của tích phân đường loại II, giá trị của
+
+−→
+F (Mi) nhân với
+
+−−−−→
+Ai− 1 Ai nên khi đổi hướng của véc tơ −−−−→ Ai− 1 Ai thì sẽ đổi dấu của tổng Riemann.
+
+Như vậy, đối với tích phân đường loại II thì ∫
+
+AB
+
+P (x, y)dx + Q(x, y)dy = −
+
+∫
+BA
+
+P (x, y)dx + Q(x, y)dy
+
+1.2 Trường hợp cung AB ⌢ có phương trình tham số x = x(t), y = y(t)
+
+Cho cung trơn AB ⌢ có phương trình tham số { x = x(t) y = y(t)
+
+t = a ứng với điểm đầu của AB ⌢, t = b ứng với điểm cuối của AB ⌢. Cho hàm số P (x, y), Q(x, y) liên tục trong miền mở D chứa cung trơn AB ⌢. Khi đó
+
+∫
+
+AB
+
+P (x, y)dx + Q(x, y)dy =
+
+∫ b a
+
+[P (x(t), y(t))x′(t) + Q(x(t), y(t))y′(t)]dt.
+
+Ví dụ 1.2. Tính tích phân I =
+
+∫
+C
+
+(−ydx + xdy) theo đường cong C, là nửa đường tròn được xác
+
+định bởi x 2 + y 2 = 4, x > 0 , đi từ A(0, −2) đến B(0, 2).
+
+Giải. Ta phải tham số hóa nửa đường tròn x 2 + y 2 = 4, x > 0 bằng cách đặt { x = 2 cos t y = 2 sin t
+
+⇒
+{
+x′(t) = −2 sin t y′(t) = 2 cos t
+
+Điểm đầu A ứng với t = − π 2 , điểm cuối B ứng với t = π 2 . Khi đó
+
+I =
+∫
+C
+
+(−ydx + xdy) =
+
+∫ π/ 2
+
+−π/ 2
+
+[(−2 sin t)(−2 sin t) + 2 cos t cos t]dt =
+
+∫ π/ 2
+
+−π/ 2
+
+4 dt = [4t]π/ −π/ 22 = 4π.
+
+14 TÍCH PHÂN ĐƯỜNG
+Hình 1: Đường cong C : x 2 + y 2 = 4, x > 0 , đi từ A(0, −2) đến B(0, 2).
+
+1.2 Trường hợp cung AB
+⌢
+
+1.2. Trường hợp cung AB ⌢ có phương trình y = y(x)
+Trường hợp cung AB ⌢ có phương trình y = y(x), x = a là hoành độ điểm đầu, x = b là hoành độ điểm cuối. Cho hàm số P (x, y), Q(x, y) liên tục trong miền mở D chứa cung trơn AB ⌢. Khi đó
+
+∫
+
+AB
+
+P (x, y)dx + Q(x, y)dy =
+
+∫ b a
+
+[P (x, y(x)) + Q(x, y(x))y′(x)]dx.
+
+Ví dụ 1.2. Tính I =
+
+∫
+C
+
+(4x−y)dx+5x 2 ydy, với C là parabol y = 3x 2 đi từ điểm A(0, 0) đến B(1, 3).
+
+Hình 1: C là parabol y = 3x 2 đi từ điểm A(0, 0) đến B(1, 3).
+
+Giải. Vì phương trình của C là y = 3x 2 nên y′(x) = 6x, điểm đầu A ứng với x = 0, điểm cuối B ứng với x = 1. Khi đó
+
+I =
+∫
+C
+
+(4x−y)dx+5x 2 ydy =
+
+∫ 1
+0
+
+[(4x− 3 x 2 )+5x 2. 3 x 2. 6 x]dx =
+
+∫ 1
+0
+
+(4x− 3 x 2 +90x 5 )dx =
+
+[
+2 x 2 − x 3 + 15x 6
+
+] 1
+0 = 16.
+16 TÍCH PHÂN ĐƯỜNG
+Ví dụ 1.2. Tính
+
+∫
+C
+
+(x + y)dx + 2zdy + xydz, với C là đường cong xác định bởi phương trình tham
+
+số x = t, y = t 2 , z = 3 − t, đi từ điểm A ứng với t = 1 đến điểm B ứng với t = 2.
+
+Hình 1: AB ⌢ là đường cong xác định bởi phương trình tham số x = t, y = t 2 , z = 3 − t, điểm A ứng với t = 1, điểm B ứng với t = 2.
+
+Giải. Với đường cong AB ⌢ ta có dx = dt, dy = 2tdt, dz = −dt. Khi đó ∫
+
+AB
+
+(x + y)dx + 2zdy + xydz =
+
+∫ 2
+1
+
+[(t + t 2 ) + 2(3 − t). 2 t + t 2 .(−1)]dt =
+
+∫ 2
+1
+
+(13t − 3 t 2 − t 3 )dt =
+
+=
+[
+13
+2 t
+
+2 − t 3 − 1 4 t
+
+4
+
+] 2
+1
+
+= 35 4
+1.2. Công thức Green
+Định nghĩa 1. Điểm M (x, y) của đường cong C xác định bởi { x = x(t) y = y(t),
+
+t ∈ [a, b]
+
+được gọi là điểm bội hay điểm tự cắt của đường cong C.
+
+Định nghĩa 1. Đường cong C không chứa điểm bội được gọi là đường cong đơn giản.
+
+Định nghĩa 1. Đường cong AB ⌢ được gọi là đường cong khép kín, nếu điểm đầu A và điểm cuối B trùng nhau.
+
+Định nghĩa 1. Miền phẳng D được gọi là miền liên thông nếu như với hai điểm bất kỳ A, B ∈ D thì tồn tại một đường cong nối A, B cũng thuộc D.
+
+Định nghĩa 1. Miền phẳng D được gọi là miền đơn liên khi thỏa mãn tính chất:
+
+Miền phẳng D là miền liên thông;
+
+Nếu đường cong đơn giản khép kín C nằm trọn trong miền D thì miền D′ có biên là đường cong C sẽ nằm trọn trong D.
+
+Định nghĩa 1. Miền phẳng D không phải là miền đơn liên, được gọi là miền đa liên.
+
+Định nghĩa 1. Chiều dương của đường cong đơn giản, khép kín C là chiều ngược chiều kim đồng hồ. Chiều âm của đường cong đơn giản, khép kín C là chiều cùng chiều kim đồng hồ.
+
+1 Tích phân đường loại hai 17
+
+Hình 1: Các đường cong trong mặt phẳng
+
+Hình 1: Miền đơn liên, miền đa liên
+
+Hình 1: Chiều dương, chiều âm của đường cong đơn giản, khép kín
+
+Định nghĩa 1. Đường cong C xác định bởi { x = x(t) y = y(t), t ∈ [a, b]
+
+1 Tích phân đường loại hai 19
+
+Ở đây, ta sử dụng công thức tích phân đường loại hai và chú ý rằng ∫
+
+QM
+
+P (x, y)dx = 0;
+
+∫
+N P
+
+P (x, y)dx = 0.
+
+Tương tự, đối với miền lồi theo x ta chứng minh được ∮
+
+C
+
+Q(x, y)dy = +
+
+∫ ∫
+D
+
+∂Q
+∂x dxdy
+
+Vậy, chúng ta đã chứng minh được định lý cho miền D lồi theo cả x và y. 2. Giả sử D là miền đơn liên có thể chia thành hữu hạn các miền đơn giản (lồi theo x và y). Giả sử miền D chia thành miền D 1 , D 2 , D 3 với các biên C 1 , C 2 , C 3 :
+
+C 1 = AmB + BA, C 2 = BN + N A + AB, C 3 = BnN + N B Ta có
+
+Hình 1: Miền D chia thành miền D 1 , D 2 , D 3 ∫ ∫
+
+D
+
+(
+∂Q
+∂x −
+
+∂P
+∂y )dxdy =
+
+∫ ∫
+D 1
+
+(
+∂Q
+∂x −
+
+∂P
+∂y )dxdy +
+
+∫ ∫
+D 2
+
+(
+∂Q
+∂x −
+
+∂P
+∂y )dxdy +
+
+∫ ∫
+D 3
+
+(
+∂Q
+∂x −
+
+∂P
+∂y )dxdy.
+
+Theo công thức Green cho các miền D 1 , D 2 , D 3 ta có ∫ ∫
+
+D 1
+
+(
+∂Q
+∂x −
+
+∂P
+∂y )dxdy =
+
+∫
+C 1
+
+P dx + Qdy =
+
+∫
+AmN
+
++
+∫
+BA
+
+.
+∫ ∫
+D 2
+
+( ∂Q ∂x − ∂P ∂y )dxdy =
+
+∫
+C 2
+
+P dx + Qdy =
+
+∫
+BN
+
++
+∫
+N A
+
++
+∫
+AB
+
+.
+∫ ∫
+D 3
+
+( ∂Q ∂x − ∂P ∂y )dxdy =
+
+∫
+C 3
+
+P dx + Qdy =
+
+∫
+BnN
+
++
+∫
+N B
+
+.
+20 TÍCH PHÂN ĐƯỜNG
+Cộng các đẳng thức trên lại ta được ∫ ∫
+
+D
+
+(
+∂Q
+∂x −
+
+∂P
+∂y )dxdy =
+
+∫
+AmN
+
++
+∫
+BA
+
++
+∫
+BN
+
++
+∫
+N A
+
++
+∫
+AB
+
++
+∫
+BnN
+
++
+∫
+N B
+
+=
+∫
+AmN
+
++
+∫
+N A
+
++
+∫
+BnN
+
+=
+∮
+C
+
+P (x, y)dx+Q(x, y)dy
+
+Giả sử miền D là miền đa liên, có thể chia thành hữu hạn các miền đơn liên. Ví dụ, miền D có thể tách thành 2 miền D 1 , D 2 bởi các đoạn thẳng AB, M N. Sử dụng công thức Green cho D 1 , D 2 và lấy tổng của chúng, ta cũng thu được định lý Green cho miền D là miền đa liên.
+Hình 1: Miền D có thể tách thành 2 miền D 1 , D 2 bởi các đoạn thẳng AB, M N.
+
+Để chứng minh định lý Green cho trường hợp tổng quát, ta phải xấp xỉ miền D bởi những miền đã xét.
+
+Ví dụ 1.2. Tính tích phân I =
+
+∫
+C
+
+x 2 ydx − xy 2 dy, với C là đường tròn x 2 + y 2 = 9, lấy theo chiều
+
+ngược chiều kim đồng hồ.
+
+Giải. Ta có P (x, y) = x 2 y, Q = −xy 2 ⇒ ∂Q ∂x = −y 2 , ∂P ∂y = x 2. Áp dụng công thức Green đối với
+
+đường cong khép kín C, lấy theo chiều dương là chiều ngược kim đồng hồ, ta được
+
+I =
+
+∮
+C
+
+x 2 ydx − xy 2 dy = +
+
+∫ ∫
+D
+
+(−y 2 − x 2 )dxdy
+
+Đổi miền D : x 2 + y 2 6 9 sang hệ tọa độ cực, ta được D = {(r, φ) : 0 6 φ 6 2 π, 0 6 r 6 3 }. Khi đó
+
+I = −
+∫ 2 π
+
+0
+
+dφ
+
+∫ 3
+0
+
+r 2 .rdr = − [φ] 20 π.
+
+[
+r 4 4
+
+] 3
+0
+
+= −
+81 π 2.
+
+Ví dụ 1.2. Tính tích phân đường loại hai I =
+
+∫
+C
+
+(x 2 + 2y)dx − (y 2 + 2x)dy, với C là phần đường
+
+tròn x 2 + y 2 = 4 thỏa điều kiện y > x, hướng theo chiều ngược chiều kim đồng hồ.
+
+S
+STUDOCUHACK
+Company
+About us
+Studocu Premium
+Academic Integrity
+Jobs
+Blog
+Dutch Website
+Study Tools
+Ask AI
+AI Notes
+AI Quiz Generator
+Get the App
+Studocu Ace
+Contact & Help
+F.A.Q.
+Contact
+Newsroom
+Legal
+Terms
+Privacy policy
+Cookie Settings
+Cookie Statement
+Copyright & DSA
+
+
+
+Studocu is not affiliated to or endorsed by any school, college or university.
+
+Copyright © 2026 StudeerSnel B.V., Keizersgracht 424-sous, 1016 GC Amsterdam, KVK: 56829787, BTW: NL852321363B01
+
