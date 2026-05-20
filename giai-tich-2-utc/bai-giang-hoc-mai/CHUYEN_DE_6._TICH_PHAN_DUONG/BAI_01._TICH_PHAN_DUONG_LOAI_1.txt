@@ -1,1 +1,5 @@
+CHUYÊN ĐỀ: TÍCH PHÂN ĐƯỜNG
+
+I/ Tích phân đường loại 1
+  1. Kí hiệu: Tích phân đường loại 1 của hàm f(x,y) dọc theo (\overparen{AB}\) kí hiệu là \int_{\overset{\LARGE\frown}{AB}} f(x,y) ds
 
