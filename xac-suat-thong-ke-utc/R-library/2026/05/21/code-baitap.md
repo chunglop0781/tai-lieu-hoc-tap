@@ -64,7 +64,7 @@ if (ket_qua_A$p.value < 0.05) {
 # Chuan bi du lieu
 k_san <- sum(mtcars$am == 1)   # So luong xe san
 n_tong <- nrow(mtcars)         # Tong so xe
-# Thực hiện kiểm định
+# Thuc hien kiem dinh
 ket_qua_A4 <- prop.test(x = k_san, n = n_tong, p = 0.40, alternative = "two.sided")
 print(ket_qua_A4)
 # Dem so luong vs=1 va tong so xe cua moi nhom (am=0 va am=1)
