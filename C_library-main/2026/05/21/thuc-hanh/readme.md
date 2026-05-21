@@ -107,30 +107,36 @@ struct Node{
     struct Node *next;
 };
 
-void printList_Nam(struct Node *head){
+void printList_Nam(struct Node *head, FILE *out){
     struct Node *current = head;
     printf("Danh sach Nam du dieu kien do:\n");
+    fprintf(out, "Danh sach Nam du dieu kien do:\n");
     while(current != NULL){
         if(strcmp(current->data.gioitinh, " Nam ") == 0 && current->data.tongdiem >= 15){
             printf("Ma hoc vien: %s | Ho ten: %s | Gioi tinh: %s | Diem: %.2f\n", current->data.mahocvien, current->data.hoten, current->data.gioitinh, current->data.tongdiem);
+            fprintf(out, "Ma hoc vien: %s | Ho ten: %s | Gioi tinh: %s | Diem: %.2f\n", current->data.mahocvien, current->data.hoten, current->data.gioitinh, current->data.tongdiem);
         }
 
         current = current->next;
     }
     printf("NULL\n");
+    fprintf(out, "NULL\n");
 }
 
-void printList_Nu(struct Node *head){
+void printList_Nu(struct Node *head, FILE *out){
     struct Node *current = head;
     printf("Danh sach Nu du dieu kien do:\n");
+    fprintf(out, "Danh sach Nu du dieu kien do:\n");
     while(current != NULL){
         if(strcmp(current->data.gioitinh, " Nu ") == 0 && current->data.tongdiem >= 14 && current->data.tongdiem < 15){
             printf("Ma hoc vien: %s | Ho ten: %s | Gioi tinh: %s | Diem: %.2f\n", current->data.mahocvien, current->data.hoten, current->data.gioitinh, current->data.tongdiem);
+            fprintf(out, "Ma hoc vien: %s | Ho ten: %s | Gioi tinh: %s | Diem: %.2f\n", current->data.mahocvien, current->data.hoten, current->data.gioitinh, current->data.tongdiem);
         }
 
         current = current->next;
     }
     printf("NULL\n");
+    fprintf(out, "NULL\n");
 }
 
 int main(){
@@ -178,8 +184,16 @@ int main(){
     node[n-1]->data = hv[n-1];
     node[n-1]->next = NULL;
     head = node[0];
-    printList_Nam(head);
-    printList_Nu(head);
+    FILE *out = fopen("C:\\Users\\Admin\\Downloads\\lop.dat", "w");
+	printList_Nam(head, out);
+	printList_Nu(head, out);
+	if(out == NULL){
+    	printf("Khong in duoc file output!\n");
+    	return 1;
+	} else {
+		printf("In file output thanh cong!\n");
+	}
+	fclose(out);
     for(i = 0; i < n; i++){
         free(node[i]);
         node[i] = NULL;
