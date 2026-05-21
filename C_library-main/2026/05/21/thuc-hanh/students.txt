@@ -1,0 +1,21 @@
+20
+HV001 Nguyen Van A Nam 16.5
+HV002 Tran Thi B Nu 14.2
+HV003 Pham Van C Nam 12.3
+HV004 Le Thi D Nu 18.0
+HV005 Hoang Van E Nam 14.8
+HV006 Vu Thi F Nu 13.5
+HV007 Dang Van G Nam 19.2
+HV008 Bui Thi H Nu 11.0
+HV009 Do Van I Nam 15.7
+HV010 Ngo Thi J Nu 17.3
+HV011 Tran Van K Nam 10.5
+HV012 Pham Thi L Nu 16.8
+HV013 Hoang Van M Nam 14.0
+HV014 Vu Thi N Nu 13.2
+HV015 Dang Van O Nam 18.5
+HV016 Le Thi P Nu 12.8
+HV017 Bui Van Q Nam 15.3
+HV018 Ngo Thi R Nu 16.2
+HV019 Do Van S Nam 11.7
+HV020 Tran Thi T Nu 14.5
