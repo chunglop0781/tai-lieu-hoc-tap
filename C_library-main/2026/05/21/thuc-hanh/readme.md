@@ -131,23 +131,18 @@ int main(){
     fscanf(f, "%d\n", &n);
     HocVien hv[n];
     char line[256];
-
-for (int i = 0; i < n; i++) {
-    fgets(line, sizeof(line), f);
-    line[strcspn(line, "\n")] = '\0';
-
-    char *token = strtok(line, "|");
-    strcpy(hv[i].mahocvien, token);
-
-    token = strtok(NULL, "|");
-    strcpy(hv[i].hoten, token);
-
-    token = strtok(NULL, "|");
-    strcpy(hv[i].gioitinh, token);
-
-    token = strtok(NULL, "|");
-    hv[i].tongdiem = atof(token);
-}
+	for (int i = 0; i < n; i++) {
+    	fgets(line, sizeof(line), f);
+    	line[strcspn(line, "\n")] = '\0';
+    	char *token = strtok(line, "|");
+    	strcpy(hv[i].mahocvien, token);
+	    token = strtok(NULL, "|");
+    	strcpy(hv[i].hoten, token);
+	    token = strtok(NULL, "|");
+    	strcpy(hv[i].gioitinh, token);
+	    token = strtok(NULL, "|");
+    	hv[i].tongdiem = atof(token);
+	}
     int i, j;
     for(i = 0; i < n - 1; i++) {
         for(j = i + 1; j < n; j++) {
