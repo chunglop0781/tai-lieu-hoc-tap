@@ -154,3 +154,7 @@ int main()
     return 0;
 }
 ```
+
+# Cho hàm số f(x) = (sin(x)) / (x ^ 2 + 1) và số nguyên dương n (n > 2) hãy tính giá trị cho n mốc cách đều trong đoạn [2,3] và coi đó là các mốc nội suy. Sử dụng đa thức nội suy Lagrange để nội suy hàm số f(x) trên [2,3]. Từ đó, tính gần đúng f(x*) với x* ∈ [2,3] nhập từ bàn phím.
+```
+```
