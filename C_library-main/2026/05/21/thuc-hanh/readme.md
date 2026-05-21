@@ -87,7 +87,7 @@ int main(){
 # Thông tin mỗi học viên gồm: Mã HV, Họ tên, giới tính, tổng điểm.
 # Xét kết quả theo điều kiện: nếu tổng điểm >= 15 thì đỗ, < 15 thì trượt.
 # Sắp xếp danh sách HV đỗ theo chiều giảm dần của tổng điểm và lưu vào tệp lop.dat.
-# Xét lại trên danh sách trượt, nếu 14 <= tổng điểm <  và giới tính là nữ thì đỗ và lưu nối vào tệp lop.dat.
+# Xét lại trên danh sách trượt, nếu 14 <= tổng điểm < 15  và giới tính là nữ thì đỗ và lưu nối vào tệp lop.dat.
 # In hai danh sách học viên đỗ và trượt dạng bảng.
 ```
 #include<stdio.h>
@@ -107,15 +107,27 @@ struct Node{
     struct Node *next;
 };
 
-void printList(struct Node *head){
+void printList_Nam(struct Node *head){
     struct Node *current = head;
-    printf("Danh sach:\n");
-    while (current != NULL) {
-        printf("Ma hoc vien: %s | Ho ten: %s | Gioi tinh: %s | Diem: %.2f\n",
-               current->data.mahocvien,
-               current->data.hoten,
-               current->data.gioitinh,
-               current->data.tongdiem);
+    printf("Danh sach Nam du dieu kien do:\n");
+    while(current != NULL){
+        if(strcmp(current->data.gioitinh, " Nam ") == 0 && current->data.tongdiem >= 15){
+            printf("Ma hoc vien: %s | Ho ten: %s | Gioi tinh: %s | Diem: %.2f\n", current->data.mahocvien, current->data.hoten, current->data.gioitinh, current->data.tongdiem);
+        }
+
+        current = current->next;
+    }
+    printf("NULL\n");
+}
+
+void printList_Nu(struct Node *head){
+    struct Node *current = head;
+    printf("Danh sach Nu du dieu kien do:\n");
+    while(current != NULL){
+        if(strcmp(current->data.gioitinh, " Nu ") == 0 && current->data.tongdiem >= 14 && current->data.tongdiem < 15){
+            printf("Ma hoc vien: %s | Ho ten: %s | Gioi tinh: %s | Diem: %.2f\n", current->data.mahocvien, current->data.hoten, current->data.gioitinh, current->data.tongdiem);
+        }
+
         current = current->next;
     }
     printf("NULL\n");
@@ -166,7 +178,8 @@ int main(){
     node[n-1]->data = hv[n-1];
     node[n-1]->next = NULL;
     head = node[0];
-    printList(head);
+    printList_Nam(head);
+    printList_Nu(head);
     for(i = 0; i < n; i++){
         free(node[i]);
         node[i] = NULL;
