@@ -1,4 +1,4 @@
-# 21052026-lagrange1
+# 21052026-lagrange
 ```
 #include<stdio.h>
 #include<math.h>
@@ -42,7 +42,7 @@ int main(){
 ```
 
 
-# 21052026-lagrange2
+# 21052026-newton-tien
 ```
 #include<stdio.h>
 #include<math.h>
@@ -95,7 +95,7 @@ int main(){
 }
 ```
 
-# 21052026-lagrange1-cogiaochua
+# 21052026-lagrange-cogiaochua
 ```
 #include <stdio.h>
 #include <math.h>
