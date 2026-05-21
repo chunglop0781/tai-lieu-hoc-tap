@@ -90,4 +90,93 @@ int main(){
 # Xét lại trên danh sách trượt, nếu 14 <= tổng điểm <  và giới tính là nữ thì đỗ và lưu nối vào tệp lop.dat.
 # In hai danh sách học viên đỗ và trượt dạng bảng.
 ```
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+typedef struct {
+    char line[200];
+    char mahocvien[100];
+    char hoten[100];
+    char gioitinh[100];
+    double tongdiem;
+} HocVien;
+
+struct Node{
+    HocVien data;
+    struct Node *next;
+};
+
+void printList(struct Node *head){
+    struct Node *current = head;
+    printf("Danh sach:\n");
+    while (current != NULL) {
+        printf("Ma hoc vien: %s | Ho ten: %s | Gioi tinh: %s | Diem: %.2f\n",
+               current->data.mahocvien,
+               current->data.hoten,
+               current->data.gioitinh,
+               current->data.tongdiem);
+        current = current->next;
+    }
+    printf("NULL\n");
+}
+
+int main(){
+    FILE *f = popen("curl -s https://raw.githubusercontent.com/chunglop0781/tai-lieu-hoc-tap/main/C_library-main/2026/05/21/thuc-hanh/students.txt", "r");
+    if (f == NULL){
+        printf("Loi file students.txt!\n");
+        return 1;
+    }
+    int n; 
+    fscanf(f, "%d\n", &n);
+    HocVien hv[n];
+    char line[256];
+
+for (int i = 0; i < n; i++) {
+    fgets(line, sizeof(line), f);
+    line[strcspn(line, "\n")] = '\0';
+
+    char *token = strtok(line, "|");
+    strcpy(hv[i].mahocvien, token);
+
+    token = strtok(NULL, "|");
+    strcpy(hv[i].hoten, token);
+
+    token = strtok(NULL, "|");
+    strcpy(hv[i].gioitinh, token);
+
+    token = strtok(NULL, "|");
+    hv[i].tongdiem = atof(token);
+}
+    int i, j;
+    for(i = 0; i < n - 1; i++) {
+        for(j = i + 1; j < n; j++) {
+            if(hv[i].tongdiem < hv[j].tongdiem) {
+                HocVien temp = hv[i];
+                hv[i] = hv[j];
+                hv[j] = temp;
+            }
+        }
+    }
+
+    struct Node *head = NULL;
+    struct Node *node[n];
+    for(i = 0; i < n; i++){
+        node[i] = (struct Node *)malloc(sizeof(struct Node));
+    }
+    for(i = 0; i < n-1; i++){
+        node[i]->data = hv[i];
+        node[i]->next = node[i+1];
+    }
+    node[n-1]->data = hv[n-1];
+    node[n-1]->next = NULL;
+    head = node[0];
+    printList(head);
+    for(i = 0; i < n; i++){
+        free(node[i]);
+        node[i] = NULL;
+    }
+    head = NULL;
+    pclose(f);
+}
 ```
