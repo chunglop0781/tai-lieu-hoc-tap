@@ -13,9 +13,9 @@ void nhap(int n, float x[], float y[]){
 
 double lagrange(int n, float x[], float y[], int input_x){
 	double P = 0;
-	for(int i = 0; i < n; i++){
+	for(int i = 0; i <= n; i++){
 		double L = 1;
-		for(int j = 0; j < n; j++){
+		for(int j = 0; j <= n; j++){
 			if(i != j){
 				L *= (input_x - x[i]) / (x[i] - x[j]);
 			}
@@ -61,7 +61,7 @@ void saiPhanCap1(int n, int y[], int D[]){
 }
 
 void saiPhanCapCao(int n, int D[], int j){
-	for(int i = 0; i < n - j; i++){
+	for(int i = 0; i <= n - j; i++){
 		D[i] = D[i+1] - D[i];
 	}
 }
@@ -71,7 +71,7 @@ float newton(int n, int x0, int input_x, int h, int y[], int D[]){
 	float k = t;
 	saiPhanCap1(n, y, D);
 	float input_y = y[0] + t * D[0];
-	for(int j = 2; j < n; j++){
+	for(int j = 2; j <= n; j++){
 		saiPhanCapCao(n, D, j);
 		k *= (t - j + 1) / j;
 		input_y += k * D[0];
@@ -92,5 +92,65 @@ int main(){
 	float result = newton(n, x0, input_x, h, y, D);
 	xuat(result);
 	return 0;
+}
+```
+
+# 21052026-lagrange1-cogiaochua
+```
+#include <stdio.h>
+#include <math.h>
+
+void Nhap(float x[], float y[], int *n)
+{
+    int i;
+    printf("Nhap n = ");
+    scanf("%d", n);
+    printf("Nhap cac bo gia tri (x,y): \n");
+    for(i = 0; i <= *n; i++)
+    {
+        printf("Nhap x[%d] = ", i);
+        scanf("%f", &x[i]);
+        printf("Nhap y[%d] = ", i);
+        scanf("%f", &y[i]);
+    }
+}
+
+void In(float x[], float y[], int n)
+{
+    int i;
+    printf("Cac bo gia tri vua nhap la: \n");
+    for(i = 0; i <= n; i++)
+    {
+        printf("(%.2f, %.2f) ", x[i], y[i]);
+    }
+}
+
+void lagrange(float x[], float y[], int n)
+{
+    float P = 0, L = 1, x0;
+    printf("\nNhap x0 = ");
+    scanf("%f", &x0);
+    for(int i = 0; i <= n; i++)
+    {
+        L = 1;
+        for(int j = 0; j <= n; j++)
+        {
+            if(i != j)
+                L *= (x0 - x[j]) / (x[i] - x[j]);
+        }
+        P += L * y[i];
+    }
+
+    printf("Gia tri gan dung cua ham so tai x0 la %.2f", P);
+}
+
+int main()
+{
+    int n;
+    float x[50], y[50];
+    Nhap(x, y, &n);
+    In(x, y, n);
+    lagrange(x, y, n);
+    return 0;
 }
 ```
