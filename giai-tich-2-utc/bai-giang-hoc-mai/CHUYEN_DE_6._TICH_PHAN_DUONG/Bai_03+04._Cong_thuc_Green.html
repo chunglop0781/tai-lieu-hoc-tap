@@ -24,15 +24,29 @@
 <p>Ta có: \(P(x,y), Q(x,y), P'_y, Q'_x\) liên tục trên \(D\)</p>
 <p>Áp dụng công thức Green, ta có:</p>
 <p>$$I = \iint_D (Q'_x - P'_y) dxdy = \iint_D (3 + 4y - 4y) dxdy$$</p>
-<p>$$(=) I = \iint_D 3 dxdy$$</p>
-<p>$$(=) I = 3 \int_{0}^{1} \left[ \int_{x}^{2-x} dy \right] dx$$</p>
-<p>$$(=) I =3 \int_{0}^{1} \Big[ y \Big|_{x}^{2-x} \Big] dx$$</p>
-<p>$$(=) I =3 \int_{0}^{1} (2 - 2x) dx$$</p>
-<p>$$(=) I =3 \Big[ 2x - x^2 \Big|_0^1 \Big]$$</p>
-<p>$$(=) I =3 \cdot (2 - 1) = 3$$</p>
+<p>$$\Rightarrow I = \iint_D 3 dxdy$$</p>
+<p>$$\Rightarrow I = 3 \int_{0}^{1} \left[ \int_{x}^{2-x} dy \right] dx$$</p>
+<p>$$\Rightarrow I =3 \int_{0}^{1} \Big[ y \Big|_{x}^{2-x} \Big] dx$$</p>
+<p>$$\Rightarrow I =3 \int_{0}^{1} (2 - 2x) dx$$</p>
+<p>$$\Rightarrow I =3 \Big[ 2x - x^2 \Big|_0^1 \Big]$$</p>
+<p>$$\Rightarrow I =3 \cdot (2 - 1) = 3$$</p>
 <p>Bài 2. Tính $$I = \oint_{OBAO} (x^2 + 2xy - y^2)dx + (-x^2 - y^2)dy$$ với \(OBAO\) là đường gấp khúc khép kín, trong đó các đỉnh có tọa độ: \(O(0,0)\), \(A(1,0)\), \(B(0,1)\).</p>
 <h3>Giải:</h3>
+<p>Cách 1: (Tính trực tiếp)</p>
+<p>\(I = \int_{OB} \left[(x^2 + 2xy - y^2)\,dx + (-x^2 - y^2)\,dy\right] + \int_{BA} \left[(x^2 + 2xy - y^2)\,dx + (-x^2 - y^2)\,dy\right] + \int_{AO} \left[(x^2 + 2xy - y^2)\,dx + (-x^2 - y^2)\,dy\right]\)</p>
+<p>Cách 2: (Áp dụng công thức Green)</p>
+<p>Gọi \(D\) là miền giới hạn bởi\[L \Rightarrow D:\begin{cases}0 \le x \le 1,\\x \le y \le 1-x\end{cases}\]</p>
+<p>Đặt: \(P(x,y) = (x^2 + 2xy - y^2), \quad Q(x,y) = (-x^2 - y^2)\)</p>
+<p>\(\Rightarrow P'_y = 2x + 2y, \quad Q'_x = -2x\)</p>
+<p>Ta thấy \(P(x,y), Q(x,y), P'_y, Q'_x\) liên tục trên \(D\)</p>
+<p>Ta có: $$I = - \oint_{OABO} (x^2 + 2xy - y^2)dx + (-x^2 - y^2)dy$$</p>
+<p>$$\Rightarrow I = \iint_D (Q'_x - P'_y) dxdy = \iint_D (-4x - 2y) dxdy$$</p>
+<p>$$\Rightarrow I = \int_{0}^{1} \left[ \int_{x}^{1-x} (-4x - 2y) dy \right] dx$$</p>
+<p>$$\Rightarrow I = \int_0^1 \left[ -4xy \Big|_{y=0}^{y=1-x} - y^2 \Big|_{y=0}^{y=1-x} \right] dx$$</p>
+<p>$$\Rightarrow I = \int_0^1 \left[ -4x(1-x) - (1-x)^2 \right] dx$$</p>
+<p>$$\Rightarrow I = \int_0^1 \left[ 3x^2 - 2x - 1 \right] dx = x^3 \Big|_0^1 - x^2 \Big|_0^1 - x \Big|_0^1$$</p>
 <p></p>
+
 
   
   </body>
