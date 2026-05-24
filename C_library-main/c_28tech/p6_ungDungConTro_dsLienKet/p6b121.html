@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[DSLK]. Bài 1. Insertion</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #7f8c8d;
+            font-size: 1.1em;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        code {
+            background-color: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.95em;
+            color: #c7254e;
+        }
+        pre {
+            background-color: #f8f9fa;
+            border-left: 4px solid #00bc8c;
+            padding: 15px;
+            overflow-x: auto;
+            border-radius: 0 4px 4px 0;
+        }
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>[DSLK]. Bài 1. Insertion</h1>
+
+    <h2>Problem</h2>
+    <p>Cho danh sách liên kết đơn mỗi node trong DSLK lưu thông tin của 1 sinh viên gồm có: Mã sinh viên (chuỗi có không quá 20 ký tự), Họ tên (chuỗi không quá 50 ký tự) và điểm gpa. Có 3 thao tác sau:</p>
+    <ol>
+        <li>Thêm 1 sinh viên vào đầu danh sách.</li>
+        <li>Thêm 1 sinh viên vào cuối danh sách.</li>
+        <li>Thêm 1 sinh viên vào vị trí X trong danh sách. Bạn hãy thực hiện in ra danh sách liên kết sau khi thực hiện 1 loạt thao tác ở trên.</li>
+    </ol>
+
+    <h3>Input Format</h3>
+    <p>Dòng đầu tiên là <code>N</code>: số lượng thao tác cần thực hiện. Các dòng tiếp theo mô tả thao tác, mỗi thao tác gồm 4 dòng. Dòng 1 là loại thao tác (1, 2, 3), nếu thao tác là 3 thì số tiếp theo sau là vị trí chèn <code>X</code>, dòng 2 là mã sinh viên, dòng 3 là họ tên, dòng 4 là điểm gpa của sinh viên cần thêm vào DSLK. Đối với thao tác loại 3 khi kích thước của DSLK là N và chèn vào vị trí N + 1 tức là bạn thêm node đó vào cuối.</p>
+
+    <h3>Constraints</h3>
+    <p><code>1 &le; N &le; 1000</code>; <code>0 &le; X &le; 1000</code>; <code>1 &le; X &le; Size(DSLK) + 1</code></p>
+
+    <h3>Output Format</h3>
+    <p>In ra DSLK sau khi thực hiện N thao tác chèn, mỗi sinh viên in ra trên 1 dòng, các thông tin viết cách nhau một dấu cách và gpa lấy 2 số sau dấu phẩy.</p>
+
+    <h3>Sample Input 0</h3>
+    <pre><code>7
+1
+CNTT1
+Le Van Long
+2.48
+1
+CNTT2
+Le Van Long
+1.28
+1
+CNTT3
+Vuong Hoang Manh
+1.28
+1
+CNTT4
+Le Hoang Nam
+2.88
+2
+CNTTS
+Vuong Van Phuoc
+2.50
+1
+CNTT6
+Phan Xuan Hanh
+3.10
+3 2
+CNTT7
+Le Xuan Phuc
+2.48</code></pre>
+
+
+    <h3>Submit</h3>
+  
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdlib.h&gt;
+
+struct node{
+    char msv[100];
+    char hoten[100];
+    double gpa;
+    struct node *next;
+};
+
+typedef struct node node;
+
+node* makeNode(){
+    node *newNode = (node*)malloc(sizeof(node));
+    getchar();
+
+    fgets(newNode-&gt;msv, 100, stdin);
+    newNode-&gt;msv[strcspn(newNode-&gt;msv, "\n")] = 0;
+
+    fgets(newNode-&gt;hoten, 100, stdin);
+    newNode-&gt;hoten[strcspn(newNode-&gt;hoten, "\n")] = 0;
+
+    scanf("%lf", &(newNode-&gt;gpa));
+
+    newNode-&gt;next = NULL;
+    return newNode;
+}
+</code></pre>
+
+</body>
+</html>
