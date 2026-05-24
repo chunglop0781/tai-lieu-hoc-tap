@@ -140,5 +140,159 @@ node* makeNode(){
 }
 </code></pre>
 
+
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-9 col-md-11">
+            <div class="problem-container">
+
+                <!-- Tiêu đề bài toán -->
+                <h2 class="problem-title">[DSLK]. Bài 2. Xóa node</h2>
+                
+                <hr>
+
+                <!-- Mô tả bài toán -->
+                <div class="problem-description">
+                    <p>Cho một <code>DSLK</code> mỗi node trong <code>DSLK</code> là một số tự nhiên. Thực hiện xóa toàn bộ node có giá trị <code>X</code> trong <code>DSLK</code>. Ví dụ DSLK = {1, 2, 2, 3, 3, 2, 4} và X = 2 thì sau khi xóa DSLK sẽ là {1, 3, 3, 4}. Bài này các bạn phải cài đặt bằng DSLK.</p>
+                </div>
+
+                <!-- Định dạng dữ liệu vào -->
+                <h5>Input Format</h5>
+                <p>Dòng đầu tiên là <code>N</code>: số lượng node của DSLK và <code>X</code> là giá trị cần xóa. Dòng thứ 2 gồm <code>N</code> số lần lượt là các node trong DSLK.</p>
+
+                <!-- Điều kiện ràng buộc -->
+                <h5>Constraints</h5>
+                <p>1 &lt;= <code>N</code> &lt;= 1000; Các node và <code>X</code> là số tự nhiên không quá 1000;</p>
+
+                <!-- Định dạng dữ liệu ra -->
+                <h5>Output Format</h5>
+                <p>In ra DSLK sau khi xóa hết các node có giá trị <code>X</code>. Nếu DSLK rỗng thì in ra <code>EMPTY</code>.</p>
+
+                <!-- Ví dụ mẫu -->
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <h5>Sample Input 0</h5>
+                        <pre>8 2
+1 2 2 3 3 2 4 2</pre>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Sample Output 0</h5>
+                        <pre>1 3 3 4</pre>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <h3>Submit</h3>
+  
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdlib.h&gt;
+
+struct node{
+    int data;
+    struct node *next;
+};
+
+typedef struct node node;
+
+node* makeNode(int x){
+    node *newNode = (node*)malloc(sizeof(node));
+    newNode-&gt;data = x;
+    newNode-&gt;next = NULL;
+    return newNode;
+}
+
+void duyet(node *head){
+    if(head == NULL){
+        printf("EMPTY\n");
+        return;
+    }
+
+    while(head != NULL){
+        printf("%d ", head-&gt;data);
+        head = head-&gt;next;
+    }
+}
+
+void pushBack(node **head, int x){
+
+    node *newNode = makeNode(x);
+
+    if(*head == NULL){
+        *head = newNode;
+        return;
+    }
+
+    node *temp = *head;
+
+    while(temp-&gt;next != NULL){
+        temp = temp-&gt;next;
+    }
+
+    temp-&gt;next = newNode;
+}
+
+void xoa(node **head, int x){
+
+    while((*head) != NULL &amp;&amp; (*head)-&gt;data == x){
+        node *temp = *head;
+        *head = (*head)-&gt;next;
+        free(temp);
+    }
+
+    node *temp = *head;
+    node *prev = temp;
+
+    while(temp != NULL){
+
+        if(temp-&gt;data == x){
+            prev-&gt;next = temp-&gt;next;
+            free(temp);
+            temp = prev;
+        }
+        else{
+            prev = temp;
+            temp = temp-&gt;next;
+        }
+    }
+}
+
+int main(){
+
+    node *head = NULL;
+
+    int n, x;
+    scanf("%d %d", &amp;n, &amp;x);
+
+    for(int i = 0; i &lt; n; i++){
+        int y;
+        scanf("%d", &amp;y);
+
+        pushBack(&amp;head, y);
+    }
+
+    xoa(&amp;head, x);
+
+    duyet(head);
+
+    return 0;
+}
+</code></pre>
+
+
+<!-- Nhúng JS Bootstrap 5 -->
+<script src="https://jsdelivr.net"></script>
+
+
 </body>
 </html>
