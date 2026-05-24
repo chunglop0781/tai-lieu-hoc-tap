@@ -3,7 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Công thức Green</title>
+    <style>
+    body {
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+    }
 
+    .container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        width: fit-content;
+        margin: auto;
+    }
+
+    svg{
+        max-width:100%;
+        height:auto;
+        display:block;
+    }
+	</style>
     <!-- Thư viện MathJax -->
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
@@ -16,6 +38,49 @@
 <p>Khi đó: \[\oint_{L^+} Pdx + Qdy=\iint_{D} \left( Q'_x - P'_y \right) dxdy\]</p>
 <h2>b) Bài tập mẫu</h2>
 <p>Bài 1. Tính \( I = \oint_{L^+} 2(x^2+y^2)dx + (3x+4xy)dy \) với \( L^+ \) là biên của \( \Delta ABC \), trong đó \( A(0,0), B(1,1), C(0,2) \).</p>
+			<!-- Hình bài 1-->
+<div class="container">
+    <svg width="400" height="400" viewBox="-50 -50 400 400" xmlns="http://w3.org">
+        <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 2 L 10 5 L 0 8 z" fill="#007bff"/>
+            </marker>
+            <marker id="contour-arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1 L 10 5 L 0 9 z" fill="#28a745"/>
+            </marker>
+        </defs>
+        <line x1="-50" y1="100" x2="350" y2="100" stroke="#eee" stroke-width="1"/>
+        <line x1="-50" y1="250" x2="350" y2="250" stroke="#eee" stroke-width="1"/>
+        <line x1="100" y1="-50" x2="100" y2="350" stroke="#eee" stroke-width="1"/>
+        <line x1="250" y1="-50" x2="250" y2="350" stroke="#eee" stroke-width="1"/>
+        <line x1="-30" y1="250" x2="320" y2="250" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+        <line x1="100" y1="330" x2="100" y2="-20" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+        <text x="325" y="255" font-size="16" font-style="italic">x</text>
+        <text x="85" y="-20" font-size="16" font-style="italic">y</text>
+        <line x1="250" y1="245" x2="250" y2="255" stroke="#333" stroke-width="1.5"/>
+        <text x="245" y="275" font-size="14">1</text>
+        <!-- Số 1 trên Oy -->
+        <line x1="95" y1="100" x2="105" y2="100" stroke="#333" stroke-width="1.5"/>
+        <text x="75" y="105" font-size="14">1</text>
+        <line x1="95" y1="-50" x2="105" y2="-50" stroke="#333" stroke-width="1.5"/>
+        <polygon points="100,250 250,100 100,-50" fill="#28a745" fill-opacity="0.15"/>
+        <line x1="100" y1="250" x2="180" y2="170" stroke="#28a745" stroke-width="2.5" marker-end="url(#contour-arrow)"/>
+        <line x1="175" y1="175" x2="250" y2="100" stroke="#28a745" stroke-width="2.5"/>
+        <line x1="250" y1="100" x2="170" y2="20" stroke="#28a745" stroke-width="2.5" marker-end="url(#contour-arrow)"/>
+        <line x1="175" y1="25" x2="100" y2="-50" stroke="#28a745" stroke-width="2.5"/>
+        <line x1="100" y1="-50" x2="100" y2="110" stroke="#28a745" stroke-width="2.5" marker-end="url(#contour-arrow)"/>
+        <line x1="100" y1="100" x2="100" y2="250" stroke="#28a745" stroke-width="2.5"/>
+        <circle cx="100" cy="250" r="4" fill="#ffc107"/>
+        <circle cx="250" cy="100" r="4" fill="#dc3545"/>
+        <circle cx="100" cy="-50" r="4" fill="#dc3545"/>
+        <text x="110" y="270" font-size="14" font-weight="bold">A</text>
+        <text x="260" y="105" font-size="14" font-weight="bold">B(1,1)</text>
+        <text x="110" y="-35" font-size="14" font-weight="bold">C(0,2)</text>
+        <text x="140" y="110" font-size="22" font-weight="bold" fill="#1e7e34" font-style="italic">D</text>
+        <text x="190" y="200" font-size="13" fill="#555" transform="rotate(-45 190 200)">y = x</text>
+        <text x="165" y="45" font-size="13" fill="#555" transform="rotate(45 165 45)">y = 2 - x</text>
+    </svg>
+</div>
 <h3>Giải:</h3>
 <p>Cách 1: \(I = \int_{AB} \left[2(x^2+y^2)\,dx + (3x+4xy)\,dy\right] + \int_{BC} \left[2(x^2+y^2)\,dx + (3x+4xy)\,dy\right] + \int_{CA} \left[2(x^2+y^2)\,dx + (3x+4xy)\,dy\right]\)</p>
 <p>Cách 2: Gọi \(D\) là miền giới hạn bởi\[L \Rightarrow D:\begin{cases}0 \le x \le 1,\\x \le y \le 2-x\end{cases}\]</p>
@@ -31,6 +96,31 @@
 <p>$$\Rightarrow I =3 \Big[ 2x - x^2 \Big|_0^1 \Big]$$</p>
 <p>$$\Rightarrow I =3 \cdot (2 - 1) = 3$$</p>
 <p>Bài 2. Tính $$I = \oint_{OBAO} (x^2 + 2xy - y^2)dx + (-x^2 - y^2)dy$$ với \(OBAO\) là đường gấp khúc khép kín, trong đó các đỉnh có tọa độ: \(O(0,0)\), \(A(1,0)\), \(B(0,1)\).</p>
+			<!-- Hình bài 2-->
+<div class="graph-container">
+    <svg width="400" height="400" viewBox="0 0 400 400">
+        <defs>
+            <pattern id="diagonal-hatch" width="10" height="10"
+                     patternTransform="rotate(45 0 0)"
+                     patternUnits="userSpaceOnUse">
+                <line x1="0" y1="0" x2="0" y2="10"
+                      stroke="#000000" stroke-width="1.5"/>
+            </pattern>
+        </defs>
+        <polygon points="100,300 300,300 100,100"
+                 fill="url(#diagonal-hatch)"
+                 stroke="#000000"
+                 stroke-width="2"/>
+        <line x1="50" y1="300" x2="360" y2="300"
+              stroke="#000000" stroke-width="2"/>
+        <polygon points="360,296 370,300 360,304" fill="#000000"/>
+        <line x1="100" y1="350" x2="100" y2="50"
+              stroke="#000000" stroke-width="2"/>
+        <polygon points="96,50 100,40 104,50" fill="#000000"/>
+        <circle cx="300" cy="300" r="3" fill="#000000"/>
+        <circle cx="100" cy="100" r="3" fill="#000000"/>
+    </svg>
+</div>
 <h3>Giải:</h3>
 <p>Cách 1: (Tính trực tiếp)</p>
 <p>\(I = \int_{OB} \left[(x^2 + 2xy - y^2)\,dx + (-x^2 - y^2)\,dy\right] + \int_{BA} \left[(x^2 + 2xy - y^2)\,dx + (-x^2 - y^2)\,dy\right] + \int_{AO} \left[(x^2 + 2xy - y^2)\,dx + (-x^2 - y^2)\,dy\right]\)</p>
@@ -45,6 +135,36 @@
 <p>$$\Rightarrow I = \int_0^1 \left[ -4xy \Big|_{y=0}^{y=1-x} - y^2 \Big|_{y=0}^{y=1-x} \right] dx$$</p>
 <p>$$\Rightarrow I = \int_0^1 \left[ -4x(1-x) - (1-x)^2 \right] dx$$</p>
 <p>$$\Rightarrow I = \int_0^1 \left[ 3x^2 - 2x - 1 \right] dx = x^3 \Big|_0^1 - x^2 \Big|_0^1 - x \Big|_0^1$$</p>
+<p>Bài 3. Tính \( I = \oint_{L^-} (2x^3+y^3)dx + (x^3+y^3)dy \) trong đó \( L \) là đường tròn của \(x^2 + y^2 = 2x\).</p>
+        <!-- Hình bài 3 -->
+<div class="container">
+    <svg width="400" height="400" viewBox="-100 -200 400 400">
+        <defs>
+            <pattern id="diagonal-hatch" width="10" height="10" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+                <line x1="0" y1="0" x2="0" y2="10" stroke="#007bff" stroke-width="1" />
+            </pattern>
+        </defs>
+        <g stroke="#e0e0e0" stroke-width="0.5">
+            <line x1="-100" y1="-100" x2="300" y2="-100" />
+            <line x1="-100" y1="100" x2="300" y2="100" />
+            <line x1="100" y1="-200" x2="100" y2="200" />
+            <line x1="200" y1="-200" x2="200" y2="200" />
+        </g>
+        <line x1="-80" y1="0" x2="280" y2="0" stroke="black" stroke-width="1.5" />
+        <polygon points="280,-4 290,0 280,4" fill="black" />
+        <text x="280" y="20" font-size="16" font-style="italic">x</text>
+        <line x1="0" y1="180" x2="0" y2="-180" stroke="black" stroke-width="1.5" />
+        <polygon points="-4,-180 0,-190 4,-180" fill="black" />
+        <text x="15" y="-175" font-size="16" font-style="italic">y</text>
+        <text x="-15" y="18" font-size="16" font-style="italic">O</text>
+        <circle cx="100" cy="0" r="100" fill="url(#diagonal-hatch)" stroke="#007bff" stroke-width="2" />
+        <circle cx="100" cy="0" r="3" fill="black" />
+        <text x="95" y="20" font-size="14">1</text>
+        <circle cx="200" cy="0" r="3" fill="black" />
+        <text x="195" y="20" font-size="14">2</text>
+        <text x="110" y="-110" font-size="14" fill="#007bff" font-weight="bold">x² + y² = 2x</text>
+    </svg>
+</div>
 <p></p>
 
 
