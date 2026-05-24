@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Toán Giải Gần Độ Phương Trình</title>
+    <script src="https://polyfill.io"></script>
+    <script id="MathJax-script" async src="https://jsdelivr.net"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 24px;
+            color: #000;
+            margin-bottom: 20px;
+        }
+        p, li {
+            font-size: 18px;
+            margin: 10px 0;
+            text-align: justify;
+        }
+        .equation {
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        .graph-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+        .theorem {
+            margin-left: 20px;
+            font-style: italic;
+            color: #555;
+        }
+        .sub-list {
+            list-style-type: none;
+            padding-left: 25px;
+            margin-top: 5px;
+        }
+        .sub-list li {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        .definition {
+            margin-top: 40px;
+            font-size: 18px;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+        .math {
+            font-style: italic;
+            font-family: "Times New Roman", Times, serif;
+        }
+        .step {
+            padding-left: 10px;
+        }
+        .limit-formula {
+            text-align: center;
+            margin: 25px 0;
+            font-size: 20px;
+        }
+        .math {
+            font-family: "Times New Roman", Times, serif;
+            font-style: italic;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }.fraction {
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            padding: 0 4px;
+        }
+        .fraction .numerator {
+            display: block;
+            border-bottom: 1px solid #333;
+            padding-bottom: 2px;
+        }
+        .fraction .denominator {
+            display: block;
+            padding-top: 2px;
+        }
+        svg {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1.5);
+            border: 1px solid #ccc;
+        }
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+            }
+        }table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+            font-size: 17px;
+        }
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #e2e8f0;
+            color: #1e293b;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>§1 ĐẶT BÀI TOÁN</h1>
+
+    <p>Giải gần đúng phương trình một biến số:</p>
+    <p class="equation">f(x) = 0</p>
+
+    <div class="graph-container">
+        <svg width="500" height="300" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+            <line x1="30" y1="180" x2="480" y2="180" stroke="#000" stroke-width="1.2" marker-end="url(#arrow)"/>
+            <line x1="60" y1="10" x2="60" y2="290" stroke="#000" stroke-width="1.2"/>
+            
+            <text x="475" y="198" font-family="Arial" font-size="16" fill="#333">x</text>
+            <text x="45" y="195" font-family="Arial" font-size="16" fill="#333">0</text>
+
+            <path d="M 15,85 
+                     C 45,85 55,115 70,140
+                     C 100,195 130,285 195,285
+                     C 230,285 270,220 290,170
+                     C 305,130 310,70 340,70
+                     C 380,70 400,210 450,190" 
+                  fill="none" stroke="#555" stroke-width="1.2" />
+            
+            <line x1="225" y1="180" x2="225" y2="290" stroke="#000" stroke-width="1.2"/>
+            <text x="210" y="173" font-family="Arial" font-size="16" fill="#333">a</text>
+
+            <line x1="310" y1="90" x2="310" y2="180" stroke="#000" stroke-width="1.2"/>
+            <text x="315" y="173" font-family="Arial" font-size="16" fill="#333">b</text>
+
+            <text x="260" y="150" font-family="Arial" font-style="italic" font-size="16" fill="#333">f(x)</text>
+
+            <defs>
+                <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 2 L 10 5 L 0 8 z" fill="#000" />
+                </marker>
+            </defs>
+        </svg>
+    </div>
+
+    <p>Quá trình giải gồm 2 bước:</p>
+
+    <ul>
+        <li>
+            <strong>1. Bước giải sơ bộ:</strong> Khảo sát đồ thị hàm f(x) hoặc dùng phương pháp chia đôi nhằm tìm ra khoảng đủ bé chứa 1 nghiệm của f(x) (khoảng này gọi là khoảng phân ly nghiệm)
+            <p class="theorem">Đlý: [a,b] là đoạn phân ly nghiệm &lt;=&gt; f(a)f(b) &lt; 0 và f' không đổi dấu trên [a,b]</p>
+        </li>
+        <li>
+            <strong>2. Bước giải kiện toàn:</strong> Thu hẹp khoảng nghiệm và tìm nghiệm với độ chính xác cần thiết.
+        </li>
+    </ul>
+</div><div class="container">
+    <div class="text-section">
+        <h2>SƠ ĐỒ KHỐI</h2>
+        
+        <h3>Bài toán:</h3>
+        <p>Cho hàm f(x) liên tục trên [a,b]. Hãy tìm gần đúng một nghiệm của phương trình f(x)=0 trên [a,b] bằng phương pháp chia đôi, biết [a,b] là đoạn phân ly nghiệm của f(x).</p>
+        
+        <p><strong>Ưu:</strong> đơn giản</p>
+        <p><strong>Nhược:</strong> độ chính xác không cao và hội tụ chậm.</p>
+    </div>
+
+    <div class="flowchart-section">
+        <svg width="400" height="560" viewBox="0 0 400 560" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#333" />
+                </marker>
+            </defs>
+
+            <polygon points="170,10 250,10 230,40 150,40" fill="none" stroke="#333" stroke-width="1.2"/>
+            <text x="165" y="26" font-family="Arial" font-size="11" fill="#333">a, b, ss, f(x)</text>
+            <line x1="200" y1="40" x2="200" y2="65" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+            <rect x="140" y="65" width="120" height="35" fill="none" stroke="#333" stroke-width="1.2"/>
+            <text x="165" y="87" font-family="Arial" font-size="13" fill="#333">c = (a+b)/2</text>
+            <line x1="200" y1="100" x2="200" y2="130" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+            <polygon points="200,130 265,155 200,180 135,155" fill="none" stroke="#333" stroke-width="1.2"/>
+            <text x="178" y="160" font-family="Arial" font-size="13" fill="#333">f(c) = 0</text>
+            
+            <line x1="135" y1="155" x2="100" y2="155" stroke="#333" stroke-width="1.2"/>
+            <text x="115" y="148" font-family="Arial" font-size="11" fill="#333">+</text>
+            <line x1="100" y1="155" x2="100" y2="505" stroke="#333" stroke-width="1.2"/>
+
+            <line x1="200" y1="180" x2="200" y2="210" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/>
+            <text x="206" y="196" font-family="Arial" font-size="11" fill="#333">-</text>
+
+            <polygon points="200,210 275,240 200,270 125,240" fill="none" stroke="#333" stroke-width="1.2"/>
+            <text x="165" y="245" font-family="Arial" font-size="12" fill="#333">f(a)f(c) &lt; 0</text>
+            
+            <line x1="200" y1="270" x2="200" y2="300" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/>
+            <text x="206" y="286" font-family="Arial" font-size="11" fill="#333">+</text>
+            
+            <rect x="160" y="300" width="80" height="35" fill="none" stroke="#333" stroke-width="1.2"/>
+            <text x="186" y="322" font-family="Arial" font-size="13" fill="#333">b = c</text>
+
+            <line x1="275" y1="240" x2="330" y2="240" stroke="#333" stroke-width="1.2"/>
+            <text x="295" y="233" font-family="Arial" font-size="11" fill="#333">-</text>
+            <line x1="330" y1="240" x2="330" y2="300" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/>
+            
+            <rect x="290" y="300" width="80" height="35" fill="none" stroke="#333" stroke-width="1.2"/>
+            <text x="316" y="322" font-family="Arial" font-size="13" fill="#333">a = c</text>
+
+            <line x1="330" y1="335" x2="330" y2="355" stroke="#333" stroke-width="1.2"/>
+            <line x1="330" y1="355" x2="200" y2="355" stroke="#333" stroke-width="1.2"/>
+            <line x1="200" y1="335" x2="200" y2="380" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+            <polygon points="200,380 270,410 200,440 130,410" fill="none" stroke="#333" stroke-width="1.2"/>
+            <text x="175" y="415" font-family="Arial" font-size="13" fill="#333">b - a &lt; ss</text>
+            
+            <line x1="270" y1="410" x2="380" y2="410" stroke="#333" stroke-width="1.2"/>
+            <text x="295" y="403" font-family="Arial" font-size="11" fill="#333">-</text>
+            <line x1="380" y1="410" x2="380" y2="82" stroke="#333" stroke-width="1.2"/>
+            <line x1="380" y1="82" x2="260" y2="82" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+            <line x1="200" y1="440" x2="200" y2="470" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/>
+            <text x="206" y="456" font-family="Arial" font-size="11" fill="#333">+</text>
+
+            <rect x="140" y="470" width="120" height="35" fill="none" stroke="#333" stroke-width="1.2"/>
+            <text x="165" y="492" font-family="Arial" font-size="13" fill="#333">c = (a+b)/2</text>
+            
+            <line x1="100" y1="505" x2="200" y2="505" stroke="#333" stroke-width="1.2"/>
+            <line x1="200" y1="505" x2="200" y2="525" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+            <polygon points="170,525 250,525 230,555 150,555" fill="none" stroke="#333" stroke-width="1.2"/>
+            <text x="180" y="543" font-family="Arial" font-size="12" fill="#333">Xuất c (End)</text>
+        </svg>
+    </div>
+</div><div class="container">
+    <h1>§2 PHƯƠNG PHÁP DÂY CUNG</h1>
+
+    <h2>2.1 Bài toán: Cho hàm <span class="math">f(x)</span> liên tục trên <span class="math">[a,b]</span>. Hãy tìm gần đúng một nghiệm của phương trình <span class="math">f(x)=0</span> trên <span class="math">[a,b]</span>, biết</h2>
+    
+    <ul class="sub-list">
+        <li>1, <span class="math">[a,b]</span> là đoạn phân ly nghiệm của <span class="math">f(x)</span>.</li>
+        <li>2, <span class="math">f(x) &in; C<sup>2</sup>[a,b]</span>; <span class="math">f'(x)</span> và <span class="math">f''(x)</span> không đổi dấu trên <span class="math">[a,b]</span>.</li>
+    </ul>
+
+    <h2>2.2 Giải quyết bài toán:</h2>
+    
+    <p>Không mất tổng quát, giả sử <span class="math">f'(x) &gt; 0</span> trên <span class="math">[a,b]</span> (nếu ngược lại thì ta chỉ cần xét hàm <span class="math">g(x) = -f(x)</span>).</p>
+    
+    <p>Sau đây ta xét trường hợp <span class="math">f''(x) &lt; 0</span> trên <span class="math">[a,b]</span> (trường hợp <span class="math">f''(x) &gt; 0</span> làm tương tự)</p>
+
+    <p class="definition">
+        <span class="underline">Định nghĩa:</span> Điểm <span class="math">x</span> được gọi là điểm Fourier nếu <span class="math">f(x).f''(x) &gt; 0</span>
+    </p>
+</div>
+<p>Ta dễ thấy <span class="math">f(a).f''(a) &gt; 0</span> nên <span class="math">a</span> là điểm Fourier. Ta chọn <span class="math">b = x<sub>0</sub></span></p>
+        
+        <p class="step">-B1: Tìm điểm giao <span class="math">x<sub>1</sub></span> của đường thẳng đi qua <span class="math">A</span> và <span class="math">N<sub>0</sub></span> với trục hoành</p>
+        <p class="step">-B2: Từ <span class="math">x<sub>1</sub></span> dựng đường thẳng song song với trục tung cắt <span class="math">f(x)</span> tại <span class="math">N<sub>1</sub></span></p>
+        <p class="step">-B3: Tìm điểm giao <span class="math">x<sub>2</sub></span> của đường thẳng đi qua <span class="math">A</span> và <span class="math">N<sub>1</sub></span> với trục hoành</p>
+        
+        <p>...</p>
+        
+        <p>Quá trình trên được lặp đi lặp lại nhiều lần, và ta nhận thấy:</p>
+        
+        <div class="limit-formula">
+            <svg width="180" height="40" viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
+                <text x="10" y="25" font-family="Times New Roman" font-style="italic" font-size="20">x<tspan dy="5" font-size="14">n</tspan></text>
+                <line x1="45" y1="20" x2="125" y2="20" stroke="#333" stroke-width="1.2"/>
+                <polygon points="125,17 132,20 125,23" fill="#333"/>
+                <text x="68" y="34" font-family="Times New Roman" font-style="italic" font-size="13">n &rarr; &infin;</text>
+                <text x="145" y="26" font-family="Times New Roman" font-size="24">&xi;</text>
+            </svg>
+        </div>
+        
+        <p>Ta sẽ xây dựng công thức lặp để tìm nghiệm gần đúng</p>
+    </div>
+
+    <svg width="600" height="400" viewBox="0 0 600 400">
+        <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="black" />
+            </marker>
+        </defs>
+
+        <line x1="50" y1="350" x2="50" y2="20" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
+        <text x="35" y="30" font-weight="bold">y</text>
+        <text x="35" y="275" font-weight="bold">0</text>
+
+        <line x1="20" y1="270" x2="570" y2="270" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
+        <text x="560" y="290" font-weight="bold">x</text>
+
+        <path d="M 120 100 C 140 180, 220 300, 300 320 L 480 370" fill="none" stroke="blue" stroke-width="2" />
+        <text x="140" y="210" fill="blue">y=f(x)</text>
+
+        <line x1="120" y1="270" x2="120" y2="100" stroke="gray" stroke-dasharray="5,5" />
+        <circle cx="120" cy="100" r="4" fill="black" />
+        <text x="105" y="105">A</text>
+        <text x="105" y="260">a</text>
+
+        <line x1="120" y1="100" x2="480" y2="370" stroke="green" stroke-width="1.5" stroke-dasharray="8,4" />
+        <text x="490" y="380" fill="green">N0</text>
+        <text x="490" y="260">b=x0</text>
+        <line x1="480" y1="270" x2="480" y2="370" stroke="gray" stroke-dasharray="5,5" />
+        <circle cx="480" cy="370" r="3" fill="green" />
+
+        <text x="360" y="260">x1</text>
+        <line x1="373" y1="270" x2="373" y2="340" stroke="gray" stroke-dasharray="5,5" />
+        <circle cx="373" cy="270" r="3" fill="black" />
+        <circle cx="373" cy="340" r="3" fill="green" />
+        <text x="380" y="350" fill="green">N1</text>
+
+        <line x1="120" y1="100" x2="373" y2="340" stroke="orange" stroke-width="1.5" stroke-dasharray="6,3" />
+
+        <text x="310" y="260">x2</text>
+        <line x1="312" y1="270" x2="312" y2="322" stroke="gray" stroke-dasharray="5,5" />
+        <circle cx="312" cy="270" r="3" fill="black" />
+        <circle cx="312" cy="322" r="3" fill="orange" />
+        <text x="300" y="335" fill="orange">N2</text>
+        
+        <line x1="120" y1="100" x2="312" y2="322" stroke="red" stroke-width="1.5" stroke-dasharray="4,2" />
+
+        <text x="240" y="300" font-size="20" font-weight="bold">ξ</text>
+        <circle cx="240" cy="270" r="5" fill="blue" stroke="blue" stroke-width="2" fill-opacity="0.5" />
+        
+    </svg>
+    
+</div>
+
+<div class="container">
+    
+    <div class="content-left">
+        <h1>XÂY DỰNG CÔNG THỨC DÂY CUNG(tiếp)</h1>
+        
+        <p>Đặt <span class="math">x<sub>0</sub> = b</span></p>
+        
+        <p>Ta có phương trình tổng quát đi qua hai điểm <span class="math">A(a, f(a))</span> và <span class="math">N<sub>k</sub>(x<sub>k</sub>, f(x<sub>k</sub>))</span> có dạng:</p>
+        
+        
+    <div class="math-container">
+        <!-- Vế trái -->
+        <div class="fraction">
+            <span class="numerator">x - x<sub>k</sub></span>
+            <span class="denominator">a - x<sub>k</sub></span>
+        </div>
+        
+        <!-- Dấu bằng -->
+        <span class="equals">=</span>
+        
+        <!-- Vế phải -->
+        <div class="fraction">
+            <span class="numerator">y - f(x<sub>k</sub>)</span>
+            <span class="denominator">f(a) - f(x<sub>k</sub>)</span>
+        </div>
+    </div>
+        
+        <p>Đường thẳng trên cắt trục hoành tại điểm có hoành độ <span class="math">x<sub>k+1</sub></span> được xác định bởi công thức sau:</p>
+        
+        <div class="math-block" style="font-size: 20px;">
+            <span class="math">
+                x = x<sub>k+1</sub> = x<sub>k</sub> - 
+                <div class="fraction">
+                    <span class="numerator">f(x<sub>k</sub>)</span>
+                    <span class="denominator">f(a) - f(x<sub>k</sub>)</span>
+                </div>
+                (a - x<sub>k</sub>)
+            </span>
+        </div>
+        
+        <p>Dễ dàng chứng minh được công thức lặp trên cho ta dãy <span class="math">{x<sub>k</sub>}</span> hội tụ đến nghiệm <span class="math">&xi;</span> của <span class="math">f(x)</span>.</p>
+        
+        <p>Điều kiện dừng của công thức lặp trên là <span class="math">|x<sub>k+1</sub> - x<sub>k</sub>| &le; &epsilon;</span> (sai số cho trước)</p>
+    </div>
+
+    <div class="content-right">
+        <svg width="550" height="400" viewBox="0 0 600 400">
+            <defs>
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                    <polygon points="0 0, 10 3.5, 0 7" fill="black" />
+                </marker>
+            </defs>
+
+            <line x1="50" y1="350" x2="50" y2="20" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
+            <text x="35" y="30" font-weight="bold">y</text>
+            <text x="35" y="275" font-weight="bold">0</text>
+
+            <line x1="20" y1="270" x2="570" y2="270" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
+            <text x="560" y="290" font-weight="bold">x</text>
+
+            <path d="M 120 100 C 140 180, 220 300, 300 320 L 480 370" fill="none" stroke="blue" stroke-width="2" />
+            <text x="140" y="210" fill="blue">y=f(x)</text>
+
+            <line x1="120" y1="270" x2="120" y2="100" stroke="gray" stroke-dasharray="5,5" />
+            <circle cx="120" cy="100" r="4" fill="black" />
+            <text x="105" y="105">A</text>
+            <text x="105" y="260">a</text>
+
+            <line x1="120" y1="100" x2="480" y2="370" stroke="green" stroke-width="1.5" stroke-dasharray="8,4" />
+            <text x="490" y="380" fill="green">N0</text>
+            <text x="490" y="260">b=x0</text>
+            <line x1="480" y1="270" x2="480" y2="370" stroke="gray" stroke-dasharray="5,5" />
+            <circle cx="480" cy="370" r="3" fill="green" />
+
+            <text x="360" y="260">x1</text>
+            <line x1="373" y1="270" x2="373" y2="340" stroke="gray" stroke-dasharray="5,5" />
+            <circle cx="373" cy="270" r="3" fill="black" />
+            <circle cx="373" cy="340" r="3" fill="green" />
+            <text x="380" y="350" fill="green">N1</text>
+
+            <line x1="120" y1="100" x2="373" y2="340" stroke="orange" stroke-width="1.5" stroke-dasharray="6,3" />
+
+            <text x="310" y="260">x2</text>
+            <line x1="312" y1="270" x2="312" y2="322" stroke="gray" stroke-dasharray="5,5" />
+            <circle cx="312" cy="270" r="3" fill="black" />
+            <circle cx="312" cy="322" r="3" fill="orange" />
+            <text x="300" y="335" fill="orange">N2</text>
+            
+            <line x1="120" y1="100" x2="312" y2="322" stroke="red" stroke-width="1.5" stroke-dasharray="4,2" />
+
+            <text x="240" y="300" font-size="20" font-weight="bold">ξ</text>
+            <circle cx="240" cy="270" r="5" fill="blue" stroke="blue" stroke-width="2" fill-opacity="0.5" />
+        </svg>
+    </div>
+    
+</div>
+
+
+
+<div class="container">
+    <h1>VÍ DỤ</h1>
+
+    <p>Giải gần đúng phương trình <span class="math">f(x) = x<sup>3</sup> - 8 = 0</span> bằng phương pháp dây cung với sai số <span class="math">&epsilon; = 10<sup>-2</sup></span> và đoạn phân ly nghiệm <span class="math">[1; 3]</span>.</p>
+    
+    <p>Ta dễ thấy <span class="math">f'(x) = 3x<sup>2</sup> &gt; 0</span> trên <span class="math">[1,3]</span> và <span class="math">f''(x) = 6x &gt; 0</span> trên <span class="math">[1,3]</span>. Mặt khác có <span class="math">f(b) = f(3) = 19 &gt; 0</span> nên <span class="math">b</span> là điểm Fourier, nên ta chọn <span class="math">x<sub>0</sub> = a = 1</span>. Áp dụng công thức lặp của phương pháp dây cung ta có bảng:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Bước</th>
+                <th><span class="math">x<sub>0</sub></span></th>
+                <th>
+                    <span class="math">
+                        x<sub>1</sub> = x<sub>0</sub> - 
+                        <div class="fraction">
+                            <span class="numerator">f(x<sub>0</sub>)</span>
+                            <span class="denominator">f(b) - f(x<sub>0</sub>)</span>
+                        </div>
+                        (b - x<sub>0</sub>)
+                    </span>
+                </th>
+                <th><span class="math">|x<sub>1</sub> - x<sub>0</sub>|</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1,5385</td>
+                <td>0,5385</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<table>
+        <thead>
+            <tr>
+                <th>Bước</th>
+                <th><span class="math">x<sub>0</sub></span></th>
+                <th>
+                    <span class="math">
+                        x<sub>1</sub> = x<sub>0</sub> - 
+                        <div class="fraction">
+                            <span class="numerator">f(x<sub>0</sub>)</span>
+                            <span class="denominator">f(b) - f(x<sub>0</sub>)</span>
+                        </div>
+                        (b - x<sub>0</sub>)
+                    </span>
+                </th>
+                <th><span class="math">|x<sub>1</sub> - x<sub>0</sub>|</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1,5385</td>
+                <td>0,5385</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>1,5385</td>
+                <td>1,8112</td>
+                <td>0,2727</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>1,8112</td>
+                <td>1,9275</td>
+                <td>0,1163</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>1,9275</td>
+                <td>1,9729</td>
+                <td>0,0454</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>1,9729</td>
+                <td>1,9899</td>
+                <td>0,017</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>1,9899</td>
+                <td>1,9963</td>
+                <td>0,0064</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p class="conclusion">
+        Vì <span class="math">|x<sub>1</sub> - x<sub>0</sub>| &lt; &epsilon;</span> nên nghiệm gần đúng là <span class="math">x = 1,9963</span>
+    </p>
+</div>
+
+
+<div class="container">
+    <div class="text-section">
+        <h2>SƠ ĐỒ KHỐI</h2>
+        
+        <h3>Bài toán:</h3>
+        <p>Cho hàm <span class="math">f(x)</span> liên tục trên <span class="math">[a,b]</span>. Hãy tìm gần đúng một nghiệm của phương trình <span class="math">f(x)=0</span> trên <span class="math">[a,b]</span> bằng phương pháp dây cung, biết:</p>
+        
+        <ul>
+            <li>1, <span class="math">[a,b]</span> là đoạn phân ly nghiệm của <span class="math">f(x)</span>.</li>
+            <li>2, <span class="math">f(x) &in; C<sup>2</sup>[a,b]</span>; <span class="math">f'(x)</span> và <span class="math">f''(x)</span> không đổi dấu trên <span class="math">[a,b]</span>.</li>
+        </ul>
+        
+        <p style="margin-top: 20px; font-style: italic; color: #555;">(Xét trường hợp <span class="math">f'(x) &gt; 0</span> trên <span class="math">[a,b]</span>)</p>
+    </div>
+
+    <div class="flowchart-section">
+        <svg width="420" height="580" viewBox="0 0 420 580" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#333" />
+                </marker>
+            </defs>
+
+            <polygon points="170,15 260,15 240,45 150,45" fill="none" stroke="#333" stroke-width="1.2"/>
+            <text x="162" y="32" font-family="Arial" font-size="12" fill="#333">a, b, ss, f(x)</text>
+            <line x1="202" y1="45" x2="202" y2="70" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+            <polygon points="202,70 267,95 202,120 137,95" fill="none" stroke="#333" stroke-width="1.2"/>
+            <text x="180" y="100" font-family="Times New Roman" font-style="italic" font-size="14" fill="#333">f(a) > 0</text>
+            
+            <line x1="137" y1="95" x2="95" y2="95" stroke="#333" stroke-width="1.2"/>
+            <text x="115" y="88" font-family="Arial" font-size="12" fill="#333">+</text>
+            <line x1="95" y1="95" x2="95" y2="125" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/>
+            
+            <rect x="55" y="125" width="80" height="45" fill="none" stroke="#333" stroke-width="1.2"/>
+            <text x="75" y="142" font-family="Times New Roman" font-style="italic" font-size="13" fill="#333">x₀ = b</text>
+            <text x="75" y="160" font-family="Times New Roman" font-style="italic" font-size="13" fill="#333">Fu = a</text>
+
+            <line x1="267" y1="95" x2="310" y2="95" stroke="#333" stroke-width="1.2"/>
+            <text x="285" y="88" font-family="Arial" font-size="12" fill="#333">-</text>
+            <line x1="310" y1="95" x2="310" y2="125" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/>
+            
+            <rect x="270" y="125" width="80" height="45" fill="none" stroke="#333" stroke-width="1.2"/>
+            <text x="290" y="142" font-family="Times New Roman" font-style="italic" font-size="13" fill="#333">x₀ = a</text>
+            <text x="290" y="160" font-family="Times New Roman" font-style="italic" font-size="13" fill="#333">Fu = b</text>
+
+            <line x1="95" y1="170" x2="95" y2="190" stroke="#333" stroke-width="1.2"/>
+            <line x1="310" y1="170" x2="310" y2="190" stroke="#333" stroke-width="1.2"/>
+            <line x1="95" y1="190" x2="202" y2="190" stroke="#333" stroke-width="1.2"/>
+            <line x1="310" y1="190" x2="202" y2="190" stroke="#333" stroke-width="1.2"/>
+            <line x1="202" y1="190" x2="202" y2="215" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+            <rect x="40" y="215" width="325" height="55" fill="none" stroke="#333" stroke-width="1.2"/>
+            <text x="50" y="248" font-family="Times New Roman" font-style="italic" font-size="15" fill="#333">x₁ = x₀  —</text>
+            <text x="128" y="235" font-family="Times New Roman" font-style="italic" font-size="13" fill="#333">f(x₀)</text>
+            <line x1="115" y1="241" x2="175" y2="241" stroke="#333" stroke-width="1"/>
+            <text x="117" y="254" font-family="Times New Roman" font-style="italic" font-size="13" fill="#333">f(Fu) - f(x₀)</text>
+            <text x="183" y="248" font-family="Times New Roman" font-style="italic" font-size="15" fill="#333">(Fu - x₀)</text>
+
+            <line x1="202" y1="270" x2="202" y2="305" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+            <polygon points="202,305 282,340 202,375 122,340" fill="none" stroke="#333" stroke-width="1.2"/>
+            <text x="170" y="345" font-family="Times New Roman" font-style="italic" font-size="14" fill="#333">|x₁ - x₀| &lt; ss</text>
+
+            <line x1="282" y1="340" x2="350" y2="340" stroke="#333" stroke-width="1.2"/>
+            <text x="300" y="333" font-family="Arial" font-size="12" fill="#333">+</text>
+            <line x1="350" y1="340" x2="350" y2="435" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+            <line x1="202" y1="375" x2="202" y2="405" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/>
+            <text x="208" y="392" font-family="Arial" font-size="12" fill="#333">-</text>
+
+            <rect x="152" y="405" width="100" height="35" fill="none" stroke="#333" stroke-width="1.2"/>
+            <text x="183" y="427" font-family="Times New Roman" font-style="italic" font-size="14" fill="#333">x₀ = x₁</text>
+
+            <line x1="202" y1="440" x2="202" y2="465" stroke="#333" stroke-width="1.2"/>
+            <line x1="202" y1="465" x2="20" y2="465" stroke="#333" stroke-width="1.2"/>
+            <line x1="20" y1="465" x2="20" y2="242" stroke="#333" stroke-width="1.2"/>
+            <line x1="20" y1="242" x2="40" y2="242" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+            <polygon points="320,435 380,435 365,465 305,465" fill="none" stroke="#333" stroke-width="1.2"/>
+            <text x="333" y="454" font-family="Times New Roman" font-style="italic" font-size="13" fill="#333">x₁</text>
+        </svg>
+    </div>
+</div>
+
+
+</body>
+</html>
