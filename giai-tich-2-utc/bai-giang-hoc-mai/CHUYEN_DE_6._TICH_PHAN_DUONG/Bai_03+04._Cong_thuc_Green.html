@@ -14,11 +14,25 @@
 <h2>a) Công thức</h2>
 <p>Gọi \(D\) là miền giới hạn bởi đường cong kín \(L\). Giả sử các hàm: \[P(x,y),\ Q(x,y),\ P'_y(x,y),\ Q'_x(x,y)\] là các hàm liên tục trên \(D\).</p>
 <p>Khi đó: \[\oint_{L^+} Pdx + Qdy=\iint_{D} \left( Q'_x - P'_y \right) dxdy\]</p>
-<h2>b) Bài tập lớn</h2>
+<h2>b) Bài tập mẫu</h2>
 <p>Bài 1. Tính \( I = \oint_{L^+} 2(x^2+y^2)dx + (3x+4xy)dy \) với \( L^+ \) là biên của \( \Delta ABC \), trong đó \( A(0,0), B(1,1), C(0,2) \).</p>
 <h3>Giải:</h3>
-<p>Cách 1:\(I = \int_{AB} \left[2(x^2+y^2)\,dx + (3x+4xy)\,dy\right] + \int_{BC} \left[2(x^2+y^2)\,dx + (3x+4xy)\,dy\right] + \int_{CA} \left[2(x^2+y^2)\,dx + (3x+4xy)\,dy\right]\)</p>
-<p>Cách 2: </p>
+<p>Cách 1: \(I = \int_{AB} \left[2(x^2+y^2)\,dx + (3x+4xy)\,dy\right] + \int_{BC} \left[2(x^2+y^2)\,dx + (3x+4xy)\,dy\right] + \int_{CA} \left[2(x^2+y^2)\,dx + (3x+4xy)\,dy\right]\)</p>
+<p>Cách 2: Gọi \(D\) là miền giới hạn bởi\[L \Rightarrow D:\begin{cases}0 \le x \le 1,\\x \le y \le 2-x\end{cases}\]</p>
+<p>Đặt: \(P(x,y) = 2(x^2+y^2), \quad Q(x,y) = 3x+4xy\)</p>
+<p>\(\Rightarrow P'_y = 4y, \quad Q'_x = 3+4y\)</p>
+<p>Ta có: \(P(x,y), Q(x,y), P'_y, Q'_x\) liên tục trên \(D\)</p>
+<p>Áp dụng công thức Green, ta có:</p>
+<p>$$I = \iint_D (Q'_x - P'_y) dxdy = \iint_D (3 + 4y - 4y) dxdy$$</p>
+<p>$$(=) I = \iint_D 3 dxdy$$</p>
+<p>$$(=) I = 3 \int_{0}^{1} \left[ \int_{x}^{2-x} dy \right] dx$$</p>
+<p>$$(=) I =3 \int_{0}^{1} \Big[ y \Big|_{x}^{2-x} \Big] dx$$</p>
+<p>$$(=) I =3 \int_{0}^{1} (2 - 2x) dx$$</p>
+<p>$$(=) I =3 \Big[ 2x - x^2 \Big|_0^1 \Big]$$</p>
+<p>$$(=) I =3 \cdot (2 - 1) = 3$$</p>
+<p>Bài 2. Tính $$I = \oint_{OBAO} (x^2 + 2xy - y^2)dx + (-x^2 - y^2)dy$$ với \(OBAO\) là đường gấp khúc khép kín, trong đó các đỉnh có tọa độ: \(O(0,0)\), \(A(1,0)\), \(B(0,1)\).</p>
+<h3>Giải:</h3>
+<p></p>
 
   
   </body>
