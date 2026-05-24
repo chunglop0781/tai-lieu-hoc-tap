@@ -247,6 +247,23 @@
     ctx.fillText('2', cx - 15, cy - radius - 8);
     ctx.fillText('-2', cx - 22, cy + radius + 18);
 </script>
+<h3>Giải:</h3>
+<p>Gọi \(D\) là miền giới hạn bởi <b>\(L\)</b>.</p>
+<p>Đặt: \(P(x,y) = (-x^2y), \quad Q(x,y) = (xy^2)\)</p>
+<p>\(\Rightarrow P'_y = -x^2, \quad Q'_x = y^2\)</p>
+<p>Ta thấy \(P(x,y), Q(x,y), P'_y, Q'_x\) liên tục trên \(D\)</p>
+<p>\(\Rightarrow I = \iint\limits_D (Q'_x - P'_y)\,dxdy = \iint\limits_D (y^3 + x^3)\,dxdy\)</p>
+<p>Đặt: \[\begin{cases} x = r\cos\varphi \\ y = r\sin\varphi\end{cases} \Rightarrow D \to D': \begin{cases} 0 \le \varphi \le 2\pi \\ 0 \le r \le 2 \end{cases} \]</p>
+<p>
+    $$
+    \begin{aligned}
+    \Rightarrow I &= -\iint_{D'} 3\left[(r\cos\varphi)^2 + (r\sin\varphi)^2\right] r \, dr d\varphi \\
+    &= \iint_{D'} r^3 \, dr d\varphi \\
+    &= \int_{0}^{2\pi} \left[ \int_{0}^{2} r^3 \, dr \right] d\varphi \\
+    &= \int_{0}^{2\pi} \left[ \left. \frac{r^4}{4} \right|_{0}^{2} \right] d\varphi \\
+    \end{aligned}
+    $$
+</p>
 <p></p>
 
 
