@@ -135,7 +135,7 @@
 <p>$$\Rightarrow I = \int_0^1 \left[ -4xy \Big|_{y=0}^{y=1-x} - y^2 \Big|_{y=0}^{y=1-x} \right] dx$$</p>
 <p>$$\Rightarrow I = \int_0^1 \left[ -4x(1-x) - (1-x)^2 \right] dx$$</p>
 <p>$$\Rightarrow I = \int_0^1 \left[ 3x^2 - 2x - 1 \right] dx = x^3 \Big|_0^1 - x^2 \Big|_0^1 - x \Big|_0^1$$</p>
-<p>Bài 3. Tính \( I = \oint_{L^-} (2x^3+y^3)dx + (x^3+y^3)dy \) trong đó \( L \) là đường tròn của \(x^2 + y^2 = 2x\).</p>
+<p>Bài 3. Tính \( I = \oint_{L^-} (2x^3-y^3)dx + (x^3+y^3)dy \) trong đó \( L \) là đường tròn của \(x^2 + y^2 = 2x\).</p>
         <!-- Hình bài 3 -->
 <div class="container">
     <svg width="400" height="400" viewBox="-100 -200 400 400">
@@ -165,6 +165,88 @@
         <text x="110" y="-110" font-size="14" fill="#007bff" font-weight="bold">x² + y² = 2x</text>
     </svg>
 </div>
+<h3>Giải:</h3>
+<p>\( I = - \oint_{L^+} (2x^3-y^3)dx + (x^3+y^3)dy \)</p>
+<p>Đặt: \(P(x,y) = (2x^3-y^3), \quad Q(x,y) = x^3+y^3\)</p>
+<p>\(\Rightarrow P'_y = -3 y^2, \quad Q'_x = 2 x^2\)</p>
+<p>Gọi \(D\) là miền giới hạn bởi <b>\(L\)</b>.</p>
+<p>Ta thấy \(P(x,y), Q(x,y), P'_y, Q'_x\) liên tục trên \(D\)</p>
+<p>$$\Rightarrow I = - \iint_D (Q'_x - P'_y) dxdy = - \iint_D 3 (x^2 + y^2) dxdy$$</p>
+<p>Đặt: $$\begin{cases} x = r\cos\varphi \\ y = r\sin\varphi \end{cases} \Rightarrow D \rightarrow D': \begin{cases} -\frac{\pi}{2} \le \varphi \le \frac{\pi}{2} \\ 0 \le r \le 2\cos\varphi \end{cases}$$</p>
+<p>
+    $$
+    \begin{aligned}
+    \Rightarrow I &= -\iint_{D'} 3\left[(r\cos\varphi)^2 + (r\sin\varphi)^2\right] r \, dr d\varphi \\
+    &= -3\iint_{D'} r^3 \, dr d\varphi \\
+    &= -3 \int_{-\pi/2}^{\pi/2} \left[ \int_{0}^{2\cos\varphi} r^3 \, dr \right] d\varphi \\
+    &= -3 \int_{-\pi/2}^{\pi/2} \left[ \left. \frac{r^4}{4} \right|_{0}^{2\cos\varphi} \right] d\varphi \\
+    &= -12 \int_{-\pi/2}^{\pi/2} \cos^4\varphi \, d\varphi = -12 \int_{-\pi/2}^{\pi/2} \left( \frac{1 + \cos2\varphi}{2} \right)^2 d\varphi \\
+    &= -3 \int_{-\pi/2}^{\pi/2} (1 + 2\cos2\varphi + \cos^22\varphi) \, d\varphi
+    \end{aligned}
+    $$
+</p>
+<p>Tính \(I = \oint_{L^+} -x^2ydx + xy^2dy\), trong đó \(L\) là đường tròn: \(x^2 + y^2 = 4\)</p>
+        <!-- Hình bài 4 -->
+    <div class="board">
+        <canvas id="graphCanvas" width="400" height="400"></canvas>
+    </div>
+    <script>
+    const canvas = document.getElementById('graphCanvas');
+    const ctx = canvas.getContext('2d');
+    const cx = 200;
+    const cy = 200;
+    const radius = 100;
+    ctx.strokeStyle = 'rgba(0, 0, 0, 0.9)';
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.9)';
+    ctx.lineWidth = 2;
+    ctx.font = 'italic 18px "Courier New", Courier, monospace';
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(cx, cy, radius, 0, Math.PI * 2);
+    ctx.clip();
+    ctx.strokeStyle = 'rgba(0, 0, 0, 0.35)';
+    ctx.lineWidth = 1.5;
+    for (let i = -radius; i <= radius; i += 12) {
+        ctx.beginPath();
+        ctx.moveTo(cx - radius, cy + i - radius);
+        ctx.lineTo(cx + radius, cy + i + radius);
+        ctx.stroke();
+    }
+    ctx.restore();
+    ctx.strokeStyle = 'rgba(0, 0, 0, 0.85)';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(40, cy);
+    ctx.lineTo(360, cy);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(350, cy - 5);
+    ctx.lineTo(360, cy);
+    ctx.lineTo(350, cy + 5);
+    ctx.stroke();
+    ctx.fillText('x', 365, cy + 5);
+    ctx.beginPath();
+    ctx.moveTo(cx, 360);
+    ctx.lineTo(cx, 40);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(cx - 5, 50);
+    ctx.lineTo(cx, 40);
+    ctx.lineTo(cx + 5, 50);
+    ctx.stroke();
+    ctx.fillText('y', cx - 18, 45);
+    ctx.strokeStyle = 'rgba(0, 0, 0, 0.95)';
+    ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    ctx.arc(cx, cy, radius, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.fillText('L: x² + y² = 4', cx + 20, cy - radius - 20);
+    ctx.font = '16px sans-serif';
+    ctx.fillText('2', cx + radius + 8, cy - 8);
+    ctx.fillText('-2', cx - radius - 24, cy - 8);
+    ctx.fillText('2', cx - 15, cy - radius - 8);
+    ctx.fillText('-2', cx - 22, cy + radius + 18);
+</script>
 <p></p>
 
 
