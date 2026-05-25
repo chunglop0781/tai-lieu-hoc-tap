@@ -319,7 +319,7 @@ push 433
 pop
 </code></pre>
 
-    <h2>Sample Input 0</h2>
+    <h2>Sample Input 1</h2>
     <pre><code>9
 pop
 push 928
@@ -408,8 +408,130 @@ int main() {
 
 
 
+    <h1>[DSLK]. Bài 4. Hàng đợi</h1>
+
+    <!-- Nội dung chính phân cột -->
+    <div class="main-content">
+        <!-- Cột trái: Nội dung đề bài -->
+        <div class="problem-description">
+            <p>Cho Hàng đợi lưu các số nguyên được cài đặt bằng DSLK, hàng đợi hỗ trợ 3 thao tác: Push, pop, front. Trong đó nếu thao tác là push thì thêm 1 phần tử vào cuối hàng đợi, thao tác là pop thì xóa phần tử khỏi đầu hàng đợi nếu hàng đợi không rỗng, front thì in ra đỉnh ở đầu hàng đợi nếu hàng đợi không rỗng, hàng đợi rỗng thì in ra EMPTY.</p>
+
+            <div class="section-title">Input Format</div>
+            <p>Dòng đầu tiên là N: số lượng thao tác. N dòng tiếp theo mô tả loại thao tác, nếu là push sẽ có thêm 1 số nguyên đi kèm.</p>
+
+            <h2>Constraints</h2>
+            <p><span class="constraints-text">1 &lt;= N &lt;= 1000;</span></p>
+
+            <h2>Output Format</h2>
+            <p>In ra đáp án của bài toán</p>
+
+            <h2>Sample Input 0</h2>
+            <pre><code>9
+push 968
+pop
+push 851
+push 51
+front
+pop
+push 159
+push 561
+push 840</code></pre>
+        </div>
+
+
+
+
+    <h3>Submit</h3>
+    <pre><code class="language-c">
+// Online C compiler to run C program online
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+struct node{
+    int data;
+    struct node *next;
+};
+
+typedef struct node node;
+
+node *makeNode(int x){
+    node *newNode = (node*)malloc(sizeof(node));
+    newNode-&gt;data = x;
+    newNode-&gt;next = NULL;
+    return newNode;
+}
+
+void pushFront(node **head, int x){
+    node* newNode = makeNode(x);
+    newNode-&gt;next = (*head);
+    (*head) = newNode;
+}
+
+void pushBack(node **head, int x){
+    node* newNode = makeNode(x);
+    if(*head == NULL){
+        *head = newNode;
+        return;
+    }
+    node* tmp = *head;
+    while(tmp-&gt;next != NULL){
+        tmp = tmp-&gt;next;
+    }
+    tmp-&gt;next = newNode;
+}
+
+void popFront(node **head){
+    if(*head == NULL){
+        return;
+    }
+    node* tmp = *head;
+    *head = tmp-&gt;next;
+    free(tmp);
+}
+
+void duyet(node *head){
+    if(head == NULL){
+        printf("EMPTY\n");
+    }
+    while(head != NULL){
+        printf("%d ", head-&gt;data);
+        head = head-&gt;next;
+    }
+}
+
+int main() {
+    node *head = NULL;
+    int n; scanf("%d", &n);
+    while(n--){
+        char c[100]; scanf("%s", c);
+        if(strcmp(c, "push") == 0){
+            int x; scanf("%d", &x);
+            pushBack(&head, x);
+        }
+        else if (strcmp(c, "pop") == 0){
+            popFront(&head);
+        }
+        else{
+            if(head == NULL){
+                printf("EMPTY\n");
+            }
+            else{
+                printf("%d\n", head-&gt;data);
+            }
+        }
+    }
+}
+    </code></pre>
+
+
+
+
 <!-- Nhúng JS Bootstrap 5 -->
 <script src="https://jsdelivr.net"></script>
+    <!-- PrismJS Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
 
 
 </body>
