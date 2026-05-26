@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài Tập Thực Hành R</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: #333;
+        }
+        h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        ol, ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+            font-weight: bold;
+            color: #d63384;
+        }
+        .math-expr {
+            font-style: italic;
+            font-family: "Times New Roman", Times, serif;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center; color: #0056b3;">BÀI TẬP THỰC HÀNH R</h1>
+
+    <h2>Bài 1. Hãy nhập các lệnh sau đây vào R và giải thích phép tính</h2>
+    <ol>
+        <li><code>(102/2 -3)/(2*4)</code></li>
+        <li><code>3^2/4</code></li>
+        <li><code>3^2^4</code></li>
+        <li><code>3^(2^4)</code></li>
+        <li><code>2 + round(6/9 +3*2)/2 -3</code></li>
+        <li><code>2+ floor (6/11)/2-3</code></li>
+        <li><code>36%%15</code></li>
+        <li><code>sin(pi/2) + cos(pi/2)</code></li>
+        <li><code>sqrt(124) +(12+3)^2/10*2</code></li>
+        <li><code>exp(2) + 8^(1/3)</code></li>
+    </ol>
+
+    <h2>Bài 2. Thực hiện các lệnh sau trên R và giải thích kết quả</h2>
+    <ol>
+        <li><code>1 &amp; -1</code></li>
+        <li><code>0 &lt; (0.2 &lt; 0.4)</code></li>
+        <li><code>13 &amp; -6</code></li>
+        <li><code>(5 &gt; 4) &gt; 3</code></li>
+        <li><code>0 &lt; -20</code></li>
+        <li><code>2 &gt; 3 &amp; 1</code></li>
+    </ol>
+
+    <h2>Bài 3. Hãy nhập vào R các code sau đây và giải thích phép tính:</h2>
+    <ol type="i">
+        <li><code>(2!=2) &amp; (3&lt;=3)</code></li>
+        <li><code>(3!=4) | (4==3)</code></li>
+        <li><code>(2&lt;=5) &amp; (4&gt;=3)</code></li>
+        <li><code>isTRUE(4==5)</code></li>
+        <li><code>125%%2==0</code></li>
+    </ol>
+
+    <h2>Bài 4. Hãy tính các giá trị của các phép tính sau đây:</h2>
+    <ul style="list-style-type: none; padding-left: 0;">
+        <li><strong>a)</strong> <span class="math-expr">(213,5 − 31) &times; &radic;2 / 3</span></li>
+        <li><strong>b)</strong> <span class="math-expr">2<sup>5</sup> . 4 − 3<sup>5</sup> + 4<sup>3</sup> . 6 / 2</span></li>
+        <li><strong>c)</strong> <span class="math-expr">e<sup>12</sup> + log(15) / 2</span></li>
+        <li><strong>d)</strong> <span class="math-expr">sin(30&deg;) + cos(30&deg;)</span></li>
+        <li><strong>e)</strong> <span class="math-expr">2&pi; : 13</span></li>
+        <li><strong>f)</strong> <span class="math-expr">ln(&radic;20)</span></li>
+    </ul>
+
+    <h2>Bài 5. Dùng lệnh phù hợp trên R để kiểm tra các phép so sánh sau đây là đúng hay sai:</h2>
+    <ol>
+        <li><code>-3 &gt; 3</code></li>
+        <li><code>5 != 12</code></li>
+        <li><code>3 == 3</code></li>
+        <li><code>"xin chao" == "Xin chao"</code></li>
+        <li><code>(3 == 3) &amp; (12 &lt; 5)</code></li>
+        <li>Kiểm tra xem: <span class="math-expr">12</span> có chia hết cho <span class="math-expr">5</span> không? (Sử dụng toán tử <code>%%</code>)</li>
+    </ol>
+
+    <h2>Bài 6. Nhập vào vector x = c(3, 1, 5, 7, 9, 2, 6). Thực hiện các dòng lệnh sau và giải thích</h2>
+    <ol>
+        <li><code>x[3]</code></li>
+        <li><code>x[seq(1, length(x), by=2)]</code></li>
+        <li><code>x[c(1, 6, 2, 1, 1)]</code></li>
+        <li><code>x[1: length(x) - 1]</code></li>
+        <li><code>c(sum(x), min(x), max(x))</code></li>
+        <li><code>x[seq(6, 1, by=-2)]</code></li>
+    </ol>
+
+    <h2>Bài 7. Cho x = c(1, 4, 8), y = c(2, 1, 5) và A = matrix(c(3, 1, 6, 5, 2, 7), ncol=3). Xét xem dòng lệnh nào hợp lệ, dự đoán kết quả và thử lại bằng R:</h2>
+    <ol>
+        <li><code>x + y</code></li>
+        <li><code>A - c(x, y)</code></li>
+        <li><code>x + A</code></li>
+        <li><code>A - 3</code></li>
+        <li><code>t(x) + y</code></li>
+        <li><code>t(A)</code></li>
+    </ol>
+
+
+<h2>Bài 8.</h2>
+    <p>Cho <code>x = c(2, -5, 1, 6)</code>. Viết các lệnh thực hiện:</p>
+    <ol>
+        <li>Cộng thêm 16 vào tất cả các phần tử.</li>
+        <li>Cộng thêm 3 vào tất cả các phần tử ở vị trí lẻ.</li>
+        <li>Lấy căn bậc 2 của tất cả các phần tử có giá trị dương.</li>
+        <li>Bình phương tất cả các phần tử.</li>
+    </ol>
+
+    <h3>Bài 9.</h3>
+    <p>Cho dữ liệu Nồng độ mol các dung dịch được đo từ 7 mẫu thí nghiệm:</p>
+    <p><code>0,12; 0,10; 0,15; 0,11; 0,14; 0,13; 0,16</code></p>
+    <ul>
+        <li><strong>a)</strong> Hãy trích lọc các mẫu có nồng độ &gt; 0.13</li>
+        <li><strong>b)</strong> Sắp xếp nồng độ theo thứ tự tăng dần</li>
+        <li><strong>c)</strong> Tính giá trị trung bình</li>
+    </ul>
+
+    <h3>Bài 10.</h3>
+    <p>Nhập vào vector <code>A = matrix(c(3, 1, 6, 5, 2, 7, -5, 10, 0), ncol = 3)</code>. Thực hiện các dòng lệnh sau và giải thích:</p>
+    <div class="matrix-grid">
+        <div>1. <code>A[3,2]</code></div>
+        <div>6. <code>colSums(A)</code></div>
+        <div>2. <code>A[c(1,3), 3]</code></div>
+        <div>7. <code>min(A)</code></div>
+        <div>3. <code>A[, c(1,2)]</code></div>
+        <div>8. <code>apply(A, 2, min)</code></div>
+        <div>4. <code>A[1, ] = A[1, ] + 5</code></div>
+        <div>9. <code>apply(A, 1, min)</code></div>
+        <div>5. <code>rowSums(A)</code></div>
+    </div>
+
+    <h3>Bài 11.</h3>
+    <p>Cho đoạn code sau:</p>
+    <pre><code>&gt; STT = 1:6
+&gt; Ten = c('Pearson', 'Neyman', 'Fisher', 'Gosset', 'Bayes', 'Poisson')
+&gt; NamSinh = c(1857, 1894, 1890, 1876, 1702, 1781)
+&gt; NamMat = c(1936, 1981, 1962, 1937, 1761, 1840)
+&gt; df = data.frame(STT, Ten, Sinh = NamSinh, Chet = NamMat)</code></pre>
+    <p>Dựa vào kết quả của đoạn code trên hãy cho biết:</p>
+    <ul>
+        <li><strong>a)</strong> Năm sinh và năm mất của nhà khoa học Neyman.</li>
+        <li><strong>b)</strong> Hãy thực hiện lệnh: <code>subset(Ten, NamSinh %% 25 &gt; 13)</code> và xem kết quả.</li>
+        <li><strong>c)</strong> Trích xuất những nhà khoa học có năm sinh là số chia hết cho 3.</li>
+    </ul>
+
+    <h3>Bài 12.</h3>
+    <p>Nhập các biến id, gender, height, weight sau đây:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>gender</th>
+                <th>height</th>
+                <th>weight</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>F</td>
+                <td>150</td>
+                <td>49</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>M</td>
+                <td>165</td>
+                <td>52</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>F</td>
+                <td>157</td>
+                <td>57</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>F</td>
+                <td>156</td>
+                <td>53</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>M</td>
+                <td>160</td>
+                <td>51</td>
+            </tr>
+        </tbody>
+    </table>
+    <ul>
+        <li><strong>a)</strong> Hãy nhập các biến trên thành một dataframe có tên <code>data1</code>.</li>
+        <li><strong>b)</strong> Hãy trích suất 3 dòng đầu tiên của <code>data1</code>.</li>
+        <li><strong>c)</strong> Dữ liệu thứ 2 có tên <code>data2</code> có dữ liệu như sau:</li>
+    </ul>
+<table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>gender</th>
+                <th>height</th>
+                <th>weight</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>6</td><td>F</td><td>153</td><td>47</td></tr>
+            <tr><td>7</td><td>F</td><td>155</td><td>58</td></tr>
+            <tr><td>8</td><td>M</td><td>167</td><td>65</td></tr>
+            <tr><td>9</td><td>M</td><td>165</td><td>54</td></tr>
+            <tr><td>10</td><td>F</td><td>158</td><td>60</td></tr>
+            <tr><td>11</td><td>F</td><td>155</td><td>48</td></tr>
+        </tbody>
+    </table>
+
+    <p>Hãy nhập 2 data trên thành 1 dataframe có tên <code>data</code>.</p>
+    <ol class="exercise-parts" start="4">
+        <li>Hãy đổi tên các cột lần lượt thành: STT, gioitinh, chieucao, cannang.</li>
+        <li>Hãy lọc ra những dữ liệu có gioitinh là M.</li>
+        <li>Hãy tính các đặc trưng: kích thước, trung bình, phương sai, độ lệch chuẩn của biến <code>chieucao</code>, <code>cannang</code> trong dữ liệu <code>data</code>.</li>
+        <li>Hãy sử dụng lệnh <code>describe</code> trong package <code>psych</code> xử lý lại câu f.</li>
+        <li>Hãy tính các đặc trưng: kích thước, trung bình, phương sai, độ lệch chuẩn của biến <code>chieucao</code>, <code>cannang</code> theo <code>gioitinh</code> M và <code>gioitinh</code> F.</li>
+        <li>Hãy sử dụng lệnh <code>describe.by</code> trong package <code>psych</code> xử lý lại câu h.</li>
+    </ol>
+
+    <h2>Bài 13</h2>
+    <p>Ta có bảng dữ liệu đo độ dẫn điện (mS/cm), pH và nhiệt độ của các dung dịch thuốc thử như sau:</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Mẫu</th>
+                <th>pH</th>
+                <th>Độ dẫn</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>A</td><td>6.1</td><td>1.5</td></tr>
+            <tr><td>B</td><td>6.8</td><td>2.1</td></tr>
+            <tr><td>C</td><td>7.2</td><td>1.9</td></tr>
+            <tr><td>D</td><td>5.9</td><td>1.2</td></tr>
+            <tr><td>E</td><td>6.3</td><td>1.7</td></tr>
+            <tr><td>F</td><td>7.0</td><td>2.3</td></tr>
+            <tr><td>G</td><td>6.5</td><td>1.8</td></tr>
+            <tr><td>H</td><td>5.7</td><td>1.1</td></tr>
+            <tr><td>I</td><td>7.1</td><td>2.0</td></tr>
+        </tbody>
+    </table>
+
+    <ol class="exercise-parts">
+        <li>Hãy tính giá trị trung bình của các biến trên.</li>
+        <li>Lọc ra những mẫu có độ dẫn cao hơn trung bình.</li>
+        <li>Thêm 1 cột <code>tinh_trang</code> để đánh giá mẫu với các giá trị như sau: nếu pH nhỏ hơn 6 thì 'axit', ngược lại thì là 'trung_tinh'.</li>
+        <li>Lập bảng thống kê tần số và tính tỷ lệ của các nhóm trong cột <code>tinh_trang</code>. Sau đó vẽ biểu đồ hình tròn mô tả kết quả này.</li>
+    </ol>
+
+    <h2>Bài 14</h2>
+    <p>Các dữ liệu sau đây cung cấp dữ liệu tuổi thọ của 30 bóng đèn cùng loại (làm tròn đến 1 giờ gần nhất). Dữ liệu được cho trong bảng sau:</p>
+    
+    <table class="data-grid">
+        <tbody>
+            <tr>
+                <td>1122</td><td>922</td><td>1146</td><td>1120</td><td>1079</td>
+                <td>905</td><td>1095</td><td>977</td><td>1138</td><td>966</td>
+            </tr>
+            <tr>
+                <td>1150</td><td>977</td><td>1137</td><td>1088</td><td>1139</td>
+                <td>1055</td><td>1082</td><td>1053</td><td>1048</td><td>1132</td>
+            </tr>
+            <tr>
+                <td>1088</td><td>996</td><td>1102</td><td>1028</td><td>1130</td>
+                <td>1002</td><td>990</td><td>1052</td><td>1116</td><td>1135</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ol class="exercise-parts">
+        <li>Hãy nhập dữ liệu vào R và vẽ đồ thị histogram thể hiện sự phân bố cho dữ liệu trên.</li>
+    </ol>
+
+<ul class="req-list">
+            <li><strong>b)</strong> Hãy tính các giá trị thống kê mô tả cho dữ liệu trên.</li>
+            <li><strong>c)</strong> Hãy chia tập dữ liệu thành 4 nhóm và xây dựng bảng tần số với các nhóm đã chia. Sau đó vẽ biểu đồ hình cột, tô màu đỏ và đặt tiêu đề ‘Bieu do tan so cua 4 khoang’ cho tập dữ liệu đã chia nhóm.</li>
+        </ul>
+    </div>
+
+    <div class="exercise">
+        <div class="ex-title">Bài 15.</div>
+        <div class="ex-content">
+            Thống kê sản lượng các vụ lúa đông xuân, mùa, hè thu và cả năm giai đoạn 1990 - 2010 của nước ta trong bảng số liệu sau:
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="2">Năm</th>
+                    <th colspan="4">Sản lượng (nghìn tấn)</th>
+                </tr>
+                <tr>
+                    <th>Cả năm</th>
+                    <th>Đông xuân</th>
+                    <th>Hè thu</th>
+                    <th>Lúa mùa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1990</td><td>19225,1</td><td>7865,6</td><td>4090,5</td><td>7269,0</td></tr>
+                <tr><td>1991</td><td>19621,9</td><td>6788,3</td><td>4715,8</td><td>8117,8</td></tr>
+                <tr><td>1992</td><td>21590,4</td><td>9156,3</td><td>4907,2</td><td>7526,9</td></tr>
+                <tr><td>1993</td><td>22836,5</td><td>9035,6</td><td>5633,1</td><td>8167,7</td></tr>
+                <tr><td>1994</td><td>23528,2</td><td>10508,5</td><td>5679,4</td><td>7340,3</td></tr>
+                <tr><td>1995</td><td>24963,7</td><td>10736,6</td><td>6500,8</td><td>7726,3</td></tr>
+                <tr><td>1996</td><td>26396,7</td><td>12209,5</td><td>6878,5</td><td>7308,7</td></tr>
+                <tr><td>1997</td><td>27523,9</td><td>13310,3</td><td>6637,8</td><td>7575,8</td></tr>
+                <tr><td>1998</td><td>29145,5</td><td>13559,5</td><td>7522,6</td><td>8063,4</td></tr>
+                <tr><td>1999</td><td>31393,8</td><td>14103,0</td><td>8758,3</td><td>8532,5</td></tr>
+                <tr><td>2000</td><td>32529,5</td><td>15571,2</td><td>8625,0</td><td>8333,3</td></tr>
+                <tr><td>2001</td><td>32108,4</td><td>15474,4</td><td>8328,4</td><td>8305,6</td></tr>
+                <tr><td>2002</td><td>34447,2</td><td>16719,6</td><td>9188,7</td><td>8538,9</td></tr>
+                <tr><td>2003</td><td>34568,8</td><td>16822,7</td><td>9400,8</td><td>8345,3</td></tr>
+                <tr><td>2004</td><td>36148,9</td><td>17078,0</td><td>10430,9</td><td>8640,0</td></tr>
+                <tr><td>2005</td><td>35832,9</td><td>17331,6</td><td>10436,2</td><td>8065,1</td></tr>
+                <tr><td>2006</td><td>35849,5</td><td>17588,2</td><td>9693,9</td><td>8567,4</td></tr>
+                <tr><td>2007</td><td>35942,7</td><td>17024,1</td><td>10140,8</td><td>8777,8</td></tr>
+                <tr><td>2008</td><td>38729,8</td><td>18326,9</td><td>11395,7</td><td>9007,2</td></tr>
+                <tr><td>2009</td><td>38950,2</td><td>18695,8</td><td>11212,2</td><td>9042,2</td></tr>
+                <tr><td>2010</td><td>39988,9</td><td>19218,1</td><td>11595,7</td><td>9175,1</td></tr>
+            </tbody>
+        </table>
+
+        <ul class="req-alpha">
+            <li><strong>a)</strong> Hãy tính các tham số đặc trưng: trung bình, phương sai, phương sai điều chỉnh của sản lượng lúa từng vụ và của cả năm.</li>
+            <li><strong>b)</strong> Hãy vẽ biểu đồ đường (với 4 màu khác nhau và 4 kiểu đường khác nhau) của 4 biến: cả năm, đông xuân, hè thu, lúa mùa trên cùng một biểu đồ và rút ra nhận xét.</li>
+        </ul>
+    </div>
+
+    <div class="exercise">
+        <div class="ex-title">Bài 16.</div>
+        <div class="ex-content">
+            Trọng lượng gà (g) sau 8 tuần nuôi bằng khẩu phần có bổ sung kháng sinh được cho trong bảng sau:
+        </div>
+
+        <table class="matrix-table">
+            <tbody>
+                <tr><td>3,7</td><td>4,2</td><td>4,7</td><td>4,0</td><td>4,9</td><td>4,3</td><td>4,0</td><td>4,2</td><td>4,7</td><td>4,1</td></tr>
+                <tr><td>4,2</td><td>3,8</td><td>4,2</td><td>4,2</td><td>3,8</td><td>4,7</td><td>3,9</td><td>4,7</td><td>4,1</td><td>4,9</td></tr>
+                <tr><td>4,4</td><td>4,2</td><td>4,2</td><td>4,0</td><td>4,3</td><td>4,1</td><td>4,5</td><td>3,8</td><td>4,8</td><td>4,3</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<p>Cho bộ dữ liệu trọng lượng của gà 8 tuần tuổi nuôi bằng khẩu phần có bổ sung kháng sinh:</p>
+    
+    <table class="matrix-table">
+        <tr>
+            <td>4,4</td><td>4,4</td><td>4,8</td><td>4,5</td><td>4,3</td>
+            <td>4,0</td><td>4,3</td><td>4,5</td><td>4,1</td><td>4,4</td>
+        </tr>
+        <tr>
+            <td>4,3</td><td>4,6</td><td>4,5</td><td>4,4</td><td>3,9</td>
+            <td>4,6</td><td>3,8</td><td>4,0</td><td>4,3</td><td>4,4</td>
+        </tr>
+        <tr>
+            <td>4,2</td><td>3,9</td><td>3,6</td><td>4,1</td><td>3,8</td>
+            <td>4,4</td><td>4,1</td><td>4,2</td><td>4,7</td><td>4,3</td>
+        </tr>
+        <tr>
+            <td>4,4</td><td>4,3</td><td>4,1</td><td>4,0</td><td>4,7</td>
+            <td>4,6</td><td>4,3</td><td>4,1</td><td>4,2</td><td>4,6</td>
+        </tr>
+        <tr>
+            <td>4,8</td><td>4,5</td><td>4,3</td><td>4,0</td><td>3,9</td>
+            <td>4,4</td><td>4,2</td><td>4,0</td><td>4,1</td><td>4,5</td>
+        </tr>
+        <tr>
+            <td>4,9</td><td>4,8</td><td>3,9</td><td>3,8</td><td>4,0</td>
+            <td>4,9</td><td>4,5</td><td>4,7</td><td>4,4</td><td>4,6</td>
+        </tr>
+        <tr>
+            <td>4,4</td><td>3,9</td><td>4,2</td><td>4,6</td><td>4,2</td>
+            <td>4,4</td><td>4,4</td><td>4,1</td><td>4,8</td><td>4,0</td>
+        </tr>
+    </table>
+
+    <ul class="question-list">
+        <li data-prefix="a)">Hãy kiểm tra tính phân phối chuẩn của bộ dữ liệu trên.</li>
+        <li data-prefix="b)">Tính các giá trị thống kê mô tả của bộ dữ liệu.</li>
+        <li data-prefix="c)">Với độ tin cậy 95%, hãy ước lượng trọng lượng trung bình của gà 8 tuần tuổi nói trên.</li>
+        <li data-prefix="d)">Nếu ta nói rằng gà sau 8 tuần tuổi nuôi bằng khẩu phần có bổ sung kháng sinh thì trọng lượng của nó lớn hơn 4g hay không?</li>
+    </ul>
+
+    <h2>Bài 17</h2>
+    <p>Trọng lượng các bao gạo là biến ngẫu nhiên có phân phối chuẩn $N(50; 0,01)$. Có nhiều ý kiến của khách hàng phản ánh là trọng lượng bị thiếu. Một tổ thanh tra đã cân ngẫu nhiên 25 bao gạo từ lô hàng bị nghi ngờ. Kết quả nhận được như sau:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Trọng lượng bao gạo (kg)</th>
+                <th>&lt; 49,4</th>
+                <th>[49,4; 49,6)</th>
+                <th>[49,6; 49,8)</th>
+                <th>[49,8; 50)</th>
+                <th>[50; 50,5)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Số bao</strong></td>
+                <td>2</td>
+                <td>5</td>
+                <td>10</td>
+                <td>6</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Từ số liệu trên có thể kết luận gì về ý kiến nghi ngờ của khách hàng (xét với mức ý nghĩa 0,05).</p>
+
+    <h2>Bài 18</h2>
+    <p>Số liệu sau đây cho biết mức lương khởi điểm (triệu đồng) in trong năm đầu tiên làm việc của 2 nhóm sinh viên vừa tốt nghiệp ngành kinh tế và khoa học xã hội. Các sinh viên này được chọn trên nguyên tắc hoàn toàn ngẫu nhiên:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Ngành kinh tế</th>
+                <th>Ngành xã hội</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>24,9</td><td>20,4</td></tr>
+            <tr><td>23,3</td><td>20,9</td></tr>
+            <tr><td>23,4</td><td>20,0</td></tr>
+            <tr><td>16,8</td><td>21,3</td></tr>
+            <tr><td>20,6</td><td>21,0</td></tr>
+            <tr><td>25,3</td><td>26,8</td></tr>
+            <tr><td>22,6</td><td>24,0</td></tr>
+            <tr><td>22,0</td><td>18,7</td></tr>
+            <tr><td>23,8</td><td>18,3</td></tr>
+            <tr><td>17,7</td><td>18,0</td></tr>
+            <tr><td>21,7</td><td>23,0</td></tr>
+            <tr><td>26,2</td><td>25,9</td></tr>
+            <tr><td>24,8</td><td>19,1</td></tr>
+            <tr><td>21,1</td><td>19,6</td></tr>
+            <tr><td>19,0</td><td>18,7</td></tr>
+            <tr><td>25,3</td><td>22,4</td></tr>
+            <tr><td>25,5</td><td>20,4</td></tr>
+            <tr><td>24,5</td><td>20,8</td></tr>
+            <tr><td>20,4</td><td>17,1</td></tr>
+            <tr><td>19,5</td><td>19,9</td></tr>
+            <tr><td>24,9</td><td>25,4</td></tr>
+            <tr><td>25,8</td><td>24,2</td></tr>
+            <tr><td>22,2</td><td>19,2</td></tr>
+            <tr><td>19,1</td><td>17,2</td></tr>
+            <tr><td>18,3</td><td>22,7</td></tr>
+            <tr><td>22,1</td><td>21,0</td></tr>
+            <tr><td>24,7</td><td>21,5</td></tr>
+            <tr><td>22,5</td><td>20,0</td></tr>
+            <tr><td>19,2</td><td>20,9</td></tr>
+            <tr><td>19,1</td><td>20,8</td></tr>
+            <tr><td>25,4</td><td>26,6</td></tr>
+            <tr><td>-</td><td>20,5</td></tr>
+            <tr><td>-</td><td>21,4</td></tr>
+            <tr><td>-</td><td>16,3</td></tr>
+            <tr><td>-</td><td>16,3</td></tr>
+            <tr><td>-</td><td>20,5</td></tr>
+        </tbody>
+    </table>
+
+    <ul class="question-list">
+        <li data-prefix="a.">Tính các tham số đặc trưng của 2 nhóm sinh viên. Tìm các giá trị Q1, Q2, Q3.</li>
+        <li data-prefix="b.">Có thể nói rằng sinh viên tốt nghiệp nhóm ngành kinh tế có mức lương khởi điểm cao hơn sinh viên tốt nghiệp thuộc nhóm ngành xã hội hay không, với mức ý nghĩa 1%.</li>
+        <li data-prefix="c.">Hãy ước lượng mức lương trung bình của từng nhóm ngành với độ tin cậy 99%.</li>
+        <li data-prefix="d.">Những sinh viên có mức lương khởi điểm trên 20,5 triệu được xem là có thu nhập cao. Hãy ước lượng tỷ lệ sinh viên có thu nhập cao trong các sinh viên được khảo sát với độ tin cậy 95%.</li>
+    </ul>
+
+<h3>Bài 19.</h3>
+    <p>Kiểm tra một số gói đường loại 1kg trong siêu thị người ta có kết quả như sau:</p>
+    
+    <table>
+        <tr>
+            <th>Trọng lượng (kg)</th>
+            <td>0,95</td>
+            <td>0,96</td>
+            <td>0,97</td>
+            <td>0,99</td>
+            <td>1,00</td>
+            <td>1,01</td>
+            <td>1,03</td>
+            <td>1,05</td>
+        </tr>
+        <tr>
+            <th>Số gói</th>
+            <td>19</td>
+            <td>30</td>
+            <td>32</td>
+            <td>8</td>
+            <td>2</td>
+            <td>3</td>
+            <td>5</td>
+            <td>1</td>
+        </tr>
+    </table>
+
+    <p><strong>a.</strong> Với mức ý nghĩa 5%, có thể nói rằng việc đóng gói đảm bảo yêu cầu hay không?</p>
+    <p><strong>b.</strong> Những gói đường nhỏ hơn 1kg được xem là loại A. Có thể nói rằng tỷ lệ gói đường loại A chiếm 90% với độ tin cậy 99% hay không?</p>
+    <p><strong>c.</strong> Những gói đường có trọng lượng lớn hơn 1kg được gọi là loại B. Hãy ước lượng trọng lượng trung bình và tỷ lệ gói đường loại B với độ tin cậy 99%.</p>
+
+    <h3>Bài 20.</h3>
+    <p>Một nhóm nghiên cứu muốn đánh giá hàm lượng chất hoạt tính trong viên thuốc là ổn định ở mức 50 mg/viên. Kết quả đo ngẫu nhiên trên 15 viên như sau:</p>
+    <p class="data-list">48,2; 51,3; 49,7; 52,1; 47,8; 50,5; 51,3; 49,4; 48,9; 51,0; 50,8; 46,7; 49,6; 52,5; 47,9; 50,2; 47,2; 52,1; 47,6; 49,8; 48,7; 50,6</p>
+    <p><strong>a)</strong> Hãy kiểm định xem hàm lượng chất hoạt tính trung bình có phải là 50mg không?</p>
+    <p><strong>b)</strong> Hãy cho biết tỷ lệ mẫu có hàm lượng chất hoạt tính là cao hơn 50% phải không?</p>
+
+    <h3>Bài 21.</h3>
+    <p>Trong một khoa về bệnh truyền nhiễm, kiểm tra tình trạng bị lây bệnh trong số 100 y tế. Người ta yêu cầu 50 người trong số đó phải thực hiện biện pháp bảo vệ đặc biệt và phát hiện có 7 người trong số này bị lây; 50 người còn lại không theo những biện pháp bảo vệ đặc biệt có 11 trường hợp bị lây. Vậy có thể kết luận hiệu quả của biện pháp bảo vệ không thực sự hiệu quả hay không? (Với mức ý nghĩa 5%).</p>
+
+    <h3>Bài 22.</h3>
+    <p>Khảo sát điểm trung bình của 10 học sinh ở học kỳ I và học kỳ II, ta có số liệu như sau:</p>
+    
+    <table>
+        <tr>
+            <th>Học sinh</th>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <th>HKI</th>
+            <td>6,2</td>
+            <td>8,3</td>
+            <td>5,4</td>
+            <td>7,1</td>
+            <td>8,0</td>
+            <td>5,3</td>
+            <td>6,7</td>
+            <td>7,4</td>
+            <td>6,7</td>
+            <td>5,8</td>
+        </tr>
+        <tr>
+            <th>HKII</th>
+            <td>6,5</td>
+            <td>8,5</td>
+            <td>5,5</td>
+            <td>6,6</td>
+            <td>7,8</td>
+            <td>6,5</td>
+            <td>7,0</td>
+            <td>7,0</td>
+            <td>7,0</td>
+            <td>6,2</td>
+        </tr>
+    </table>
+    
+    <p>Với mức ý nghĩa 5%, có thể khẳng định điểm trung bình của học kỳ II lớn hơn học kỳ I hay không?</p>
+
+    <h3>Bài 23.</h3>
+    <p>Kết quả phân tích kiểm tra hàm lượng Vitamin B1 (mg/viên) trên một lô thuốc thương phẩm thu được như sau:</p>
+    <p class="data-list">5,02; 5,04; 5,2; 5,1; 5,03; 4,9; 5,13; 4,8; 5,23; 4,75; 5,04; 4,96; 5,17; 4,81</p>
+    <p>Hãy cho biết hàm lượng vitamin B1 trong loại thuốc trên cùng lô này có phải là 5mg/viên hay không? (độ tin cậy 95%)?</p>
+
+    <h3>Bài 24.</h3>
+    <p>Một thiết bị phân tích được kiểm tra bằng cách xác định hàm lượng Cu (tính bằng mg) có trong 1g vật liệu chuẩn được chứng nhận (CRM). Giấy chứng nhận phân tích của CRM ghi rằng hàm lượng trung bình của Cu là 4,54 mg/g mẫu. Thực hiện 30 lần phân tích mẫu CRM bằng thiết bị phân tích mới thu được kết quả như sau:</p>
+    <p class="data-list">4.65; 4.56; 4.38; 4.54; 4.47; 4.42; 4.49; 4.46; 4.68; 4.33; 4.54; 4.63; 4.5;  4.46;  4.47;  4.56;  4.52;  4.47;  4.56;  4.56;  4.35;  4.5;  4.47;  4.44;  4.64;  4.57;  4.37;  4.55;  4.46;  4.7</p>
+    <p>Với mức ý nghĩa 5%, hãy cho biết thiết bị có đạt yêu cầu về mặt kĩ thuật hay không nếu tất cả các yếu tố khác khi phân tích đã được kiểm soát.</p>
+
+<h2>Bài 25.</h2>
+    <p>Để đánh giá nguyên nhân ô nhiễm arsenic (µg/L) trong nước ngầm ở 14 địa điểm thuộc đồng bằng sông Hồng có phải từ nguồn ô nhiễm nước mặt gây nên hay không, người ta đo so sánh nồng độ arsenic giữa hai môi trường, kết quả thu được như sau:</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Vị trí</th>
+                <th>Nước ngầm (A)</th>
+                <th>Nước mặt (B)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>17.74</td><td>3.03</td></tr>
+            <tr><td>2</td><td>32.45</td><td>0.53</td></tr>
+            <tr><td>3</td><td>11.98</td><td>2.53</td></tr>
+            <tr><td>4</td><td>9.03</td><td>6.4</td></tr>
+            <tr><td>5</td><td>20.64</td><td>3.33</td></tr>
+            <tr><td>6</td><td>26.92</td><td>1.33</td></tr>
+            <tr><td>7</td><td>5.85</td><td>0.63</td></tr>
+            <tr><td>8</td><td>36.18</td><td>4.2</td></tr>
+            <tr><td>9</td><td>13.07</td><td>3.7</td></tr>
+            <tr><td>10</td><td>10.83</td><td>0.66</td></tr>
+            <tr><td>11</td><td>23.37</td><td>0.84</td></tr>
+            <tr><td>12</td><td>10.92</td><td>1.17</td></tr>
+        </tbody>
+    </table>
+    
+    <p>Chọn phương pháp kiểm định thống kê phù hợp để đánh giá mối liên quan về nồng độ arsenic ở hai môi trường nước nói trên với độ tin cậy 95%.</p>
+
+    <hr>
+
+    <h2>Bài 26.</h2>
+    <p>Kết quả của một thí nghiệm dùng ba loại huyết thanh kháng vi trùng uốn ván của bò, ngựa và cừu. Với 498 người tham gia vào thí nghiệm theo phương thức hoàn toàn ngẫu nhiên và thu được kết quả được trình bày ở bảng dưới đây:</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Huyết thanh</th>
+                <th>Số người</th>
+                <th>Số người có phản ứng</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Bò</td>
+                <td>205</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Ngựa</td>
+                <td>148</td>
+                <td>42</td>
+            </tr>
+            <tr>
+                <td>Cừu</td>
+                <td>145</td>
+                <td>17</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p>Hãy xét xem liệu các phản ứng giữa các loại huyết thanh trên có cho kết quả khác nhau giữa bò, ngựa, cừu hay không? Cho kết luận với mức ý nghĩa 1%.</p>
+
+    <hr>
+
+    <h2>Bài 27.</h2>
+    <p>Giả sử ta có mẫu quan sát về hàm lượng vitamin của một loại trái cây được trồng ở 4 vùng đất khác nhau như sau:</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>X<sub>1</sub></th>
+                <th>X<sub>2</sub></th>
+                <th>X<sub>3</sub></th>
+                <th>X<sub>4</sub></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>12</td><td>12</td><td>9</td><td>12</td></tr>
+            <tr><td>10</td><td>16</td><td>7</td><td>8</td></tr>
+            <tr><td>7</td><td>15</td><td>16</td><td>8</td></tr>
+            <tr><td>8</td><td>9</td><td>11</td><td>10</td></tr>
+            <tr><td>9</td><td></td><td>7</td><td></td></tr>
+            <tr><td>14</td><td></td><td></td><td></td></tr>
+        </tbody>
+    </table>
+
+    <p>Với mức ý nghĩa 5%, hãy cho biết thiết bị có đạt yêu cầu về mặt kĩ thuật hay không nếu tất cả các yếu tố khác khi phân tích đã được kiểm soát.</p>
+
+
+<h2>Bài 28</h2>
+    <p>Yếu tố A có 3 nghiệm thức A<sub>1</sub>, A<sub>2</sub>, A<sub>3</sub> được bố trí theo phương pháp CRD với số lần lặp lại lần lượt là 8, 6, 6. Kết quả thí nghiệm được trình bày trong bảng sau:</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Số lần lặp lại</th>
+                <th>A<sub>1</sub></th>
+                <th>A<sub>2</sub></th>
+                <th>A<sub>3</sub></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-bold">1</td>
+                <td>82</td>
+                <td>74</td>
+                <td>79</td>
+            </tr>
+            <tr>
+                <td class="text-bold">2</td>
+                <td>86</td>
+                <td>82</td>
+                <td>79</td>
+            </tr>
+            <tr>
+                <td class="text-bold">3</td>
+                <td>79</td>
+                <td>78</td>
+                <td>77</td>
+            </tr>
+            <tr>
+                <td class="text-bold">4</td>
+                <td>83</td>
+                <td>75</td>
+                <td>78</td>
+            </tr>
+            <tr>
+                <td class="text-bold">5</td>
+                <td>85</td>
+                <td>76</td>
+                <td>82</td>
+            </tr>
+            <tr>
+                <td class="text-bold">6</td>
+                <td>84</td>
+                <td>77</td>
+                <td>79</td>
+            </tr>
+            <tr>
+                <td class="text-bold">7</td>
+                <td>86</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="text-bold">8</td>
+                <td>87</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Hãy phân tích phương sai để so sánh kết quả trung bình của 3 nghiệm thức này.</p>
+
+
+    <h2>Bài 29</h2>
+    <p>Nghiên cứu số lượng tế bào lymphô của chuột (x1000 tế bào / mm<sup>3</sup> máu) được sử dụng với 4 loại thuốc khác nhau (A, B, C và D là thuốc placebo) qua 5 lứa, số liệu thu được như sau:</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Loại thuốc</th>
+                <th>Lứa 1</th>
+                <th>Lứa 2</th>
+                <th>Lứa 3</th>
+                <th>Lứa 4</th>
+                <th>Lứa 5</th>
+                <th>Trung bình</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-bold">Thuốc A</td>
+                <td>7,1</td>
+                <td>6,1</td>
+                <td>6,9</td>
+                <td>5,6</td>
+                <td>6,4</td>
+                <td class="text-bold">6,42</td>
+            </tr>
+            <tr>
+                <td class="text-bold">Thuốc B</td>
+                <td>6,7</td>
+                <td>5,1</td>
+                <td>5,9</td>
+                <td>5,1</td>
+                <td>5,8</td>
+                <td class="text-bold">5,72</td>
+            </tr>
+            <tr>
+                <td class="text-bold">Thuốc C</td>
+                <td>7,1</td>
+                <td>5,8</td>
+                <td>6,2</td>
+                <td>5,0</td>
+                <td>6,2</td>
+                <td class="text-bold">6,06</td>
+            </tr>
+            <tr>
+                <td class="text-bold">Thuốc D</td>
+                <td>6,7</td>
+                <td>5,4</td>
+                <td>5,7</td>
+                <td>5,2</td>
+                <td>5,3</td>
+                <td class="text-bold">5,66</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Hãy cho biết số lượng tế bào lymphô của chuột có bị ảnh hưởng khi dùng thuốc hay không? Nếu có hãy phân tích sự khác nhau.</p>
+
+
+    <h2>Bài 30</h2>
+    <p>Mead và cộng sự tiến hành nghiên cứu ảnh hưởng của thức ăn mùa đông đến sản lượng sữa, nghiên cứu được bố trí theo mô hình ô vuông Latin. Có 4 khẩu phần ăn khác nhau (A<sub>1</sub>, A<sub>2</sub>, A<sub>3</sub>, A<sub>4</sub>), 4 giai đoạn thí nghiệm và mỗi giai đoạn kéo dài 3 tuần và có 4 con bò tham gia thí nghiệm (1, 2, 3 và 4). Mỗi con bò ăn từng khẩu phần trong 3 tuần và mỗi con bò tham gia cả 4 giai đoạn thí nghiệm. Sản lượng sữa chỉ được tính tổng cộng trong tuần thứ 3 của mỗi giai đoạn. Số lượng được ghi lại như sau:</p>
+
+<table>
+        <thead>
+            <tr>
+                <th rowspan="2">Giai đoạn (Hàng)</th>
+                <th colspan="4">Bò (Cột)</th>
+                <th rowspan="2">Tổng</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>1</strong></td>
+                <td>A<sub>1</sub> = 192</td>
+                <td>A<sub>2</sub> = 195</td>
+                <td>A<sub>3</sub> = 292</td>
+                <td>A<sub>4</sub> = 249</td>
+                <td><strong>928</strong></td>
+            </tr>
+            <tr>
+                <td><strong>2</strong></td>
+                <td>A<sub>2</sub> = 190</td>
+                <td>A<sub>4</sub> = 203</td>
+                <td>A<sub>1</sub> = 218</td>
+                <td>A<sub>3</sub> = 210</td>
+                <td><strong>821</strong></td>
+            </tr>
+            <tr>
+                <td><strong>3</strong></td>
+                <td>A<sub>3</sub> = 214</td>
+                <td>A<sub>1</sub> = 139</td>
+                <td>A<sub>4</sub> = 245</td>
+                <td>A<sub>2</sub> = 163</td>
+                <td><strong>761</strong></td>
+            </tr>
+            <tr>
+                <td><strong>4</strong></td>
+                <td>A<sub>4</sub> = 221</td>
+                <td>A<sub>3</sub> = 152</td>
+                <td>A<sub>2</sub> = 204</td>
+                <td>A<sub>1</sub> = 134</td>
+                <td><strong>711</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Tổng</strong></td>
+                <td><strong>817</strong></td>
+                <td><strong>689</strong></td>
+                <td><strong>959</strong></td>
+                <td><strong>756</strong></td>
+                <td><strong>3221</strong></td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="note">Hãy cho kết luận về ảnh hưởng của thức ăn mùa đông đến sản lượng sữa.</p>
+
+
+
+    <h2>Bài 31.</h2>
+    <p>Nhằm khảo sát sự sai khác trong lượng thức ăn được tiêu thụ của chim với 2 khẩu phần ăn khác nhau (diet 1 và diet 2). Người ta bố trí thí nghiệm trên 12 con chim (6 con trống và 6 con mái), mỗi khẩu phần ăn cho mỗi giới tính gồm 3 con lựa chọn ngẫu nhiên. Lượng thức ăn tiêu thụ (gram) trong suốt 1 tháng được ghi nhận lại như sau:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">Giới tính</th>
+                <th colspan="2">Khẩu phần ăn</th>
+            </tr>
+            <tr>
+                <th>Diet 1</th>
+                <th>Diet 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3">Chim trống</td>
+                <td>70,9</td>
+                <td>59,2</td>
+            </tr>
+            <tr>
+                <td>67,9</td>
+                <td>53,8</td>
+            </tr>
+            <tr>
+                <td>69,9</td>
+                <td>47,0</td>
+            </tr>
+            <tr>
+                <td rowspan="3">Chim mái</td>
+                <td>65,7</td>
+                <td>50,8</td>
+            </tr>
+            <tr>
+                <td>59,4</td>
+                <td>50,5</td>
+            </tr>
+            <tr>
+                <td>67,7</td>
+                <td>50,5</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Với mức ý nghĩa 1%, Hãy kết luận cho 2 vấn đề sau:</p>
+    <ol>
+        <li>Lượng thức ăn tiêu thụ trung bình trong 1 tháng có sự khác nhau giữa chim trống và chim mái hay không?</li>
+        <li>Lượng thức ăn tiêu thụ trung bình trong 1 tháng có sự khác nhau giữa các khẩu phần ăn hay không?</li>
+    </ol>
+
+    <h2>Bài 32.</h2>
+    <p>Phương pháp chiết xuất và 5 loại dung môi được dùng để chiết xuất chất X từ một loại dược liệu được cho bởi số liệu mẫu sau:</p>
+    
+
+<table>
+        <thead>
+            <tr>
+                <th rowspan="2">Dung môi<br>(Yếu tố A)</th>
+                <th colspan="3">Phương pháp chiết suất (Yếu tố B)</th>
+            </tr>
+            <tr>
+                <th>B1</th>
+                <th>B2</th>
+                <th>B3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>A1</strong></td>
+                <td>120</td>
+                <td>60</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td><strong>A2</strong></td>
+                <td>120</td>
+                <td>70</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td><strong>A3</strong></td>
+                <td>130</td>
+                <td>60</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td><strong>A4</strong></td>
+                <td>150</td>
+                <td>70</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td><strong>A5</strong></td>
+                <td>110</td>
+                <td>75</td>
+                <td>54</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Xét ảnh hưởng của phương pháp chiết suất và dung môi đến kết quả chiết suất chất X với mức ý nghĩa 5%.</p>
+
+    <h2>Bài 33</h2>
+    <p>Hàm lượng Oxygen trong nước là một chỉ tiêu để xem xét mức độ ô nhiễm môi trường. Trong một lần khảo sát người ta lấy ngẫu nhiên 24 mẫu ở 4 khu vực khác nhau, ký hiệu là KV1, KV2, KV3, KV4. Mẫu được đem phân tích và đo hàm lượng oxygen hòa tan (đơn vị tính theo phần triệu). Kết quả ghi nhận ở bảng dưới đây.</p>
+    
+    <p><strong>Hàm lượng oxygen hòa tan ở 4 khu vực (đơn vị phần triệu)</strong></p>
+    <table>
+        <thead>
+            <tr>
+                <th>Khu vực</th>
+                <th>Mẫu số 1</th>
+                <th>Mẫu số 2</th>
+                <th>Mẫu số 3</th>
+                <th>Mẫu số 4</th>
+                <th>Mẫu số 5</th>
+                <th>Mẫu số 6</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>KV1</strong></td>
+                <td>6.3</td>
+                <td>6.8</td>
+                <td>6.5</td>
+                <td>5.9</td>
+                <td>5.8</td>
+                <td>5.7</td>
+            </tr>
+            <tr>
+                <td><strong>KV2</strong></td>
+                <td>6.9</td>
+                <td>6.3</td>
+                <td>6.2</td>
+                <td>5.4</td>
+                <td>5.7</td>
+                <td>5.9</td>
+            </tr>
+            <tr>
+                <td><strong>KV3</strong></td>
+                <td>4.8</td>
+                <td>4.7</td>
+                <td>4.5</td>
+                <td>4.8</td>
+                <td>4.9</td>
+                <td>4.6</td>
+            </tr>
+            <tr>
+                <td><strong>KV4</strong></td>
+                <td>4.8</td>
+                <td>4.9</td>
+                <td>5.2</td>
+                <td>5.6</td>
+                <td>5.8</td>
+                <td>5.7</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Bốn khu vực có thật sự khác nhau (trung bình) về hàm lượng oxygen hòa tan hay không? Từ đó kết luận về mức độ ô nhiễm của mỗi khu vực.</p>
+
+    <h2>Bài 34</h2>
+    <p>Một nghiên cứu được thực hiện để kiểm tra ảnh hưởng của chế độ ăn kiêng (A) và mức độ tập thể dục (B) đến kết quả giảm cân của người thừa cân (kg).</p>
+    <p>Có 3 chế độ ăn khác nhau:</p>
+    <ul>
+        <li><strong>A1:</strong> Ăn kiêng theo thực đơn ít carb</li>
+        <li><strong>A2:</strong> Ăn kiêng theo chế độ Địa Trung Hải</li>
+        <li><strong>A3:</strong> Ăn kiêng thuần chay</li>
+    </ul>
+    <p>Có 3 mức độ vận động:</p>
+    <ul>
+        <li><strong>B1:</strong> Ít vận động</li>
+        <li><strong>B2:</strong> Vận động mức trung bình</li>
+        <li><strong>B3:</strong> Vận động tích cực</li>
+    </ul>
+    <p>Kết quả giảm cân sau 8 tuần (kg) được ghi nhận như sau:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Chế độ ăn</th>
+                <th>B1</th>
+                <th>B2</th>
+                <th>B3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>A1</strong></td>
+                <td>1,2<br>1,4</td>
+                <td>2,3<br>2,5</td>
+                <td>4,8<br>5,0</td>
+            </tr>
+            <tr>
+                <td><strong>A2</strong></td>
+                <td>1,8<br>2,9</td>
+                <td>2,0<br>3,9</td>
+                <td>2,7<br>4,1</td>
+            </tr>
+            <tr>
+                <td><strong>A3</strong></td>
+                <td>0,9<br>2,4</td>
+                <td>1,0<br>4,6</td>
+                <td>2,2<br>4,8</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Với mức ý nghĩa 5%, Bạn hãy kiểm tra xem kết quả giảm cân có bị ảnh hưởng bởi chế độ ăn kiêng và mức độ vận động hay không? Nếu có hãy chỉ ra sự khác nhau đó.</p>
+
+    <h2>Bài 35</h2>
+    <p>Cho bộ dữ liệu ‘warpbreaks’. Tập dữ liệu này có sẵn trong R. Tập dữ liệu này cung cấp số lượng sợi dọc bị đứt trên mỗi khung dệt, trong đó khung dệt tương ứng với chiều dài cố định của sợi.</p>
+    <div style="max-height: 300px; overflow-y: auto; border: 1px solid #bdc3c7; margin-bottom: 15px;">
+        <table>
+            <thead>
+                <tr>
+                    <th>breaks</th>
+                    <th>wool</th>
+                    <th>tension</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>26</td><td>A</td><td>L</td></tr><tr><td>30</td><td>A</td><td>L</td></tr><tr><td>54</td><td>A</td><td>L</td></tr><tr><td>25</td><td>A</td><td>L</td></tr><tr><td>70</td><td>A</td><td>L</td></tr><tr><td>52</td><td>A</td><td>L</td></tr><tr><td>51</td><td>A</td><td>L</td></tr><tr><td>26</td><td>A</td><td>L</td></tr><tr><td>67</td><td>A</td><td>L</td></tr><tr><td>18</td><td>A</td><td>M</td></tr><tr><td>21</td><td>A</td><td>M</td></tr><tr><td>29</td><td>A</td><td>M</td></tr><tr><td>17</td><td>A</td><td>M</td></tr><tr><td>12</td><td>A</td><td>M</td></tr><tr><td>18</td><td>A</td><td>M</td></tr><tr><td>35</td><td>A</td><td>M</td></tr><tr><td>30</td><td>A</td><td>M</td></tr><tr><td>36</td><td>A</td><td>M</td></tr><tr><td>36</td><td>A</td><td>H</td></tr><tr><td>21</td><td>A</td><td>H</td></tr><tr><td>24</td><td>A</td><td>H</td></tr><tr><td>18</td><td>A</td><td>H</td></tr><tr><td>10</td><td>A</td><td>H</td></tr><tr><td>43</td><td>A</td><td>H</td></tr><tr><td>28</td><td>A</td><td>H</td></tr><tr><td>15</td><td>A</td><td>H</td></tr><tr><td>26</td><td>A</td><td>H</td></tr><tr><td>27</td><td>B</td><td>L</td></tr><tr><td>14</td><td>B</td><td>L</td></tr><tr><td>29</td><td>B</td><td>L</td></tr><tr><td>19</td><td>B</td><td>L</td></tr><tr><td>29</td><td>B</td><td>L</td></tr><tr><td>31</td><td>B</td><td>L</td></tr><tr><td>41</td><td>B</td><td>L</td></tr><tr><td>20</td><td>B</td><td>L</td></tr><tr><td>44</td><td>B</td><td>L</td></tr><tr><td>42</td><td>B</td><td>M</td></tr><tr><td>26</td><td>B</td><td>M</td></tr><tr><td>19</td><td>B</td><td>M</td></tr><tr><td>16</td><td>B</td><td>M</td></tr><tr><td>39</td><td>B</td><td>M</td></tr><tr><td>28</td><td>B</td><td>M</td></tr><tr><td>21</td><td>B</td><td>M</td></tr><tr><td>39</td><td>B</td><td>M</td></tr><tr><td>29</td><td>B</td><td>M</td></tr><tr><td>20</td><td>B</td><td>H</td></tr><tr><td>21</td><td>B</td><td>H</td></tr><tr><td>24</td><td>B</td><td>H</td></tr><tr><td>17</td><td>B</td><td>H</td></tr><tr><td>13</td><td>B</td><td>H</td></tr><tr><td>15</td><td>B</td><td>H</td></tr><tr><td>15</td><td>B</td><td>H</td></tr><tr><td>16</td><td>B</td><td>H</td></tr><tr><td>28</td><td>B</td><td>H</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p>Hãy thực hiện các yêu cầu sau:</p>
+    <ul>
+        <li><strong>a)</strong> Hãy tính các đặc trưng mô tả (trung bình, trung vị, phương sai, phân vị, giá trị lớn nhất, nhỏ nhất) của biến breaks.</li>
+        <li><strong>b)</strong> Thống kê tần số của các biến định tính còn lại. Vẽ đồ thị thể hiện kết quả thống kê tần số trên.</li>
+        <li><strong>c)</strong> Hãy tính các đặc trưng mô tả (trung bình, trung vị, phương sai, phân vị, giá trị lớn nhất, nhỏ nhất) của biến breaks theo từng nhóm của biến wool (A, B).</li>
+        <li><strong>d)</strong> Với mức ý nghĩa 1%, có thể nói rằng breaks trung bình của nhóm sợi loại A (wool=A) và nhóm sợi loại B (wool=B) có sự khác nhau hay không?</li>
+        <li><strong>e)</strong> Với mức ý nghĩa 1%, có thể nói rằng breaks trung bình của hệ số căng (tension = L, M, H) có sự khác nhau hay không? Nếu có, hãy chỉ ra sự khác nhau đó cụ thể ở những loại nào?</li>
+    </ul>
+
+    <h2>Bài 36</h2>
+    <p>Điều tra về thu nhập và tiêu dùng của 10 công nhân trong một công ty được số liệu như bảng sau:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Thu nhập (Y)<br>(triệu đồng/tháng)</th>
+                <th>Tiêu dùng (X)<br>(triệu đồng/tháng)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>6</td><td>7</td></tr>
+            <tr><td>2</td><td>6,5</td><td>9</td></tr>
+            <tr><td>3</td><td>8,5</td><td>11</td></tr>
+            <tr><td>4</td><td>9,5</td><td>13,5</td></tr>
+            <tr><td>5</td><td>11</td><td>15</td></tr>
+            <tr><td>6</td><td>10</td><td>18</td></tr>
+            <tr><td>7</td><td>12</td><td>20</td></tr>
+            <tr><td>8</td><td>12</td><td>22</td></tr>
+            <tr><td>9</td><td>15,5</td><td>25</td></tr>
+            <tr><td>10</td><td>14,5</td><td>26</td></tr>
+        </tbody>
+    </table>
+    <ul>
+        <li><strong>a)</strong> Hãy vẽ đồ thị tán xạ thể hiện mối liên hệ giữa X và Y.</li>
+        <li><strong>b)</strong> Kiểm định sự tương quan tuyến tính của X và Y.</li>
+        <li><strong>c)</strong> Hãy xây dựng mô hình hồi qui tuyến tính để dự báo cho biến Tiêu dùng.</li>
+        <li><strong>d)</strong> Hệ số xác định của mô hình trên là bao nhiêu? Có ý nghĩa gì?</li>
+        <li><strong>e)</strong> Kiểm định hệ số hồi qui trong mô hình trên.</li>
+    </ul>
+
+    <h2>Bài 37</h2>
+    <p>Để nghiên cứu về mối liên hệ giữa lượng nhiên liệu sử dụng (Kwh), nhiệt độ bình quân (0F) và độ dày của tấm cách nhiệt (inch) tại các hộ gia đình người ta điều tra trên 15 hộ và được kết quả như bảng sau:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Nhiên liệu sử dụng<br>(Kwh) (Y)</th>
+                <th>Nhiệt độ bình quân<br>(0F) (X1)</th>
+                <th>Độ dày tấm cách nhiệt<br>(inch) (X2)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>275,3</td><td>40</td><td>3</td></tr>
+            <tr><td>2</td><td>363,8</td><td>27</td><td>3</td></tr>
+            <tr><td>3</td><td>164,3</td><td>40</td><td>10</td></tr>
+            <tr><td>4</td><td>40,8</td><td>73</td><td>6</td></tr>
+            <tr><td>5</td><td>94,3</td><td>64</td><td>6</td></tr>
+            <tr><td>6</td><td>230,9</td><td>34</td><td>6</td></tr>
+            <tr><td>7</td><td>366,7</td><td>9</td><td>6</td></tr>
+            <tr><td>8</td><td>300,6</td><td>8</td><td>10</td></tr>
+            <tr><td>9</td><td>237,8</td><td>23</td><td>10</td></tr>
+            <tr><td>10</td><td>121,4</td><td>63</td><td>3</td></tr>
+            <tr><td>11</td><td>31,4</td><td>65</td><td>10</td></tr>
+            <tr><td>12</td><td>203,5</td><td>41</td><td>6</td></tr>
+            <tr><td>13</td><td>441,1</td><td>21</td><td>3</td></tr>
+            <tr><td>14</td><td>323</td><td>38</td><td>3</td></tr>
+            <tr><td>15</td><td>52,5</td><td>58</td><td>10</td></tr>
+        </tbody>
+    </table>
+    <ul>
+        <li><strong>c)</strong> Hãy xây dựng mô hình hồi quy tuyến tính biểu diễn sự ảnh hưởng của nhiệt độ bình quân và độ dày tấm cách nhiệt tới lượng nhiên liệu sử dụng tại các hộ gia đình.</li>
+        <li><strong>d)</strong> Tính hệ số xác định của mô hình. Kiểm định hệ số hồi qui của mô hình trên.</li>
+        <li><strong>e)</strong> Hãy đưa ra giá trị dự báo cho Y khi biết:
+            <ul>
+                <li>X1 = 30 và X2 = 7</li>
+                <li>X1 = 27 và X2 = 3</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Bài 38</h2>
+    <p>Hãy tải bộ dữ liệu ‘Soils’ trong package ‘carData’. Ta không xem xét đến 5 biến đầu tiên trong bộ dữ liệu.</p>
+    <ul>
+        <li><strong>a)</strong> Kiểm tra hệ số tương quan tuyến tính giữa các biến còn lại.</li>
+        <li><strong>b)</strong> Xây dựng mô hình hồi qui biểu diễn biến Conduc theo các biến còn lại.</li>
+        <li><strong>c)</strong> Tính hệ số xác định và kiểm định hệ số hồi qui của mô hình trên.</li>
+    </ul>
+
+</div>
+
+
+</body>
+</html>
