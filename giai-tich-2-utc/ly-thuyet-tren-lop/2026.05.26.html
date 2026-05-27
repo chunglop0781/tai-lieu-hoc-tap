@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Định nghĩa Toán học</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .step {
+            margin-bottom: 15px;
+        }
+        .underline {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .math-display {
+            margin: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Định nghĩa</h2>
+    
+    <p>
+    Xét hàm \(f(x, y, z)\) xác định tại mọi điểm thuộc mặt cong 
+    \(S \subset \mathbb{R}^3\).
+</p>
+
+<div class="step">
+    <span class="underline">Bước 1:</span>
+    Chia mặt \(S\) thành các phần nhỏ 
+    \(S_1, S_2, \dots, S_n\) 
+    có diện tích lần lượt là 
+    \(\Delta S_1, \Delta S_2, \dots, \Delta S_n\).
+    Đặt
+    \[
+        d = \max_{1 \le i \le n} \{\Delta S_i\}.
+    \]
+</div>
+
+<div class="step">
+    <span class="underline">Bước 2:</span>
+    Lấy các điểm 
+    \(M_i(x_i, y_i, z_i) \in S_i\).
+    Lập tổng
+
+</div>
+
+    <div class="math-display">
+        $$T(f, S_i, M_i) = \sum_{i=1}^{n} f(x_i, y_i, z_i)\Delta S_i$$
+    </div>
+</div>
+
+<div class="content">
+    <p><strong class="underline">Bước 3:</strong> Cho \(n \rightarrow +\infty\) sao cho \(d \rightarrow 0\)</p>
+
+    <div class="math-display">
+        $$\lim_{n \rightarrow +\infty} \text{T}(f, S_i, M_i) = L$$
+    </div>
+
+    <p>Nếu \(L\) không phụ thuộc vào cách chia mặt \(S\) và cách chọn các điểm \(M_i\) thì ta gọi nó là tích phân của hàm \(f\) trên mặt \(S\) (Tích phân mặt loại 1). Ký hiệu</p>
+
+    <div class="math-display">
+        $$\iint\limits_{S} f(x, y, z)\text{dS} = L$$
+
+
+
+<p><strong>Cách tính</strong></p>
+
+<p>
+Xét mặt cong <span>\(S\)</span> có phương trình
+<span>\(z = z(x, y)\)</span>,
+<span>\((x, y) \in D \subset \mathbb{R}^2\)</span>.
+</p>
+
+<p>Khi đó:</p>
+
+<p>
+\[
+\mathrm{d}S
+=
+\sqrt{
+1 + \left(z'_x\right)^2 + \left(z'_y\right)^2
+}
+\,\mathrm{d}x\mathrm{d}y
+\]
+</p>
+
+<p><strong>Cách tính tích phân mặt loại 1</strong></p>
+
+<p>
+\[
+\iint\limits_S f(x, y, z)\,\mathrm{d}S
+=
+\iint\limits_D
+f(x, y, z(x, y))
+\sqrt{
+1 + \left(z'_x\right)^2 + \left(z'_y\right)^2
+}
+\,\mathrm{d}x\mathrm{d}y
+\]
+</p>
+
+<p><strong>Chú ý:</strong></p>
+
+<p>
+<span>\(D\)</span> là hình chiếu của mặt <span>\(S\)</span>
+lên mặt phẳng <span>\(Oxy\)</span>.
+</p>
+
+
+<p>Nếu mặt <strong>S</strong> có phương trình \( y = y(x, z) \) thì</p>
+
+<p>
+\[
+dS = \sqrt{1 + \left(y'_x\right)^2 + \left(y'_z\right)^2} \, dxdz.
+\]
+</p>
+
+<p>\((Oxz)\)</p>
+
+<p>Nếu mặt <strong>S</strong> có phương trình \( x = x(y, z) \) thì</p>
+
+<p>
+\[
+dS = \sqrt{1 + \left(x'_y\right)^2 + \left(x'_z\right)^2} \, dydz.
+\]
+</p>
+
+<p>\((Oyz)\)</p>
+
+<h3>Bài 3.1: Tính tích phân</h3>
+
+<p>
+\[
+I = \iint_S \left(x^2 + y^2\right) dS
+\]
+với \( S \) là phần mặt cầu
+</p>
+
+<p>
+\[
+x^2 + y^2 + z^2 = a^2,\quad z \ge 0 \quad (a > 0)
+\]
+</p>
+
+<div class="p-6 md:p-8 space-y-8">
+            <div class="text-lg text-gray-700 leading-relaxed">
+                <p class="mb-4">
+                    $$I = \iint_{S} (x^2 + y^2) \, dS$$ với $S$ là phần mặt cầu
+                </p>
+                <p class="text-center font-medium my-4">
+                    $$x^2 + y^2 + z^2 = a^2, \quad z \ge 0 \quad (a > 0)$$
+                </p>
+            </div>
+
+            <hr class="border-gray-200">
+
+            <div>
+                <h3 class="text-lg font-bold text-gray-900 mb-6 flex items-center">
+                    <span class="bg-blue-500 w-2 h-6 rounded mr-2 inline-block"></span>
+                    Lời giải:
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    
+    <div class="flex flex-col items-center justify-center p-2 bg-gray-50 rounded-xl border border-gray-100 shadow-inner">
+        <svg viewBox="0 0 300 250" class="w-full max-w-[220px] h-auto">
+            <defs>
+                <radialGradient id="sphereGrad" cx="50%" cy="40%" r="60%">
+                    <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.6"/>
+                    <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0.3"/>
+                </radialGradient>
+                <linearGradient id="baseGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#fda4af" stop-opacity="0.4"/>
+                    <stop offset="100%" stop-color="#f43f5e" stop-opacity="0.2"/>
+                </linearGradient>
+            </defs>
+
+            <line x1="150" y1="180" x2="60" y2="240" stroke="#6b7280" stroke-width="1.5" />
+            <polygon points="60,240 68,235 63,233" fill="#6b7280" />
+            <text x="65" y="250" font-size="12" font-style="italic" fill="#374151">x</text>
+
+            <line x1="20" y1="180" x2="280" y2="180" stroke="#6b7280" stroke-width="1.5" />
+            <polygon points="280,180 272,176 272,184" fill="#6b7280" />
+            <text x="285" y="185" font-size="12" font-style="italic" fill="#374151">y</text>
+
+            <line x1="150" y1="180" x2="150" y2="20" stroke="#6b7280" stroke-width="1.5" />
+            <polygon points="150,20 146,28 154,28" fill="#6b7280" />
+            <text x="158" y="25" font-size="12" font-style="italic" fill="#374151">z</text>
+
+            <text x="152" y="196" font-size="12" font-weight="bold" fill="#374151">O</text>
+
+            <ellipse cx="150" cy="180" rx="110" ry="22" fill="url(#baseGrad)" stroke="#f43f5e" stroke-width="1" stroke-dasharray="3,3" />
+            <path d="M 40,180 A 110,22 0 0,0 260,180" fill="none" stroke="#f43f5e" stroke-width="1.5" />
+
+            <path d="M 40,180 A 110,110 0 0,1 260,180 Z" fill="url(#sphereGrad)" stroke="#0284c7" stroke-width="1.5" />
+
+            <line x1="150" y1="180" x2="150" y2="70" stroke="#374151" stroke-width="1" stroke-dasharray="4,4" />
+
+            <text x="254" y="196" font-size="11" fill="#374151">a</text>
+            <text x="32" y="196" font-size="11" fill="#374151">-a</text>
+            <text x="156" y="78" font-size="11" fill="#374151">a</text>
+        </svg>
+    </div>
+
+                    <div class="space-y-4 text-gray-700 text-[15px] md:text-base leading-relaxed">
+                        <p>
+    Vì \(S\) là nửa trên của mặt cầu nên ta có thể viết phương trình của \(S\) dưới dạng:
+</p>
+
+<p class="font-medium text-blue-600">
+    \[
+    z = \sqrt{a^2 - x^2 - y^2}
+    \]
+</p>
+                        <p>Ta có công thức tính vi phân diện tích mặt:</p>
+                        <div class="bg-blue-50/50 p-3 rounded-lg border border-blue-100">
+                            $$dS = \sqrt{(z'_x)^2 + (z'_y)^2 + 1} \, dxdy$$
+                        </div>
+                        <div class="pt-2">
+                            $$= \frac{a}{\sqrt{a^2 - x^2 - y^2}} \, dxdy$$
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+<div class="math-block">
+    \[
+    \text{Đặt } t = \sqrt{a^2 - r^2}
+    \Rightarrow r^2 = a^2 - t^2
+    \Rightarrow r\,dr = -t\,dt.
+    \]
+</div>
+
+    <div class="math-block">
+        Đổi cận: 
+        \(\begin{array}{c|c} 
+        x & 0 \to a \\ \hline 
+        t & a \to 0 
+        \end{array}\). Ta có
+    </div>
+
+    <div class="math-block">
+        $$
+        \begin{aligned}
+        I &= 2\pi a \int_{a}^{0} \frac{a^2 - t^2}{t}(-t\mathrm{d}t) = 2\pi a \int_{0}^{a} (a^2 - t^2)\mathrm{d}t \\
+          &= 2\pi a \left( a^2 t - \frac{t^3}{3} \right) \bigg|_{0}^{a} = \frac{4}{3}\pi a^4
+        \end{aligned}
+        $$
+    </div>
+
+
+<div class="container">
+    <h2>Định nghĩa</h2>
+
+    <p>
+        <strong>Mặt cong định hướng:</strong>
+        Cho mặt cong trơn \(S\), tại mỗi điểm \(M\) thuộc \(S\) có hai véc tơ pháp tuyến đơn vị
+        \(\vec{n}\) và \(\vec{n}' = -\vec{n}\).
+    </p>
+
+    <p>
+        Ta gọi \(S\) là mặt định hướng được (mặt cong hai phía) nếu khi điểm \(M\)
+        biến thiên trên một đường cong kín bất kỳ thuộc mặt \(S\) đến khi quay lại vị trí ban đầu
+        thì véc tơ \(\vec{n}\) cũng về vị trí ban đầu.
+    </p>
+
+    <p>
+        Các mặt thường gặp như một phần mặt phẳng, mặt cầu, mặt nón,
+        mặt paraboloid... là các mặt định hướng được.
+    </p>
+
+    <p>
+        Phép xấp xỉ sẽ càng chính xác khi đường kính các mảnh \(S_i\) càng bé.
+        Nếu khi \(n \rightarrow \infty\) sao cho đường kính của các mảnh \(S_i\)
+        tiến đến \(0\), mà tổng trên dẫn tới một giới hạn \(I\) không phụ thuộc
+        vào cách chia mặt \(S\) và cách chọn các điểm \(M_i\),
+        thì \(I\) là thông lượng của \(\vec{F}\) qua mặt \(S\).
+    </p>
+
+    <p>
+        Ta cũng gọi nó là tích phân mặt loại hai của
+        \(\vec{F} = (P, Q, R)\) trên mặt \(S\). Ký hiệu:
+    </p>
+
+    <div class="math-display">
+        \[
+        \iint_{S} P \, dydz + Q \, dzdx + R \, dxdy
+        =
+        \iint_{S}
+        \left[
+            P \cos \alpha + Q \cos \beta + R \cos \gamma
+        \right] dS
+        \]
+    </div>
+</div>
+
+
+<div class="container">
+    <h2>Công thức Ostrogradsky</h2>
+
+    <p>
+        Giả sử \(V\) là miền đóng, bị chặn trong \(\mathbb{R}^3\)
+        có biên là mặt kín trơn từng mảnh \(S\).
+        Các hàm \(P, Q, R\) cùng các đạo hàm riêng của chúng
+        liên tục trong \(V\). Khi đó:
+    </p>
+
+    <div class="formula-box">
+        \[
+        \iint\limits_{S}
+        P \, dydz + Q \, dzdx + R \, dxdy
+        =
+        \iiint\limits_{V}
+        \left(
+            P'_x + Q'_y + R'_z
+        \right)
+        dxdydz
+        \]
+    </div>
+</div>
+
+
+<div class="container">
+    <h2>Bài 4.1: Tính tích phân</h2>
+    
+    <div class="problem-statement">
+        \(I = \iint\limits_{S} z \, dxdy\), biết \(S\) là phía ngoài mặt cầu \(x^2 + y^2 + z^2 = 1\).
+    </div>
+
+    <div class="solution-title">Lời giải:</div>
+
+    <div class="content-layout">
+        <div class="visual-axis">
+            <svg width="320" height="320" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <radialGradient id="sphereGrad" cx="40%" cy="40%" r="60%">
+                        <stop offset="0%" stop-color="#bce3f7" />
+                        <stop offset="70%" stop-color="#73b9e6" />
+                        <stop offset="100%" stop-color="#4a9cd1" />
+                    </radialGradient>
+                </defs>
+
+                <circle cx="150" cy="150" r="90" fill="url(#sphereGrad)" opacity="0.85" />
+
+                <ellipse cx="150" cy="150" rx="90" ry="22" fill="#ff9999" opacity="0.6" stroke="#cc5555" stroke-width="1" />
+
+                <line x1="40" y1="150" x2="280" y2="150" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)" />
+                <line x1="150" y1="260" x2="150" y2="40" stroke="#555" stroke-width="1.5" />
+                <line x1="220" y1="80" x2="80" y2="220" stroke="#555" stroke-width="1.5" />
+
+                <polygon points="280,146 290,150 280,154" fill="#555" />
+                <polygon points="146,40 150,30 154,40" fill="#555" />
+                <polygon points="83,215 75,225 87,221" fill="#555" />
+
+                <text x="285" y="165" font-size="16" font-style="italic" font-family="serif">y</text>
+                <text x="158" y="42" font-size="16" font-style="italic" font-family="serif">z</text>
+                <text x="82" y="242" font-size="16" font-style="italic" font-family="serif">x</text>
+                
+                <text x="156" y="164" font-size="15" font-family="serif" fill="#cc5555">O</text>
+                <text x="156" y="70" font-size="14" font-family="serif">1</text>
+                <text x="242" y="168" font-size="14" font-family="serif">1</text>
+                <text x="50" y="168" font-size="14" font-family="serif">-1</text>
+            </svg>
+        </div>
+
+        <div class="math-steps">
+            Ta có: \(P = Q = 0, \; R = z\).<br>
+            Áp dụng công thức Ostrogradsky:
+            $$I = \iiint\limits_{V} \left( P'_x + Q'_y + R'_z \right) dxdydz$$
+            $$= \iiint\limits_{V} 1 \cdot dxdydz$$
+            với \(V = \left\{ x^2 + y^2 + z^2 \le 1 \right\}\).
+        </div>
+    </div>
+</div>
+
+
+<div class="math-container">
+    <p>
+        Đặt 
+        $$\begin{cases} 
+        x = r \cos \varphi \sin \theta \\ 
+        y = r \sin \varphi \sin \theta \\ 
+        z = r \cos \theta 
+        \end{cases} 
+        \implies 
+        \begin{cases} 
+        0 \le \varphi \le 2\pi \\ 
+        0 \le \theta \le \pi \\ 
+        0 \le r \le 1 
+        \end{cases}, J = -r^2 \sin \theta.$$
+    </p>
+
+    <p>
+        $$\begin{align*}
+        I &= \int_{0}^{2\pi} \text{d}\varphi \int_{0}^{\pi} \text{d}\theta \int_{0}^{1} r^2 \sin \theta \text{d}r = \int_{0}^{2\pi} \text{d}\varphi \int_{0}^{\pi} \sin \theta \cdot \left. \frac{r^3}{3} \right|_{0}^{1} \text{d}\theta \\
+        &= \int_{0}^{2\pi} \text{d}\varphi \int_{0}^{\pi} \frac{1}{3} \sin \theta \text{d}\theta = \int_{0}^{2\pi} \left. \left( -\frac{1}{3} \cos \theta \right) \right|_{0}^{\pi} \text{d}\varphi \\
+        &= \int_{0}^{2\pi} \frac{2}{3} \text{d}\varphi = \left. \frac{2}{3} \varphi \right|_{0}^{2\pi} = \frac{4\pi}{3}.
+        \end{align*}$$
+    </p>
+</div>
+
+
+<div class="container">
+    <h2>1. Định nghĩa</h2>
+    
+    <div class="equation-block">
+        $$F(x, y, y') = 0 \text{ hoặc } y' = f(x, y) \qquad (1)$$
+    </div>
+
+    <ul>
+        <li><strong>Nghiệm tổng quát:</strong> $$y = \varphi(x; C)$$ (nghiệm tường minh)</li>
+        <li><strong>Tích phân tổng quát:</strong> $$F(x, y, C) = 0$$ (nghiệm dạng ẩn)</li>
+        <li><strong>Bài toán Cauchy:</strong> Tìm nghiệm của (1) thỏa mãn: $$y(x_0) = y_0$$</li>
+    </ul>
+</div>
+
+
+<div class="container">
+
+    <h2>2. Phương trình tách biến</h2>
+
+    <p>
+        \[
+        y' = -\frac{f(x)}{g(y)}
+        \iff \frac{dy}{dx} = -\frac{f(x)}{g(y)}
+        \iff f(x)\,dx + g(y)\,dy = 0
+        \]
+    </p>
+
+    <p>
+        Tích phân hai vế:
+        \(\int f(x)\,dx + \int g(y)\,dy = C\),
+        từ đây ta thu được tích phân tổng quát.
+    </p>
+
+    <h3>Ví dụ 1:</h3>
+
+    <p>
+        Tích phân phương trình:
+        \[
+        x(1+y^2)\,dx + y(1+x^2)\,dy = 0
+        \]
+    </p>
+
+    <p>
+        Chia cả hai vế cho \((1+x^2)(1+y^2)\), ta có:
+    </p>
+
+    <p>
+        \[
+        \frac{x\,dx}{1+x^2} + \frac{y\,dy}{1+y^2} = 0
+        \]
+    </p>
+
+    <p>
+        \[
+        \int \frac{x\,dx}{1+x^2} + \int \frac{y\,dy}{1+y^2} = C
+        \]
+    </p>
+
+    <p>
+        \[
+        \iff \frac{1}{2} \int \frac{d(1+x^2)}{1+x^2}
+        + \frac{1}{2} \int \frac{d(1+y^2)}{1+y^2}
+        = C
+        \]
+    </p>
+
+    <p>
+        \[
+        \iff \frac{1}{2}\ln|1+x^2|
+        + \frac{1}{2}\ln|1+y^2|
+        = C
+        \]
+    </p>
+
+    <p>
+        \[
+        \iff \ln\big((1+x^2)(1+y^2)\big) = \overline{C}
+        \]
+    </p>
+
+    <p>
+        \[
+        \iff (1+x^2)(1+y^2) = C
+        \quad \text{là tích phân tổng quát của phương trình đã cho}
+        \; (C = e^{\overline{C}})
+        \]
+    </p>
+
+</div>
+
+
+
+</body>
+</html>
