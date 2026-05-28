@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Slide Kỹ Thuật Lập Trình - UTC</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:'Segoe UI', Arial, sans-serif;
+    }
+
+    body{
+        background:#dfe6ec;
+        padding:40px 0;
+    }
+
+    /* ===== SLIDE ===== */
+    .slide{
+        width:1024px;
+    	height:768px;
+    	overflow-y:auto;   /* thay vì hidden */
+    	overflow-x:hidden;
+        margin:0 auto 40px;
+        background:#fff;
+        position:relative;
+        box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    /* ===== BACKGROUND ===== */
+    .slide-background{
+        position:absolute;
+        inset:0;
+        height:62%;
+        background:
+            linear-gradient(
+                rgba(255,255,255,0.72),
+                rgba(255,255,255,0.72)
+            ),
+            url("https://www.utc.edu.vn/Upload/2024/06/28/phm39.jpg");
+
+        background-size:cover;
+        background-position:center 30%;
+        background-repeat:no-repeat;
+        z-index:1;
+    }
+
+    /* ===== DECOR ===== */
+    .wave-decor{
+        position:absolute;
+        top:48%;
+        left:-10%;
+        width:120%;
+        height:120px;
+        z-index:2;
+
+        background:linear-gradient(
+            176deg,
+            transparent 25%,
+            #507a9e 25%, #507a9e 38%,
+            #8faec6 38%, #8faec6 55%,
+            #b2c8d8 55%, #b2c8d8 70%,
+            #e5c173 70%, #e5c173 85%,
+            transparent 85%
+        );
+
+        transform:rotate(-3deg);
+    }
+
+    /* ===== CONTENT ===== */
+    .content{
+        position:relative;
+        z-index:3;
+        padding:520px 80px 80px;
+    }
+
+    .title-main{
+        font-size:44px;
+        font-weight:700;
+        color:#718391;
+        margin-bottom:12px;
+    }
+
+    .title-sub{
+        font-size:34px;
+        font-weight:600;
+        color:#8ea2b1;
+        margin-bottom:12px;
+    }
+
+    .title-detail{
+        font-size:26px;
+        color:#a3b5c2;
+    }
+
+    /* ===== NORMAL SLIDE ===== */
+    .normal-slide{
+        padding:70px 80px;
+    }
+
+    .section-title{
+        font-size:42px;
+        color:#507a9e;
+        margin-bottom:40px;
+        border-left:10px solid #507a9e;
+        padding-left:20px;
+    }
+
+    ul{
+        margin-left:30px;
+    }
+
+    li{
+        font-size:28px;
+        margin-bottom:24px;
+        color:#44525f;
+        line-height:1.5;
+    }
+
+    .code-box{
+        background:#f4f6f8;
+        border-left:6px solid #507a9e;
+        padding:25px;
+        border-radius:8px;
+        font-size:22px;
+        line-height:1.6;
+        margin-top:25px;
+        white-space:pre-wrap;
+    }
+
+    .note{
+        margin-top:25px;
+        color:#d35400;
+        font-size:24px;
+        font-weight:600;
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- ================================================= -->
+<!-- SLIDE 1 : TRANG BÌA -->
+<!-- ================================================= -->
+
+<section class="slide">
+
+    <div class="slide-background"></div>
+    <div class="wave-decor"></div>
+
+    <div class="content">
+        <h1 class="title-main">Kỹ Thuật Lập Trình</h1>
+
+        <h2 class="title-sub">
+            Chương 3: Hàm và tổ chức chương trình
+        </h2>
+
+        <p class="title-detail">
+            Hàm có đối là mảng 1 chiều
+        </p>
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SLIDE 2 : MỤC LỤC -->
+<!-- ================================================= -->
+
+<section class="slide normal-slide">
+
+    <h1 class="section-title">MỤC LỤC</h1>
+
+    <ul>
+        <li>Cơ chế truyền mảng vào hàm (Call by Reference)</li>
+
+        <li>
+            Khai báo và gọi hàm với tham số là mảng
+        </li>
+
+        <li>
+            Ví dụ các thao tác cơ bản trên mảng bằng hàm
+        </li>
+
+        <li>
+            Những lưu ý, lỗi thường gặp và thực hành
+        </li>
+    </ul>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- SLIDE 3 -->
+<!-- ================================================= -->
+
+<section class="slide normal-slide">
+
+    <h1 class="section-title">1) Cơ chế truyền mảng vào hàm</h1>
+
+    <div class="slide-content">
+
+        <h2 class="main-title">
+            Tại sao cần Hàm với tham số là Mảng?
+        </h2>
+
+        <ul>
+            <li>
+                Trong các bài toán thực tế, chúng ta thường xuyên phải xử lý một lượng lớn dữ liệu được lưu trữ trong mảng
+                (ví dụ: danh sách điểm học sinh, dữ liệu cảm biến, v.v.).
+            </li>
+
+            <li>
+                Việc đóng gói các thao tác xử lý mảng
+                (như nhập, xuất, tìm kiếm, sắp xếp, tính toán)
+                vào các hàm riêng biệt giúp chương trình trở nên có tổ chức,
+                dễ đọc, dễ bảo trì và đặc biệt là dễ dàng tái sử dụng
+                các đoạn mã này cho các mảng khác nhau.
+            </li>
+        </ul>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ================================================= -->
+<!-- SLIDE 4 -->
+<!-- ================================================= -->
+
+<section class="slide normal-slide">
+
+    <h1 class="section-title">1) Cơ chế truyền mảng vào hàm</h1>
+
+    <div class="slide-content">
+
+        <h2 class="main-title">
+            Nhắc lại kiến thức cũ
+        </h2>
+
+        <p>
+            Các bạn hãy nhìn ví dụ dưới đây và cho biết kết quả chương trình sẽ in ra là gì?
+        </p>
+
+        <div class="container">
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int xuly(int n){
+    n += 10;
+    printf("Ket qua sau khi xu ly: %d\n", n);
+    return n;
+}
+
+int main(){
+    int a = 50;
+    xuly(a);
+    printf("a = %d", a);
+    return 0;
+}</code></pre>
+
+            <div class="output-box">
+                Ket qua sau khi xu ly: 60<br>
+                a = 50<br><br>
+                --------------------------------<br>
+                Process exited after 0.04857 seconds with return value 0<br>
+                Press any key to continue . . .
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- SLIDE 5 -->
+<!-- ================================================= -->
+
+<section class="slide normal-slide">
+
+    <h1 class="section-title">1) Cơ chế truyền mảng vào hàm</h1>
+
+    <div class="slide-content">
+
+        <h2 class="main-title">
+            Vậy thì mảng được truyền vào hàm có thay đổi gì không?
+        </h2>
+
+        <ul class="highlight-list">
+            <li>
+                Một trong những điểm khác biệt quan trọng của mảng trong C là cách chúng được truyền vào hàm.
+            </li>
+
+            <li>
+                Khi một mảng được truyền làm tham số cho hàm, thực chất hàm sẽ nhận địa chỉ của phần tử đầu tiên của mảng đó.
+            </li>
+
+            <li>
+                Điều này có nghĩa là, mảng luôn được truyền theo dạng tham biến
+                (Call by Reference) một cách ngầm định.
+            </li>
+        </ul>
+
+        <div class="note-box">
+            <ul class="result-list">
+                <li>
+                    Không có bản sao của toàn bộ mảng được tạo ra trong bộ nhớ khi truyền vào hàm.
+                </li>
+
+                <li>
+                    <strong>Kết quả:</strong>
+                    Mọi thay đổi mà hàm thực hiện trên các phần tử của mảng bên trong hàm
+                    sẽ ảnh hưởng trực tiếp đến mảng gốc bên ngoài hàm
+                    (trong <code>main()</code> hoặc hàm gọi).
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- SLIDE 6 -->
+<!-- ================================================= -->
+
+<section class="slide normal-slide">
+
+    <h1 class="section-title">2) Khai báo hàm với tham số là mảng</h1>
+
+    <div class="slide-content">
+
+        <h2 class="main-title">
+            Có hai cú pháp tương đương để khai báo tham số mảng trong hàm
+        </h2>
+
+        <ul class="highlight-list">
+
+            <li>
+                Dùng cú pháp mảng:
+            </li>
+
+        </ul>
+
+        <div class="syntax-box">
+            kiểu_trả_về tên_hàm(kiểu_dữ_liệu_mảng tên_tham_số_mảng[], int kích_thước)
+        </div>
+
+        <div class="example-box">
+            Ví dụ:
+            <code>void printArray(int arr[], int size);</code>
+            <br><br>
+            Cách này trực quan và cho biết rõ ràng rằng tham số này là một mảng.
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- SLIDE 7 -->
+<!-- ================================================= -->
+
+<section class="slide normal-slide">
+
+    <h1 class="section-title">2) Khai báo hàm với tham số là mảng</h1>
+
+    <div class="slide-content">
+
+        <h2 class="main-title">
+            Hai cú pháp khai báo tham số mảng
+        </h2>
+
+        <ul class="highlight-list">
+
+            <li>
+                Dùng cú pháp mảng
+            </li>
+
+        </ul>
+
+        <div class="syntax-box">
+            kiểu_trả_về tên_hàm(kiểu_dữ_liệu_mảng tên_tham_số_mảng[], int kích_thước)
+        </div>
+
+        <div class="example-box">
+            Ví dụ:
+            <code>void printArray(int arr[], int size);</code>
+        </div>
+
+        <ul class="highlight-list">
+
+            <li>
+                Dùng cú pháp con trỏ
+            </li>
+
+        </ul>
+
+        <div class="syntax-box">
+            kiểu_trả_về tên_hàm(kiểu_dữ_liệu_mảng *tên_tham_số_con_trỏ, int kích_thước)
+        </div>
+
+        <div class="example-box">
+            Ví dụ:
+            <code>void printArray(int *arr, int size);</code>
+        </div>
+
+        <div class="note-box">
+            <strong>Lưu ý quan trọng:</strong><br>
+            Ta <strong>BẮT BUỘC</strong> phải truyền kèm theo một tham số kiểu số nguyên
+            để chỉ định số lượng phần tử của mảng
+            (<code>int kích_thước</code>)
+            vì hàm không thể tự xác định kích thước của mảng chỉ từ tên mảng.
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- SLIDE 8 -->
+<!-- ================================================= -->
+
+<section class="slide normal-slide">
+
+    <h1 class="section-title">2) Khai báo hàm với tham số là mảng</h1>
+
+    <div class="slide-content">
+
+        <h2 class="main-title">
+            Lỗi khi không truyền kích thước mảng
+        </h2>
+
+        <p>
+            Hàm không thể tự biết kích thước thật sự của mảng chỉ thông qua tên mảng.
+        </p>
+
+        <div class="container">
+
+<pre><code>#include &lt;stdio.h&gt;
+
+void processArray(int arr[]) {
+    printf("Kich thuoc arr trong ham: %d bytes\n", sizeof(arr));
+}
+
+int main() {
+    int myArr[10]; // Kich thuoc thuc su: 40 bytes
+    processArray(myArr);
+    return 0;
+}</code></pre>
+
+            <div class="output-box">
+                Kich thuoc arr trong ham: 8 bytes<br><br>
+
+                --------------------------------<br>
+                Process exited after 0.08357 seconds with return value 0<br>
+                Press any key to continue . . .
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- SLIDE 9 -->
+<!-- ================================================= -->
+
+<section class="slide normal-slide">
+
+    <h1 class="section-title">2) Khai báo hàm với tham số là mảng</h1>
+
+    <div class="slide-content">
+
+        <h2 class="main-title">
+            Ví dụ các thao tác cơ bản
+        </h2>
+
+        <p>
+            Khi truyền mảng vào hàm, ta cần truyền thêm kích thước để hàm có thể duyệt đúng số phần tử.
+        </p>
+
+        <div class="container">
+
+<pre><code>#include &lt;stdio.h&gt;
+
+void printArray(int arr[], int size) {
+    for (int i = 0; i &lt; size; i++) {
+        printf("%d ", arr[i]);
+    }
+}
+
+int main() {
+    int myNumbers[5] = {10, 20, 30, 40, 50};
+    printf("In mang tu ham main\n");
+    for (int i = 0; i &lt; 5; i++) {
+        printf("%d ", myNumbers[i]);
+    }
+    printf("\n\nIn mang tu ham printArray\n");
+    printArray(myNumbers, 5);
+    return 0;
+}</code></pre>
+
+            <div class="output-box">
+                In mang tu ham main<br>
+                10 20 30 40 50 <br><br>
+                In mang tu ham printArray<br>
+                10 20 30 40 50 <br><br>
+
+                --------------------------------<br>
+                Process exited after 0.08357 seconds with return value 0<br>
+                Press any key to continue . . .
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- SLIDE 10 -->
+<!-- ================================================= -->
+
+<section class="slide normal-slide">
+
+    <h1 class="section-title">2) Khai báo hàm với tham số là mảng</h1>
+
+    <div class="slide-content">
+
+        <h2 class="main-title">
+            Ví dụ 2: Hàm tính tổng các phần tử mảng
+        </h2>
+
+        <p>
+            Hàm có thể nhận mảng làm tham số để thực hiện các thao tác như tính tổng, tìm giá trị lớn nhất hoặc xử lý dữ liệu hàng loạt.
+        </p>
+
+        <div class="container">
+
+<pre><code>#include &lt;stdio.h&gt;
+int sumArray(int arr[], int size) {
+    int sum = 0;
+    for (int i = 0; i &lt; size; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+
+int main() {
+    int scores[] = {7, 8, 9, 6, 10};
+    int total_score;
+    total_score = sumArray(scores, 5);
+    printf("Tong diem cua mang la: %d\n", total_score);
+    int prices[] = {100, 200, 300};
+    int N = sizeof(prices) / sizeof(prices[0]);
+    printf("Tong gia tri cua mang prices: %d\n",
+           sumArray(prices, N));
+
+    return 0;
+}</code></pre>
+
+            <div class="output-box">
+                Tong diem cua mang la: 40<br>
+                Tong gia tri cua mang prices: 600<br><br>
+
+                --------------------------------<br>
+                Process exited after 0.08357 seconds with return value 0<br>
+                Press any key to continue . . .
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- SLIDE 11 -->
+<!-- ================================================= -->
+
+<section class="slide normal-slide">
+
+    <div class="slide-background"></div>
+    <div class="wave-decor"></div>
+
+    <div class="content">
+        <h1 class="title-main">Kỹ Thuật Lập Trình</h1>
+
+        <h2 class="title-sub">
+            Chương 3: Hàm và tổ chức chương trình
+        </h2>
+
+        <p class="title-detail">
+            Hàm có đối là mảng hai chiều
+        </p>
+    </div>
+
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- SLIDE 12 -->
+<!-- ================================================= -->
+
+<section class="slide normal-slide">
+
+    <div class="slide-container">
+
+        <h1 class="section-title">3) Mảng hai chiều trong hàm</h1>
+
+        <div class="slide-content">
+
+            <h2 class="main-title">
+                MỤC LỤC
+            </h2>
+
+            <div class="container">
+
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        Cơ chế truyền mảng vào hàm (Call by Reference)
+                    </li>
+
+                    <li class="menu-item">
+                        Khai báo và gọi hàm với tham số là mảng hai chiều
+                    </li>
+
+                    <li class="menu-item">
+                        Ví dụ các thao tác cơ bản trên mảng hai chiều bằng hàm
+                    </li>
+
+                    <li class="menu-item">
+                        Những lưu ý, lỗi thường gặp và thực hành một số ví dụ
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- ================================================= -->
+<!-- SLIDE 13 -->
+<!-- ================================================= -->
+
+<section class="slide normal-slide">
+
+    <div class="slide-container">
+
+        <h2>1) Cơ chế truyền mảng vào hàm hai chiều</h2>
+        
+        <h3>Nhắc lại kiến thức</h3>
+
+        <p>
+            - Quan sát hai hình dưới đây và cho biết mảng hai chiều được dùng để làm gì?
+            Từ đó nêu khái niệm về mảng hai chiều
+        </p>
+
+        <div class="tables-wrapper">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Họ và tên</th>
+                        <th class="center italic">Điểm<br>Toán</th>
+                        <th class="center italic">Điểm<br>Văn</th>
+                        <th class="center italic">Điểm<br>Tin</th>
+                        <th class="center">...</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nguyễn Văn Anh</td>
+                        <td class="center">7.5</td>
+                        <td class="center">6.5</td>
+                        <td class="center">5.0</td>
+                        <td class="center">...</td>
+                    </tr>
+                    <tr>
+                        <td>Hoàng Đình Bảo</td>
+                        <td class="center">5.0</td>
+                        <td class="center">9.0</td>
+                        <td class="center">4.5</td>
+                        <td class="center">...</td>
+                    </tr>
+                    <tr>
+                        <td>Trần Kim Cúc</td>
+                        <td class="center">8.5</td>
+                        <td class="center">8.0</td>
+                        <td class="center">8.0</td>
+                        <td class="center">...</td>
+                    </tr>
+                    <tr>
+                        <td>Phạm Cao Dương</td>
+                        <td class="center">4.5</td>
+                        <td class="center">5.5</td>
+                        <td class="center">7.0</td>
+                        <td class="center">...</td>
+                    </tr>
+                    <tr>
+                        <td class="center">...</td>
+                        <td class="center">...</td>
+                        <td class="center">...</td>
+                        <td class="center">...</td>
+                        <td class="center">...</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th class="italic">bangDiem</th>
+                        <th class="center italic">Cột<br>[ ][0]</th>
+                        <th class="center italic">Cột<br>[ ][1]</th>
+                        <th class="center italic">Cột<br>[ ][2]</th>
+                        <th class="center">...</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="italic">bangDiem[0]</td>
+                        <td class="center">7.5</td>
+                        <td class="center">6.5</td>
+                        <td class="center">5.0</td>
+                        <td class="center">...</td>
+                    </tr>
+                    <tr>
+                        <td class="italic">bangDiem[1]</td>
+                        <td class="center">5.0</td>
+                        <td class="center">9.0</td>
+                        <td class="center">4.5</td>
+                        <td class="center">...</td>
+                    </tr>
+                    <tr>
+                        <td class="italic">bangDiem[2]</td>
+                        <td class="center">8.5</td>
+                        <td class="center">8.0</td>
+                        <td class="center">8.0</td>
+                        <td class="center">...</td>
+                    </tr>
+                    <tr>
+                        <td class="italic">bangDiem[3]</td>
+                        <td class="center">4.5</td>
+                        <td class="center">5.5</td>
+                        <td class="center">7.0</td>
+                        <td class="center">...</td>
+                    </tr>
+                    <tr>
+                        <td class="center">...</td>
+                        <td class="center">...</td>
+                        <td class="center">...</td>
+                        <td class="center">...</td>
+                        <td class="center">...</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- ================================================= -->
+<!-- SLIDE 14 -->
+<!-- ================================================= -->
+
+<section class="slide normal-slide">
+
+    <div class="slide-container">
+
+        <h2>1) Cơ chế truyền mảng vào hàm hai chiều</h2>
+        
+        <h3>● Mảng 2 chiều được lưu trữ thế nào trong bộ nhớ?</h3>
+        
+        <ul>
+            <li>Mặc dù nhìn như bảng, mảng 2 chiều vẫn được lưu trữ trong bộ nhớ liên tiếp (tuần tự) theo thứ tự từng hàng.</li>
+            <li><strong>Ví dụ:</strong> <code>int matrix[2][3] = {{1,2,3}, {4,5,6}};</code></li>
+        </ul>
+
+        <div class="content-layout">
+            <div class="code-block">
+                matrix[0][0] (1)<br>
+                matrix[0][1] (2)<br>
+                matrix[0][2] (3)<br>
+                matrix[1][0] (4)<br>
+                matrix[1][1] (5)<br>
+                matrix[1][2] (6)
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>0</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>0</th>
+                            <td>a[0][0]</td>
+                            <td>a[0][1]</td>
+                            <td>a[0][2]</td>
+                            <td>a[0][3]</td>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>a[1][0]</td>
+                            <td>a[1][1]</td>
+                            <td>a[1][2]</td>
+                            <td>a[1][3]</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>a[2][0]</td>
+                            <td>a[2][1]</td>
+                            <td>a[2][2]</td>
+                            <td>a[2][3]</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>a[3][0]</td>
+                            <td>a[3][1]</td>
+                            <td>a[3][2]</td>
+                            <td>a[3][3]</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="table-caption">Mảng 2 chiều gồm 4 hàng, 4 cột</div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- ================================================= -->
+<!-- SLIDE 15 -->
+<!-- ================================================= -->
+
+<section class="slide normal-slide">
+
+    <div class="slide-container">
+
+        <h2>2) Khai báo hàm với tham số là mảng hai chiều</h2>
+
+        <ul>
+            <li class="bullet"><strong>Có hai cú pháp tương đương để khai báo tham số mảng trong hàm:</strong></li>
+            
+            <li>- Cách 1 (Phổ biến, rõ ràng):
+                <div class="code-block">Kiểu_trả_về Tên_hàm(Kiểu_dữ_ liệu Tên_mảng[][số_cột], int so_hang, int so_cot);</div>
+            </li>
+            
+            <li>- Cách 2 (Sử dụng con trỏ tới mảng):
+                <div class="code-block">Kiểu_trả_về Tên_hàm(Kiểu_dữ_liệu (*arr_ptr)[số_cột], int so_hang, int so_cot);</div>
+            </li>
+            
+            <li>- Trong đó:
+                <ul style="padding-left: 20px; list-style-type: disc;">
+                    <li><strong>số_cột</strong>: Phải là một hằng số đã biết trước khi biên dịch.</li>
+                    <li><strong>so_hang</strong>: Số lượng hàng (cần để duyệt).</li>
+                    <li><strong>so_cot</strong>: Số lượng cột (cần để duyệt, và quan trọng nhất là để trình biên dịch tính địa chỉ).</li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- ================================================= -->
+<!-- SLIDE 16 -->
+<!-- ================================================= -->
+
+<section class="slide normal-slide">
+
+    <div class="slide-container">
+
+        <h2>2) Khai báo hàm với tham số là mảng hai chiều</h2>
+        <h3>● Ví dụ các thao tác cơ bản</h3>
+        <p>- Ví dụ 1: Hàm nhập và in mảng 2 Chiều</p>
+
+        <pre><code>#include &lt;stdio.h&gt;
+#define COLS 3
+
+void inputMatrix(int mat[][COLS], int rows, int cols) {
+    for (int i = 0; i &lt; rows; i++) {
+        for (int j = 0; j &lt; cols; j++) {
+            printf("Nhap phan tu [%d][%d]: ", i, j);
+            scanf("%d", &amp;mat[i][j]);
+        }
+    }
+}
+
+void printMatrix(int mat[][COLS], int rows, int cols) {
+    for (int i = 0; i &lt; rows; i++) {
+        for (int j = 0; j &lt; cols; j++) {
+            printf("%4d", mat[i][j]);
+        }
+        printf("\n"); // Xuong dong sau moi hang
+    }
+}
+
+int main() {
+    int myMatrix[2][COLS];
+    printf("Nhap gia tri cho ma tran 2x%d\n", COLS);
+    inputMatrix(myMatrix, 2, COLS); // Goi ham nhap
+    printf("\nMa tran vua nhap:\n");
+    printMatrix(myMatrix, 2, COLS); // Goi ham in
+    return 0;
+}
+</code></pre>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- ================================================= -->
+<!-- SLIDE 17 -->
+<!-- ================================================= -->
+
+<section class="slide normal-slide">
+
+    <div class="slide-container">
+
+        <h2>2) Khai báo hàm với tham số là mảng hai chiều</h2>
+
+        <h3>● Ví dụ các thao tác cơ bản</h3>
+
+        <p><strong>- Ví dụ 2: Hàm tính tổng các phần tử trong Ma trận</strong></p>
+
+        <pre><code>
+#include &lt;stdio.h&gt;
+#define COLS_MATRIX 4
+
+int sumMatrix(int mat[][COLS_MATRIX], int rows, int cols) {
+    int sum = 0;
+    for (int i = 0; i &lt; rows; i++) {
+        for (int j = 0; j &lt; cols; j++) {
+            sum += mat[i][j];
+        }
+    }
+    return sum;
+}
+
+void printMatrixExample(int mat[][COLS_MATRIX], int rows, int cols) {
+    for (int i = 0; i &lt; rows; i++) {
+        for (int j = 0; j &lt; cols; j++) {
+            printf("%4d", mat[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    int myMatrix[3][COLS_MATRIX] = {
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 10, 11, 12}
+    };
+    int total_sum;
+    printf("Ma tran dang xet:\n");
+    printMatrixExample(myMatrix, 3, COLS_MATRIX);
+    total_sum = sumMatrix(myMatrix, 3, COLS_MATRIX); // gọi hàm tính tổng
+    printf("\nTong cac phan tu trong ma tran la: %d\n", total_sum);
+    return 0;
+}
+        </code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- SLIDE 18 -->
+<!-- ================================================= -->
+
+<section class="slide normal-slide">
+
+    <div class="slide-container">
+
+        <h2>2) Khai báo hàm với tham số là mảng hai chiều</h2>
+        <h3>● Ví dụ các thao tác cơ bản</h3>
+        <p><strong>- Ví dụ 3: Hàm thay đổi các phần tử trong ma trận</strong></p>
+
+        <div class="container">
+
+            <div class="code-wrapper">
+                <div class="code-left">
+
+                    <div class="line"><span class="line-content"><span class="keyword">#include</span> <span class="string">&lt;stdio.h&gt;</span></span></div>
+                    <div class="line"><span class="line-content"><span class="keyword">#define</span> COLS_UPDATE <span class="number">2</span></span></div>
+                    <div class="line"><span class="line-content"></span></div>
+
+                    <div class="line"><span class="line-content"><span class="type">void</span> <span class="keyword">multiplyMatrixByTwo</span>(<span class="type">int</span> mat[][COLS_UPDATE], <span class="type">int</span> rows, <span class="type">int</span> cols) {</span></div>
+                    <div class="line"><span class="line-content">    <span class="keyword">printf</span>(<span class="string">"\nTrong ham multiplyMatrixByTwo\n"</span>);</span></div>
+                    <div class="line"><span class="line-content">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; rows; i++) {</span></div>
+                    <div class="line"><span class="line-content">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; cols; j++) {</span></div>
+                    <div class="line"><span class="line-content">            mat[i][j] *= <span class="number">2</span>;</span></div>
+                    <div class="line"><span class="line-content">            <span class="keyword">printf</span>(<span class="string">"%5d"</span>, mat[i][j]);</span></div>
+                    <div class="line"><span class="line-content">        }</span></div>
+                    <div class="line"><span class="line-content">        <span class="keyword">printf</span>(<span class="string">"\n"</span>);</span></div>
+                    <div class="line"><span class="line-content">    }</span></div>
+                    <div class="line"><span class="line-content">}</span></div>
+
+                    <div class="line"><span class="line-content"></span></div>
+
+                    <div class="line"><span class="line-content"><span class="type">void</span> <span class="keyword">printMatrixExample</span>(<span class="type">int</span> mat[][COLS_UPDATE], <span class="type">int</span> rows, <span class="type">int</span> cols) {</span></div>
+                    <div class="line"><span class="line-content">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; rows; i++) {</span></div>
+                    <div class="line"><span class="line-content">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; cols; j++) {</span></div>
+                    <div class="line"><span class="line-content">            <span class="keyword">printf</span>(<span class="string">"%5d"</span>, mat[i][j]);</span></div>
+                    <div class="line"><span class="line-content">        }</span></div>
+                    <div class="line"><span class="line-content">        <span class="keyword">printf</span>(<span class="string">"\n"</span>);</span></div>
+                    <div class="line"><span class="line-content">    }</span></div>
+                    <div class="line"><span class="line-content">}</span></div>
+
+                </div>
+
+                <div class="code-right">
+
+                    <div class="line"><span class="line-content"><span class="type">int</span> <span class="keyword">main</span>() {</span></div>
+                    <div class="line"><span class="line-content">    <span class="type">int</span> myMatrix[<span class="number">3</span>][COLS_UPDATE] = {</span></div>
+                    <div class="line"><span class="line-content">        {<span class="number">1</span>, <span class="number">2</span>},</span></div>
+                    <div class="line"><span class="line-content">        {<span class="number">3</span>, <span class="number">4</span>},</span></div>
+                    <div class="line"><span class="line-content">        {<span class="number">5</span>, <span class="number">6</span>}</span></div>
+                    <div class="line"><span class="line-content">    };</span></div>
+
+                    <div class="line"><span class="line-content">    <span class="keyword">printf</span>(<span class="string">"Ma tran goc (truoc khi goi ham):\n"</span>);</span></div>
+                    <div class="line"><span class="line-content">    printMatrixExample(myMatrix, <span class="number">3</span>, COLS_UPDATE);</span></div>
+
+                    <div class="line"><span class="line-content">    multiplyMatrixByTwo(myMatrix, <span class="number">3</span>, COLS_UPDATE);</span></div>
+
+                    <div class="line"><span class="line-content">    <span class="keyword">printf</span>(<span class="string">"\nMa tran sau khi goi ham (kiem tra trong main):\n"</span>);</span></div>
+                    <div class="line"><span class="line-content">    printMatrixExample(myMatrix, <span class="number">3</span>, COLS_UPDATE);</span></div>
+
+                    <div class="line"><span class="line-content">    <span class="keyword">return</span> <span class="number">0</span>;</span></div>
+                    <div class="line"><span class="line-content">}</span></div>
+
+                </div>
+            </div>
+
+            <div class="terminal">
+                <div>Ma tran goc (truoc khi goi ham):</div>
+                <div>    1    2</div>
+                <div>    3    4</div>
+                <div>    5    6</div>
+                <br>
+                <div>Trong ham multiplyMatrixByTwo</div>
+                <div>    2    4</div>
+                <div>    6    8</div>
+                <div>   10   12</div>
+                <br>
+                <div>Ma tran sau khi goi ham (kiem tra trong main):</div>
+                <div>    2    4</div>
+                <div>    6    8</div>
+                <div>   10   12</div>
+                <br>
+                <div style="color:#bbb; font-size:12px;">--------------------------------</div>
+                <div style="color:#bbb; font-size:12px;">Process exited after 0.05485 seconds with return value 0</div>
+                <div style="color:#bbb; font-size:12px;">Press any key to continue . . .</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- ================================================= -->
+<!-- SLIDE 19 -->
+<!-- ================================================= -->
+
+<section class="slide normal-slide">
+
+<div class="slide-container">
+
+    <h2>3) Những lỗi thường gặp</h2>
+    <h3>• Kết quả chạy chương trình từ ví dụ</h3>
+
+    <div class="content-layout">
+
+        <div class="code-block">
+
+            <div>#include &lt;stdio.h&gt;</div>
+            <div></div>
+
+            <div>void printMatrixError(<span class="error-highlight">int mat[][]</span>, int rows, int cols) {</div>
+            <div class="indent-1">for (int i = 0; i &lt; rows; i++) {</div>
+            <div class="indent-2">for (int j = 0; j &lt; cols; j++) {</div>
+            <div class="indent-3">printf("%d ", mat[i][j]);</div>
+            <div class="indent-2">}</div>
+            <div class="indent-1">printf("\n");</div>
+            <div class="indent-1">}</div>
+            <div>}</div>
+
+            <div></div>
+
+            <div>int main() {</div>
+            <div class="indent-1">int myMatrix[2][3] = {{1,2,3}, {4,5,6}};</div>
+            <div class="indent-1">printMatrixError(myMatrix, 2, 3);</div>
+            <div class="indent-1"></div>
+            <div class="indent-1">return 0;</div>
+            <div>}</div>
+
+        </div>
+
+        <div class="error-box">
+            Lỗi: Khi khai báo tham số mảng hai chiều, kích thước của cột là <strong>BẮT BUỘC</strong> phải được chỉ rõ. Luôn cung cấp kích thước cột trong khai báo tham số mảng 2 chiều.
+        </div>
+
+    </div>
+
+    <div class="footer-decor"></div>
+
+</div>
+
+</section>
+
+
+
+
+<!-- ================================================= -->
+<!-- SLIDE 20 -->
+<!-- ================================================= -->
+
+<section class="slide normal-slide">
+
+<div class="slide-container">
+
+    <h2>3) Những lỗi thường gặp</h2>
+    <h1>Kết quả chạy chương trình từ ví dụ</h1>
+
+    <div class="content-layout">
+
+        <div class="code-block">
+
+<pre>
+#include &lt;stdio.h&gt;
+#define COLS_EXAMPLE 2
+
+void printMatrixError2(int mat[][COLS_EXAMPLE], int rows, int cols) {
+    printf("In ma tran\n");
+    for (int i = 0; i &lt;= rows; i++) {
+        for (int j = 1; j &lt;= cols; j++) {
+            printf("%d ", mat[i][j]);
+        }
+        printf("\n");
+    }
+}
+</pre>
+
+<br>
+
+<pre>
+int main() {
+    int myMatrix[2][COLS_EXAMPLE] = {{1,2}, {3,4}};
+    printMatrixError2(myMatrix, 2, COLS_EXAMPLE);
+    return 0;
+}
+</pre>
+
+        </div>
+
+        <div class="output-block">
+<pre>
+In ma tran
+2 3
+4 1990096
+0 4199408
+
+--------------------------------
+Process exited after 0.05861 seconds
+Press any key to continue . . .
+</pre>
+        </div>
+
+        <div class="error-alert">
+            Lỗi: Truy cập các phần tử nằm ngoài phạm vi khai báo của mảng
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+
+<!-- ================================================= -->
+<!-- SLIDE 21 -->
+<!-- ================================================= -->
+
+<section class="slide normal-slide">
+
+<div class="container">
+
+    <h2>3) Những lỗi thường gặp</h2>
+    <h1>● Kết quả sau khi sửa lỗi</h1>
+
+    <div class="content-layout">
+
+        <div class="code-section">
+
+<pre>
+<span class="keyword">#include</span> <span class="string">&lt;stdio.h&gt;</span>
+<span class="keyword">#define</span> COLS_EXAMPLE 2
+
+void printMatrixError2(int mat[][COLS_EXAMPLE], int rows, int cols) {
+    printf("In ma tran:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("%d ", mat[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+
+<pre>
+int main() {
+    int myMatrix[2][COLS_EXAMPLE] = {{1,2}, {3,4}};
+    printMatrixError2(myMatrix, 2, COLS_EXAMPLE);
+    return 0;
+}
+</pre>
+
+        </div>
+
+        <div class="output-block">
+<pre>
+
+
+        </div>
+
+        <div class="output-section">
+
+<pre>
+In ma tran
+1 2 
+3 4 
+
+<span class="output-text">--------------------------------
+Process exited after 0.04952 seconds
+Press any key to continue . . .</span>
+</pre>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+
+<!-- ================================================= -->
+<!-- SLIDE 22 -->
+<!-- ================================================= -->
+
+<section class="slide normal-slide">
+
+<div class="container">
+
+    <h2>4) Một số ví dụ</h2>
+    <h3>- Bài tập vận dụng:</h3>
+
+    <ol>
+
+        <li>
+            <div class="exercise-title">Hàm tính tổng các phần tử trên đường chéo chính:</div>
+            <div class="desc">
+                Viết hàm <code>int tongDuongCheoChinh(int mat[][COLS], int rows, int cols)</code> nhận ma trận vuông. Hàm này sẽ trả về tổng các phần tử trên đường chéo chính (nếu không phải ma trận vuông, trả về -1).
+            </div>
+            <div class="desc">
+                Trong <code>main()</code>, nhập ma trận vuông 3x3, gọi hàm và in tổng.
+            </div>
+        </li>
+        
+        <li>
+            <div class="exercise-title">Hàm tìm kiếm giá trị trong Ma trận:</div>
+            <div class="desc">
+                Viết hàm <code>int timTrongMaTran(int mat[][COLS], int rows, int cols, int target_val)</code> trả về 1 nếu tìm thấy <code>target_val</code>, 0 nếu không tìm thấy.
+            </div>
+        </li>
+
+    </ol>
+
+</div>
+
+</section>
+
+
+
+</body>
+</html>
