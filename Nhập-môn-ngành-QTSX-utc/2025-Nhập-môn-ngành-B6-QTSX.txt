@@ -1,0 +1,340 @@
+Nhập môn ngành QTKD
+1BÀI 6: QUẢN TRỊ SẢN XUẤT
+Một số khái niệm về sản xuất
+Khái niệm về sản xuất
+Phân loại sản xuất
+Chu kỳ sản xuất
+Khái niệm về sản xuất
+ Trước đây, thuật ngữ sản xuất được hiểu là một quá trình tạo ra sản phẩm hữu hình có hình thái cụ thể
+ Ngày nay, sản xuất được hiểu là một quá trình tạo ra sản phẩm hoặc dịch vụ
+ Về thực chất, sản xuất chính là quá trình chuyển hóa các đầu vào, biến chúng thành đầu ra là các sản phẩm dịch vụ
+Khái niệm về sản xuất
+ĐẦU VÀO ĐẦU RAHao mòn VCĐ
+Tiêu hao NVL
+Hao phí sức Lđ
+VCĐ - VDH
+VLĐ - VNH
+Lđ
+SP,DV - DT - LNVCĐ1
+Lđ1
+Tác động đến XH, MTChuyển hóa
+Phân loại sản xuất
+ Số lượng sản phẩm sản xuất và tính chất lặp lại của sản xuất
+ Tổ chức sản xuất
+ Mối quan hệ với khách hàng
+ Kết cấu sản phẩm
+ Khả năng tự chủ trong sản xuất kinh doanh
+Phân theo số lượng sản phẩm và tính chất lặp lại
+ Sản xuất đơn chiếc
+ Sản xuất loại nhỏ
+ Sản xuất loại trung bình
+ Sản xuất loại lớn
+Cần lứu ý rằng số lượng sản xuất lớn hay nhỏ chỉ mang tính tương đối. Chúng phụ thuộc vào đặc điểm từng loại sản phẩm. Theo cách phân loại này phải lưu ý đến tính chất lặp lại của sản xuất
+Phân theo hình thức tổ chức sản xuấtSản xuất liên tục
+Sản xuất gián đoạn
+Sản xuất theo dự án
+Sản xuất liên tục
+ Tiến hành sản xuất một khối lượng lớn một hoặc một nhóm sản phẩm nào đó
+ Hệ thống máy móc thiết bị được lắp đặt theo dây chuyền. Hệ thống này không có tính chất linh hoạt
+ Phải cân bằng công suất trên các thiết bị, các công đoạn sản xuất
+ Thường đi cùng với tự động hóa quá trình vận chuyển nội bộ
+ Bắt buộc phải thực hiện phương pháp sửa chữa dự phòng máy móc, thiết bị để tránh sự gián đoạn trong quá trình sản xuất
+Sản xuất gián đoạn
+ Để xử lý gia công, chế biến một khối lượng nhỏ sản phẩm mỗi loại, song số loại sản phẩm thì lại nhiều và đa dạng
+ Quá trình sản xuất được thực hiện nhờ các thiết bị vạn năng (máy tiện, máy phay ) và việc lắp đặt chúng theo các xưởng chuyên môn hóa
+ Hệ thống này thích hợp với các ngành cơ khí và có tính linh hoạt cao vì chúng thực hiện nhiều công việc khác nhau Tuy nhiên rất khó cân đối công suất trong quá trình sản xuất
+Sản xuất theo dự án
+ Là một loại hình sản xuất mà ở đó sản phẩm là duy nhất Tổ chức thực hiện các công việc và phối hợp chúng nhằm giảm thời gian gián đoạn, đảm bảo kết thúc dự án và giao nộp sản phẩm đúng hạn
+ Hệ thống sản xuất không ổn định, cơ cấu tổ chức bị xáo trộn rất lớn khi chuyển từ dự án này sang dự án khác Có thể coi như một dạng đặc biệt của hệ thống sản xuất gián đoạn
+Áp dụng các hệ thống sản xuất
+ Khi khối lượng sản xuất trung bình: ưu thế thuộc về hệ thống sản xuất gián đoạn
+ Khi khối lượng sản xuất rất lớn thì ưu thế lại thuộc về sản xuất liên tục
+Phân loại theo mối quan hệ với khách hàng Sản xuất để dự trữ
+ Sản xuất theo yêu cầu
+ Sản xuất kết hợp
+Sản xuất để dự trữ
+Được áp dụng khi:
+ Chu kỳ sản xuất lớn hơn chu kỳ thương mại
+ Các nhà sản xuất muốn sản xuất một khối lượng lớn để giảm giá thành đơn vị sản phẩm ( phân bổ chi phí cố định) Nhu cầu của các loại sản phẩm có tính thời vụ: khi nhu cầu thấp, doanh nghiệp không muốn ngừng sản xuất, sa thải công nhân, nên họ quyết định sản xuất để dự trữ rồi tiêu thụ cho các kỳ sau khi nhu cầu trên thị trường tăng lên.
+Chu kỳ sản xuất và chu kỳ thương mại Chu kỳ sản xuất sản phẩm là khoảng thời gian kể từ khi đưa sản phẩm vào gia công cho tới khi sản phẩm hoàn thành và có thể giao nộp cho khách hàng
+ Chu kỳ thương mại là khoảng thời gian từ khi khách hàng có yêu cầu mua đến khi nhận được hàng
+ Một khi chu kỳ sản xuất sản phẩm lớn hơn chu kỳ thương mại doanh nghiệp phải sản xuất trước để dự trữ nhằm thỏa mãn nhu cầu của khách hàng một cách nhanh nhất khi khách hàng có yêu cầu
+Sản xuất theo yêu cầu
+ Quá trình sản xuất chỉ được tiến hành khi có những yêu cầu cụ thể của khách hàng về sản phẩm
+ Tránh được việc dự trữ và nâng cao lợi nhuận
+ Tuy nhiên, doanh nghiệp phải đảm bảo được kỳ hạn giao nộp sản phẩm thì mới tiến hành sản xuất theo yêu cầu, bằng không sẽ phải dự trữ sản xuất rồi bán
+Sản xuất kết hợp
+ Trong thực tế, hình thức tổ chức sản xuất hỗn hợp ( sản xuất dự trữ - sản xuất theo yêu cầu) vẫn tồn tại
+ Trong trường hợp này, doanh nghiệp sẽ tận dụng thời gian để chấp nhận kỳ hạn đặt hàng của khách hàng
+ Hoặc doanh nghiệp sẽ thực hiện những khâu cuối cùng của quá trình sản xuất sản phẩm để giao nộp sản phẩm cho khách hàng đúng hạn.
+Phân loại theo kết cấu sản phẩmSản xuất theo cấu trúc hội tụ
+Sản xuất theo cấu trúc phân kỳ
+Sản xuất theo cấu trúc phân kỳ có điểm hội tụ
+Sản xuất theo cấu trúc hội tụ
+ Một sản phảm được ghép nối từ nhiều bộ phận, cụm chi tiết, tổng thành
+ Sản phẩm cuối cùng thì ít nhưng các bộ phận cụm chi tiết lại rất nhiều
+ Điển hình cho dạng này là sản phẩm ngành cơ khí
+Sản xuất theo cấu trúc phân kỳ
+ Xuất phát từ một vài nguyên liệu nhưng lại sản xuất ra rất nhiều loại sản phẩm khác nhau
+ Ngành chế biến lương thực thực phẩm đặc trưng cho hệ thống sản xuất này
+Sản xuất theo cấu trúc hội tụ có điểm phân kỳ
+ Là trường hợp nhiều bộ phận, cụm chi tiết đã được tiêu chuẩn hóa ở một điểm hội tụ
+ Xuất phát từ điểm hội tụ đó sản phẩm của các doanh
+nghiệp lại rất nhiều loại và đa dạng
+ Để quản trị sản xuất ở các doanh nghiệp kiểu này ta có thể sử dụng các phương pháp khác nhau: quản trị sản xuất để dự trữ đối với phần hội tụ, quản trị sản xuất theo đơn đặt hàng đối với phần phân kỳ.
+Phân loại theo tính tự chủ
+Nhà thiết kế chế tạo
+Nhà thầu
+Người gia công
+Nhà thiết kế chế tạo
+ Doanh nghiệp tự thiết kế, tự sản xuất,tự tiêu thụ các sản phẩm của mình
+ Doanh nghiệp loại này cần một hệ thống quản trị sản xuất hoàn chỉnh có tính thích ứng cao nhằm tạo điều kiện tăng mức cạnh tranh trên thị trường
+Nhà thầu
+ Là các doanh nghiệp chỉ thực hiện một bộ phận các công việc sản xuất của người cấp thầu ( doanh nghiệp chủ) Doanh nghiệp nhận thầu có thể tự chủ trong việc mua sắm nguyên vật liệu và các trang thiết bị cần thiết.
+ Có thể lựa chọn phương pháp sản xuất phù hợp đẻ thỏa mãn yêu cầu đặt ra của người cấp thầu về sản xuất dịch vụ
+Người gia công
+ Cung giống như người nhận thầu chỉ thực hiện một phần công việc sản xuất do người cấp thầu giao cho
+ Song họ không có quyền tự chủ trong việc mua sắm
+nguyên vật liệu, chúng được cung cấp bởi doanh nghiệp chủ thậm chí máy móc, trang thiết bị dùng cho sản xuất
+Chu kỳ sản xuất
+Khái niệm chu kỳ sản xuất
+Kết cấu của chu kỳ sản xuất
+Khái niệm về chu kỳ sản xuất
+ Chu kỳ sản xuất là khoảng thời gian theo lịch từ khi đưa nguyên vật liệu vào sản xuất cho đến khi sản xuất ra thành phẩm
+ Chu kỳ sản xuất chỉ tính thời gian sản phẩm đang trong quá trình sản xuất
+Kết cấu của chu kỳ sản xuất
+
+Kết cấu của chu kỳ sản xuất
+ Tcn – thời gian công nghệ: đó là thời gian thực hiện các nguyên công công nghệ trực tiếp làm thay đổi tính chất cơ – lý – hóa, hình dáng, kích thước của đối tượng lao động theo yêu cầu của sản xuất đặt ra… Tvc- thời gian vận chuyển sản phẩm trong quá trình sản xuất. Thời gian này bao gồm thời gian: vận chuyển giữa các phân xưởng, vận chuyển từ các phân xưởng đến hệ thống các kho. Vận chuyển nội bộ phân xưởng.
+ Ttn – thời gian tự nhiên: là thời gian thực hiện các quá trình biến đổi các tính chất của đối tượng lao động dưới tác động của các điều kiện tự nhiên
+ Tkt-thời gian kiểm tra: kiểm tra đầu vào, kiểm tra bước công nghệ, kiểm tra nguyên công, kiểm tra thành phẩm, bán thành phẩm.
+ Tgđ- thời gian gián đoạn trong sản xuất do tổ chức sản xuất, quản lý kém, do máy móc hỏng, do mất điện, do công nhân vi phạm kỷ luật lao động, do chế độ làm việc qui định
+Hệ thống sản xuất dịch vụ
+ Khái niệm về dịch vụ
+ Phân loại dịch vụ
+ Đặc điểm của dịch vụ
+ Hệ thống sản xuất dịch vụ
+Khái niệm về dịch vụ
+ Chẳng hạn việc vận chuyển hàng hóa hay hành khách là một dịch vụ: Sản phẩm của nó là vô hình và được quy ước đo bằng: Tkm và HKkm
+Nhà cung cấp Khách hàngSản phẩm vô hình
+Không thay đổi
+quyền sở hữu
+Đặc điểm của dịch vụ
+ Tính vô hình: Dịch vụ không tồn tại dưới dạng vật thể, không cảm thấy, không nghe thấy, không ngửi thấy trước khi mua chúng.
+ Tính không tách rời: Quá trình sản xuất gắn liền với việc tiêu dùng dịch vụ
+ Tính không ổn định: Các dịch vụ rất không ổn định, nó phụ thuộc vào người thực hiện dịch vụ ( lao động phổ thông, công nhân lành nghề hay người chuyên nghiệp…) thời gian và địa điểm thực hiện dịch vụ đó
+ Tính không dự trữ được:
+Phân loại sản phẩm dịch vụ
+ Sản phẩm hữu hình thuần túy: vd: xà bông, kem đánh răng, muối, đường..
+ Sản phẩm hữu hình có kèm theo dịch vụ: bán một chiếc xe oto cho khách hàng thường kèm tho một loại các dịch vụ (phòng trưng bày, việc giao xe, việc sửa chữa bảo trì, hướng dẫn sử dụng, đào tạo vận hành, bảo hành..)
+ Sản phẩm hỗn hợp: vd: nhà hàng phải cung cấp cho khách hàng thức ăn, đồ uống lẫn dịch vụ
+ Dịch vụ chính có thể kèm theo sản phẩm và dịch vụ phụ: vd: các hành khách đã mu dịch vụ vận chuyền, khi đến đích trong tay không có một sản phẩm hữu hình nào chứng kiến cho những chi phí mà mình đã bỏ ra. Song trong quá trình bay, họ vẫn có một số sản phẩm hữu hình như thức ăn, đồ uống, quà tặng, cuống vé, báo chí, tạp chí và được hướng dẫn những quy định chung trong quá trình bay.
+ Dịch vụ thuần túy: đào tạo, trong trẻ, trị liệu tâm lý…
+Phân loại sản phẩm dịch vụ
+tt Loại sản phẩm dịch vụ
+Tỷ trọng (%)
+SP hữu hình Dịch vụ1 Sản phẩm hữu hình thuần túy 100 02 Sản phẩm hữu hình có kèm theo dịch vụ 70 303 Sản phẩm hỗn hợp 50 504 Dịch vụ chính kèm theo sản phâm và dịch
+vụ phụ
+30 705 Dịch vụ thuần tuý 0 100
+Hệ thống sản xuất dịch vụ
+Hệ thống thứ nhất: Khách hàng – Người cung ứng –Dịch vụ
+Hệ thống thứ hai: Khách hàng – Máy móc thiết bị -Dịch vụ
+Hệ thống thứ ba: Khách hàng, máy móc thiết bị, người cung ứng, dịch vụ
+Các yếu tố của hệ thống sản xuất dịch vụ Khách hàng
+ Người cung ứng dịch vụ
+ Cơ sở vật chất
+ Môi trường vật chất
+ Dịch vụ
+ Hệ thống tổ chức nội bộ
+Định nghĩa về Quản trị sản xuất
+ĐẦU VÀO ĐẦU RAQuản trị
+Chuyển hóa
+Đạt hiệu quảlợi ích lớn nhấtTổ chức, phối hợp
+Chức năng của Quản trị sản xuất Giai đoạn thứ nhất: Chức năng nghiên cứu
+ Giai đoạn thứ hai: Chức năng của doanh nghiệp là chế tạo
+ Giai đoạn thứ ba: Chức năng lựa chọn phương pháp, công nghệ chế tạo sản phẩm dịch vụ
+ Giai đoạn thứ tư: Chức năng tổ chức sản xuất
+ Giai đoạn thứ năm: Chức năng kiểm tra
+Mục tiêu của quản trị sản xuất
+ Đảm bảo chất lượng sản phẩm – dịch vụ
+ Rút ngắn và đảm bảo thời gian trong một chu kỳ sản xuất Giảm chi phí sản xuất
+ Tăng tính linh hoạt của doanh nghiệp
+- Quản lý dòng sản xuất: Dòng thông tin, Dòng vật chất.- Lập kế hoạch sản xuất
+QUY TRÌNH THIẾT KẾ SP-DV MỚI
+Ý tưởng về
+sản phẩm
+dịch vụ
+Thiết kế
+chi tiết
+Sản xuất
+thử
+Sản xuất hàng loạtCải tiến đa dạng hóaThông tin
+phản hồi
+QUYẾT ĐỊNH VỀ CÔNG SUẤT Khái niệm về công suất
+ Các loại công suất
+ Lựa chọn công suất
+Công suất lý thuyết
+Công suất thiết kế
+Công suất có hiệu quả
+Công suất thực tế
+Công suất hòa vốn
+Phạm vi lựa chọn công suất
+Căn cứ để lựa chọn công suất
+Phương pháp tính toán lựa chọn công suất
+Điều chỉnh công suất
+KHÁI NIỆM
+ Công suất là khả năng sản xuất của máy móc, thiết bị,phương tiện vận tải, dây chuyền công nghệ của doanhnghiệp thường được tính trong một đơn vị thời gian.
+ Cách đo công suất
++ Đo bằng sản lượng đầu ra: có thể là đơn vị hiện vật: tấn(gạo, xi măng, sắt thép…), viên (gạch, đá..), chiếc (áo,quần..), có thể là đơn vị giá trị: VND, USD…+ Đo bằng sản lượng đầu vào: số lượng xe, máy móc+ Đối với dịch vụ vận tải công suất thường đo bằng TKm,HKKm, T , Km
+CÁC LOẠI CÔNG SUẤT
+ Công suất lý thuyết: Công suất tối đa có thể đạt được trong điều kiện sản xuất lý thuyết.
+ Công suất thiết kế: Công suất do nhà sản xuất quy định ghi trên máy móc thiết bị, công suất thiết kế thường được tính trong một giờ.
+ Công suất có hiệu quả: Công suất mong muốn của doanh nghiệp trong những điều kiện hoạt động cụ thể của doanh nghiệp, thường thấp hơn công suất thiết kế.
+ Công suất thực tế: Công suất mà doanh nghiệp đạt được trong thực tế hoạt động
+Mức độ sử dụng công
+suất có hiệu quả
+=
+Công suất có hiệu quả
+x 100%Công suất thiết kế
+Mức độ sử dựng công
+suất thực tế
+= Công suất thực tế x 100%Công suất thiết kế
+CÁC LOẠI CÔNG SUẤT
+ Công suất hòa vốn: Công suất
+ứng với điểm hòa vốn
+X là sản lượng
+P: giá một đơn vị sản phẩmTR: tổng doanh thuTC: tổng chi phí
+FC: chi phí cố địnhVC: chi phí biến đổi
+V: chi phí biến đổi đơn vị Tại điểm hòa vốn có: Doanh thu = Chi phíTC = TRP.X = FC + VCta có: VC = V. X nênVùng lãi P..X
+FC
+TC
+X
+Vùng lỗ
+Doanh
+thu, chi
+phí
+Sản
+lượng
+X =
+P V
+FC
+
+LỰA CHỌN CÔNG SUẤT
+ Phạm vi lựa chọn công suất:
+Phạm vi lựa chọn công suất nằm trong khoảng từ công suất hòa vốn đến công suất thực tế:
+Công suất thiết kế
+Công suất hiệu quả
+Công suất thực tế
+Công suất hòa vốn
+Phạm vi lựa chọn công suất
+LỰA CHỌN CÔNG SUẤT
+ Căn cứ để lực chọn công suất:
+Nhu cầu sản phẩm dịch vụ
+Đặc điểm của sản phẩm dịch vụ
+Khả năng chiếm lĩnh thị trường, quy mô thị phầnĐặc điểm, tính chất công nghệ sử dụng
+Năng lực tổ chức điều hành
+Trình độ tay nghề của lực lượng lao độngKhả năng về vốn
+Điều kiện mặt bằng của doanh nghiệp…
+LỰA CHỌN CÔNG SUẤT
+ Phương pháp tính toán lựa chọn công suất
+Phương pháp cây quyết định là phương pháp thường được sử dụng để lựa chọn phương án.
+Ví dụ: Một công ty vận tải hàng hóa đang xem xét việc mở rộng công suất. Có 3 phương án được đưa ra như sau:
+ S1: công suất 50 triệu TKM/năm
+ S2: công suất 30 triệu TKM/năm
+ S3: công suất 15 triệu TKM/năm
+ Các số liệu về lợi nhuận tính cho một tháng và xác suất xẩy ra các trạng thái của thị trường cho ở bảng sau:
+LỰA CHỌN CÔNG SUẤT
+ Vì giá trị mong đợi của phương án S2 là lớn nhất (180 triệu đồng) nên ta quyết định sử dụng phương án công suất là 30 triệu TKm/năm.
+Phương án
+công
+suất
+(triệu
+Tkm)
+E1 Thị
+trường
+tốt
+E2 Thị
+trường
+xấu
+S1 = 50 1000 -900
+S2 = 30 600 -100
+S3 = 15 400 -50
+Xác suất 0,4 0,6
+130
+180
+-140
+E2= 0,6E1 = 0,4E2 = 0,6E1 = 0,4E2 = 0,6E1 = 0,41
+1000-900600-100400-50180
+ Phương pháp tính giá thành sản xuất sản phẩm
+theo phương pháp trực tiếp
+ Bước 1: Xác định chi phí vật tư trực tiếp
+ Bước 2: Xác định khoản mục chi phí nhân công
+trực tiếp
+Chi phí vật tư
+trực tiếp
+=
+Sản lượng sản
+phẩm sản xuất
+x
+Định mức vật tư
+tiêu hao
+x
+Đơn giá vật tư
+tiêu hao
+- Phế liệu thuhồi . Chi phí tiền
+lương =
+Sản lượng sản
+phẩm sản xuất
+x
+Định mức la/o động cho
+mỗi sản phẩm
+x
+Đơn giá tiền lương trên mộtđơn vị định mức lao động=
+Sản lượng sản
+phẩm sản xuất
+x
+Đơn giá tiền lương
+tính cho mỗi sản phẩm
+ Bước 3: Xác định chi phí sản xuất chung (Chi phíphân xưởng)
+ Bước 4: Xác định tổng chi phí sản xuất phát sinhtrong kỳ
+ Bước 5: Xác định tổng giá thành sản xuất
+Mức phân bổ
+chi phí cho sản phẩm i =
+Tổng chi phí cần phân bổ
+x
+Tiêu thứcphân bổ sảnphẩm i
+Tổng tiêu thức dùng để phân bổ
+Tổng chi phí sản xuất
+phát sinh trong kỳ = Chi phí vật tư
+trực tiếp
++
+Chi phí nhân công
+trực tiếp
++
+Chi phí sản xuất chungđược phân bổTổng giá thành
+sản xuất = Chi phí sản xuất dở
+dang đầu kỳ
++
+Chi phí sản xuất
+phát sinh trong kỳ
+- Chi phí sản xuất
+dở dang cuối kỳ
+Trừ các khoảngiảm CPSX
+ . Bước 6: Xác định giá thành sản xuất đơn vị cho mỗi loại sản phẩm
+Tại công ty H có kế hoạch sản xuất tháng 5/N như sau:
+1. Số lượng sản phẩm hoàn thành: SP A : 6.000 cái; SP B: 8.000 cái
+2. Định mức tiêu hao nguyên vật liệu, lao động và đơn giá cho như sau:
+Khoản mục Đơn giá (đ) Định mức tiêu hao cho mỗi sản phẩmSP A SP B
+Nguyên vật liệu chính 40.000 8 kg 12 kg
+Vật liệu phụ 2.000 2 kg 4 kg
+Giờ công sản xuất 10.000 6 giờ 8 giờ
+3. Trong tháng, tổng chi phí sản xuất chung phát sinh là 1.000 trđ, trong đó chi phí sản xuất chung cố định là 600 trđ, công suất bình thường cả 2 loại sản phẩm là 15.000 sp/tháng. Biết chi phí sản xuất chung phân bổ theo chi phí nguyên vật liệu trực tiếp.
+4. Chi phí sản xuất dở dang như sau:
+Đầu tháng: SP A: 30 trđ, SP B: 40 trđ
+Cuối tháng: SP A: 20 trđ, SP B: 70 trđ
+5. Phế liệu thu hồi từ sản xuất:
+SP A: 10 trđ
+SP B: 15 trđ
+6. BHXH, BHYT, BHTN, KPCĐ trích theo quy định hiện hành.
+7. Định mức tiêu hao thực tế bằng mức tiêu hao đăng ký
+Hãy tính và lập bảng giá thành sản xuất cho sản phẩm A và sản phẩm B 
