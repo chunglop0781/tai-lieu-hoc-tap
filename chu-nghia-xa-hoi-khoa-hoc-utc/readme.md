@@ -165,3 +165,39 @@
 * Lấy hệ tư tưởng Mác Lênin là tư tưởng chủ đạo, kế thừa, phát huy tinh hoa văn hóa truyền thống dân tộc, tiếp thu giá trị, tư tưởng văn hóa, tiến bộ của nhân loại.
 
 * Kết hợp hài hòa về lợi ích giữa cá nhân, tập thể và lợi ích của toàn xã hội. Vì vậy nền DÂN CHỦ XHCN ra sức động viên, thu hút mọi tiềm năng sáng tạo, tính tích cực xã hội của nhân dân trong sự nghiệp xây dựng xã hội mới
+
+# III. Dân chủ XHCN và nhà nước pháp quyền XHCN ở Việt Nam (Thảo luận)
+
+## 2. Nhà nước pháp quyền XHCN ở Việt Nam
+
+### a. Quan niệm về nhà nước pháp quyền XHCN ở Việt Nam
+
+- Theo quan niệm chung: Là nhà nước thượng tôn pháp luật. hướng tới những vấn đề phúc lợi cho mọi người, tạo điều kiện cho cả nhân được tự do, bình đẳng, phát huy hết năng lực của chính mình.
+
+- Quan niệm hiện nay: Là nhà nước mà ở đó, mọi công dân đều được giáo dục pháp luật và phải hiểu biết pháp luật, tuân thủ pháp luật, pháp luật phải đảm bảo tỉnh nghiêm minh; trong hoạt động của các cơ quan nhà nước, phải có sự kiểm soát lẫn nhau, tất cả vì mục tiêu phục vụ nhân dân.
+
+- Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên CNXH: Đề cao vai trò tối thượng của của hiến pháp và pháp luật, đề cao quyền lợi và nghĩa vụ của công dân, đảm bảo quyền con người, tổ chức bộ máy vừa đảm bảo tập trung, thống nhất, vừa có sự phân công quyền lực, phân cấp quyền hạn giữa các cấp chính quyền.
+
+- Trong công cuộc đổi mới đất nước, đăng khăng định: "Xây dựng nhà nước pháp quyền của dân, do dân, vì dân". Nhà nước quản lý xã hội bằng pháp luật, mọi cơ quan, tổ chức, cán bộ, công chức, mọi công dân có nghĩa vụ chấp hành hiến pháp và pháp luật.
+
+- Đại hội XII làm rõ: “Quyền lực nhà nước là thống nhất, có sự phân công, phối hợp, kiểm soát giữa các cơ quan nhà nước trong việc thực hiện các quyền lập pháp, hành pháp, tư pháp".
+
+### b. Một số đặc điểm của nhà nước pháp quyền XHCN ở Việt Nam
+- Thứ nhất, xây dựng nhà nước do NDLĐ làm chủ, đó là nhà nước của dân, do dân, vì dân
+- Thứ hai, nhà nước được tổ chức và hoạt động dựa trên cơ sở của hiến pháp và pháp luật
+- Thứ ba, quyền lực nhà nước là thống nhất, có sự phân công rõ ràng, có cơ chế phối hợp nhịp nhàng và kiểm soát giữa các cơ quan lập pháp, hành pháp và tư pháp.
+- Thứ tư, nhà nước pháp quyền XHCN ở Việt Nam do ĐCSVN lãnh đạo.
+- Thứ năm, tôn trọng quyền con người, coi con người là chủ thể, là trung tâm của sự phát triển.
+- Thứ sáu, tổ chức và hoạt động của bộ máy nhà nước theo nguyên tắc tập trung dân chủ, có sự phân công, phân cấp, phối hợp và kiểm soát lẫn nhau, nhưng đâm bảo quyền lực là thống nhất và sự chỉ đạo thống nhất của trung ương.
+
+  ## 3. Phát huy dân chủ XHCN, xây dựng nhà nước pháp quyền XHCN ở Việt Nam
+- Một là, xây dựng, hoàn thiện thể chế kinh tế thị trường định hướng XHCN, tạo cơ sở kinh tế vững chắc cho xây dựng dân chủ XHCN.
+- Hai là, xây dựng ĐCSVN trong sạch, vững mạnh với tư cách điều kiện tiên quyết để xây dựng nền dân chủ XHCN ở Việt Nam.
+- Ba là, xây dựng nhà nước pháp quyền XHCN vững mạnh với tư cách điều kiện thực hiện dân chủ XHCN.
+- Bốn là, nâng cao vai trò của các tổ chức chính trị - xã hội trong xây dựng nền dân chủ XHCN.
+- Năm là, xây dựng và từng bước hoàn thiện các hệ thống giám sát, phản biện xã hội đề phát huy quyền làm chủ của nhân dân.
+### b. Tiếp tục xây dựng và hoàn thiện nhà nước pháp quyền XHCN
+- Một là, xây dựng nhà nước pháp quyền XHCN dưới sự lãnh đạo của đảng.
+- Hai là, cải cách thể chế và phương thức hoạt động của nhà nước.
+- Ba là, xây dựng đội ngũ cán bộ, công chức trong sạch, có năng lực.
+- Bốn là, đấu tranh phòng chống tham nhũng, lãng phí, thực hành tiết kiệm
