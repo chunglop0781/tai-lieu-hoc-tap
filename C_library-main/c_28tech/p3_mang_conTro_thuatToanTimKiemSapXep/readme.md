@@ -229,3 +229,489 @@ int main(){
 * Việc truy cập vào các chỉ số không hợp lệ sẽ gây lỗi Segmentation Fault trên Hackerrank hoặc các lỗi Runtime Error trên các Online judge khác.
 
 # p3b52.mp4
+
+## [Mảng 1 chiều cơ bản]. Bài 1. Đếm chẵn lẻ, tổng chẵn lẻ
+* Đề bài: Cho mảng số nguyên A[] gồm N phần tử, nhiệm vụ của bạn là đếm xem trong máng có bao nhiêu số chẵn, bao nhiêu số lẻ, tống các phần tử là số chẵn, tổng các phần tử là số lẻ.
+* Input Format: Dòng đầu tiên là số nguyên dương N; Dòng thứ 2 gồm N số nguyên viết cách nhau một vài khoảng trắng
+* Constraints: 1<=N<=1000;-10^3<= A[i]<=10^3;
+* Output Format: Dòng đầu tiên in ra số lượng số chân. Dòng thứ 2 in ra số lượng số lẻ. Dòng thứ 3 in ra tổng các số chần. Dòng thứ 4 in ra tổng các số lẻ.
+* Sample Input 0:
+```
+6
+-711 327 372 779 451 -864
+```
+* Sample Output 0
+```
+2
+4
+-492
+846
+```
+* Code
+```
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    int a[n];
+    for(int i = 0; i < n; i++){
+        scanf("%d", &a[i]);
+    }
+    int chan = 0, le = 0, tongchan = 0, tongle = 0;
+    for(int i = 0; i < n; i++){
+        if(a[i] % 2 == 0){
+            ++chan; tongchan += a[i];
+        }
+        else{
+            ++le; tongle += a[i];
+        }
+    }
+    printf("%d\n%d\n%d\n%d\n", chan, le, tongchan, tongle);
+    return 0;
+}
+```
+## [Mảng 1 chiều cơ bản]. Bài 2. Trung bình cộng nguyên tố
+* Đề bài: Cho màng số nguyên A[] gồm N phân tử, nhiệm vụ của bạn là tính trung bình cộng của các số là số nguyên tố trong dãy.
+* Input Format: Dòng đầu tiên là số nguyên dương N: Dòng thứ 2 gồm N số nguyên viết cách nhau một vài khoảng trắng
+* Constraints: 1<=N<=1000;-10^3<= A[i]<=10^3;
+* Output Format: In ra đáp án của bài toán lấy 3 số sau đấu phẩy.
+* Sample Input 0:
+```
+5
+-911 234 151 347 231
+```
+* Sample Output 0
+```
+249.000
+```
+* Code
+```
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <math.h>
+
+int nt(int n){
+    for(int i = 2; i <= sqrt(n); i++){
+        if(n % i == 0){
+            return 0;
+        }
+    }
+    return n > 1;
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    int a[n];
+    for(int i = 0; i < n; i++){
+        scanf("%d", &a[i]);
+    }
+    int dem = 0, tong = 0;
+    for(int i = 0; i < n; i++){
+        if(nt(a[i])){
+            ++dem; tong += a[i];
+        }
+    }
+    double tbcong = (double)tong/dem;
+    printf("%.3lf\n", tbcong);
+    return 0;
+}
+```
+## [Mảng 1 chiều cơ bản]. Bài 3. Số nhỏ nhất
+* Đề bài: Cho mảng số nguyên A[] gồm N phần tử, hãy đếm xem trong máng của bạn có bao nhiêu số có cùng giá trị nhỏ nhất. Ví dụ máng A = {1, 2, 1, 3, 5} thì số nhỏ nhất trong máng là 1 xuất hiện 2 lần.
+* Input Format: Dòng đầu tiên là số nguyên dương N; Dùng thứ 2 gồm N xô nguyên việt cách nhau một vài khoảng trắng
+* Constraints: 1<=N<=1000;-10^3<= A[i]<=10^3;
+* Output Format: In ra đáp án của bài toán.
+* Sample Input 0:
+```
+5
+-854 600 222 472 207
+```
+* Sample Output 0
+```
+1
+```
+* Code
+```
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <math.h>
+
+
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    int a[n];
+    for(int i = 0; i < n; i++){
+        scanf("%d", &a[i]);
+    }
+    int min = 1e9;
+    for(int i = 0; i < n; i++){
+        if(min > a[i]){
+            min = a[i];
+        //min = fmin(min, a[i]);
+        }
+    }
+    int dem = 0;
+    for(int i = 0; i < n; i++){
+        if(a[i] == min){
+            ++dem;
+        }
+    }
+    printf("%d", dem);
+    return 0;
+}
+```
+## [Mảng 1 chiều cơ bản]. Bài 4. Lớn hơn, nhỏ hơn
+* Đề bài: Cho mảng số nguyên A gồm N phần tử và số nguyên X, hãy đếm xem trong máng có bao nhiêu số lớn hơn X và bao nhiêu số nhỏ hơn X.
+* Input Format: Dòng đầu tiên là số nguyên dương N; Dòng thứ 2 gồm N số nguyên viết cách nhau một vài khoảng trắng; Dòng thứ 3 là số nguyên X.
+* Constraints: 1<=N<=1000;-10^3<= A[i]<=10^3;
+* Output Format: Dòng 1 in ra các số nhỏ hớn X, dòng 2 in ra các số lớn hơn X.
+* Sample Input 0:
+```
+5
+-798 183 434 850 555
+135
+```
+* Sample Output 0
+```
+1
+4
+```
+* Code
+```
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <math.h>
+
+
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    int a[n];
+    for(int i = 0; i < n; i++){
+        scanf("%d", &a[i]);
+    }
+    int x;
+    scanf("%d", &x);
+    int lon = 0, nho = 0;
+    for(int i = 0; i < n; i++){
+        if(a[i] > x){
+            ++lon;
+        }
+        else if(a[i] < x){
+            ++nho;
+        }
+    }
+    printf("%d\n%d", nho, lon);
+    return 0;
+}
+```
+## [Mảng 1 chiều cơ bản]. Bài 5. In phần tử
+* Đề bài: Cho mảng số nguyên A gồm N phần tử, nhiệm vụ của bạn là in ra các phần tử là số chẵn ở chỉ số chắn, mất mảng không tồn tại phần tử như vậy thì in ra "NONE".
+* Input Format: Dòng đầu tiên là số nguyên dương N; Dòng thứ 2 gồm N số nguyên viết cách nhau một vài khoảng trắng.
+* Constraints: 1<=N<=1000;-10^3<= A[i]<=10^3;
+* Output Format: In ra các số cách nhau một khoảng trắng hoặc in ra NONE nếu không tìm thấy số thỏa mãn điều kiện của đầu bài.
+* Sample Input 0:
+```
+5
+-971 107 458 222 200
+```
+* Sample Output 0
+```
+458 200
+```
+* Explanation 0: Số 458 là số chẵn và ở chỉ số 2, số 200 là số chẵn ở ở chỉ số 4
+* Code
+```
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <math.h>
+
+
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    int a[n];
+    for(int i = 0; i < n; i++){
+        scanf("%d", &a[i]);
+    }
+    int check = 0;
+    for(int i = 0; i < n; i++){
+        if(i % 2 == 0 && a[i] % 2 == 0){
+            printf("%d ", a[i]);
+            check = 1; // da tim thay
+        }
+    }
+    if(check == 0){
+        printf("NONE");
+    }
+    return 0;
+}
+```
+
+# p3b53.mp4
+
+## [Mảng 1 chiều cơ bản]. Bài 6. Cặp số 1
+* Đề bài: Cho mảng số nguyên AI] gồm N phân tử, hãy đếm xem trong mảng A[] tồn tại bao nhiêu cặp số A[i], A[j]) với khác j sao cho tổng của 2 phần tử này bằng số K cho trước.
+* Input Format: Dòng đầu tiên là số nguyên dương N; Dòng thứ 2 gồm N số nguyên viết cách nhau một vài khoảng trắng: Dòng thứ 3 là số nguyên K
+* Constraints: 1<=N<=1000; 0<=A[i], X<=10^3;
+* Output Format: In ra số lượng cặp thỏa mãn.
+* Sample Input 0:
+```
+5
+1 2 3 1 2
+3
+```
+* Sample Output 0
+```
+4
+```
+* Code
+```
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <math.h>
+
+
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    int a[n];
+    for(int i = 0; i < n; i++){
+        scanf("%d", &a[i]);
+    }
+    int k;
+    scanf("%d", &k);
+    int dem = 0;
+    for(int i = 0; i < n - 1; i++){
+        //xet thang a[i] => xet a[i] cap voi cac phan tu a[j], j bat dau i + 1 => n - 1
+        for(int j = i + 1; j < n; j++){
+            if(a[i] + a[j] == k){
+                ++dem;
+            }
+        }
+    }
+    printf("%d", dem);
+    return 0;
+}
+```
+## [Mảng 1 chiều cơ bản]. Bài 7. Cặp số 2
+* Đề bài: Cho mảng số nguyên A[] gồm N phần tử, hãy tìm độ chênh lệch nhỏ nhất giữa 2 phần tử trong mảng.
+* Input Format: Dòng đầu tiên là số nguyên dương N; Dòng thứ 2 gồm N số nguyên viết tách nhau một vài khoảng trắng;
+* Constraints: 1<=N<=1000; 0<=A[i], X<=10^3;
+* Output Format: In ra độ chênh lệch nhỏ nhất giữa 2 phân tử bất kì trong mảng.
+* Sample Input 0:
+```
+8
+69 96 93 27 84 32 78 56
+```
+* Sample Output 0
+```
+3
+```
+* Code
+```
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    int a[n];
+    for(int i = 0; i < n; i++){
+        scanf("%d", &a[i]);
+    }
+    int min = 1e9;
+    for(int i = 0; i < n - 1; i++){
+        //xet thang a[i] => xet a[i] cap voi cac phan tu a[j], j bat dau i + 1 => n - 1
+        for(int j = i + 1; j < n; j++){
+            if(abs(a[i] - a[j]) < min){
+                min = abs(a[i] - a[j]);
+            }
+        }
+    }
+    printf("%d", min);
+    return 0;
+}
+```
+## [Mảng 1 chiều cơ bản]. Bài 8. Liệt kê các giá trị khác nhau
+* Đề bài: Cho mảng số nguyên A gồm N phân tử, hãy liệt kê các giá trị khác nhau trong màng theo thứ tự xuất hiện, mỗi giá trị chỉ liệt kê 1 lần. Ở thời điểm hiện tại các bạn có thể for trâu để giải bài này, sau này sẽ dùng cách tôi ưu hơn.
+* Input Format: Dòng đầu tiên là số nguyên dương N; Dòng thứ 2 gồm N số nguyên viết cách nhau một vài khoảng trắng;
+* Constraints: 1<=N<=1000; 0<=A[i], X<=10^3;
+* Output Format: In ra các giá trị khác nhau theo thứ tự xuất hiện, mỗi giá trị chỉ liệt kê 1 lần.
+* Sample Input 0:
+```
+9
+1 2 3 4 1 2 3 4 5
+```
+* Sample Output 0
+```
+1 2 3 4 5
+```
+* Code
+```
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    int a[n];
+    for(int i = 0; i < n; i++){
+        scanf("%d", &a[i]);
+    }
+    //O(n^2)
+    for(int i = 0; i < n; i++){
+        //xet thang a[i] => xet a[i] cap voi cac phan tu a[j], j bat dau i + 1 => n - 1
+        int kiemtra = 1; //kiem tra xem a[i] da duoc in truoc do hay chua
+        for(int j = 0; j < i; j++){
+            if(a[i] == a[j]){
+               kiemtra = 0; break;
+            }
+        }
+        if(kiemtra){
+            printf("%d ", a[i]);
+        }
+    }
+    return 0;
+}
+```
+## [Mảng 1 chiều cơ bản]. Bài 9. Tần suất
+* Đề bài: Cho mảng số nguyên A[] gồm N phần tử, hãy liệt kê các giá trị xuất hiện trong mảng kèm theo tần suất tương ứng, mỗi giá trị chỉ liệt kê một lần theo thứ tự xuất hiện.
+* Input Format: Dòng đầu tiên là số nguyên dương N; Dòng thứ 2 gồm N số nguyên viết cách nhau một vài khoảng trắng;
+* Constraints: 1<=N<=1000; 0<=A[i], X<=10^3;
+* Output Format: In ra nhiều dòng, mỗi dòng gồm giá trị kèm theo tần suất tương ứng.
+* Sample Input 0:
+```
+8
+57 58 29 28 19 42 14 72
+```
+* Sample Output 0:
+```
+57 1
+58 1
+29 1
+28 1
+19 1
+42 1
+14 1
+72 1
+```
+* Sample Input 1:
+```
+10
+1 2 1 2 1 2 4 5 5 5
+```
+* Sample Output 1:
+```
+1 3
+2 3
+4 1
+5 3
+```
+* Code
+```
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    int a[n];
+    for(int i = 0; i < n; i++){
+        scanf("%d", &a[i]);
+    }
+    //O(n^2)
+    for(int i = 0; i < n; i++){
+        //xet thang a[i] => xet a[i] cap voi cac phan tu a[j], j bat dau i + 1 => n - 1
+        int kiemtra = 1; //kiem tra xem a[i] da duoc in truoc do hay chua
+        for(int j = 0; j < i; j++){
+            if(a[i] == a[j]){
+               kiemtra = 0; break;
+            }
+        }
+        if(kiemtra){
+            int dem = 1;
+            for(int j = i + 1; j < n; j++){
+                if(a[i] == a[j]){
+                    ++dem;
+                }
+            }
+            printf("%d %d\n", a[i], dem);
+        }
+    }
+    return 0;
+}
+```
+## [Mảng 1 chiều cơ bản]. Bài 10. Cân bằng nguyên tố
+* Đề bài: Cho mảng số nguyên A[] gôm N phân tử, hãy liệt kê các chỉ số i trong mảng thỏa mãn: Tông các phần tử bên trái i và tổng các phân tử bên phải i là các số nguyên tố.
+* Input Format: Dòng đầu tiên là số nguyên dương N; Dòng thứ 2 gồm N số nguyên viết cách nhau một vài khoảng trắng;
+* Constraints: 1<=N<=1000; 0<=A[i], X<=10^3;
+* Output Format: In ra các chỉ số thỏa mãn trên một đông, các số cách nhau một khoảng trắng.
+* Sample Input 0:
+```
+5
+53 5 69 47 19
+```
+* Sample Output 0
+```
+3
+```
+* Code
+```
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int nt(int n){
+    for(int i = 2; i <= sqrt(n); i++){
+        if(n % i == 0){
+            return 0;
+        }
+    }
+    return n > 1;
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    int a[n];
+    for(int i = 0; i < n; i++){
+        scanf("%d", &a[i]);
+    }
+    for(int i = 0; i < n; i++){
+        //tinh tong cac phan tu ben trai, va ben phai
+        int left = 0, right = 0;
+        for(int j = 0; j < i; j++){
+            left += a[j];
+        }
+        for(int j = i + 1; j < n; j++){
+            right += a[i];
+        }
+        if(nt(left) && nt(right)){
+            printf("%d ", i);
+        }
+    }
+    return 0;
+}
+```
