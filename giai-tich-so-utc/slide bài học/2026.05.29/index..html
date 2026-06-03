@@ -1,0 +1,439 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Slide Giải tích số - UTC</title>
+<script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['$$', '$$']]
+            }
+        };
+    </script>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Segoe UI', Arial, sans-serif;
+        }
+
+        body{
+            background:#dfe6ec;
+            padding:40px 0;
+        }
+        svg {
+            background-color: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+        .math-bold {
+            font-weight: bold;
+        }
+
+        /* ===== SLIDE ===== */
+        .slide{
+            width:1024px;
+            height:768px;
+            overflow-y:auto;   /* thay vì hidden */
+            overflow-x:hidden;
+            margin:0 auto 40px;
+            background:#fff;
+            position:relative;
+            box-shadow:0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* ===== BACKGROUND ===== */
+        .slide-background{
+            position:absolute;
+            inset:0;
+            height:62%;
+            background:
+                linear-gradient(
+                    rgba(255,255,255,0.72),
+                    rgba(255,255,255,0.72)
+                ),
+                url("https://www.utc.edu.vn/Upload/2024/06/28/phm39.jpg");
+
+            background-size:cover;
+            background-position:center 30%;
+            background-repeat:no-repeat;
+            z-index:1;
+        }
+
+        /* ===== DECOR ===== */
+        .wave-decor{
+            position:absolute;
+            top:48%;
+            left:-10%;
+            width:120%;
+            height:120px;
+            z-index:2;
+
+            background:linear-gradient(
+                176deg,
+                transparent 25%,
+                #507a9e 25%, #507a9e 38%,
+                #8faec6 38%, #8faec6 55%,
+                #b2c8d8 55%, #b2c8d8 70%,
+                #e5c173 70%, #e5c173 85%,
+                transparent 85%
+            );
+
+            transform:rotate(-3deg);
+        }
+
+        /* ===== CONTENT ===== */
+        .content{
+            position:relative;
+            z-index:3;
+            padding:520px 80px 80px;
+        }
+
+        .title-main{
+            font-size:44px;
+            font-weight:700;
+            color:#718391;
+            margin-bottom:12px;
+        }
+
+        .title-sub{
+            font-size:34px;
+            font-weight:600;
+            color:#8ea2b1;
+            margin-bottom:12px;
+        }
+
+        .title-detail{
+            font-size:26px;
+            color:#a3b5c2;
+        }
+
+        /* ===== NORMAL SLIDE ===== */
+        .normal-slide{
+            padding:60px 50px;
+            display: flex;
+            gap: 30px;
+            height: 100%;
+        }
+
+        .left-panel {
+            flex: 1.1;
+        }
+
+        .right-panel {
+            flex: 0.9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-title{
+            font-size:38px;
+            color:#507a9e;
+            margin-bottom:30px;
+            border-left:10px solid #507a9e;
+            padding-left:20px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .problem-label {
+            font-size: 28px;
+            font-weight: bold;
+            text-decoration: underline;
+            color: #44525f;
+            margin-bottom: 15px;
+        }
+
+        ul{
+            margin-left:30px;
+        }
+
+        li{
+            font-size:22px;
+            margin-bottom:16px;
+            color:#44525f;
+            line-height:1.5;
+            list-style-type: none;
+        }
+
+        .note{
+            margin-top:25px;
+            color:#d35400;
+            font-size:22px;
+            font-weight:600;
+            font-style: italic;
+        }
+
+        /* CSS tùy chỉnh bổ sung để MathJax hiển thị đẹp bên trong SVG nước ngoài (foreignObject) */
+        foreignObject {
+            text-align: center;
+            font-size: 16px;
+        }
+        .mjx-container {
+            margin: 0 !important;
+            display: inline-block !important;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================================================= -->
+<!-- SLIDE 1 -->
+<!-- ================================================= -->
+
+<section class="slide">
+
+<h2>§3 PHƯƠNG PHÁP TIẾP TUYẾN</h2>
+
+    <h3>3.1 Bài toán:</h3>
+    <p>Cho hàm f(x) liên tục trên [a,b]. Hãy tìm gần đúng một nghiệm của phương trình f(x)=0 trên [a,b], biết:</p>
+    <ul>
+        <li>1. [a,b] là đoạn phân ly nghiệm của f(x).</li>
+        <li>2. f(x) &in; C<sup>2</sup>[a,b]; f'(x) và f''(x) không đổi dấu trên [a,b].</li>
+    </ul>
+
+    <h3>3.2 Giải quyết bài toán:</h3>
+    <p>Không mất tổng quát, giả sử f''(x) &gt; 0 trên [a,b] (nếu ngược lại thì ta chỉ cần xét hàm g(x) = -f(x)).</p>
+    <p>Sau đây ta xét trường hợp f'(x) &lt; 0 trên [a,b] (trường hợp f'(x) &gt; 0 làm tương tự)</p>
+
+    <div class="definition">
+        <p><span class="underline">Định nghĩa:</span> Điểm x được gọi là điểm Fourier nếu f(x).f''(x) &gt; 0</p>
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- SLIDE 2 -->
+<!-- ================================================= -->
+
+<section class="slide">
+
+<div class="container">
+    <h1>§3 PHƯƠNG PHÁP TIẾP TUYẾN (tiếp)</h1>
+
+    <p>Ta dễ thấy \(f(a)\,f''(a) > 0\) nên \(a\) là điểm Fourier. Chọn \(a = x_0\).</p>
+
+<p><strong>B1:</strong> Vẽ tiếp tuyến của đồ thị \(y=f(x)\) tại điểm
+\(M_0(x_0, f(x_0))\). Phương trình tiếp tuyến có dạng:</p>
+
+    <div class="equation">
+        $$y = f'(x_0)(x - x_0) + f(x_0)$$
+    </div>
+
+    <p><strong>B2:</strong> Gọi giao điểm của tiếp tuyến tại điểm \(M_0\) với trục hoành là điểm có hoành độ \(x_1\). Khi đó ta có phương trình:</p>
+    <div class="equation">
+        $$f'(x_0)(x_1 - x_0) + f(x_0) = 0 \implies x_1 = x_0 - \frac{f(x_0)}{f'(x_0)}$$
+    </div>
+
+    <p><strong>B3:</strong> Dựng đường thẳng vuông góc với trục hoành tại điểm có hoành độ \(x_1\). Gọi giao điểm của đường thẳng này với đồ thị hàm số \(y=f(x)\) là \(M_1(x_1, f(x_1))\). Tiếp tục lặp lại các bước B1 và B2 với điểm \(M_1\).</p>
+    
+	<p>- Quá trình trên được lặp đi lặp lại nhiều lần, và ta nhận được dãy:</p>
+    
+    <div class="math-block">
+        $$\{x_n\} \xrightarrow[n \to \infty]{} \xi$$
+    </div>
+
+    <p>Và có công thức lặp để tìm nghiệm gần đúng như sau:</p>
+
+    <div class="graph-container">
+    <svg width="900" height="500" viewBox="0 0 900 500">
+        <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#000" />
+            </marker>
+        </defs>
+
+        <line x1="40" y1="360" x2="860" y2="360" stroke="#000000" stroke-width="2" marker-end="url(#arrow)" />
+        <text x="845" y="395" font-size="24">x</text>
+        <text x="20" y="395" font-size="28">0</text>
+
+        <line x1="50" y1="380" x2="50" y2="30" stroke="#000000" stroke-width="2" marker-end="url(#arrow)" />
+        <text x="65" y="60" font-size="26">y</text>
+
+        <line x1="720" y1="190" x2="720" y2="440" stroke="#000000" stroke-width="1.5" />
+        <text x="735" y="345" font-size="24">b</text>
+
+
+        <line x1="200" y1="100" x2="200" y2="360" stroke="#94a3b8" stroke-width="1.2" />
+        <text x="165" y="395" font-size="24">a=x<tspan dy="5" font-size="16">0</tspan></text>
+
+        <line x1="340" y1="200" x2="340" y2="360" stroke="#94a3b8" stroke-width="1.2" />
+        <text x="315" y="395" font-size="24">x<tspan dy="5" font-size="16">1</tspan></text>
+
+        <line x1="455" y1="270" x2="455" y2="360" stroke="#94a3b8" stroke-width="1.2" />
+        <text x="430" y="395" font-size="24">x<tspan dy="5" font-size="16">2</tspan></text>
+
+
+	<line x1="162" y1="30" x2="385" y2="443" stroke="#64748b" stroke-width="1.5" />
+
+	<line x1="250" y1="100" x2="501" y2="416" stroke="#64748b" stroke-width="1.5" />
+
+
+        <text x="545" y="398" font-size="34" class="math-bold">ξ</text>
+
+
+        <path d="M 160 62 C 260 160, 420 290, 780 415" fill="none" stroke="#000000" stroke-width="5" stroke-linecap="round" />
+        <text x="750" y="450" font-size="28" class="math-bold">y=f(x)</text>
+
+        <circle cx="200" cy="100" r="9" fill="#000000" />
+        <text x="215" y="95" font-size="28" class="math-bold">M<tspan dy="5" font-size="18">0</tspan></text>
+
+        <circle cx="340" cy="210" r="9" fill="#000000" />
+        <text x="355" y="215" font-size="28" class="math-bold">M<tspan dy="5" font-size="18">1</tspan></text>
+
+        <circle cx="455" cy="280" r="9" fill="#000000" />
+        <text x="470" y="282" font-size="28" class="math-bold">M<tspan dy="5" font-size="18">2</tspan></text>
+
+    </svg>
+</div>
+</div>
+
+</section>
+
+
+
+
+<!-- ================================================= -->
+<!-- SLIDE 3 -->
+<!-- ================================================= -->
+
+<section class="slide">
+
+<h2>§3 CÔNG THỨC LẶP CỦA PHƯƠNG PHÁP TIẾP TUYẾN</h2>
+
+    <div class="formula-container">
+        $$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$
+    </div>
+
+<p>Với \(x_0\) được chọn là điểm Fourier (\(a\) hoặc \(b\)).</p>
+
+<p>Phép lặp dừng lại khi \(\lvert x_{n+1} - x_n \rvert < \varepsilon\) (sai số đủ nhỏ cho trước).</p>
+
+    <br>
+    <p>Có thể tính đạo hàm theo công thức:</p>
+
+    <div class="formula-container">
+        $$f'(x_n) = \lim_{\varepsilon \to 0} \frac{f(x_n + \varepsilon) - f(x_n)}{\varepsilon}$$
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- SLIDE 4 -->
+<!-- ================================================= -->
+
+<section class="slide">
+
+<div class="slide">
+    <div class="normal-slide">
+        
+        <div class="left-panel">
+            <div class="section-title">Sơ đồ khối</div>
+            <div class="problem-label" style="font-size: 28px; font-weight: bold; text-decoration: underline; color: #44525f; margin-bottom: 15px;">Bài toán:</div>
+            <ul style="margin-left: 30px; list-style-type: none;">
+                <li style="font-size: 22px; margin-bottom: 20px; color: #44525f; line-height: 1.5;">
+                    Cho hàm \(f(x)\) liên tục trên \([a,b]\). Hãy tìm gần đúng một nghiệm của phương trình \(f(x)=0\) trên \([a,b]\) bằng phương pháp tiếp tuyến, biết:
+                </li>
+                <li style="font-size: 22px; margin-bottom: 16px; color: #44525f; line-height: 1.5;">1, \([a,b]\) là đoạn phân ly nghiệm của \(f(x)\).</li>
+                <li style="font-size: 22px; margin-bottom: 16px; color: #44525f; line-height: 1.5;">2, \(f(x) \in C^2[a,b]\); \(f''(x)\) và \(f'(x)\) không đổi dấu trên \([a,b]\).</li>
+            </ul>
+            <div class="note" style="margin-top: 25px; color: #d35400; font-size: 22px; font-weight: 600; font-style: italic;">
+                (Xét trường hợp \(f''(x)>0\) trên \([a,b]\))
+            </div>
+        </div>
+
+        <div class="right-panel" style="flex: 0.9; display: flex; justify-content: center; align-items: center;">
+    <svg width="420" height="630" viewBox="0 0 420 630" fill="none" xmlns="http://www.w3.org/2000/svg" style="background-color: #fafafa; border: 1px solid #e0e0e0; border-radius: 8px;">
+        <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1.5 L 7 5 L 0 8.5 z" fill="#444"/>
+            </marker>
+        </defs>
+
+        <polygon points="130,20 290,20 270,60 110,60" stroke="#444" stroke-width="1.5" fill="#fff"/>
+        <foreignObject x="110" y="28" width="160" height="30" style="text-align: center; font-size: 16px;">
+            <div>\(a, b, \text{ss}, f(x)\)</div>
+        </foreignObject>
+
+        <line x1="200" y1="60" x2="200" y2="90" stroke="#444" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+        <polygon points="200,90 260,125 200,160 140,125" stroke="#444" stroke-width="1.5" fill="#fff"/>
+        <foreignObject x="140" y="113" width="120" height="30" style="text-align: center; font-size: 16px;">
+            <div>\(f(a) > 0\)</div>
+        </foreignObject>
+
+        <path d="M 140,125 L 85,125 L 85,180" stroke="#444" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+        <text x="110" y="115" fill="#444" font-weight="bold" font-size="16">+</text>
+
+        <rect x="35" y="180" width="100" height="45" stroke="#444" stroke-width="1.5" fill="#fff"/>
+        <foreignObject x="35" y="191" width="100" height="30" style="text-align: center; font-size: 16px;">
+            <div>\(x_0 = a\)</div>
+        </foreignObject>
+
+        <path d="M 260,125 L 315,125 L 315,180" stroke="#444" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+        <text x="280" y="115" fill="#444" font-weight="bold" font-size="16">-</text>
+
+        <rect x="265" y="180" width="100" height="45" stroke="#444" stroke-width="1.5" fill="#fff"/>
+        <foreignObject x="265" y="191" width="100" height="30" style="text-align: center; font-size: 16px;">
+            <div>\(x_0 = b\)</div>
+        </foreignObject>
+
+        <path d="M 85,225 L 85,245 L 315,245 L 315,225" stroke="#444" stroke-width="1.5" fill="none"/>
+        <line x1="200" y1="245" x2="200" y2="280" stroke="#444" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+        <path d="M 150,502.5 L 20,502.5 L 20,312.5 L 40,312.5" stroke="#444" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+
+        <rect x="40" y="280" width="320" height="65" stroke="#444" stroke-width="1.5" fill="#fff"/>
+        <foreignObject x="45" y="293" width="310" height="50" style="text-align: center; font-size: 16px;">
+            <div>\(x_1 = x_0 - \frac{f(x_0)\cdot\varepsilon}{f(x_0+\varepsilon) - f(x_0)}\)</div>
+        </foreignObject>
+
+        <line x1="200" y1="345" x2="200" y2="375" stroke="#444" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+        <polygon points="200,375 285,415 200,455 115,415" stroke="#444" stroke-width="1.5" fill="#fff"/>
+        <foreignObject x="120" y="403" width="160" height="30" style="text-align: center; font-size: 16px;">
+            <div>\(|x_1 - x_0| < \varepsilon\)</div>
+        </foreignObject>
+
+        <line x1="200" y1="455" x2="200" y2="480" stroke="#444" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <text x="210" y="470" fill="#444" font-weight="bold" font-size="16">-</text>
+
+        <rect x="150" y="480" width="100" height="45" stroke="#444" stroke-width="1.5" fill="#fff"/>
+        <foreignObject x="150" y="491" width="100" height="30" style="text-align: center; font-size: 16px;">
+            <div>\(x_0 = x_1\)</div>
+        </foreignObject>
+
+        <path d="M 285,415 L 360,415 L 360,480" stroke="#444" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+        <text x="310" y="400" fill="#444" font-weight="bold" font-size="16">+</text>
+
+        <polygon points="325,480 405,480 385,520 305,520" stroke="#444" stroke-width="1.5" fill="#fff"/>
+        <foreignObject x="325" y="488" width="60" height="30" style="text-align: center; font-size: 16px;">
+            <div>\(x_1\)</div>
+        </foreignObject>
+        
+    </svg>
+</div>
+
+    </div>
+</div>
+
+</section>
+
+
+
+</body>
+</html>
