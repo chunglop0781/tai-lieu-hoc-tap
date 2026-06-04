@@ -130,3 +130,73 @@ int main() {
     return 0;
 }
 ```
+
+# hinhThangMoRong
+
+```
+#include <stdio.h>
+#include <math.h>
+
+#define MAX 100
+
+int bac;
+double hs[MAX];
+
+/* Tinh P(x) = a0 + a1*x + a2*x^2 + ... + an*x^n */
+double f(double x) {
+    double result = 0.0;
+    for (int i = 0; i <= bac; i++) {
+        result += hs[i] * pow(x, i);
+    }
+    return result;
+}
+
+void nhapDuLieu(double *a, double *b, int *n) {
+    printf("Nhap bac cua da thuc: ");
+    scanf("%d", &bac);
+    printf("Nhap cac he so cua da thuc:\n");
+    for (int i = 0; i <= bac; i++) {
+        printf("He so x^%d: ", i);
+        scanf("%lf", &hs[i]);
+    }
+    printf("Nhap can duoi a: ");
+    scanf("%lf", a);
+    printf("Nhap can tren b: ");
+    scanf("%lf", b);
+    printf("Nhap so doan chia n (phai la so chan): ");
+    scanf("%d", n);
+}
+
+void tinhTichPhan(double a, double b, int n, double *I) {
+    double h = (b - a) / n;
+    *I = f(a) + f(b);
+    for (int i = 1; i < n; i++) {
+        double x = a + i * h;
+        if (i % 2 == 0)
+            *I += 2 * f(x);
+        else
+            *I += 4 * f(x);
+    }
+    *I *= h / 3.0;
+}
+
+void inKetQua(double I) {
+    printf("\nGia tri gan dung cua tich phan la: %lf\n", I);
+}
+
+int main() {
+    double a, b, I;
+    int n;
+    // 1+2x+x^2
+    // double a = -3.0;
+    // double b = 7.0;
+    nhapDuLieu(&a, &b, &n);
+    if (n <= 0 || n % 2 != 0) {
+        printf("n phai la so chan va lon hon 0!\n");
+        return 1;
+    }
+    tinhTichPhan(a, b, n, &I);
+    inKetQua(I);
+    return 0;
+}
+```
