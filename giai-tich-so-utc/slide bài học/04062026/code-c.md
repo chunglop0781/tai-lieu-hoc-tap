@@ -27,17 +27,17 @@ double noiSuyNewtonLui(double x_n, double x_star, double h, double y_arr[], int 
 
 int main() {
 //    int n = 3; 
-	int n; 
 //    double h = 1.0;
-	double h;
 //    double y_arr[] = {0.0, 1.0, 8.0, 27.0}; 
-	double y_arr[n + 1];
 //    double x_n = 3.0;
-	double x_n;
 //    double x_star = 2.5;
-	double x_star;
+	int n;
+    double h;
+    double x_n;
+    double x_star;
     printf("Nhap cac gia tri trong NOI SUY NEWTON LUI:\n");
     printf("n = "); scanf("%d", &n); 
+    double y_arr[n + 1];
     printf("Khoang cach h = ");
     scanf("%lf", &h);
     printf("Nhap %d gia tri y0 -> y%d:\n", n + 1, n);
@@ -51,6 +51,82 @@ int main() {
     scanf("%lf", &x_star);
     double ket_qua = noiSuyNewtonLui(x_n, x_star, h, y_arr, n);
     printf("\nGia tri gan dung f(%.6lf) = %.10lf\n", x_star, ket_qua);
+    return 0;
+}
+```
+
+# newtonTrenLuoiKhongDeu
+
+```
+#include <stdio.h>
+
+void noiSuyNewton(int n, double x, double xi[], double yi[], double *y_out) {
+    double y = yi[0];
+    if (n == 1) {
+        *y_out = y;
+        return;
+    }
+    double t = x - xi[0];
+    // Co n diem => n-1 sai phan cap 1
+    double F[n - 1];
+    for (int i = 0; i < n - 1; i++) {
+        F[i] = (yi[i + 1] - yi[i]) / (xi[i + 1] - xi[i]);
+    }
+    y += F[0] * t;
+    for (int j = 2; j <= n - 1; j++) {
+        for (int i = 0; i <= n - j - 1; i++) {
+            F[i] = (F[i + 1] - F[i]) /
+                   (xi[i + j] - xi[i]);
+        }
+        t *= (x - xi[j - 1]);
+        y += F[0] * t;
+    }
+    *y_out = y;
+}
+
+int main() {
+	//    int n = 4; 
+	//    double xi[] = {0.0, 1.0, 2.0, 3.0};
+	//    double yi[] = {1.0, 2.0, 4.0, 8.0}; 
+	//    double x = 1.5; 
+
+	// int n = 5; 
+	//    double xi[] = {3.0, 4.8, 6.0, 8.0, 9.0};
+	//    double yi[] = {-4.0, 6.0, 0.0, -1.0, 8.0};
+	//    double x[] = {5.0, 7.0};
+    int n;
+    printf("So diem du lieu n = ");
+    scanf("%d", &n);
+    if (n < 2) {
+        printf("Can it nhat 2 diem du lieu!\n");
+        return 1;
+    }
+    double xi[n];
+    double yi[n];
+    printf("\nNhap %d gia tri xi:\n", n);
+    for (int i = 0; i < n; i++) {
+        printf("xi[%d] = ", i);
+        scanf("%lf", &xi[i]);
+    }
+    printf("\nNhap %d gia tri yi:\n", n);
+    for (int i = 0; i < n; i++) {
+        printf("yi[%d] = ", i);
+        scanf("%lf", &yi[i]);
+    }
+    int k;
+    printf("\nSo diem can noi suy = ");
+    scanf("%d", &k);
+    double tich = 1.0;
+    for (int i = 0; i < k; i++) {
+        double x;
+        double y;
+        printf("\nx[%d] = ", i);
+        scanf("%lf", &x);
+        noiSuyNewton(n, x, xi, yi, &y);
+        printf("f(%.6lf) = %.10lf\n", x, y);
+        tich *= y;
+    }
+    printf("\nTich cac gia tri noi suy = %.10lf\n", tich);
     return 0;
 }
 ```
