@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến Ngẫu Nhiên Nhiều Chiều</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .slide-container {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .slide-header {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .slide-title {
+            font-size: 22px;
+            color: #0056b3;
+            margin: 0;
+            font-weight: bold;
+        }
+        .slide-subtitle {
+            font-size: 18px;
+            color: #555;
+            margin: 5px 0 0 0;
+        }
+        .content {
+            font-size: 15px;
+            text-align: justify;
+        }
+        .highlight-box {
+            background-color: #f1f7fc;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .box-title {
+            font-weight: bold;
+            color: #0056b3;
+            margin-bottom: 8px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .math-display {
+            text-align: center;
+            margin: 15px 0;
+            font-size: 16px;
+        }
+        .footer-note {
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+            font-size: 12px;
+            color: #777;
+            display: flex;
+            justify-content: space-between;
+        }
+        table.prob-table {
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-size: 15px;
+            text-align: center;
+        }
+        table.prob-table th, table.prob-table td {
+            border: 1px solid #333;
+            padding: 10px 15px;
+            min-width: 50px;
+        }
+        table.prob-table th {
+            background-color: #f2f2f2;
+        }
+        .board-content {
+            background-color: #0b3c26;
+            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 25px;
+            border-radius: 6px;
+            border: 8px solid #6d4c41;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+        }
+        .board-title {
+            color: #ffeb3b;
+            font-size: 20px;
+            text-align: center;
+            text-decoration: underline;
+            margin-bottom: 20px;
+        }
+        .board-content h3 {
+            color: #ffeb3b;
+            text-decoration: underline;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+    </style>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <div class="slide-container">
+        <div class="slide-header">
+            <div class="slide-title">4.1 Biến ngẫu nhiên hai chiều</div>
+            <div class="slide-subtitle">Khái niệm</div>
+        </div>
+        <div class="content">
+            <p>Trong thực tế có nhiều phép thử ngẫu nhiên, ở đó ta quan sát về nhiều biến ngẫu nhiên. Chẳng hạn, trong một hệ thống điện ta có thể quan sát điện thế tại nhiều điểm khác nhau. Trong chương trước chúng ta đã tìm hiểu các quy luật phân phối một biến ngẫu nhiên. Trong chương này chúng ta mở rộng các khái niệm đã biết cho hai hay nhiều các biến ngẫu nhiên. Nội dung của chương này bao gồm:</p>
+            <ul>
+                <li>Hàm phân phối đồng thời, hàm khối xác suất đồng thời, và hàm mật độ đồng thời của biến ngẫu nhiên hai chiều;</li>
+                <li>Hàm phân phối thành phần, hàm khối xác suất thành phần, và hàm mật độ thành phần;</li>
+                <li>Các biến ngẫu nhiên độc lập;</li>
+                <li>Hàm khối xác suất có điều kiện, hàm mật độ có điều kiện và kỳ vọng có điều kiện;</li>
+                <li>Hiệp phương sai, hệ số tương quan và tỷ số tương quan;</li>
+                <li>Biến ngẫu nhiên nhiều chiều tổng quát.</li>
+            </ul>
+        </div>
+        <div class="footer-note">
+            <span>Hà Nội - 03/2020</span>
+            <span>Biến ngẫu nhiên nhiều chiều</span>
+            <span>4</span>
+        </div>
+    </div>
+
+    <div class="slide-container">
+        <div class="slide-header">
+            <div class="slide-title">4.1 Biến ngẫu nhiên hai chiều</div>
+            <div class="slide-subtitle">Khái niệm</div>
+        </div>
+        <div class="content">
+            <div class="highlight-box">
+                <div class="box-title">Biến ngẫu nhiên hai chiều</div>
+                Giả sử ta xét một phép thử ngẫu nhiên có không gian mẫu $\Omega$. Một hàm được xác định trên $\Omega$ bằng cách ứng với mỗi biến cố sơ cấp $\omega \in \Omega$ ta gán với một cặp số thực $(X(\omega), Y(\omega))$. Ta gọi $(X, Y)$ là biến ngẫu nhiên hai chiều hay đại lượng ngẫu nhiên hai chiều.
+            </div>
+
+            <div class="highlight-box" style="background-color: #fcf8e3; border-left-color: #f0ad4e;">
+                <div class="box-title" style="color: #a94442;">Ví dụ 4.1</div>
+                Xét phép thử ngẫu nhiên là kiểm tra sinh viên của Trường Đại học Giao thông Vận tải. Với mỗi sinh viên $\omega$, ta xác định hai hàm sau:
+                <div class="math-display">
+                    $X(\omega) = \text{chiều cao của sinh viên (cm),}$
+                </div>
+                <div class="math-display">
+                    $Y(\omega) = \text{cân nặng của sinh viên (kg).}$
+                </div>
+                Ta có biến ngẫu nhiên hai chiều $(X, Y)$.
+            </div>
+        </div>
+        <div class="footer-note">
+            <span>Hà Nội - 03/2020</span>
+            <span>Biến ngẫu nhiên nhiều chiều</span>
+            <span>5</span>
+        </div>
+    </div>
+
+    <div class="slide-container">
+        <div class="slide-header">
+            <div class="slide-title">4.1 Biến ngẫu nhiên hai chiều</div>
+            <div class="slide-subtitle">Hàm phân phối đồng thời</div>
+        </div>
+        <div class="content">
+            <p>Để xác định xác suất của biến ngẫu nhiên hai chiều $(X, Y)$ trong một miền $S$ nào đó của mặt phẳng, ta xét biến cố</p>
+            <div class="math-display">
+                $A = \{(X, Y) \in S\} = \{\omega \in \Omega : (X(\omega), Y(\omega)) \in S\}.$
+            </div>
+            <p>Khi đó xác suất tương ứng là</p>
+            <div class="math-display">
+                $P(A) = P((X, Y) \in S) = P(\{\omega \in \Omega : (X(\omega), Y(\omega)) \in S\}).$
+            </div>
+            <p>Trong trường hợp tập $S$ có thể viết dạng $S = S_1 \times S_2$, biến cố trên có thể viết là $A = \{X \in S_1, Y \in S_2\} = \{X \in S_1\} \cap \{Y \in S_2\}$.</p>
+
+            <div class="highlight-box">
+                <div class="box-title">Định nghĩa 4.1</div>
+                Cho $(X, Y)$ là biến ngẫu nhiên hai chiều. Hàm phân phối xác suất của $(X, Y)$ là hàm hai biến $F(x, y) = F_{(X,Y)}(x, y)$ xác định với mọi $(x, y) \in \mathbb{R}^2$ và nó là xác suất của biến cố $\{X \le x, Y \le y\} = \{\omega \in \Omega : X(\omega) \le x, Y(\omega) \le y\}$.
+                <p>Hàm phân phối xác suất đồng thời được định nghĩa như sau:</p>
+                <div class="math-display" style="font-size: 18px;">
+                    $$F(x, y) = P(X \le x, Y \le y).$$ <span style="float: right; font-size: 14px;">(4.1)</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-note">
+            <span>Hà Nội - 03/2020</span>
+            <span>Biến ngẫu nhiên nhiều chiều</span>
+            <span>7</span>
+        </div>
+    </div>
+
+    <div class="slide-container">
+        <div class="slide-header">
+            <div class="slide-title">4.1 Biến ngẫu nhiên hai chiều</div>
+            <div class="slide-subtitle">Hàm phân phối đồng thời</div>
+        </div>
+        <div class="content">
+            <p>Từ các tính chất trên ta có thể tính được các hàm phân phối xác suất thành phần của biến ngẫu nhiên thành phần $X, Y$ lần lượt là $F_X(x), F_Y(y)$. Chẳng hạn để tìm hàm phân phối xác suất của $X$ ta có</p>
+            <div class="math-display">
+                $F_X(x) = P([X \le x]) = P([X \le x, Y < +\infty]) = F(x, +\infty),$
+            </div>
+            <div class="math-display">
+                $F_Y(y) = P([Y \le y]) = P([X < +\infty, Y \le y]) = F(+\infty, y).$
+            </div>
+            <p>Vậy hàm phân phối xác suất của biến thành phần $X$ và $Y$ là</p>
+            <div class="math-display" style="font-size: 16px;">
+                $$F_X(x) = F(x, +\infty), \quad F_Y(y) = F(+\infty, y).$$ <span style="float: right; font-size: 14px;">(4.2)</span>
+            </div>
+            <p>Tương tự như trường hợp biến ngẫu nhiên một chiều đã được xét đến ở các chương trước, trong chương này ta chia các biến ngẫu nhiên hai chiều thành hai loại: biến ngẫu nhiên hai chiều rời rạc và biến ngẫu nhiên hai chiều liên tục.</p>
+        </div>
+        <div class="footer-note">
+            <span>Hà Nội - 03/2020</span>
+            <span>Biến ngẫu nhiên nhiều chiều</span>
+            <span>11</span>
+        </div>
+    </div>
+
+    <div class="slide-container">
+        <div class="slide-header">
+            <div class="slide-title">4.2 Biến ngẫu nhiên hai chiều rời rạc</div>
+            <div class="slide-subtitle">Hàm khối xác suất đồng thời</div>
+        </div>
+        <div class="content">
+            <div class="highlight-box" style="background-color: #fcf8e3; border-left-color: #f0ad4e;">
+                <div class="box-title" style="color: #a94442;">Ví dụ 4.4</div>
+                Một hộp đựng 10 chiếc bút bi giống nhau về kích thước và hình dạng, trong đó có 2 chiếc màu đỏ, 3 chiếc màu xanh và 5 chiếc màu vàng. Chọn ngẫu nhiên 2 chiếc bút. Gọi $X$ là số bút màu đỏ và $Y$ là số bút màu xanh.
+                <br>a) Tìm bảng phân phối xác suất đồng thời của $(X, Y)$.
+                <br>b) Tính xác suất để $P((X, Y) \in A)$ với $A = \{(x, y) : x + y \le 1\}$.
+            </div>
+            <p><b>Giải:</b> Ta biết tập các giá trị có thể có của $(X, Y)$ là</p>
+            <div class="math-display">
+                $S = \{(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (2, 0)\}.$
+            </div>
+            <p>Với mỗi giá trị $(x, y) \in S$ xác suất để $X = x$ và $Y = y$ là</p>
+            <div class="math-display">
+                $$f(x, y) = \frac{C_2^x C_3^y C_5^{2-x-y}}{C_{10}^2}.$$
+            </div>
+        </div>
+        <div class="footer-note">
+            <span>Hà Nội - 03/2020</span>
+            <span>Biến ngẫu nhiên nhiều chiều</span>
+            <span>15</span>
+        </div>
+    </div>
+
+    <div class="slide-container">
+        <div class="slide-header">
+            <div class="slide-title">4.2 Biến ngẫu nhiên hai chiều rời rạc</div>
+            <div class="slide-subtitle">Hàm khối xác suất biên</div>
+        </div>
+        <div class="content">
+            <p>Khi ta biết hàm khối xác suất đồng thời của $(X, Y)$ thì ta dễ dàng xác định được hàm khối xác suất của $X$ và $Y$. Các hàm khối xác suất của $X$ và $Y$ gọi là các hàm khối xác suất biên hay hàm khối xác suất thành phần được xác định như sau:</p>
+            <div class="math-display">
+                $$f_X(x_i) = P(X = x_i) = P(X = x_i, Y \text{ bất kỳ})$$
+                $$= P(\bigcup_j \{X = x_i, Y = y_j\})$$
+                $$= \sum_j P(X = x_i, Y = y_j) = \sum_j f(x_i, y_j).$$
+            </div>
+            <p>Tương tự như trên ta xác định hàm khối xác suất của $Y như sau:</p>
+            <div class="math-display">
+                $$f_Y(y_j) = P(Y = y_j) = \sum_i P(X = x_i, Y = y_j) = \sum_i f(x_i, y_j).$$
+            </div>
+            <p>Các hàm khối xác suất biên có các tính chất như hàm khối xác suất của biến ngẫu nhiên một chiều.</p>
+        </div>
+        <div class="footer-note">
+            <span>Hà Nội - 03/2020</span>
+            <span>Biến ngẫu nhiên nhiều chiều</span>
+            <span>20</span>
+        </div>
+    </div>
+
+    <div class="slide-container">
+        <div class="slide-header">
+            <div class="slide-title">Nội dung ghi bảng (1)</div>
+        </div>
+        <div class="board-content">
+            <div class="board-title">Chương 4: Biến ngẫu nhiên nhiều chiều</div>
+            <p><b>1. Khái niệm</b></p>
+            <p><b>2. Bảng phân phối xác suất đồng thời</b></p>
+            <p><b>3. Hàm khối xác suất đồng thời</b></p>
+            <p><b>4. Hàm khối xác suất biên</b></p>
+            <p style="padding-left: 20px;">Là hàm khối xác suất của các biến thành phần $X$ và $Y$, ký hiệu:</p>
+            <div class="math-display" style="color: #fff;">
+                $$f_X(x) = P(X = x)$$
+                $$f_Y(y) = P(Y = y)$$
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-container">
+        <div class="slide-header">
+            <div class="slide-title">Nội dung ghi bảng (2) - Ma trận phân phối biên</div>
+        </div>
+        <div class="board-content">
+            <table class="prob-table" style="color: white; border-color: white;">
+                <tr>
+                    <th>$X \setminus Y$</th>
+                    <th>$y_1$</th>
+                    <th>$y_2$</th>
+                    <th>$\dots$</th>
+                    <th>$y_n$</th>
+                </tr>
+                <tr>
+                    <th>$x_1$</th>
+                    <td>$p_{11}$</td>
+                    <td>$p_{12}$</td>
+                    <td>$\dots$</td>
+                    <td>$p_{1n}$</td>
+                </tr>
+                <tr>
+                    <th>$x_2$</th>
+                    <td>$p_{21}$</td>
+                    <td>$p_{22}$</td>
+                    <td>$\dots$</td>
+                    <td>$p_{2n}$</td>
+                </tr>
+                <tr>
+                    <th>$\vdots$</th>
+                    <td>$\vdots$</td>
+                    <td>$\vdots$</td>
+                    <td>$\ddots$</td>
+                    <td>$\vdots$</td>
+                </tr>
+                <tr>
+                    <th>$x_m$</th>
+                    <td>$p_{m1}$</td>
+                    <td>$p_{m2}$</td>
+                    <td>$\dots$</td>
+                    <td>$p_{mn}$</td>
+                </tr>
+            </table>
+            
+            <p style="text-align: center; color: #ffeb3b;">
+                $\rightarrow \text{Lấy tổng theo hàng} \Rightarrow f_X(x_i)$ 
+                <br>
+                $\downarrow \text{Lấy tổng theo cột} \Rightarrow f_Y(y_j)$
+            </p>
+
+            <h3>Tính toán:</h3>
+            <div class="math-display" style="color: #fff; text-align: left; padding-left: 40px;">
+                $$f_X(x_i) = P(X = x_i) = \sum_j P(X = x_i, Y = y_j) = \sum_j p_{ij}$$
+                $$f_Y(y_j) = P(Y = y_j) = \sum_i p_{ij}$$
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
