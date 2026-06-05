@@ -201,3 +201,100 @@
 - Hai là, cải cách thể chế và phương thức hoạt động của nhà nước.
 - Ba là, xây dựng đội ngũ cán bộ, công chức trong sạch, có năng lực.
 - Bốn là, đấu tranh phòng chống tham nhũng, lãng phí, thực hành tiết kiệm
+
+
+# CHƯƠNG 6: VẤN ĐỀ DÂN TỘC VÀ TÔN GIÁO TRONG THỜI KỲ QUÁ ĐỘ LÊN CHỦ NGHĨA XÃ HỘI
+
+## I. VẤN ĐỀ DÂN TỘC TRONG THỜI KỲ QUÁ ĐỘ LÊN CHỦ NGHĨA XÃ HỘI
+
+### a. Khái niệm, đặc trưng của dân tộc
+
+#### */ Khái niệm
+Khái niệm dân tộc được hiểu theo 2 nghĩa:
+
+* **Thứ nhất:** Dân tộc chỉ một cộng đồng người cụ thể có những mối quan hệ chặt chẽ và bền vững, có sinh hoạt kinh tế chung, có ngôn ngữ chung của cộng đồng, sinh hoạt văn hóa có những nét đặc thù, xuất hiện sau cộng đồng bộ lạc, bộ tộc, có sự kế thừa và phát triển cao hơn những nhân tố tộc người ở cộng đồng bộ lạc, bộ tộc và thể hiện thành ý thức tự giác của các thành viên trong cộng đồng đó.
+    
+    `=> Theo nghĩa này thì dân tộc được hiểu theo nghĩa tộc người. Ví dụ: dân tộc Kinh, Tày, Thái...`
+
+* **Thứ hai:** Dân tộc chỉ một cộng đồng người ổn định, bền vững hợp thành nhân dân một nước, có lãnh thổ quốc gia chung, nền kinh tế thống nhất, quốc ngữ chung, có truyền thống văn hóa, truyền thống đấu tranh chung trong quá trình dựng nước và giữ nước.
+    
+    `=> Theo nghĩa này dân tộc được hiểu là quốc gia dân tộc. Ví dụ: dân tộc Việt Nam...`
+
+#### */ Đặc trưng của dân tộc
+
+* **Theo nghĩa thứ nhất:**
+    * Cộng đồng ngôn ngữ
+    * Cộng đồng văn hóa
+    * Ý thức tự giác tộc người
+* **Theo nghĩa thứ hai:**
+    * Có chung phương thức sinh hoạt kinh tế
+    * Có lãnh thổ chung không bị chia cắt
+    * Có sự quản lý của một nhà nước
+    * Có quốc ngữ chung làm phương tiện giao tiếp
+    * Có bản sắc văn hóa của quốc gia dân tộc
+
+---
+
+### b. Hai xu hướng phát triển khách quan của phong trào dân tộc
+
+* **Xu hướng phân lập dân tộc:** Cộng đồng dân cư muốn tách ra để hình thành cộng đồng dân tộc độc lập.
+    * Do sự thức tỉnh, sự trưởng thành về ý thức dân tộc, ý thức về quyền sống của mình.
+    * Xu hướng này được thể hiện rõ trong phong trào đấu tranh giành độc lập dân tộc của các dân tộc phụ thuộc và thuộc địa muốn thoát khỏi sự áp bức, bóc lột của các nước thực dân, đế quốc.
+    * *VD:* Sau chiến tranh thế giới 2 đã có hơn 100 quốc gia giành độc lập dân tộc.
+* **Xu hướng liên hiệp dân tộc:** Các dân tộc ở từng quốc gia, kể cả các dân tộc ở nhiều quốc gia muốn liên hiệp lại với nhau.
+    * Xu hướng này nổi lên trong giai đoạn chủ nghĩa tư bản phát triển mạnh mẽ về khoa học, kỹ thuật, giao lưu kinh tế và văn hóa đã làm nảy sinh nhu cầu muốn xóa bỏ hàng rào ngăn cách giữa các quốc gia dân tộc, thúc đẩy các dân tộc xích lại gần nhau cùng phát triển.
+
+---
+
+### c. Nội dung cương lĩnh dân tộc của chủ nghĩa Mác – Lênin
+
+#### */ Các dân tộc có quyền bình đẳng
+* **Khái niệm Quyền bình đẳng dân tộc:** các dân tộc dù đông người hay ít người, trình độ phát triển cao hay thấp đều có nghĩa vụ và quyền lợi ngang nhau trước những vấn đề của quốc gia, quốc tế.
+* **Trong một quốc gia có nhiều dân tộc:**
+    * Quyền bình đẳng dân tộc phải được pháp luật bảo vệ và thực hiện trong thực tế.
+    * Chú ý khắc phục chênh lệch về trình độ phát triển kinh tế, văn hóa giữa các dân tộc có ý nghĩa quan trọng.
+* **Trong mối quan hệ giữa các quốc gia – quốc gia:**
+    * Quyền bình đẳng dân tộc gắn với cuộc đấu tranh chống phân biệt chủng tộc, chủ nghĩa bá quyền nước lớn, chống sự áp bức bóc lột của các nước phát triển đối với các nước lạc hậu, chậm phát triển về kinh tế.
+    * Mọi quốc gia đều bình đẳng trong quan hệ quốc tế.
+* **Chú ý:** Quyền bình đẳng giữa các dân tộc là cơ sở để thực hiện quyền tự quyết dân tộc và xây dựng mối quan hệ hữu nghị, hợp tác giữa các dân tộc.
+
+#### */ Các dân tộc có quyền tự quyết
+* **Khái niệm Quyền tự quyết:** là quyền làm chủ của mỗi dân tộc, quyền tự quyết định con đường phát triển kinh tế, chính trị - xã hội của dân tộc mình.
+* **Quyền tự quyết bao gồm:**
+    * Quyền tự do phân lập thành cộng đồng quốc gia dân tộc độc lập (vì lợi ích của cả dân tộc chứ không phải vì lợi ích và mưu đồ của một nhóm người nào).
+    * Quyền tự liên hợp lại với các dân tộc khác trên cơ sở bình đẳng.
+
+#### */ Liên hiệp công nhân các dân tộc
+* Tư tưởng này thể hiện bản chất quốc tế của giai cấp công nhân (GCCN), phong trào công nhân và phản ánh tính thống nhất giữa sự nghiệp giải phóng dân tộc và giải phóng giai cấp.
+* Góp phần vào thực hiện quyền bình đẳng và tự quyết cho các dân tộc.
+* Tạo nên sức mạnh bảo đảm thắng lợi của GCCN và các dân tộc bị áp bức trong cuộc đấu tranh chống chủ nghĩa đế quốc.
+
+---
+
+## II. VẤN ĐỀ TÔN GIÁO TRONG THỜI KỲ QUÁ ĐỘ LÊN CHỦ NGHĨA XÃ HỘI
+*(Nội dung tiếp theo trong chương trình)*
+
+---
+
+## III. QUAN HỆ DÂN TỘC VÀ TÔN GIÁO Ở VIỆT NAM
+
+### 2. Dân tộc và quan hệ dân tộc ở Việt Nam
+
+#### a. Đặc điểm của dân tộc Việt Nam
+* Có sự chênh lệch rất lớn về số lượng người giữa các dân tộc.
+* Các dân tộc cư trú xen kẽ rải rác khắp từ Bắc tới Nam.
+* Đồng bào các dân tộc thiểu số phân bố chủ yếu ở các vùng có vị trí chiến lược về an ninh quốc phòng và giao lưu kinh tế quan trọng của quốc gia.
+
+#### b. Quan điểm và chính sách dân tộc của Đảng và Nhà nước ta
+Thực hiện nhất quán quan điểm của chủ nghĩa Mác - Lênin và căn cứ vào thực tiễn đấu tranh cách mạng giải phóng dân tộc, xây dựng đất nước, Đảng ta đưa ra quan điểm về vấn đề dân tộc ở nước ta như sau:
+
+* Vấn đề dân tộc và vấn đề đại đoàn kết dân tộc là vấn đề chiến lược, cơ bản, lâu dài và cấp bách hiện nay của cách mạng Việt Nam.
+* Các dân tộc Việt Nam luôn bình đẳng, đoàn kết, tương trợ, giúp đỡ nhau cùng phát triển, cùng nhau phấn đấu thực hiện thắng lợi sự nghiệp công nghiệp hóa, hiện đại hóa để xây dựng tổ quốc và bảo vệ nền độc lập dân tộc.
+* Ưu tiên phát triển toàn diện về chính trị, kinh tế, văn hóa, giáo dục - xã hội và an ninh quốc phòng trên địa bàn các vùng dân tộc và miền núi.
+
+**Chính sách cụ thể trên các lĩnh vực:**
+* **Về chính trị:** Thực hiện sự bình đẳng, đoàn kết, tôn trọng, giúp đỡ lẫn nhau cùng phát triển giữa các dân tộc nhằm hướng tới mục tiêu chung là “độc lập dân tộc và CN XÃ HỘI”, dân giàu nước mạnh, xã hội công bằng, dân chủ, văn minh.
+* **Về kinh tế:** Thực hiện chủ trương chính sách phát triển kinh tế - xã hội miền núi, vùng đồng bào các dân tộc thiểu số nhằm phát huy tiềm năng phát triển, từng bước khắc phục sự chênh lệch giữa các vùng, các dân tộc.
+* **Về văn hóa:** Đào tạo các cán bộ văn hóa ở các vùng, các dân tộc nhằm xây dựng nền văn hóa Việt Nam tiên tiến, đậm đà bản sắc văn hóa dân tộc. Giữ gìn và phát huy những giá trị văn hóa truyền thống của các tộc người.
+* **Về xã hội:** Thực hiện các chính sách xã hội, đảm bảo an sinh xã hội, xóa đói, giảm nghèo, bình đẳng và công bằng xã hội cho đồng bào dân tộc.
+* **Về an ninh quốc phòng:** Tăng cường mối quan hệ khăng khít giữa quân và dân, tạo thế trận quốc phòng toàn dân nhằm tăng cường sức mạnh bảo vệ tổ quốc ngay trong vùng đồng bào các dân tộc sinh sống.
