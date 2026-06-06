@@ -1,0 +1,59 @@
+58
+253610642|NGUYEN DUC AN|31/08/2007|Khoa hoc may tinh K66|an253610642@lms.utc.edu.vn
+253610643|CAO HOANG ANH|12/01/2007|Khoa hoc may tinh K66|anh253610643@lms.utc.edu.vn
+253610644|MAI NGOC HUNG ANH|15/09/2006|Khoa hoc may tinh K66|anh253610644@lms.utc.edu.vn
+253630646|NGUYEN VIET ANH|10/10/2007|Khoa hoc may tinh K66|anh253630646@lms.utc.edu.vn
+253610647|TANG XUAN ANH|19/02/2006|Khoa hoc may tinh K66|anh253610647@lms.utc.edu.vn
+253630565|NHUYEN HONG AN|23/06/2006|Khoa hoc may tinh K66|an253630565@lms.utc.edu.vn
+253610648|VU MAI ANH|18/09/2006|Khoa hoc may tinh K66|anh253610648@lms.utc.edu.vn
+253630650|NGUYEN LE BAO CHAU|30/03/2007|Khoa hoc may tinh K66|chau253630650@lms.utc.edu.vn
+253630651|TRUONG THI MINH CHAU|09/03/2007|Khoa hoc may tinh K66|chau253630651@lms.utc.edu.vn
+253630652|NGUYEN THANH CONG|04/08/2007|Khoa hoc may tinh K66|cong253630652@lms.utc.edu.vn
+253630653|PHAM PHU CUONG|22/12/2007|Khoa hoc may tinh K66|cuong253630653@lms.utc.edu.vn
+253610661|SA XUAN DAI|08/01/2007|Khoa hoc may tinh K66|dai253610661@lms.utc.edu.vn
+253630662|NGUYEN XUAN DAT|04/09/2007|Khoa hoc may tinh K66|dat253630662@lms.utc.edu.vn
+253630663|PHAM CONG DOAN|23/06/2007|Khoa hoc may tinh K66|doan253630663@lms.utc.edu.vn
+253630654|DO DANG DUNG|18/02/2006|Khoa hoc may tinh K66|dung253630654@lms.utc.edu.vn
+253630655|LE DINH DUNG|18/11/2007|Khoa hoc may tinh K66|dung253630655@lms.utc.edu.vn
+253630656|NGUYEN MANH DUNG|08/02/2007|Khoa hoc may tinh K66|dung253630656@lms.utc.edu.vn
+253630657|PHAN LE DUNG|29/09/2007|Khoa hoc may tinh K66|dung253630657@lms.utc.edu.vn
+253630658|VU DUNG|27/11/2007|Khoa hoc may tinh K66|dung253630658@lms.utc.edu.vn
+253610660|TA MINH DUONG|29/04/2007|Khoa hoc may tinh K66|duong253610660@lms.utc.edu.vn
+253630664|DO TRUONG GIANG|25/02/2007|Khoa hoc may tinh K66|giang253630664@lms.utc.edu.vn
+253610665|LUONG HOANG HAI|15/01/2007|Khoa hoc may tinh K66|hai253610665@lms.utc.edu.vn
+253610666|NGHIEM ANH HAO|01/04/2007|Khoa hoc may tinh K66|hao253610666@lms.utc.edu.vn
+253610667|DO MINH HIEU|18/06/2007|Khoa hoc may tinh K66|hieu253610667@lms.utc.edu.vn
+253610668|NGUYEN TRUNG HIEU|20/07/2007|Khoa hoc may tinh K66|hieu253610668@lms.utc.edu.vn
+253610669|PHAM KHANH HOA|10/12/2007|Khoa hoc may tinh K66|hoa253610669@lms.utc.edu.vn
+253610670|HOANG NGOC HUNG|29/08/2007|Khoa hoc may tinh K66|hung253610670@lms.utc.edu.vn
+253610671|NGUYEN DUC HUNG|11/02/2007|Khoa hoc may tinh K66|hung253610671@lms.utc.edu.vn
+253610672|MAC VIET HUNG|19/11/2007|Khoa hoc may tinh K66|hung253610672@lms.utc.edu.vn
+253610674|PHAM GIA KHIEM|31/03/2007|Khoa hoc may tinh K66|khiem253610674@lms.utc.edu.vn
+253630675|HOANG ANH KHOI|19/08/2007|Khoa hoc may tinh K66|khoi253630675@lms.utc.edu.vn
+253610676|VU MANH KIEN|10/01/2007|Khoa hoc may tinh K66|kien253610676@lms.utc.edu.vn
+253610677|NGUYEN HOANG LONG|25/03/2007|Khoa hoc may tinh K66|long253610677@lms.utc.edu.vn
+253610678|BUI DUY MANH|13/08/2007|Khoa hoc may tinh K66|manh253610678@lms.utc.edu.vn
+253610679|HOANG DUC MANH|22/11/2007|Khoa hoc may tinh K66|manh253610679@lms.utc.edu.vn
+253630680|LE DUC MANH|26/01/2007|Khoa hoc may tinh K66|manh253630680@lms.utc.edu.vn
+253610681|NGUYEN BA MANH|23/01/2007|Khoa hoc may tinh K66|manh253610681@lms.utc.edu.vn
+253610682|HOANG GIA MINH|21/05/2007|Khoa hoc may tinh K66|minh253610682@lms.utc.edu.vn
+253610683|LE QUANG MINH|10/09/2007|Khoa hoc may tinh K66|minh253610683@lms.utc.edu.vn
+253610684|NGUYEN NHAT MINH|29/09/2007|Khoa hoc may tinh K66|minh253610684@lms.utc.edu.vn
+253610685|NGUYEN THANH MINH|30/10/2007|Khoa hoc may tinh K66|minh253610685@lms.utc.edu.vn
+253610686|PHAM NHAT MINH|05/11/2007|Khoa hoc may tinh K66|minh253610686@lms.utc.edu.vn
+253630687|HOANG TUAN PHONG|29/01/2007|Khoa hoc may tinh K66|phong253630687@lms.utc.edu.vn
+253630688|TRAN DAN PHONG|03/01/2007|Khoa hoc may tinh K66|phong253630688@lms.utc.edu.vn
+253634785|DINH VAN PHUC|07/03/2006|Khoa hoc may tinh K66|phuc253634785@lms.utc.edu.vn
+253610689|HOANG MINH QUAN|01/07/2007|Khoa hoc may tinh K66|quan253610689@lms.utc.edu.vn
+253610690|DO MINH SON|27/09/2007|Khoa hoc may tinh K66|son253610690@lms.utc.edu.vn
+253630694|HO SY THANG|04/06/2007|Khoa hoc may tinh K66|thang253630694@lms.utc.edu.vn
+253610691|DANG THE THANH|15/05/2007|Khoa hoc may tinh K66|thanh253610691@lms.utc.edu.vn
+253630692|PHAN CHINH THANH|16/09/2007|Khoa hoc may tinh K66|thanh253630692@lms.utc.edu.vn
+253610693|TRAN NHAT THANH|06/09/2007|Khoa hoc may tinh K66|thanh253610693@lms.utc.edu.vn
+253630695|CAO DANG THIEN|21/10/2007|Khoa hoc may tinh K66|thien253630695@lms.utc.edu.vn
+253610696|NGUYEN DUC THINH|22/12/2007|Khoa hoc may tinh K66|thinh253610696@lms.utc.edu.vn
+253610697|PHAM THANH THUY|09/06/2007|Khoa hoc may tinh K66|thuy253610697@lms.utc.edu.vn
+253630698|NGUYEN VAN TIEM|09/01/2006|Khoa hoc may tinh K66|tiem253630698@lms.utc.edu.vn
+253610699|CAO VAN TRINH|10/03/2007|Khoa hoc may tinh K66|trinh253610699@lms.utc.edu.vn
+253610700|TRUONG ANH TUAN|04/01/2007|Khoa hoc may tinh K66|tuan253610700@lms.utc.edu.vn
+253610701|NGUYEN DANG VIET|02/09/2007|Khoa hoc may tinh K66|viet253610701@lms.utc.edu.vn
