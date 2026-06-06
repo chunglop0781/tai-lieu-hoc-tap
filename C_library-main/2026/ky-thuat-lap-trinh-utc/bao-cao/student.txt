@@ -1,0 +1,59 @@
+58
+253610642|NGUYỄN ĐỨC AN|31/08/2007|Khoa học máy tính K66|an253610642@lms.utc.edu.vn
+253610643|CAO HOÀNG ANH|12/01/2007|Khoa học máy tính K66|anh253610643@lms.utc.edu.vn
+253610644|MAI NGỌC HÙNG ANH|15/09/2006|Khoa học máy tính K66|anh253610644@lms.utc.edu.vn
+253630646|NGUYỄN VIỆT ANH|10/10/2007|Khoa học máy tính K66|anh253630646@lms.utc.edu.vn
+253610647|TĂNG XUÂN ANH|19/02/2006|Khoa học máy tính K66|anh253610647@lms.utc.edu.vn
+253630565|NHUYỄN HỒNG AN|23/06/2006|Khoa học máy tính K66|an253630565@lms.utc.edu.vn
+253610648|VŨ MAI ANH|18/09/2006|Khoa học máy tính K66|anh253610648@lms.utc.edu.vn
+253630650|NGUYỄN LÊ BẢO CHÂU|30/03/2007|Khoa học máy tính K66|chau253630650@lms.utc.edu.vn
+253630651|TRƯƠNG THỊ MINH CHÂU|09/03/2007|Khoa học máy tính K66|chau253630651@lms.utc.edu.vn
+253630652|NGUYỄN THÀNH CÔNG|04/08/2007|Khoa học máy tính K66|cong253630652@lms.utc.edu.vn
+253630653|PHẠM PHÚ CƯỜNG|22/12/2007|Khoa học máy tính K66|cuong253630653@lms.utc.edu.vn
+253610661|SA XUÂN ĐẠI|08/01/2007|Khoa học máy tính K66|dai253610661@lms.utc.edu.vn
+253630662|NGUYỄN XUÂN ĐẠT|04/09/2007|Khoa học máy tính K66|dat253630662@lms.utc.edu.vn
+253630663|PHẠM CÔNG ĐOAN|23/06/2007|Khoa học máy tính K66|doan253630663@lms.utc.edu.vn
+253630654|ĐỖ ĐĂNG DŨNG|18/02/2006|Khoa học máy tính K66|dung253630654@lms.utc.edu.vn
+253630655|LÊ ĐÌNH DŨNG|18/11/2007|Khoa học máy tính K66|dung253630655@lms.utc.edu.vn
+253630656|NGUYỄN MẠNH DŨNG|08/02/2007|Khoa học máy tính K66|dung253630656@lms.utc.edu.vn
+253630657|PHAN LÊ DŨNG|29/09/2007|Khoa học máy tính K66|dung253630657@lms.utc.edu.vn
+253630658|VŨ DŨNG|27/11/2007|Khoa học máy tính K66|dung253630658@lms.utc.edu.vn
+253610660|TẠ MINH DƯƠNG|29/04/2007|Khoa học máy tính K66|duong253610660@lms.utc.edu.vn
+253630664|ĐỖ TRƯỜNG GIANG|25/02/2007|Khoa học máy tính K66|giang253630664@lms.utc.edu.vn
+253610665|LƯƠNG HOÀNG HẢI|15/01/2007|Khoa học máy tính K66|hai253610665@lms.utc.edu.vn
+253610666|NGHIÊM ANH HÀO|01/04/2007|Khoa học máy tính K66|hao253610666@lms.utc.edu.vn
+253610667|ĐỖ MINH HIẾU|18/06/2007|Khoa học máy tính K66|hieu253610667@lms.utc.edu.vn
+253610668|NGUYỄN TRUNG HIẾU|20/07/2007|Khoa học máy tính K66|hieu253610668@lms.utc.edu.vn
+253610669|PHẠM KHÁNH HÒA|10/12/2007|Khoa học máy tính K66|hoa253610669@lms.utc.edu.vn
+253610670|HOÀNG NGỌC HÙNG|29/08/2007|Khoa học máy tính K66|hung253610670@lms.utc.edu.vn
+253610671|NGUYỄN ĐỨC HÙNG|11/02/2007|Khoa học máy tính K66|hung253610671@lms.utc.edu.vn
+253610672|MẠC VIỆT HƯNG|19/11/2007|Khoa học máy tính K66|hung253610672@lms.utc.edu.vn
+253610674|PHẠM GIA KHIÊM|31/03/2007|Khoa học máy tính K66|khiem253610674@lms.utc.edu.vn
+253630675|HOÀNG ANH KHÔI|19/08/2007|Khoa học máy tính K66|khoi253630675@lms.utc.edu.vn
+253610676|VŨ MẠNH KIÊN|10/01/2007|Khoa học máy tính K66|kien253610676@lms.utc.edu.vn
+253610677|NGUYỄN HOÀNG LONG|25/03/2007|Khoa học máy tính K66|long253610677@lms.utc.edu.vn
+253610678|BÙI DUY MẠNH|13/08/2007|Khoa học máy tính K66|manh253610678@lms.utc.edu.vn
+253610679|HOÀNG ĐỨC MẠNH|22/11/2007|Khoa học máy tính K66|manh253610679@lms.utc.edu.vn
+253630680|LÊ ĐỨC MẠNH|26/01/2007|Khoa học máy tính K66|manh253630680@lms.utc.edu.vn
+253610681|NGUYỄN BÁ MẠNH|23/01/2007|Khoa học máy tính K66|manh253610681@lms.utc.edu.vn
+253610682|HOÀNG GIA MINH|21/05/2007|Khoa học máy tính K66|minh253610682@lms.utc.edu.vn
+253610683|LÊ QUANG MINH|10/09/2007|Khoa học máy tính K66|minh253610683@lms.utc.edu.vn
+253610684|NGUYỄN NHẬT MINH|29/09/2007|Khoa học máy tính K66|minh253610684@lms.utc.edu.vn
+253610685|NGUYỄN THÀNH MINH|30/10/2007|Khoa học máy tính K66|minh253610685@lms.utc.edu.vn
+253610686|PHẠM NHẬT MINH|05/11/2007|Khoa học máy tính K66|minh253610686@lms.utc.edu.vn
+253630687|HOÀNG TUẤN PHONG|29/01/2007|Khoa học máy tính K66|phong253630687@lms.utc.edu.vn
+253630688|TRẦN ĐAN PHONG|03/01/2007|Khoa học máy tính K66|phong253630688@lms.utc.edu.vn
+253634785|ĐINH VĂN PHÚC|07/03/2006|Khoa học máy tính K66|phuc253634785@lms.utc.edu.vn
+253610689|HOÀNG MINH QUÂN|01/07/2007|Khoa học máy tính K66|quan253610689@lms.utc.edu.vn
+253610690|ĐỖ MINH SƠN|27/09/2007|Khoa học máy tính K66|son253610690@lms.utc.edu.vn
+253630694|HỒ SỸ THẮNG|04/06/2007|Khoa học máy tính K66|thang253630694@lms.utc.edu.vn
+253610691|ĐẶNG THẾ THÀNH|15/05/2007|Khoa học máy tính K66|thanh253610691@lms.utc.edu.vn
+253630692|PHAN CHÍNH THÀNH|16/09/2007|Khoa học máy tính K66|thanh253630692@lms.utc.edu.vn
+253610693|TRẦN NHẬT THÀNH|06/09/2007|Khoa học máy tính K66|thanh253610693@lms.utc.edu.vn
+253630695|CAO ĐĂNG THIỆN|21/10/2007|Khoa học máy tính K66|thien253630695@lms.utc.edu.vn
+253610696|NGUYỄN ĐỨC THỊNH|22/12/2007|Khoa học máy tính K66|thinh253610696@lms.utc.edu.vn
+253610697|PHẠM THANH THÙY|09/06/2007|Khoa học máy tính K66|thuy253610697@lms.utc.edu.vn
+253630698|NGUYỄN VĂN TIỆM|09/01/2006|Khoa học máy tính K66|tiem253630698@lms.utc.edu.vn
+253610699|CAO VĂN TRÌNH|10/03/2007|Khoa học máy tính K66|trinh253610699@lms.utc.edu.vn
+253610700|TRƯƠNG ANH TUẤN|04/01/2007|Khoa học máy tính K66|tuan253610700@lms.utc.edu.vn
+253610701|NGUYỄN ĐĂNG VIỆT|02/09/2007|Khoa học máy tính K66|viet253610701@lms.utc.edu.vn
