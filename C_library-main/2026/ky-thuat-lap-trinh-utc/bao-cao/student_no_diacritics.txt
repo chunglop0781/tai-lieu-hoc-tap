@@ -1,4 +1,4 @@
-129
+127
 253610642|NGUYEN DUC AN|31/08/2007|Khoa hoc may tinh K66|an253610642@lms.utc.edu.vn|Khoa hoc may tinh|K66|Dang hoc|88|7.2|7.5|7.3
 253610643|CAO HOANG ANH|12/01/2007|Khoa hoc may tinh K66|anh253610643@lms.utc.edu.vn|Khoa hoc may tinh|K66|Dang hoc|92|8.1|8.0|8.05
 253610644|MAI NGOC HUNG ANH|15/09/2006|Khoa hoc may tinh K66|anh253610644@lms.utc.edu.vn|Khoa hoc may tinh|K66|Dang hoc|85|7.0|7.8|7.4
