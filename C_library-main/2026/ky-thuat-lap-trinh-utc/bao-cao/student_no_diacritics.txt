@@ -1,4 +1,4 @@
-58
+129
 253610642|NGUYEN DUC AN|31/08/2007|Khoa hoc may tinh K66|an253610642@lms.utc.edu.vn|Khoa hoc may tinh|K66|Dang hoc|88|7.2|7.5|7.3
 253610643|CAO HOANG ANH|12/01/2007|Khoa hoc may tinh K66|anh253610643@lms.utc.edu.vn|Khoa hoc may tinh|K66|Dang hoc|92|8.1|8.0|8.05
 253610644|MAI NGOC HUNG ANH|15/09/2006|Khoa hoc may tinh K66|anh253610644@lms.utc.edu.vn|Khoa hoc may tinh|K66|Dang hoc|85|7.0|7.8|7.4
@@ -57,3 +57,72 @@
 253610699|CAO VAN TRINH|10/03/2007|Khoa hoc may tinh K66|trinh253610699@lms.utc.edu.vn|Khoa hoc may tinh|K66|Dang hoc|85|7.1|7.2|7.15
 253610700|TRUONG ANH TUAN|04/01/2007|Khoa hoc may tinh K66|tuan253610700@lms.utc.edu.vn|Khoa hoc may tinh|K66|Dang hoc|87|7.3|7.4|7.35
 253610701|NGUYEN DANG VIET|02/09/2007|Khoa hoc may tinh K66|viet253610701@lms.utc.edu.vn|Khoa hoc may tinh|K66|Dang hoc|86|7.2|7.3|7.25
+251210798|HOANG VIET ANH|31/05/2007|Cong nghe thong tin 2 K66|anh251210798@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|90|7.5|7.0|7.15
+251230799|LA TUAN ANH|02/05/2007|Cong nghe thong tin 2 K66|anh251230799@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|85|6.8|6.5|6.59
+251230802|NGUYEN CONG TUAN ANH|10/09/2007|Cong nghe thong tin 2 K66|anh251230802@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|95|8.2|7.8|7.92
+251230806|NGUYEN TUAN ANH|20/10/2007|Cong nghe thong tin 2 K66|anh251230806@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|88|7.0|7.2|7.14
+252333157|NGUYEN DUC ANH|28/01/2005|Cong nghe thong tin 2 K66|anh252333157@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|92|8.0|8.5|8.35
+251230817|LE CONG CUONG|05/06/2007|Cong nghe thong tin 2 K66|cuong251230817@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|80|6.5|6.0|6.15
+251230819|NGUYEN DAI CUONG|21/02/2007|Cong nghe thong tin 2 K66|cuong251230819@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|85|7.2|6.8|6.92
+251210827|NGUYEN LAN DUNG|28/11/2007|Cong nghe thong tin 2 K66|dung251210827@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|98|9.0|8.8|8.86
+251230828|TRAN QUOC DUNG|24/06/2007|Cong nghe thong tin 2 K66|dung251230828@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|90|7.8|7.5|7.59
+251230829|DOAN CONG DUY|16/02/2007|Cong nghe thong tin 2 K66|duy251230829@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|87|7.0|7.0|7.00
+251230830|NGUYEN VAN DUY|21/07/2007|Cong nghe thong tin 2 K66|duy251230830@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|84|6.9|6.4|6.55
+251210831|NGUYEN BA DUONG|12/04/2007|Cong nghe thong tin 2 K66|duong251210831@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|91|8.0|7.2|7.44
+251230835|PHAN TUNG DUONG|24/09/2007|Cong nghe thong tin 2 K66|duong251230835@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|86|7.1|7.5|7.38
+252233344|VU CONG DUONG|23/04/2004|Cong nghe thong tin 2 K66|duong252233344@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|80|6.2|5.8|5.94
+251230844|DUONG VIET DUC|28/10/2007|Cong nghe thong tin 2 K66|duc251230844@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|89|7.6|8.0|7.87
+251210845|MAI ANH DUC|19/11/2007|Cong nghe thong tin 2 K66|duc251210845@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|93|8.5|8.2|8.31
+251210842|LUONG DINH DOAN|11/10/2007|Cong nghe thong tin 2 K66|doan251210842@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|88|7.4|7.0|7.12
+251230837|HOANG THANH DAT|23/04/2007|Cong nghe thong tin 2 K66|dat251230837@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|85|7.0|6.5|6.65
+251210838|LE TRAN TIEN DAT|28/03/2007|Cong nghe thong tin 2 K66|dat251210838@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|94|8.3|8.0|8.12
+251210839|NGUYEN TIEN DAT|27/12/2007|Cong nghe thong tin 2 K66|dat251210839@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|87|7.2|7.4|7.34
+251230840|PHAM TIEN DAT|20/03/2007|Cong nghe thong tin 2 K66|dat251230840@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|90|7.5|7.2|7.32
+251230857|NGUYEN VAN HIEN|25/06/2007|Cong nghe thong tin 2 K66|hien251230857@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|83|6.7|6.8|6.77
+251230859|DINH NGUYEN MINH HIEU|07/09/2007|Cong nghe thong tin 2 K66|hieu251230859@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|96|8.8|8.5|8.62
+251210860|DANG TRUNG HIEU|13/10/2007|Cong nghe thong tin 2 K66|hieu251210860@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|89|7.6|7.3|7.42
+251210862|NGUYEN MINH HIEU|10/12/2007|Cong nghe thong tin 2 K66|hieu251210862@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|91|8.0|8.2|8.14
+251230864|DAO VIET HOANG|07/11/2007|Cong nghe thong tin 2 K66|hoang251230864@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|85|7.3|7.0|7.12
+251230868|NGO XUAN HUAN|07/03/2007|Cong nghe thong tin 2 K66|huan251230868@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|82|6.4|6.5|6.47
+251230869|TRAN DUC HUAN|21/02/2007|Cong nghe thong tin 2 K66|huan251230869@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|88|7.5|7.3|7.39
+251210875|HOANG TRONG HUNG|26/12/2007|Cong nghe thong tin 2 K66|hung251210875@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|90|7.8|7.6|7.68
+251230877|NGUYEN DUY HUNG|08/08/2007|Cong nghe thong tin 2 K66|hung251230877@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|86|7.0|7.2|7.12
+251230884|HOANG KY KHANG|28/05/2007|Cong nghe thong tin 2 K66|khang251230884@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|92|8.1|8.0|8.04
+251210885|LE HOANG GIA KHANH|11/02/2007|Cong nghe thong tin 2 K66|khanh251210885@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|95|8.5|8.4|8.45
+251210888|NGUYEN TRONG KHANH|22/04/2007|Cong nghe thong tin 2 K66|khanh251210888@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|87|7.4|7.0|7.16
+251230892|NGUYEN ANH KHOA|20/11/2007|Cong nghe thong tin 2 K66|khoa251230892@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|89|7.6|7.5|7.54
+251230902|NGUYEN THI NGOC LE|22/08/2007|Cong nghe thong tin 2 K66|le251230902@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|97|9.2|9.0|9.08
+251210897|CHU HAI LAM|20/01/2007|Cong nghe thong tin 2 K66|lam251210897@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|84|6.8|6.7|6.73
+251230906|DO PHAM HAI LONG|01/03/2007|Cong nghe thong tin 2 K66|long251230906@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|91|8.0|7.8|7.88
+251210908|NGUYEN THANH LONG|29/01/2007|Cong nghe thong tin 2 K66|long251210908@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|88|7.5|7.2|7.31
+251210916|NGUYEN VAN MANH|07/12/2007|Cong nghe thong tin 2 K66|manh251210916@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|83|6.6|6.5|6.54
+251210919|VU DUC MANH|29/09/2007|Cong nghe thong tin 2 K66|manh251210919@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|90|7.8|8.2|8.04
+251230926|TRUONG THI LY NA|07/02/2007|Cong nghe thong tin 2 K66|na251230926@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|94|8.6|8.5|8.54
+251230928|NGUYEN DUC NAM|14/04/2007|Cong nghe thong tin 2 K66|nam251230928@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|86|7.2|7.0|7.08
+251230930|NGUYEN PHUONG NAM|18/01/2007|Cong nghe thong tin 2 K66|nam251230930@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|89|7.5|7.4|7.45
+251230931|TRAN DINH NAM|10/02/2007|Cong nghe thong tin 2 K66|nam251230931@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|85|7.0|6.9|6.94
+251210934|NGUYEN KHOI NGUYEN|30/06/2007|Cong nghe thong tin 2 K66|nguyen251210934@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|93|8.4|8.0|8.16
+251230937|NGUYEN HOANG NHAT|30/04/2007|Cong nghe thong tin 2 K66|nhat251230937@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|88|7.3|7.5|7.43
+251230942|NGUYEN HOANG PHUC|09/12/2007|Cong nghe thong tin 2 K66|phuc251230942@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|91|8.0|7.8|7.88
+251230945|HOANG MINH PHUONG|15/09/2007|Cong nghe thong tin 2 K66|phuong251230945@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|95|8.8|8.4|8.56
+251230946|HOANG XUAN PHUONG|16/04/2007|Cong nghe thong tin 2 K66|phuong251230946@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|87|7.2|7.0|7.09
+251230951|NGUYEN QUANG QUAN|08/11/2007|Cong nghe thong tin 2 K66|quan251230951@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|84|6.9|6.6|6.72
+251230952|TONG QUANG QUY|06/02/2007|Cong nghe thong tin 2 K66|quy251230952@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|89|7.6|7.3|7.42
+251210953|NGUYEN ANH QUYEN|20/06/2007|Cong nghe thong tin 2 K66|quuyen251210953@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|90|7.8|7.5|7.61
+251230954|LUU CHI QUYET|12/09/2007|Cong nghe thong tin 2 K66|quyet251230954@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|86|7.0|6.8|6.88
+251230960|CONG ANH TAI|08/04/2007|Cong nghe thong tin 2 K66|tai251230960@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|88|7.4|7.2|7.28
+251230961|HOANG QUOC THAI|14/08/2007|Cong nghe thong tin 2 K66|thai251230961@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|92|8.2|8.0|8.08
+251210965|DO NHU THANH|04/02/2005|Cong nghe thong tin 2 K66|thanh251210965@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|80|6.4|6.2|6.30
+251230968|NGUYEN QUANG THANH|02/01/2007|Cong nghe thong tin 2 K66|thanh251230968@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|87|7.3|7.5|7.44
+251230971|TRAN VAN THANH|26/01/2007|Cong nghe thong tin 2 K66|thanh251230971@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|85|7.0|7.1|7.06
+251210975|TRUONG NGOC THANG|07/11/2007|Cong nghe thong tin 2 K66|thang251210975@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|91|8.0|7.8|7.88
+251230978|NGUYEN TA ANH THINH|06/11/2007|Cong nghe thong tin 2 K66|thinh251230978@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|93|8.5|8.2|8.31
+251230980|TRAN BA THUONG|20/11/2007|Cong nghe thong tin 2 K66|thuong251230980@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|86|7.2|7.0|7.08
+251230984|NGUYEN DUC TOAN|24/02/2007|Cong nghe thong tin 2 K66|toan251230984@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|89|7.5|7.6|7.57
+251230993|TRINH QUOC TUAN|05/07/2007|Cong nghe thong tin 2 K66|tuan251230993@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|88|7.4|7.2|7.28
+251231003|TRAN QUANG VINH|03/06/2007|Cong nghe thong tin 2 K66|vinh251231003@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|94|8.6|8.4|8.48
+251230996|CHUC ANH VIET|29/05/2007|Cong nghe thong tin 2 K66|viet251230996@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|90|7.8|8.0|7.92
+251230997|LE BAO VIET|18/03/2006|Cong nghe thong tin 2 K66|viet251230997@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|84|6.9|6.5|6.67
+251230999|PHAN DINH VIET|26/12/2007|Cong nghe thong tin 2 K66|viet251230999@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|88|7.2|7.4|7.34
+251211005|DUONG HOANG VU|24/11/2007|Cong nghe thong tin 2 K66|vu251211005@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|85|7.1|6.8|6.93
+251231006|HA HUY VU|13/04/2007|Cong nghe thong tin 2 K66|vu251231006@lms.utc.edu.vn|Cong nghe thong tin|K66|Dang hoc|92|8.0|7.8|7.88
