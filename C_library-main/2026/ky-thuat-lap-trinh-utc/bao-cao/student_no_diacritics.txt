@@ -4,7 +4,7 @@
 253610644|MAI NGOC HUNG ANH|15/09/2006|Khoa hoc may tinh K66|anh253610644@lms.utc.edu.vn|Khoa hoc may tinh|K66|Dang hoc|85|7.0|7.8|7.4
 253630646|NGUYEN VIET ANH|10/10/2007|Khoa hoc may tinh K66|anh253630646@lms.utc.edu.vn|Khoa hoc may tinh|K66|Dang hoc|90|6.8|7.0|6.9
 253610647|TANG XUAN ANH|19/02/2006|Khoa hoc may tinh K66|anh253610647@lms.utc.edu.vn|Khoa hoc may tinh|K66|Dang hoc|87|7.5|7.2|7.35
-253630565|NHUYEN HONG AN|23/06/2006|Khoa hoc may tinh K66|an253630565@lms.utc.edu.vn|Khoa hoc may tinh|K66|Dang hoc|83|6.5|6.8|6.65
+253630565|NGUYEN HONG AN|23/06/2006|Khoa hoc may tinh K66|an253630565@lms.utc.edu.vn|Khoa hoc may tinh|K66|Dang hoc|83|6.5|6.8|6.65
 253610648|VU MAI ANH|18/09/2006|Khoa hoc may tinh K66|anh253610648@lms.utc.edu.vn|Khoa hoc may tinh|K66|Dang hoc|91|8.0|8.3|8.15
 253630650|NGUYEN LE BAO CHAU|30/03/2007|Khoa hoc may tinh K66|chau253630650@lms.utc.edu.vn|Khoa hoc may tinh|K66|Dang hoc|89|7.6|7.4|7.5
 253630651|TRUONG THI MINH CHAU|09/03/2007|Khoa hoc may tinh K66|chau253630651@lms.utc.edu.vn|Khoa hoc may tinh|K66|Dang hoc|86|7.1|7.0|7.05
