@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chương 3: Tích phân đường và tích phân mặt</title>
+
+<script>
+window.MathJax = {
+    tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    line-height: 1.7;
+    background:#f8f9fa;
+}
+h1{
+    text-align:center;
+    color:#0d47a1;
+}
+h2{
+    background:#1976d2;
+    color:white;
+    padding:10px;
+    border-radius:8px;
+}
+h3{
+    color:#1565c0;
+}
+.box{
+    background:white;
+    padding:15px;
+    margin:15px 0;
+    border-radius:10px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+.math{
+    background:#eef7ff;
+    padding:10px;
+    border-left:5px solid #2196f3;
+    margin:10px 0;
+}
+.note{
+    background:#fff8e1;
+    padding:10px;
+    border-left:5px solid #ffc107;
+}
+</style>
+</head>
+
+<body>
+
+<h1>CHƯƠNG 3: TÍCH PHÂN ĐƯỜNG VÀ TÍCH PHÂN MẶT</h1>
+
+<!-- DẠNG 1 -->
+<h2>DẠNG 1: TÍCH PHÂN ĐƯỜNG LOẠI MỘT</h2>
+
+<div class="box">
+<h3>Công thức cơ bản</h3>
+
+<div class="math">
+$$
+ds=\sqrt{[x'(t)]^2+[y'(t)]^2}\,dt
+$$
+</div>
+
+<p>Nếu đường cong được tham số hóa theo biến \(t\), ta luôn đưa tích phân đường loại một về tích phân một biến bằng công thức trên.</p>
+</div>
+
+<div class="box">
+<h3>Câu 1</h3>
+
+<p>Cho đường cong</p>
+
+<div class="math">
+$$
+C:
+\begin{cases}
+x=2\cos t\\
+y=2\sin t
+\end{cases}
+\qquad
+0\le t\le\pi
+$$
+</div>
+
+<p>Tính:</p>
+
+<div class="math">
+$$
+I=\int_C x^2\,ds
+$$
+</div>
+
+<p><b>Bước 1.</b></p>
+
+<div class="math">
+$$
+x'(t)=-2\sin t,\qquad y'(t)=2\cos t
+$$
+</div>
+
+<p><b>Bước 2.</b></p>
+
+<div class="math">
+$$
+[x'(t)]^2+[y'(t)]^2
+=
+4\sin^2 t+4\cos^2 t
+=
+4
+$$
+
+$$
+ds=2dt
+$$
+</div>
+
+<p><b>Bước 3.</b></p>
+
+<div class="math">
+$$
+I
+=
+\int_0^\pi
+(2\cos t)^2\cdot2\,dt
+=
+8\int_0^\pi \cos^2 t\,dt
+=
+4\pi
+$$
+</div>
+
+<p><b>Kết quả:</b> \(I=4\pi\).</p>
+
+</div>
+
+<div class="box">
+<h3>Câu 2</h3>
+
+<p>Đoạn thẳng nối \(A(0,2)\) và \(B(-2,-3)\).</p>
+
+<div class="math">
+$$
+I=\int_L (x^2-y)\,ds
+$$
+</div>
+
+<p>Tham số hóa:</p>
+
+<div class="math">
+$$
+\overrightarrow{AB}=(-2,-5)
+$$
+
+$$
+\begin{cases}
+x=-2t\\
+y=2-5t
+\end{cases}
+\qquad 0\le t\le1
+$$
+</div>
+
+<p>Tính:</p>
+
+<div class="math">
+$$
+x'=-2,\qquad y'=-5
+$$
+
+$$
+ds=\sqrt{29}\,dt
+$$
+</div>
+
+<div class="math">
+$$
+I
+=
+\int_0^1
+\Big[(-2t)^2-(2-5t)\Big]
+\sqrt{29}\,dt
+=
+\frac{13}{6}\sqrt{29}
+$$
+</div>
+
+</div>
+
+<div class="box">
+<h3>Câu 3</h3>
+
+<p>Đường cong:</p>
+
+<div class="math">
+$$
+y=x^2
+$$
+</div>
+
+<p>nối \(O(0,0)\) và \(A(-2,4)\).</p>
+
+<div class="math">
+$$
+I=
+\int_{\overset{\frown}{OA}}
+\frac{3y}{\sqrt{4x^2+1}}\,ds
+$$
+</div>
+
+<p>Chọn tham số \(t=x\).</p>
+
+<div class="math">
+$$
+y=x^2
+$$
+
+$$
+y'=2x
+$$
+
+$$
+ds=\sqrt{1+(2x)^2}\,dx
+=
+\sqrt{4x^2+1}\,dx
+$$
+</div>
+
+<div class="math">
+$$
+I
+=
+\int_0^{-2}
+\frac{3x^2}{\sqrt{4x^2+1}}
+\cdot
+\sqrt{4x^2+1}\,dx
+$$
+
+$$
+=
+\int_0^{-2}
+3x^2\,dx
+=
+-8
+$$
+</div>
+
+</div>
+
+<!-- DẠNG 2 -->
+<h2>DẠNG 2: TÍCH PHÂN ĐƯỜNG LOẠI HAI</h2>
+
+<div class="box">
+
+<h3>Công thức</h3>
+
+<div class="math">
+$$
+I=
+\int_C P\,dx+Q\,dy
+$$
+</div>
+
+<p>Khi tham số hóa theo \(t\):</p>
+
+<div class="math">
+$$
+dx=x'(t)\,dt,
+\qquad
+dy=y'(t)\,dt
+$$
+</div>
+
+</div>
+
+<div class="box">
+<h3>Câu 7</h3>
+
+<div class="math">
+$$
+x=t^2,
+\qquad
+y=4-t
+$$
+</div>
+
+<p>Từ \(A(0,4)\) đến \(B(4,6)\).</p>
+
+<div class="math">
+$$
+I=
+\int_{\overset{\frown}{AB}}
+x\,dx+(x-y)\,dy
+$$
+</div>
+
+<p>Tìm cận:</p>
+
+<div class="math">
+$$
+A(0,4)\Rightarrow t=0
+$$
+
+$$
+B(4,6)\Rightarrow t=-2
+$$
+</div>
+
+<p>Do đó:</p>
+
+<div class="math">
+$$
+dx=2t\,dt,
+\qquad
+dy=-dt
+$$
+</div>
+
+<div class="math">
+$$
+I
+=
+\int_0^{-2}
+\Big[
+t^2(2t)
++
+(t^2-(4-t))(-1)
+\Big]
+dt
+=
+\frac{34}{3}
+$$
+</div>
+
+</div>
+
+<div class="box">
+<h3>Câu 8 - Điều kiện độc lập đường đi</h3>
+
+<div class="math">
+$$
+P\,dx+Q\,dy
+$$
+</div>
+
+<p>Tích phân không phụ thuộc đường đi khi:</p>
+
+<div class="math">
+$$
+\frac{\partial P}{\partial y}
+=
+\frac{\partial Q}{\partial x}
+$$
+</div>
+
+</div>
+
+<!-- DẠNG 3 -->
+<h2>DẠNG 3: CÔNG SINH BỞI LỰC</h2>
+
+<div class="box">
+
+<div class="math">
+$$
+\vec F
+=
+P\vec i
++
+Q\vec j
+$$
+</div>
+
+<p>Công của lực:</p>
+
+<div class="math">
+$$
+W
+=
+\int_C P\,dx+Q\,dy
+$$
+</div>
+
+<h3>Câu 11</h3>
+
+<div class="math">
+$$
+\vec F
+=
+3x^2\vec i
++
+2y\vec j
+$$
+</div>
+
+<div class="math">
+$$
+C:\ y=x^2
+$$
+</div>
+
+<p>Từ \(A(2,4)\) đến \(B(-1,1)\).</p>
+
+<div class="math">
+$$
+dy=2x\,dx
+$$
+</div>
+
+<div class="math">
+$$
+W
+=
+\int_2^{-1}
+\Big[
+3x^2
++
+2x^2(2x)
+\Big]dx
+$$
+
+$$
+=
+\int_2^{-1}
+(3x^2+4x^3)\,dx
+=
+-24
+$$
+</div>
+
+</div>
+
+<!-- DẠNG 4 -->
+<h2>DẠNG 4: TÍCH PHÂN MẶT LOẠI MỘT</h2>
+
+<div class="box">
+
+<h3>Công thức</h3>
+
+<div class="math">
+$$
+dS
+=
+\sqrt{
+1+
+\left(\frac{\partial z}{\partial x}\right)^2
++
+\left(\frac{\partial z}{\partial y}\right)^2
+}
+\,dxdy
+$$
+</div>
+
+</div>
+
+<div class="box">
+
+<h3>Câu 15</h3>
+
+<p>Mặt nón:</p>
+
+<div class="math">
+$$
+z=\sqrt{x^2+y^2}
+$$
+</div>
+
+<p>nằm dưới mặt phẳng \(z=1\).</p>
+
+<div class="math">
+$$
+z_x=\frac{x}{\sqrt{x^2+y^2}},
+\qquad
+z_y=\frac{y}{\sqrt{x^2+y^2}}
+$$
+</div>
+
+<div class="math">
+$$
+dS
+=
+\sqrt2\,dxdy
+$$
+</div>
+
+<p>Miền chiếu:</p>
+
+<div class="math">
+$$
+x^2+y^2\le1
+$$
+</div>
+
+<div class="math">
+$$
+S
+=
+\sqrt2\cdot\pi
+=
+\pi\sqrt2
+$$
+</div>
+
+</div>
+
+<!-- DẠNG 5 -->
+<h2>DẠNG 5: TÍCH PHÂN MẶT LOẠI HAI</h2>
+
+<div class="box">
+
+<h3>Định lý Gauss – Ostrogradsky</h3>
+
+<div class="math">
+$$
+\iint_S
+P\,dydz
++
+Q\,dzdx
++
+R\,dxdy
+=
+\iiint_V
+\left(
+\frac{\partial P}{\partial x}
++
+\frac{\partial Q}{\partial y}
++
+\frac{\partial R}{\partial z}
+\right)dV
+$$
+</div>
+
+</div>
+
+<div class="box">
+
+<h3>Câu 22</h3>
+
+<div class="math">
+$$
+I=
+\iint_S
+3x\,dydz
++
+2z\,dzdx
++
+dxdy
+$$
+</div>
+
+<p>Mặt cầu:</p>
+
+<div class="math">
+$$
+x^2+y^2+z^2\le2z
+$$
+</div>
+
+<div class="math">
+$$
+x^2+y^2+(z-1)^2\le1
+$$
+</div>
+
+<p>Áp dụng Gauss:</p>
+
+<div class="math">
+$$
+\frac{\partial(3x)}{\partial x}=3
+$$
+
+$$
+\frac{\partial(2z)}{\partial y}=0
+$$
+
+$$
+\frac{\partial(1)}{\partial z}=0
+$$
+</div>
+
+<div class="math">
+$$
+I
+=
+\iiint_V 3\,dV
+=
+3V
+$$
+</div>
+
+<div class="math">
+$$
+V
+=
+\frac43\pi
+$$
+</div>
+
+<div class="math">
+$$
+I
+=
+3\cdot\frac43\pi
+=
+4\pi
+$$
+</div>
+
+</div>
+
+<div class="note">
+<b>TÓM TẮT CẦN NHỚ</b>
+
+<ul>
+<li>Tích phân đường loại 1: dùng \(ds\).</li>
+<li>Tích phân đường loại 2: thay trực tiếp \(dx,dy\).</li>
+<li>Công của lực chính là tích phân đường loại 2.</li>
+<li>Tích phân mặt loại 1: dùng công thức \(dS\).</li>
+<li>Tích phân mặt loại 2 trên mặt kín: ưu tiên dùng định lý Gauss.</li>
+</ul>
+
+</div>
+
+</body>
+</html>
