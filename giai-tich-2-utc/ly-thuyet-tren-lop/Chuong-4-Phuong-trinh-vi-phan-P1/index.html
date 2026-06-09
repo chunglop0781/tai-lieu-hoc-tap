@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài Giảng Phương Trình Vi Phân</title>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            options: {
+                ignoreHtmlClass: 'tex2jax_ignore',
+                processHtmlClass: 'tex2jax_process'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #2c3e50;
+            color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 26px;
+        }
+        .board-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-left: 5px solid #3498db;
+        }
+        .board-card h2 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 18px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .math-block {
+            font-size: 18px;
+            overflow-x: auto;
+        }
+        .highlight {
+            border: 1px solid #e74c3c;
+            padding: 10px;
+            border-radius: 4px;
+            background-color: #fdf2f2;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>TỔNG HỢP NỘI DUNG BÀI GIẢNG PHƯƠNG TRÌNH VI PHÂN</h1>
+    </header>
+
+    <div class="board-card">
+        <h2>Hình 1: § PTVP cấp 2</h2>
+        <div class="math-block">
+            <p>$\oint$ PTVP cấp 2 .</p>
+            <p><strong>I. KN cơ bản</strong></p>
+            <p style="padding-left: 20px;">$F(x, y, y', y'') = 0$</p>
+            <p style="padding-left: 20px; letter-spacing: 5px;">_ _ _</p>
+            <br>
+            <div>
+                $y'' - 1 = 0$<br><br>
+                $y'^3 - x y'' + 1 = 0$
+                <span style="font-style: italic; color: #7f8c8d; margin-left: 20px;">| là pTVP cấp 2</span>
+            </div>
+            <br>
+            <p><strong>* Nghiệm tổng quát:</strong> <span style="text-decoration: underline; font-size: 20px;">$y = \varphi(x, C_1, C_2)$</span></p>
+        </div>
+    </div>
+
+    <div class="board-card">
+        <h2>Hình 2: ② . pTVP tuyến tính cấp 1</h2>
+        <div class="math-block">
+            <p>② . pTVP tuyến tính cấp 1</p>
+            <p style="padding-left: 40px;">$y' + p(x)y = q(x)$</p>
+            <p>$q(x) \equiv 0 \Rightarrow y' + p(x)y = 0$ : pt thuần nhất</p>
+            <p>$q(x) \neq 0 \Rightarrow y' + p(x)y = q(x)$ : pt k° . . .</p>
+            <br>
+            <p><strong>* <u>PTTN</u> :</strong> &nbsp;&nbsp;&nbsp;&nbsp; $y' + p(x)y = 0$</p>
+            <p>$$\Rightarrow y = C \cdot e^{-\int p(x)dx}$$</p>
+            <p><strong><u>VD</u> :</strong> &nbsp;&nbsp;&nbsp;&nbsp; $y' - 2xy = 0$</p>
+            <p style="padding-left: 40px;">$$\Rightarrow y = C \cdot e^{-\int -2xdx}$$</p>
+            <p style="padding-left: 80px;">$y = C \cdot e^{x^2}$</p>
+        </div>
+    </div>
+
+    <div class="board-card">
+        <h2>Hình 3: Ví dụ b)</h2>
+        <div class="math-block">
+            <p style="text-align: right; font-size: 16px;">$$\int e^{ax+b}dx = \frac{1}{a} e^{ax+b}$$</p>
+            <p>b, $y' = e^{\frac{3y}{x}} + \frac{y}{x}$</p>
+            <p>Đặt $\frac{y}{x} = u \Rightarrow y = x \cdot u \Rightarrow y' = u + u'x$</p>
+            <p style="padding-left: 20px;">$\Rightarrow u'x + u = e^{3u} + u$</p>
+            <p style="padding-left: 20px;">$\Rightarrow \frac{du}{dx} \cdot x = e^{3u} \Rightarrow \frac{du}{e^{3u}} = \frac{dx}{x} \Rightarrow \int \frac{du}{e^{3u}} = \ln|x| + C$</p>
+            <br>
+            <p>$\Leftrightarrow \int \frac{du}{e^{3u}} = \ln|x| + C$</p>
+            <p>$\Leftrightarrow \int e^{-3u} du = \ln|x| + C$</p>
+            <p>$\Leftrightarrow -\frac{1}{3e^{3u}} = \ln|x| + C$</p>
+        </div>
+    </div>
+
+    <div class="board-card" style="border-left-color: #e67e22;">
+        <h2>Hình 4: Ví dụ 1,</h2>
+        <div class="math-block">
+            <p>1,</p>
+            <p>Đặt: $\frac{y}{x} = u \Rightarrow y' = u'x + u$</p>
+            <br>
+            <p>Thay vào có:</p>
+            <p style="padding-left: 20px;">$u'x + u = u^2 + u + 4$</p>
+            <p style="padding-left: 20px;">$\Leftrightarrow u'x = u^2 + 4$</p>
+            <p style="padding-left: 20px;">$\Leftrightarrow \frac{du}{u^2+4} = \frac{dx}{x}$ &nbsp;&nbsp;&nbsp;&nbsp; (1)</p>
+            <br>
+            <p>Lấy tích phân 2 vế của (1)</p>
+            <p style="padding-left: 20px;">$$\int \frac{du}{u^2+4} = \int \frac{dx}{x}$$</p>
+            <div class="highlight" style="display: block; margin: 15px 0;">
+                $\Leftrightarrow \frac{1}{2} \arctan \frac{u}{2} = \ln|x| + C$
+            </div>
+            <p style="padding-left: 20px;">$\Leftrightarrow \frac{u}{2} = \tan(2\ln|x| + C')$</p>
+            <p style="padding-left: 20px;">$\Rightarrow y = 2x \cdot \tan(2\ln|x| + C')$</p>
+        </div>
+    </div>
+
+    <div class="board-card">
+        <h2>Hình 5: ① p(x)dx + Q(y)dy = 0</h2>
+        <div class="math-block">
+            <p>危機 &nbsp;&nbsp;&nbsp;&nbsp; $p(x)dx + Q(y)dy = 0$</p>
+            <p><strong>* PT k° TN:</strong></p>
+            <p style="padding-left: 40px;">$y' + p(x)y = q(x)$</p>
+            <p>$$\Rightarrow y = \left( C + \int q(x) e^{\int p(x)dx} dx \right) e^{-\int p(x)dx}$$</p>
+            <br>
+            <p><strong><u>VD</u> . Giải:</strong> &nbsp;&nbsp;&nbsp;&nbsp; $y' + 2xy = x \;\; ; \;\; y(0) = -1$</p>
+            <p>$$y = \left( C + \int x e^{\int 2xdx} dx \right) e^{-\int 2xdx}$$</p>
+            <p>$$= \left( C + \int x e^{x^2} dx \right) e^{-x^2}$$</p>
+            <p>$$= \left( C + \frac{1}{2} \int e^{x^2} d(x^2) \right) e^{-x^2} = \left( C + \frac{1}{2} e^{x^2} \right) e^{-x^2}$$</p>
+            <p style="text-align: right; padding-right: 100px;">$y = C \cdot e^{-x^2} + \frac{1}{2}$</p>
+        </div>
+    </div>
+
+    <div class="board-card" style="border-left-color: #9b59b6;">
+        <h2>Hình 6: Bài tập mẫu Cauchy</h2>
+        <div class="math-block">
+            <p>$$y' - \frac{4}{x+1}y = 2(x+1)$$</p>
+            <p>$$\Rightarrow y = \left( C + \int 2(x+1) \cdot e^{\int -\frac{4}{x+1}dx} dx \right) \cdot e^{\int \frac{4}{x+1}dx}$$</p>
+            <p>$$= \left( C + \int 2(x+1) \cdot e^{-4\ln|x+1|} dx \right) \cdot e^{4\ln|x+1|}$$</p>
+            <p>$$= \left( C + \int \frac{2 \cdot (x+1)}{(x+1)^4} dx \right) \cdot (x+1)^4$$</p>
+            <p>$$= \left( C + 2 \frac{(x+1)^{-2}}{-2} \right) (x+1)^4$$</p>
+            <p>$$= \left( C - (x+1)^{-2} \right) \cdot (x+1)^4$$</p>
+            <p>$$= C \cdot (x+1)^4 - (x+1)^2$$</p>
+            <br>
+            <p style="padding-left: 40px;">Mà $y(0) = 2 \Rightarrow C - 1 = 2 \Rightarrow C = 3$</p>
+            <p>$$\Rightarrow y = 3(x+1)^4 - (x+1)^2$$</p>
+        </div>
+    </div>
+
+    <div class="board-card">
+        <h2>Hình 7: * PT Becnulli</h2>
+        <div class="math-block">
+            <p>② . pTVP tuyến tính cấp 1</p>
+            <p style="padding-left: 40px;">$y' + p(x)y = q(x)$</p>
+            <br>
+            <p><strong>* PT Becnulli:</strong></p>
+            <p style="padding-left: 40px;">$y' + p(x)y = q(x) \cdot \underline{y^\alpha} \;\; (\alpha \neq 0 ; 1)$</p>
+            <p>Chia 2 vế cho $y^\alpha$ :</p>
+            <p style="padding-left: 20px;">$\underline{y^{-\alpha} y'} + p(x) \underline{y^{1-\alpha}} = q(x)$</p>
+            <br>
+            <p>Đặt $y^{1-\alpha} = u \Rightarrow u' = (1-\alpha) \cdot \underline{y^{-\alpha} y'}$</p>
+            <p style="padding-left: 80px;">$\Rightarrow y^{-\alpha} y' = \frac{u'}{1-\alpha}$</p>
+            <p style="padding-left: 40px;">$$\frac{u'}{1-\alpha} + p(x) \cdot u = q(x)$$</p>
+        </div>
+    </div>
+
+    <div class="board-card" style="border-left-color: #1abc9c;">
+        <h2>Hình 8: ③ pT VP toàn phần</h2>
+        <div class="math-block">
+            <p>② . pTVP tuyến tính cấp 1</p>
+            <p style="padding-left: 40px;">$y' + p(x)y = q(x)$</p>
+            <br>
+            <p>③ <strong>pT VP toàn phần</strong></p>
+            <p style="padding-left: 40px;">$p(x,y)dx + Q(x,y)dy = 0$ &nbsp;&nbsp;&nbsp;&nbsp; (1)</p>
+            <p>Nếu $P'_y = Q'_x$</p>
+            <p style="padding-left: 20px;">$$\int_{x_0}^{x} p(x,y)dx + \int_{y_0}^{y} Q(x_0,y)dy = C$$</p>
+            <p>hoặc . . .</p>
+            <p style="padding-left: 20px;">$$\int_{x_0}^{x} p(x,y_0)dx + \int_{y_0}^{y} Q(x,y)dy = C$$</p>
+            <p>Với $(x_0, y_0)$ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\begin{cases} x_0 = 0 \\ y_0 = 0 \end{cases}$</p>
+        </div>
+    </div>
+
+    <div class="board-card">
+        <h2>Hình 9: VD Giải phương trình vi phân toàn phần</h2>
+        <div class="math-block">
+            <p>① &nbsp;&nbsp;&nbsp;&nbsp; $p(x)dx + Q(y)dy = 0$</p>
+            <br>
+            <p><strong><u>VD</u> &nbsp;&nbsp; Giải:</strong></p>
+            <p style="padding-left: 40px;">$(2xy + x^3)dx + (x^2 - y^2 - 1)dy = 0$ &nbsp;&nbsp;&nbsp;&nbsp; (1)</p>
+            <br>
+            <p style="padding-left: 20px;">$p = 2xy + x^3 \rightarrow P'_y = 2x$</p>
+            <p style="padding-left: 20px;">$Q = x^2 - y^2 - 1 \rightarrow Q'_x = 2x$</p>
+            <br>
+            <p>$P'_y = Q'_x \Rightarrow (1)$ là pTVP toàn phần</p>
+            <p>Chọn $\begin{cases} x_0 = 0 \\ y_0 = 0 \end{cases}$</p>
+        </div>
+    </div>
+
+    <div class="board-card" style="border-left-color: #2ecc71;">
+        <h2>Hình 10: Phần tiếp theo và kết luận</h2>
+        <div class="math-block">
+            <p>$p = x + y \Rightarrow P'_y = 1$</p>
+            <p>$Q = x - y \Rightarrow Q'_x = 1$</p>
+            <p>$\Rightarrow P'_y = Q'_x \Rightarrow (1)$ là pTVP toàn phần .</p>
+            <p style="padding-left: 20px;">$$\int_{0}^{x} (x+y)dx + \int_{0}^{y} -ydy = C$$</p>
+            <p style="padding-left: 40px;">$$\frac{x^2}{2} + xy - \frac{y^2}{2} = C$$</p>
+            <p style="text-align: right; padding-right: 100px;">$y(0) = 0$</p>
+            <p style="text-align: right; padding-right: 80px;">$\Rightarrow C = 0$</p>
+            <br>
+            <div style="text-align: center;">
+                <span class="highlight" style="font-size: 22px; border: 2px solid #27ae60; background-color: #f1f9f5;">
+                    $$\frac{x^2}{2} + xy - \frac{y^2}{2} = 0$$
+                </span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
