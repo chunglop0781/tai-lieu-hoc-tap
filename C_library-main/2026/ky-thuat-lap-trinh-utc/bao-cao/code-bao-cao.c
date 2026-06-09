@@ -169,32 +169,40 @@ void nhapThongTin(SinhVien *sv) {
     printf("--- Nhap thong tin sinh vien moi ---\n");
     printf("MSSV: ");
     scanf("%14s", sv->mssv);
-    getchar(); // xoa buffer
+    while (getchar() != '\n');
     printf("Ho ten: ");
     fgets(sv->ho_ten, 50, stdin);
     sv->ho_ten[strcspn(sv->ho_ten, "\n")] = 0;
     printf("Ngay sinh: ");
     scanf("%11s", sv->ngay_sinh);
+    while (getchar() != '\n');
     printf("Lop: ");
-    scanf("%29s", sv->lop);
+    fgets(sv->lop, 30, stdin);
+    sv->lop[strcspn(sv->lop, "\n")] = 0;
     printf("Email: ");
     scanf("%49s", sv->email);
-    getchar();
+    while (getchar() != '\n');
     printf("Nganh: ");
     fgets(sv->nganh, 50, stdin);
     sv->nganh[strcspn(sv->nganh, "\n")] = 0;
     printf("Khoa: ");
     scanf("%9s", sv->khoa);
+    while (getchar() != '\n');
     printf("Tinh trang: ");
-    scanf("%19s", sv->tinh_trang);
+    fgets(sv->tinh_trang, 20, stdin);
+    sv->tinh_trang[strcspn(sv->tinh_trang, "\n")] = 0;
     printf("Chuyen can: ");
     scanf("%f", &sv->chuyen_can);
     printf("Qua trinh: ");
     scanf("%f", &sv->qua_trinh);
     printf("Thi: ");
     scanf("%f", &sv->thi);
-    sv->gpa = sv->chuyen_can * 0.1 + sv->qua_trinh * 0.3 + sv->thi * 0.6;
+    sv->gpa = sv->chuyen_can * 0.1f
+            + sv->qua_trinh * 0.3f
+            + sv->thi * 0.6f;
     printf("GPA: %.2f\n", sv->gpa);
+    printf("\n=> Da them sinh vien co MSSV %s thanh cong!\n", sv->mssv);
+    while (getchar() != '\n');
 }
 
 /* ===== TIM KIEM SINH VIEN THEO TEN VA MSSV ===== */
