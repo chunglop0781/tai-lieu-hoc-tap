@@ -467,24 +467,63 @@ Node* buildList(SinhVien sv[], int count) {
 // CASE 9 — Sap xep
 // ============================================================
 void sapXepSinhVien(Node *head, int tieuChi, int order) {
-    if (head == NULL) return;
+    if (head == NULL) {
+        printf("Danh sach rong!\n");
+        return;
+    }
     for (Node *i = head; i->next != NULL; i = i->next) {
         Node *targetNode = i;
         for (Node *j = i->next; j != NULL; j = j->next) {
             int condition = 0;
-            if      (tieuChi == 1) condition = strcmp(j->data.ho_ten, targetNode->data.ho_ten);
-            else if (tieuChi == 2) condition = strcmp(j->data.mssv,   targetNode->data.mssv);
-            else if (tieuChi == 3) condition = (j->data.gpa > targetNode->data.gpa) ? 1 : -1;
+            if (tieuChi == 1)
+                condition = strcmp(j->data.ho_ten, targetNode->data.ho_ten);
+            else if (tieuChi == 2)
+                condition = strcmp(j->data.mssv, targetNode->data.mssv);
+            else if (tieuChi == 3) {
+                if (j->data.gpa > targetNode->data.gpa)
+                    condition = 1;
+                else if (j->data.gpa < targetNode->data.gpa)
+                    condition = -1;
+                else
+                    condition = 0;
+            }
 
-            if ((order == 1 && condition < 0) || (order == 2 && condition > 0)) {
+            if ((order == 1 && condition < 0) ||
+                (order == 2 && condition > 0)) {
                 targetNode = j;
             }
         }
-        SinhVien temp  = i->data;
-        i->data        = targetNode->data;
+        SinhVien temp = i->data;
+        i->data = targetNode->data;
         targetNode->data = temp;
     }
+    FILE *fout = fopen(
+        "D:\\bai tap dh\\2026.06\\bao-cao\\sap-xep.txt",
+        "w"
+    );
+    if (fout == NULL) {
+        printf("Khong mo duoc file sap-xep.txt\n");
+        return;
+    }
+    fprintf(fout,
+            "=============================================================\n");
+    fprintf(fout,
+            "| %-10s | %-30s | %-5s |\n",
+            "MSSV", "HO TEN", "GPA");
+    fprintf(fout,
+            "=============================================================\n");
+    for (Node *p = head; p != NULL; p = p->next) {
+        fprintf(fout,
+                "| %-10s | %-30s | %5.2f |\n",
+                p->data.mssv,
+                p->data.ho_ten,
+                p->data.gpa);
+    }
+    fprintf(fout,
+            "=============================================================\n");
+    fclose(fout);
     printf("Da sap xep danh sach thanh cong.\n");
+    printf("Da luu ket qua vao file sap-xep.txt\n");
 }
 // ============================================================
 // CASE 10 — Thong ke theo lop
