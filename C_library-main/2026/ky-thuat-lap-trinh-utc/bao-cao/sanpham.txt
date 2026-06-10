@@ -1,0 +1,9 @@
+masp tensp loai size mau gianhap giaban soluong
+101 Aothun basic Aothun M Den 80000.00 150000.00 50
+102 Ao croptop Aothun S Trang 90000.00 170000.00 40
+201 Somi slimfit Aosomi L Xanh 200000.00 350000.00 30
+202 Somi oxford Aosomi XL Xam 220000.00 380000.00 25
+301 Quanjean skinny Quanjean M Den 300000.00 550000.00 20
+302 Quankaki classic Quankaki L Nau 250000.00 450000.00 30
+401 Muluoitrai Phukien Freesize Den 50000.00 120000.00 100
+402 Tatcongan Phukien S Trang 10000.00 150000.00 200
