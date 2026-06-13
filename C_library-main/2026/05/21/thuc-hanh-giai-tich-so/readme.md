@@ -157,4 +157,48 @@ int main()
 
 # Cho hàm số f(x) = (sin(x)) / (x ^ 2 + 1) và số nguyên dương n (n > 2) hãy tính giá trị cho n mốc cách đều trong đoạn [2,3] và coi đó là các mốc nội suy. Sử dụng đa thức nội suy Lagrange để nội suy hàm số f(x) trên [2,3]. Từ đó, tính gần đúng f(x*) với x* ∈ [2,3] nhập từ bàn phím.
 ```
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+double f(float x){
+    return sin(x)/(pow(x,2)+1);
+}
+
+void NhapVaIn(float x[], float y[], int n){
+    printf("Nhap cac gia tri x:\n");
+    for(int i = 0; i <= n; i++){
+        printf("Nhap x[%d] = ", i);
+        scanf("%f", &x[i]);
+        y[i] = f(x[i]);
+    }
+    printf("Cac gia tri vua nhap la:\n");
+    for(int i = 0; i <= n; i++){
+        printf("(%.2f, %.6f)\n", x[i], y[i]);
+    }
+}
+
+void lagrange(float x[], float y[], int n){
+    float P = 0, L, x0;
+    printf("Nhap x* = "); scanf("%f", &x0);
+    for(int i = 0; i <= n; i++){
+        L = 1;
+        for(int j = 0; j <= n; j++){
+            if(i != j){
+                L *= (x0 - x[j])/(x[i]-x[j]);
+            }
+        }
+        P += L * y[i];
+    }
+    printf("Gia tri gan dung cua ham so f(x) tai x* la: %.6f\n", P);
+}
+
+int main(){
+    int n;
+    printf("Nhap n = "); scanf("%d", &n);
+    float x[n+1], y[n+1];
+    NhapVaIn(x, y, n);
+    lagrange(x, y, n);
+    return 0;
+}
 ```
