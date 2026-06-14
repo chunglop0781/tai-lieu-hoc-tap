@@ -48,6 +48,59 @@ int main(){
     return 0;
 }
 ```
+# NewtonTien
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+void nhap(int n, float y[]){
+    printf("Vui long nhap y[i]:\n");
+    for(int i = 0; i < n; i++){
+        printf("y[%d] = ", i); scanf("%f", &y[i]);
+    }
+}
+
+void saiPhanCap1(int n, float y[], float D[]){
+    for(int i = 0; i < n - 1; i++){
+        D[i] = y[i+1] - y[i];
+    }
+}
+
+void saiPhanCapCao(int n, float D[], int j){
+    for(int i = 0; i < n - 1; i++){
+        D[i] = D[i+1] - D[i];
+    }
+}
+
+float newton(int n, float x0, float input_x, float h, float y[], float D[]){
+    float t = (input_x - x0)/h;
+    float k = t;
+    saiPhanCap1(n, y, D);
+    float input_y = y[0] + t * D[0];
+    for(int j = 2; j < n; j++){
+        saiPhanCapCao(n, D, j);
+        k *= (t-j+1)/j;
+        input_y += k * D[0];
+    }
+    return input_y;
+}
+
+void xuat(float input_y){
+    printf("\ny = %.4f\n", input_y);
+}
+
+int main(){
+    float x0, input_x, h; int n;
+    printf("Vui long nhap x[0], x, h, n: ");
+    scanf("%f %f %f %d", &x0, &input_x, &h, &n);
+    float y[n], x[n], D[n];
+    nhap(n, y);
+    float result = newton(n, x0, input_x, h, y, D);
+    xuat(result);
+    return 0;
+}
+```
 # NoiSuyNewtonTrenLuoiKhongDeu
 ```
 #include<stdio.h>
