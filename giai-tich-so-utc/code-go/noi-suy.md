@@ -6,7 +6,6 @@
 void Nhap(float x[], float y[], int *n){
     printf("Nhap n = ");
     scanf("%d", n);
-    printf("Nhap cac bo gia tri (x,y):\n");
     for(int i = 0; i < *n; i++){
         printf("x[%d] = ", i);
         scanf("%f", &x[i]);
@@ -16,7 +15,6 @@ void Nhap(float x[], float y[], int *n){
 }
 
 void In(float x[], float y[], int n){
-    printf("Cac diem vua nhap:\n");
     for(int i = 0; i < n; i++){
         printf("(%.2f, %.2f) ", x[i], y[i]);
     }
@@ -34,9 +32,8 @@ void Lagrange(float x[], float y[], int n){
                 L *= (x0 - x[j]) / (x[i] - x[j]);
             }
         }
-        P += L * y[i];
+        P += y[i] * L;
     }
-
     printf("f(x*) = %.6f\n", P);
 }
 
@@ -47,6 +44,18 @@ int main(){
     In(x, y, n);
     Lagrange(x, y, n);
     return 0;
+// test f(x)=x^2+1
+// n = 4
+// x[0] = 0
+// y[0] = 1
+// x[1] = 1
+// y[1] = 2
+// x[2] = 2
+// y[2] = 9
+// x[3] = 3
+// y[3] = 28
+// x* = 1.5
+// f(1.5) = 4.375
 }
 ```
 # NewtonTien
@@ -55,47 +64,128 @@ int main(){
 #include <stdlib.h>
 #include <math.h>
 
-void nhap(int n, float y[]){
-    for(int i = 0; i < n; i++){
+void nhapDuLieu(int *n, double *x0, double *x, double *h, double D[]) {
+    int i;
+    printf("Nhap n: ");
+    scanf("%d", n);
+    printf("Nhap x0: ");
+    scanf("%lf", x0);
+    printf("Nhap x can tinh: ");
+    scanf("%lf", x);
+    printf("Nhap h: ");
+    scanf("%lf", h);
+    printf("Nhap cac gia tri y:\n");
+    for (i = 0; i <= *n; i++) {
         printf("y[%d] = ", i);
-        scanf("%f", &y[i]);
+        scanf("%lf", &D[i]);
     }
 }
 
-void saiPhan(float y[], float D[][50], int n){
-    for(int i = 0; i < n; i++){
-        D[i][0] = y[i];
+void noiSuyNewton(int n, double x0, double x, double h, double D[]) {
+    int i, j;
+    double y0 = D[0];
+    double t = (x - x0) / h;
+    double k = t;
+    double ketQua;
+    for (i = 0; i < n; i++) {
+        D[i] = D[i + 1] - D[i];
     }
-    for(int j = 1; j < n; j++){
-        for(int i = 0; i < n - j; i++){
-            D[i][j] = D[i+1][j-1] - D[i][j-1];
+    ketQua = y0 + t * D[0];
+    for (j = 2; j <= n; j++) {
+        for (i = 0; i <= n - j; i++) {
+            D[i] = D[i + 1] - D[i];
         }
+        k = k * (t - j + 1) / j;
+        ketQua = ketQua + k * D[0];
     }
+    printf("\nKet qua = %lf\n", ketQua);
 }
 
-float NewtonTien(int n, float x0, float x, float h, float y[]){
-    float D[50][50];
-    saiPhan(y, D, n);
-    float t = (x - x0) / h;
-    float P = D[0][0];
-    float k = 1;
-    for(int j = 1; j < n; j++){
-        k *= (t - (j - 1)) / j;
-        P += k * D[0][j];
-    }
-    return P;
-}
-
-int main(){
+int main() {
     int n;
-    float x0, x, h;
-    printf("Nhap x0, x, h, n: ");
-    scanf("%f %f %f %d", &x0, &x, &h, &n);
-    float y[50];
-    nhap(n, y);
-    float kq = NewtonTien(n, x0, x, h, y);
-    printf("f(x) = %.6f\n", kq);
+    double x0, x, h;
+    double *D = (double *)malloc(100 * sizeof(double));
+    nhapDuLieu(&n, &x0, &x, &h, D);
+    noiSuyNewton(n, x0, x, h, D);
+    free(D);
     return 0;
+// test f(x)=x^2+1
+// n = 3
+// x0 = 0
+// x can tinh = 1.5
+// h = 1
+// y[0] = 1
+// y[1] = 2
+// y[2] = 9
+// y[3] = 28
+// Ket qua = 4.375000
+}
+```
+# NewtonLui
+```
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+void NhapDuLieu(int *n, double x[], double y[]) {
+    printf("Nhap bac cua da thuc n = ");
+    scanf("%d", n);
+    printf("Nhap cac gia tri x:\n");
+    for (int i = 0; i <= *n; i++) {
+        printf("x[%d] = ", i);
+        scanf("%lf", &x[i]);
+    }
+    printf("Nhap cac gia tri y:\n");
+    for (int i = 0; i <= *n; i++) {
+        printf("y[%d] = ", i);
+        scanf("%lf", &y[i]);
+    }
+}
+
+void NewtonLui(int n, double x[], double y[]) {
+    double xCanTinh;
+    printf("Nhap x can tinh: ");
+    scanf("%lf", &xCanTinh);
+    double h = x[1] - x[0];
+    double *D = (double *)malloc((n + 1) * sizeof(double));
+    for (int i = 0; i <= n - 1; i++) {
+        D[i] = y[i + 1] - y[i];
+    }
+    double t = (xCanTinh - x[n]) / h;
+    double k = t;
+    double ketQua = y[n] + t * D[n - 1];
+    for (int j = 2; j <= n; j++) {
+        for (int i = 0; i <= n - j; i++) {
+            D[i] = D[i + 1] - D[i];
+        }
+        k = k * (t + j - 1) / j;
+        ketQua = ketQua + k * D[n - j];
+    }
+    printf("\nKet qua = %.6lf\n", ketQua);
+    free(D);
+}
+
+int main() {
+    int n;
+    double *x = (double *)malloc(100 * sizeof(double));
+    double *y = (double *)malloc(100 * sizeof(double));
+    NhapDuLieu(&n, x, y);
+    NewtonLui(n, x, y);
+    free(x);
+    free(y);
+    return 0;
+// test f(x)=x^2+1
+// n = 3
+// x[0] = 0
+// x[1] = 1
+// x[2] = 2
+// x[3] = 3
+// y[0] = 1
+// y[1] = 2
+// y[2] = 9
+// y[3] = 28
+// x can tinh = 2.5
+// Ket qua = 16.625000
 }
 ```
 # NoiSuyNewtonTrenLuoiKhongDeu
@@ -104,47 +194,61 @@ int main(){
 #include<stdlib.h>
 #include<math.h>
 
-void NewtonKhongDeu(int n, double x, double xi[], double yi[], double *y_out){
-    double F[50][50];
-    for(int i = 0; i < n; i++){
-        F[i][0] = yi[i];
+void NhapDuLieu(int *n, double x[], double y[]) {
+    printf("Nhap bac cua da thuc n = ");
+    scanf("%d", n);
+    printf("Nhap cac diem (x, y):\n");
+    for (int i = 0; i <= *n; i++) {
+        printf("x[%d] = ", i);
+        scanf("%lf", &x[i]);
+        printf("y[%d] = ", i);
+        scanf("%lf", &y[i]);
     }
-    for(int j = 1; j < n; j++){
-        for(int i = 0; i < n - j; i++){
-            F[i][j] = (F[i+1][j-1] - F[i][j-1]) /
-                      (xi[i+j] - xi[i]);
-        }
-    }
-    double result = F[0][0];
-    double k = 1;
-    for(int j = 1; j < n; j++){
-        k *= (x - xi[j-1]);
-        result += k * F[0][j];
-    }
-    *y_out = result;
 }
 
-int main(){
+void NewtonChiaSaiPhan(int n, double x[], double y[]) {
+    double xCanTinh;
+    printf("Nhap gia tri x can tinh: ");
+    scanf("%lf", &xCanTinh);
+    double F[100];
+    double ketQua = y[0];
+    double tich = xCanTinh - x[0];
+    for (int i = 0; i < n; i++) {
+        F[i] = (y[i + 1] - y[i]) / (x[i + 1] - x[i]);
+    }
+    ketQua = ketQua + F[0] * tich;
+    for (int j = 2; j <= n; j++) {
+        for (int i = 0; i <= n - j; i++) {
+            F[i] = (F[i + 1] - F[i]) / (x[i + j] - x[i]);
+        }
+        tich = tich * (xCanTinh - x[j - 1]);
+        ketQua = ketQua + F[0] * tich;
+    }
+    printf("\nKet qua = %.6lf\n", ketQua);
+}
+
+int main() {
     int n;
-    printf("n = ");
-    scanf("%d", &n);
-    double xi[50], yi[50];
-    for(int i = 0; i < n; i++){
-        printf("x[%d] = ", i);
-        scanf("%lf", &xi[i]);
-        printf("y[%d] = ", i);
-        scanf("%lf", &yi[i]);
-    }
-    int k;
-    printf("So diem can noi suy: ");
-    scanf("%d", &k);
-    for(int i = 0; i < k; i++){
-        double x, y;
-        printf("x = ");
-        scanf("%lf", &x);
-        NewtonKhongDeu(n, x, xi, yi, &y);
-        printf("f(%.5f) = %.10lf\n", x, y);
-    }
+    double x[100];
+    double y[100];
+    NhapDuLieu(&n, x, y);
+    NewtonChiaSaiPhan(n, x, y);
     return 0;
+// test f(x)=x^2+1
+// n = 3
+// x[0] = 0
+// y[0] = 1
+// x[1] = 1
+// y[1] = 2
+// x[2] = 3
+// y[2] = 10
+// x[3] = 4
+// y[3] = 17
+// x can tinh = 2
+// Ket qua = 5.000000
 }
 ```
+
+
+
+#### Lệnh: xoá ghi chú và viết lại code sao cho đơn giản với người đang học tập code cơ bản nhất (giữ nội dung chỉ là đặt biến bằng tiếng Việt để dễ hiểu với viết các lệnh cơ bản thôi với là vẫn chia void)
