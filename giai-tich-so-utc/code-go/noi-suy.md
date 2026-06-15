@@ -103,11 +103,9 @@ void noiSuyNewton(int n, double x0, double x, double h, double D[]) {
 
 int main() {
     int n;
-    double x0, x, h;
-    double *D = (double *)malloc(100 * sizeof(double));
+    double x0, x, h, D[100];
     nhapDuLieu(&n, &x0, &x, &h, D);
     noiSuyNewton(n, x0, x, h, D);
-    free(D);
     return 0;
 // test f(x)=x^2+1
 // n = 3
