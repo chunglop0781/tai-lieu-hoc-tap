@@ -9,7 +9,7 @@ void In(float x[], float y[], int n){
     }
     printf("\n");
 }
-void Langrange(float x[], float y[], int n){
+void Lagrange(float x[], float y[], int n){
     float x0, P = 0;
     printf("Nhap x* = "); scanf("%f", &x0);
     for(int i = 0; i < n; i++){
@@ -93,7 +93,7 @@ void NoiSuyNewtonTrenLuoiKhongDeu(int n, double x[], double y[]){
 
 int main(){
     int luaChon;
-    printf("1. Langrange.\n");
+    printf("1. Lagrange.\n");
     printf("2. NewtonTien.\n");
     printf("3. NewtonLui.\n");
     printf("4. NoiSuyNewtonTrenLuoiKhongDeu.\n");
@@ -106,7 +106,7 @@ int main(){
             printf("y[%d] = ", i); scanf("%f", &y[i]);
         }
         In(x, y, n);
-        Langrange(x, y, n);
+        Lagrange(x, y, n);
         // test f(x)=x^2+1
         // n = 4
         // x[0] = 0
