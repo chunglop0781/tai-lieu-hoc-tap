@@ -147,7 +147,6 @@ void TimX(int n, double b[100], double a[100][100], double x[100], int *loi){
         x[i] = tong / a[i][i];
     }
 }
-
 void Gauss(int n, double a[100][100], double b[100], double x[100], int *loi){
     *loi = 0;
     for (int cot = 1; cot <= n; cot++){
