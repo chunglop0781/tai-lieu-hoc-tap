@@ -7,7 +7,7 @@ void noiSuyNewtonTien(int n, double x0, double x, double h, double D[]){
 	double y0 = D[0];
 	double t = (x-x0)/h;
     double k = t;
-    double ketQua = y0;
+    double ketQua;
     for(int i = 0; i < n; i++){
         D[i] = D[i + 1] - D[i];
     }
