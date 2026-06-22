@@ -25,7 +25,7 @@ void tinhTichPhanHinhThang(double a, double b, int n){
 		}
     }
     I *= h / 3.0;
-    printf("\nGia tri gan dung cua tich phan la: %lf\n", I);
+    printf("\nGia tri gan dung cua tich phan la: %.5lf\n", I);
 }
 
 int main(){
