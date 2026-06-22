@@ -21,7 +21,7 @@ void NewtonLui(int n, double x[], double y[]){
         k = k * (t+j-1)/j;
         ketQua = ketQua + k * D[n - j];
     }
-    printf("\nKet qua = %lf\n", ketQua);
+    printf("\nKet qua = %.6lf\n", ketQua);
 }
 
 int main(){
