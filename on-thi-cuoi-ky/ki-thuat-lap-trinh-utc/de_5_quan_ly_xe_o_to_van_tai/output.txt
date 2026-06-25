@@ -1,0 +1,4 @@
+3 o to co trong tai nho nhat:
+Bien kiem soat: 1018 | Trong tai: 15.50 | Cong ty: B
+Bien kiem soat: 1033 | Trong tai: 14.00 | Cong ty: B
+Bien kiem soat: 1008 | Trong tai: 12.00 | Cong ty: A

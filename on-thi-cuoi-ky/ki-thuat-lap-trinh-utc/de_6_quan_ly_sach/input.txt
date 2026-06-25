@@ -1,0 +1,61 @@
+20
+Lap Trinh C Basic
+NXB Giao Duc
+65000
+Cau Truc Du Lieu
+NXB Tre
+120000
+Co So Du Lieu
+NXB Giao Duc
+150000
+Giai Thuat Toan Tap
+NXB Lao Dong
+45000
+Nhap Mon Code C
+NXB Tre
+50000
+Toan Roi Rac
+NXB Giao Duc
+95000
+Lap Trinh Mang
+NXB Bach Khoa
+110000
+He Dieu Hanh
+NXB Tre
+135000
+Tri Tue Nhan Tao
+NXB Bach Khoa
+250000
+Phat Trien Web
+NXB Lao Dong
+85000
+An Toan Thong Tin
+NXB Bach Khoa
+140000
+Lap Trinh Python
+NXB Tre
+75000
+Kien Truc May Tinh
+NXB Giao Duc
+90000
+Cong Nghe Phan Mem
+NXB Bach Khoa
+125000
+Dien Toan Dam May
+NXB Lao Dong
+180000
+Xu Ly Anh
+NXB Bach Khoa
+165000
+Huong Doi Tuong
+NXB Giao Duc
+85000
+Quan Ly Du An IT
+NXB Tre
+105000
+Phan Tich Thiet Ke
+NXB Bach Khoa
+115000
+Dai So Tuyen Tinh
+NXB Giao Duc
+55000

@@ -69,7 +69,7 @@ int main(){
 		printf("Loi file txt!\n");
 		return 1;
 	}
-	int n, m; fscanf(f, "%d %d", &n, &m);
+	int n, m; fscanf(f, "%d %d\n", &n, &m);
 	double *a = (double*)calloc(n+1, sizeof(double)); 
 	double *b = (double*)calloc(m+1, sizeof(double));
 	for(int i = 0; i <= n; i++){

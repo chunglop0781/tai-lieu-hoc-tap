@@ -1,0 +1,14 @@
+Nhung doan vien co nam ket nap tu sau nam 2007 va tuoi doan tinh den nam 2015:
+Ho ten: Hoang Minh Thu | Nam sinh: 1993 | Nam ket nap: 2008 | Tuoi doan: 7
+Ho ten: Tran Thi Binh | Nam sinh: 1992 | Nam ket nap: 2008 | Tuoi doan: 7
+Ho ten: Lam Chi Vinh | Nam sinh: 1991 | Nam ket nap: 2008 | Tuoi doan: 7
+Ho ten: Ly Minh Triet | Nam sinh: 1992 | Nam ket nap: 2009 | Tuoi doan: 6
+Ho ten: Bui Thi Hue | Nam sinh: 1992 | Nam ket nap: 2009 | Tuoi doan: 6
+Ho ten: Pham Minh Duc | Nam sinh: 1993 | Nam ket nap: 2010 | Tuoi doan: 5
+Ho ten: Phan Thanh Thao | Nam sinh: 1994 | Nam ket nap: 2010 | Tuoi doan: 5
+Ho ten: Dang Thanh Nam | Nam sinh: 1994 | Nam ket nap: 2011 | Tuoi doan: 4
+Ho ten: Cao Minh Khang | Nam sinh: 1993 | Nam ket nap: 2011 | Tuoi doan: 4
+Ho ten: Do Hoang Long | Nam sinh: 1995 | Nam ket nap: 2012 | Tuoi doan: 3
+Ho ten: Kieu Minh Tuan | Nam sinh: 1994 | Nam ket nap: 2012 | Tuoi doan: 3
+Ho ten: Mai Phuong Thuy | Nam sinh: 1995 | Nam ket nap: 2013 | Tuoi doan: 2
+Ho ten: Doan Van Hau | Nam sinh: 1996 | Nam ket nap: 2014 | Tuoi doan: 1

@@ -1,0 +1,21 @@
+Danh sach cua 20 dau sach theo thu tu giam dan cua gia:
+STT: 1 | Ten sach: Tri Tue Nhan Tao | Nha xuat ban: NXB Bach Khoa | Gia: 250000
+STT: 2 | Ten sach: Dien Toan Dam May | Nha xuat ban: NXB Lao Dong | Gia: 180000
+STT: 3 | Ten sach: Xu Ly Anh | Nha xuat ban: NXB Bach Khoa | Gia: 165000
+STT: 4 | Ten sach: Co So Du Lieu | Nha xuat ban: NXB Giao Duc | Gia: 150000
+STT: 5 | Ten sach: An Toan Thong Tin | Nha xuat ban: NXB Bach Khoa | Gia: 140000
+STT: 6 | Ten sach: He Dieu Hanh | Nha xuat ban: NXB Tre | Gia: 135000
+STT: 7 | Ten sach: Cong Nghe Phan Mem | Nha xuat ban: NXB Bach Khoa | Gia: 125000
+STT: 8 | Ten sach: Cau Truc Du Lieu | Nha xuat ban: NXB Tre | Gia: 120000
+STT: 9 | Ten sach: Phan Tich Thiet Ke | Nha xuat ban: NXB Bach Khoa | Gia: 115000
+STT: 10 | Ten sach: Lap Trinh Mang | Nha xuat ban: NXB Bach Khoa | Gia: 110000
+STT: 11 | Ten sach: Quan Ly Du An IT | Nha xuat ban: NXB Tre | Gia: 105000
+STT: 12 | Ten sach: Toan Roi Rac | Nha xuat ban: NXB Giao Duc | Gia: 95000
+STT: 13 | Ten sach: Kien Truc May Tinh | Nha xuat ban: NXB Giao Duc | Gia: 90000
+STT: 14 | Ten sach: Phat Trien Web | Nha xuat ban: NXB Lao Dong | Gia: 85000
+STT: 15 | Ten sach: Huong Doi Tuong | Nha xuat ban: NXB Giao Duc | Gia: 85000
+STT: 16 | Ten sach: Lap Trinh Python | Nha xuat ban: NXB Tre | Gia: 75000
+STT: 17 | Ten sach: Lap Trinh C Basic | Nha xuat ban: NXB Giao Duc | Gia: 65000
+STT: 18 | Ten sach: Dai So Tuyen Tinh | Nha xuat ban: NXB Giao Duc | Gia: 55000
+STT: 19 | Ten sach: Nhap Mon Code C | Nha xuat ban: NXB Tre | Gia: 50000
+STT: 20 | Ten sach: Giai Thuat Toan Tap | Nha xuat ban: NXB Lao Dong | Gia: 45000
