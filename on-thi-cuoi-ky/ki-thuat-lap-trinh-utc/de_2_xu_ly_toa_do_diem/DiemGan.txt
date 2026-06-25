@@ -1,0 +1,21 @@
+Cac diem gan A(2.40, 3.20) nhat lan luot la:
+Diem 1: (1.50, 2.00) - Khoang cach: 1.50
+Diem 2: (4.00, 4.00) - Khoang cach: 1.79
+Diem 3: (4.00, 4.00) - Khoang cach: 1.79
+Diem 4: (4.00, 4.00) - Khoang cach: 1.79
+Diem 5: (-1.10, 3.40) - Khoang cach: 3.51
+Diem 6: (0.00, 0.00) - Khoang cach: 4.00
+Diem 7: (0.50, -0.50) - Khoang cach: 4.16
+Diem 8: (2.50, -1.80) - Khoang cach: 5.00
+Diem 9: (-3.20, 4.50) - Khoang cach: 5.75
+Diem 10: (7.00, 7.00) - Khoang cach: 5.97
+Diem 11: (3.30, 9.10) - Khoang cach: 5.97
+Diem 12: (8.00, 0.00) - Khoang cach: 6.45
+Diem 13: (1.20, -4.20) - Khoang cach: 7.50
+Diem 14: (-2.50, -2.50) - Khoang cach: 7.52
+Diem 15: (6.50, -3.50) - Khoang cach: 7.85
+Diem 16: (-6.00, 8.00) - Khoang cach: 9.67
+Diem 17: (-7.30, 2.10) - Khoang cach: 9.76
+Diem 18: (-5.00, -5.00) - Khoang cach: 11.05
+Diem 19: (10.20, 12.00) - Khoang cach: 11.76
+Diem 20: (-9.50, -1.00) - Khoang cach: 12.62

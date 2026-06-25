@@ -1,0 +1,22 @@
+
+Cac mat hang sau khi sap xep:
+STT: 1    | Mat hang: TatChan       | So luong:       30 | Gia:       20000.00
+STT: 2    | Mat hang: DepLe         | So luong:       25 | Gia:       50000.00
+STT: 3    | Mat hang: MuLuoiTrai    | So luong:       20 | Gia:       80000.00
+STT: 4    | Mat hang: NonKet        | So luong:       15 | Gia:       90000.00
+STT: 5    | Mat hang: AoSoMi        | So luong:       12 | Gia:      180000.00
+STT: 6    | Mat hang: AoPolo        | So luong:       10 | Gia:      200000.00
+STT: 7    | Mat hang: AoThun        | So luong:       10 | Gia:      120000.50
+STT: 8    | Mat hang: QuanShort     | So luong:        8 | Gia:      140000.00
+STT: 9    | Mat hang: KhanChoang    | So luong:        7 | Gia:      150000.00
+STT: 10   | Mat hang: VayNu         | So luong:        6 | Gia:      320000.00
+STT: 11   | Mat hang: DamNu         | So luong:        5 | Gia:      400000.00
+STT: 12   | Mat hang: QuanJean      | So luong:        5 | Gia:      250000.00
+STT: 13   | Mat hang: Balotruot     | So luong:        4 | Gia:      550000.00
+STT: 14   | Mat hang: AoKhoac       | So luong:        4 | Gia:      450000.00
+STT: 15   | Mat hang: KinhMat       | So luong:        3 | Gia:      350000.00
+STT: 16   | Mat hang: Balo          | So luong:        3 | Gia:      300000.00
+STT: 17   | Mat hang: TuiXach       | So luong:        2 | Gia:      700000.00
+STT: 18   | Mat hang: GiayTheThao   | So luong:        2 | Gia:      500000.00
+STT: 19   | Mat hang: DongHo        | So luong:        1 | Gia:     1200000.00
+STT: 20   | Mat hang: GiayDa        | So luong:        1 | Gia:      600000.00
