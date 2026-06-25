@@ -1,0 +1,5 @@
+Diem so, so ban thang, so ban thua cua tung doi:
+Doi A | 16 diem | 23 ban thang | 1 ban thua
+Doi B | 11 diem | 9 ban thang | 6 ban thua
+Doi C | 10 diem | 15 ban thang | 3 ban thua
+Doi D | 17 diem | 21 ban thang | 4 ban thua

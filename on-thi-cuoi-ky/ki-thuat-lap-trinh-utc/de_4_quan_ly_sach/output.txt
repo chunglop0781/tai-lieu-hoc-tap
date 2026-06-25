@@ -1,0 +1,21 @@
+Danh sach cua 20 sach theo thu tu gia sach tang dan:
+Ma sach: MS05 | Ten sach: Giai Thuat Toan Tap | Ten tac gia: Vo Hoang E | Nam xuat ban: 2025 | Gia: 45000
+Ma sach: MS06 | Ten sach: Nhap Mon Code C | Ten tac gia: Dang Thanh N | Nam xuat ban: 2020 | Gia: 50000
+Ma sach: MS01 | Ten sach: Lap Trinh C Basic | Ten tac gia: Nguyen Van A | Nam xuat ban: 2022 | Gia: 65000
+Ma sach: MS18 | Ten sach: Lap Trinh C Basic | Ten tac gia: Doan Van H | Nam xuat ban: 2026 | Gia: 65000
+Ma sach: MS13 | Ten sach: Lap Trinh Python | Ten tac gia: Ly Minh T | Nam xuat ban: 2023 | Gia: 75000
+Ma sach: MS03 | Ten sach: Lap Trinh C Basic | Ten tac gia: Le Hoang C | Nam xuat ban: 2024 | Gia: 85000
+Ma sach: MS11 | Ten sach: Phat Trien Web | Ten tac gia: Vu Van D | Nam xuat ban: 2024 | Gia: 85000
+Ma sach: MS14 | Ten sach: Kien Truc May Tinh | Ten tac gia: Trinh Cong S | Nam xuat ban: 2018 | Gia: 90000
+Ma sach: MS07 | Ten sach: Toan Roi Rac | Ten tac gia: Bui Thi H | Nam xuat ban: 2019 | Gia: 95000
+Ma sach: MS19 | Ten sach: Quan Ly Du An IT | Ten tac gia: Lam Chi V | Nam xuat ban: 2023 | Gia: 105000
+Ma sach: MS08 | Ten sach: Lap Trinh Mang | Ten tac gia: Ngo Quang H | Nam xuat ban: 2022 | Gia: 110000
+Ma sach: MS20 | Ten sach: Phan Tich Thiet Ke | Ten tac gia: Kieu Minh T | Nam xuat ban: 2022 | Gia: 115000
+Ma sach: MS02 | Ten sach: Cau Truc Du Lieu | Ten tac gia: Tran Thi B | Nam xuat ban: 2023 | Gia: 120000
+Ma sach: MS15 | Ten sach: Cong Nghe Phan Mem | Ten tac gia: Mai Phuong T | Nam xuat ban: 2022 | Gia: 125000
+Ma sach: MS09 | Ten sach: He Dieu Hanh | Ten tac gia: Do Hoang L | Nam xuat ban: 2023 | Gia: 135000
+Ma sach: MS12 | Ten sach: An Toan Thong Tin | Ten tac gia: Phan Thanh T | Nam xuat ban: 2021 | Gia: 140000
+Ma sach: MS04 | Ten sach: Co So Du Lieu | Ten tac gia: Pham Minh D | Nam xuat ban: 2021 | Gia: 150000
+Ma sach: MS17 | Ten sach: Xu Ly Anh | Ten tac gia: Nguyen Bich N | Nam xuat ban: 2024 | Gia: 165000
+Ma sach: MS16 | Ten sach: Dien Toan Dam May | Ten tac gia: Cao Minh K | Nam xuat ban: 2025 | Gia: 180000
+Ma sach: MS10 | Ten sach: Tri Tue Nhan Tao | Ten tac gia: Hoang Minh T | Nam xuat ban: 2026 | Gia: 250000

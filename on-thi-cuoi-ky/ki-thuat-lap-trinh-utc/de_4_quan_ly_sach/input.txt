@@ -1,0 +1,101 @@
+20
+MS01
+Lap Trinh C Basic
+Nguyen Van A
+2022
+65000
+MS02
+Cau Truc Du Lieu
+Tran Thi B
+2023
+120000
+MS03
+Lap Trinh C Basic
+Le Hoang C
+2024
+85000
+MS04
+Co So Du Lieu
+Pham Minh D
+2021
+150000
+MS05
+Giai Thuat Toan Tap
+Vo Hoang E
+2025
+45000
+MS06
+Nhap Mon Code C
+Dang Thanh N
+2020
+50000
+MS07
+Toan Roi Rac
+Bui Thi H
+2019
+95000
+MS08
+Lap Trinh Mang
+Ngo Quang H
+2022
+110000
+MS09
+He Dieu Hanh
+Do Hoang L
+2023
+135000
+MS10
+Tri Tue Nhan Tao
+Hoang Minh T
+2026
+250000
+MS11
+Phat Trien Web
+Vu Van D
+2024
+85000
+MS12
+An Toan Thong Tin
+Phan Thanh T
+2021
+140000
+MS13
+Lap Trinh Python
+Ly Minh T
+2023
+75000
+MS14
+Kien Truc May Tinh
+Trinh Cong S
+2018
+90000
+MS15
+Cong Nghe Phan Mem
+Mai Phuong T
+2022
+125000
+MS16
+Dien Toan Dam May
+Cao Minh K
+2025
+180000
+MS17
+Xu Ly Anh
+Nguyen Bich N
+2024
+165000
+MS18
+Lap Trinh C Basic
+Doan Van H
+2026
+65000
+MS19
+Quan Ly Du An IT
+Lam Chi V
+2023
+105000
+MS20
+Phan Tich Thiet Ke
+Kieu Minh T
+2022
+115000
