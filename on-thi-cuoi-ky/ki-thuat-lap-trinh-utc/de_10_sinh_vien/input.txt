@@ -1,0 +1,46 @@
+15
+Nguyen Van An
+Hanoi
+A
+Tran Thi Binh
+Nam Dinh
+B
+Le Hoang Cuong
+Thanh Hoa
+C
+Pham Minh Duc
+Hanoi
+B
+Vo Hoang Yen
+Nghe An
+A
+Dang Thanh Nam
+Hai Phong
+C
+Bui Thi Hue
+Thanh Hoa
+A
+Ngo Quang Hai
+Quang Ninh
+B
+Do Hoang Long
+Hanoi
+C
+Hoang Minh Thu
+Da Nang
+A
+Vu Van Dat
+Nam Dinh
+B
+Phan Thanh Thao
+Hanoi
+C
+Ly Minh Triet
+Nghe An
+A
+Trinh Cong Son
+Thanh Hoa
+B
+Mai Phuong Thuy
+Hanoi
+A
