@@ -1,0 +1,37 @@
+12
+SV001
+Nguyen Van An
+A 8.5
+SV002
+Tran Thi Binh
+B 7.2
+SV003
+Le Hoang Cuong
+C 6.8
+SV004
+Pham Minh Duc
+B 9.0
+SV005
+Vo Hoang Yen
+A 5.5
+SV006
+Dang Thanh Nam
+C 7.8
+SV007
+Bui Thi Hue
+A 8.2
+SV008
+Ngo Quang Hai
+B 6.0
+SV009
+Do Hoang Long
+C 7.4
+SV010
+Hoang Minh Thu
+A 9.5
+SV011
+Vu Van Dat
+B 6.5
+SV012
+Phan Thanh Thao
+A 8.0

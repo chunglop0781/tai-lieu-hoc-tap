@@ -1,0 +1,46 @@
+15
+Nguyen Van An
+15500000
+1
+Tran Thi Binh
+12000000
+2
+Le Hoang Cuong
+8500000
+3
+Pham Minh Duc
+14000000
+2
+Vo Hoang Yen
+25000000
+1
+Dang Thanh Nam
+9500000
+3
+Bui Thi Hue
+11000000
+1
+Ngo Quang Hai
+13500000
+2
+Do Hoang Long
+7000000
+3
+Hoang Minh Thu
+18000000
+1
+Vu Van Dat
+12500000
+2
+Phan Thanh Thao
+16000000
+3
+Ly Minh Triet
+22000000
+1
+Trinh Cong Son
+10500000
+2
+Mai Phuong Thuy
+30000000
+1

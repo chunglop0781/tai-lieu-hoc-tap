@@ -1,0 +1,13 @@
+5 8 2 9 1 4 
+12 7 3 6 8 2 
+8 4 9 5 3 7 
+6 9 16 2 4 1 
+20 15 8 7 11 6 
+3 24 5 12 9 13 
+Trung binh:11.23
+Tong cot 1:54
+Tong cot 2:67
+Tong cot 3:43
+Tong cot 4:41
+Tong cot 5:36
+Tong cot 6:33
