@@ -1,0 +1,31 @@
+10
+Nguyen Van An
+85.5
+A
+Tran Thi Binh
+72.0
+B
+Le Hoang Cuong
+91.0
+C
+Pham Minh Duc
+68.5
+B
+Vo Hoang Yen
+95.0
+A
+Dang Thanh Nam
+79.0
+C
+Bui Thi Hue
+54.5
+A
+Ngo Quang Hai
+73.0
+B
+Do Hoang Long
+88.5
+C
+Hoang Minh Thu
+91.0
+A
